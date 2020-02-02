@@ -295,7 +295,6 @@ app.layout = html.Div(
 )
 
 def update_bubble(date_index):
-    figtime=str(dates[date_index])
     filtered_df=df[date_index]
 
     fig = go.Figure(
