@@ -27,7 +27,7 @@ server=app.server
 
 #--------------------------Load Data-----------------------------------#
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
-filename='WHCV_JHU.xlsx'
+filename='data/WHCV_JHU.xlsx'
 sheetnames=['Jan22_12pm', 'Jan23_12pm', 'Jan24_12pm',
 'Jan25_10pm', 'Jan26_11pm', 'Jan27_830pm',
 'Jan28_11pm', 'Jan29_9pm', 'Jan30_930pm',
@@ -38,7 +38,7 @@ xlsxf=pd.ExcelFile(
     os.path.join(APP_PATH, filename)
     )
 df=list(map(lambda x: xlsxf.parse(x), sheetnames))
-latlnt=pd.read_excel(os.path.join(APP_PATH, 'latlnt.xlsx'), usecols='A:D')
+latlnt=pd.read_excel(os.path.join(APP_PATH, 'data/latlnt.xlsx'), usecols='A:D')
 latlnt=latlnt.fillna(value={'State':''})
 
 def cleandat(
