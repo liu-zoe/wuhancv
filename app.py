@@ -31,7 +31,7 @@ filename='data/WHCV_JHU.xlsx'
 sheetnames=['Jan22_12pm', 'Jan23_12pm', 'Jan24_12pm',
 'Jan25_10pm', 'Jan26_11pm', 'Jan27_830pm',
 'Jan28_11pm', 'Jan29_9pm', 'Jan30_930pm',
-'Jan31_7pm','Feb01_6pm',
+'Jan31_7pm','Feb01_11pm',
 ]
 
 xlsxf=pd.ExcelFile(
@@ -241,7 +241,6 @@ app.layout = html.Div(
                                     opacity=0.85,    
                                 ),
                                 layout=dict(
-                                    title = 'Place holder for line plot title',
                                     paper_bgcolor=bgcl,
                                     plot_bgcolor=bgcl,
                                     margin=dict(t=0, r=0, b=0, l=0, pad=0,),
@@ -354,7 +353,6 @@ def display_selected_data(chart_dropdown):
         ),
     )
     fig.update_layout(
-        title = 'Place holder for line plot title',
         paper_bgcolor=bgcl, 
         plot_bgcolor=bgcl,
         margin=dict(l=0, t=0, b=0, r=0, pad=0),
