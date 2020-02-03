@@ -31,7 +31,8 @@ filename='data/WHCV_JHU.xlsx'
 sheetnames=['Jan22_12pm', 'Jan23_12pm', 'Jan24_12pm',
 'Jan25_10pm', 'Jan26_11pm', 'Jan27_830pm',
 'Jan28_11pm', 'Jan29_9pm', 'Jan30_930pm',
-'Jan31_7pm','Feb01_11pm',
+'Jan31_7pm','Feb01_11pm', 'Feb02_9pm',
+'Feb03_1230pm'
 ]
 
 xlsxf=pd.ExcelFile(
@@ -59,16 +60,21 @@ def cleandat(
     indat['Location']=np.where(indat['State']=='', indat['Country'],\
         indat['Country']+'-'+indat['State'])
     indat=pd.merge(indat, latlnt, how='left', on=['Country','State'])
-    indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*20 if x>0 else 0)
+    indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*10 if x>0 else 0)
     indat['date']=indat['Last Update'].apply(lambda x: x.date())
     return indat
 df=list(map(lambda x: cleandat(x), df))
 
 # Create a dataset with cumulated cases by date
-cum=pd.DataFrame(map(lambda x: [x['date'][0], x.Confirmed.sum(), x.Recovered.sum(), x.Deaths.sum()], df))
-cum.columns=['date','Confirmed','Deaths','Recovered']
-vars=['Confirmed','Deaths','Recovered']
-
+cum=pd.DataFrame(map(lambda x: [x['date'][0], x.Confirmed.sum(), x.Deaths.sum(), x.Recovered.sum(),], df))
+cum.columns=['date','Confirmed','Deaths','Recovered',]
+cum['death_rate']=round(100*(cum['Deaths']/cum['Confirmed']),2)
+cum['recover_rate']=round(100*(cum['Recovered']/cum['Confirmed']),2)
+vars=['Confirmed','Deaths','Recovered', 'death_rate','recover_rate']
+yaxislab=['Confirmed Cases', 'Deaths Cases', 'Recovered Cases',
+'Death Rates (%)', 'Recovered Rates (%)']
+charttitle=['Number of Confirmed Cases', 'Number of Deaths Cases', 
+'Number of Recovered Cases', 'Deaths Rates', 'Recovered Rates']
 # Create a list of dates
 dates=[]
 for dat in df: 
@@ -80,6 +86,7 @@ orcl3=cl.scales['3']['seq']['Oranges']
 grcl3=cl.scales['3']['seq']['Greys']
 bgcl='#1f2630'
 linecl="#BDC6DC"
+fontcl="#BDC6DC"
 markercl=orcl3[2]
 
 # Fonts
@@ -93,7 +100,7 @@ plotly_fonts=["Arial, sans-serif", "Balto, sans-serif", "Courier New, monospace"
 plotfont=plotly_fonts[10]
 
 #----------------------------------App Title------------------------------------#
-app.title='Coronavirus Time Lapse'
+app.title='2019-nCoV Time Lapse'
 #----------------------------------App Layout-----------------------------------#
 app.layout = html.Div(
     id="root",
@@ -103,7 +110,7 @@ app.layout = html.Div(
             id="header",
             children=[
                 html.Img(id="logo", src=app.get_asset_url("logo.png")),
-                html.H3(children="2020 Novel Coronavirus Outbreak Time Lapse",
+                html.H3(children="Novel Coronavirus Outbreak Time Lapse",
                 style={'textAlign': 'left',},
                 ),
                 dcc.Markdown(
@@ -111,7 +118,7 @@ app.layout = html.Div(
                     children=
                     '''
                     Data Source: Data used in this project is extracted from 
-                    [**Mapping 2019-nCov**](https://systems.jhu.edu/research/public-health/ncov/) 
+                    [**Mapping 2019-nCoV**](https://systems.jhu.edu/research/public-health/ncov/) 
                     by Johns Hopkins University Center Center for Systems Science and Engineering, 
                     who collected data from various sources, including WHO, U.S. CDC, ECDC China CDC (CCDC), 
                     NHC and DXY.                    
@@ -217,11 +224,19 @@ app.layout = html.Div(
                                     "label": "Recovered Cases", 
                                     "value":2,
                                 },
+                                {
+                                    "label": "Deaths Rates",
+                                    "value":3,
+                                },
+                                {
+                                    "label": "Recovered Rates",
+                                    "value":4,
+                                }
                             ],
                             value=0,
                             id="chart-dropdown",
                         ),
-                        html.H5("Number of Cases Across Time",
+                        html.H5("Number of Confirmed Cases Across Time",
                                 id="lineplot-title",
                                 style={'textAlign': 'left',},
                                 ),
@@ -234,7 +249,7 @@ app.layout = html.Div(
                                     y=cum['Confirmed'],
                                     name='Confirmed',
                                     mode='lines+markers',
-                                    hovertemplate='%{x}'+'<br>Confirmed:%{y:1f}',
+                                    hovertemplate='%{x}'+'<br>Confirmed:%{y}',
                                     marker = go.scatter.Marker(
                                                 color = markercl,
                                     ),
@@ -257,7 +272,7 @@ app.layout = html.Div(
                                     ),
                                     font=dict(
                                         family=plotfont, size=12, 
-                                        color='rgba(255, 255, 255, 0.5)'
+                                        color=fontcl,
                                     ),
                                 ),
                             ),
@@ -270,12 +285,11 @@ app.layout = html.Div(
         html.Div(
             id="footer",
             children=[
-                dcc.Markdown(
-                    id="author",
-                    children=
-                    '''
-                    Created by [**Zoe Liu**](zoe-liu.com)
-                    '''
+                html.H5(
+                    [
+                        "Create by ",
+                        html.A("Zoe Liu", href="http://zoe-liu.com", target="_blank"),
+                    ]
                 ),
                 dcc.Markdown(
                     id="credit",
@@ -332,6 +346,15 @@ def update_bubble(date_index):
     return fig
 
 @app.callback(
+    Output("lineplot-title", "children"), 
+    [
+        Input("chart-dropdown", "value"),
+    ],
+)
+def update_chart_title(chart_dropdown):
+    return charttitle[chart_dropdown]+" Across Time"
+
+@app.callback(
     Output("selected-data", "figure"),
     [
         Input("chart-dropdown","value"),
@@ -344,7 +367,7 @@ def display_selected_data(chart_dropdown):
             y=cum[vars[chart_dropdown]],
             name='',
             mode='lines+markers',
-            hovertemplate='%{x}'+'<br>'+vars[chart_dropdown]+':%{y:1f}',
+            hovertemplate='%{x}'+'<br>'+yaxislab[chart_dropdown]+':%{y}',
             marker = go.scatter.Marker(
                         color = markercl,
             ),
@@ -356,7 +379,7 @@ def display_selected_data(chart_dropdown):
         plot_bgcolor=bgcl,
         margin=dict(l=0, t=0, b=0, r=0, pad=0),
         yaxis = dict(zeroline = False,
-                    title=vars[chart_dropdown]+' Cases',
+                    title=yaxislab[chart_dropdown],
                     color=linecl, 
                     showgrid=False,
         ),
@@ -366,8 +389,9 @@ def display_selected_data(chart_dropdown):
                     showgrid=False,
         ),
         font=dict(
-            family=plotfont, size=12, 
-            color='rgba(255, 255, 255, 0.5)'
+            family=plotfont, 
+            size=12, 
+            color=fontcl,
         ),
     )
     return fig 
