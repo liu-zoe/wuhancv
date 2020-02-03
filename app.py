@@ -20,11 +20,12 @@ import datetime
 app = dash.Dash(
     __name__,
     meta_tags=[
-        {"name": "viewport", "content": "width=device-width, initial-scale=1.0"}
+        {"name": "viewport", "content": "width=device-width, initial-scale=1.0"},
+        {"name": "description", "content": "A Time Lapse of the 2019-nCoV Outbreak"}, 
+        {"name": "news_keywords", "content": "2019-nCoV, Novel Coronavirus, Novel CoronaVirus, Wuhan Coronavirus"}
         ],
     )
 server=app.server
-
 #--------------------------Load Data-----------------------------------#
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
 filename='data/WHCV_JHU.xlsx'
