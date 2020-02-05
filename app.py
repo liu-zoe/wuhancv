@@ -33,9 +33,15 @@ sheetnames=['Jan22_12pm', 'Jan23_12pm', 'Jan24_12pm',
 'Jan25_10pm', 'Jan26_11pm', 'Jan27_830pm',
 'Jan28_11pm', 'Jan29_9pm', 'Jan30_930pm',
 'Jan31_7pm','Feb01_11pm', 'Feb02_9pm',
-'Feb03_1230pm'
+'Feb03_940pm','Feb04_1150am',
 ]
-
+# Create a list of dates
+dates=['Jan22','Jan23','Jan24',
+'Jan25','Jan26','Jan27',
+'Jan28','Jan29','Jan30',
+'Jan31','Feb01','Feb02',
+'Feb03','Feb04',
+]
 xlsxf=pd.ExcelFile(
     os.path.join(APP_PATH, filename)
     )
@@ -67,8 +73,9 @@ def cleandat(
 df=list(map(lambda x: cleandat(x), df))
 
 # Create a dataset with cumulated cases by date
-cum=pd.DataFrame(map(lambda x: [x['date'][0], x.Confirmed.sum(), x.Deaths.sum(), x.Recovered.sum(),], df))
-cum.columns=['date','Confirmed','Deaths','Recovered',]
+cum=pd.DataFrame(map(lambda x: [x.Confirmed.sum(), x.Deaths.sum(), x.Recovered.sum(),], df))
+cum['date']=dates
+cum.columns=['Confirmed','Deaths','Recovered','date']
 cum['death_rate']=round(100*(cum['Deaths']/cum['Confirmed']),2)
 cum['recover_rate']=round(100*(cum['Recovered']/cum['Confirmed']),2)
 vars=['Confirmed','Deaths','Recovered', 'death_rate','recover_rate']
@@ -76,12 +83,6 @@ yaxislab=['Confirmed Cases', 'Deaths Cases', 'Recovered Cases',
 'Death Rates (%)', 'Recovered Rates (%)']
 charttitle=['Number of Confirmed Cases', 'Number of Deaths Cases', 
 'Number of Recovered Cases', 'Deaths Rates', 'Recovered Rates']
-# Create a list of dates
-dates=[]
-for dat in df: 
-    dates.append(dat['date'][0].strftime('%m-%d'))
-del dat
-
 # Create a color scheme
 orcl3=cl.scales['3']['seq']['Oranges']
 grcl3=cl.scales['3']['seq']['Greys']
@@ -250,7 +251,7 @@ app.layout = html.Div(
                                     y=cum['Confirmed'],
                                     name='Confirmed',
                                     mode='lines+markers',
-                                    hovertemplate='%{x}'+'<br>Confirmed:%{y}',
+                                    hovertemplate='%{x}'+'<br>Confirmed Cases:%{y}',
                                     marker = go.scatter.Marker(
                                                 color = markercl,
                                     ),
@@ -388,10 +389,11 @@ def display_selected_data(chart_dropdown):
                     title='Date',
                     color=linecl,
                     showgrid=False,
+                    tickangle=45,
         ),
         font=dict(
             family=plotfont, 
-            size=12, 
+            size=11, 
             color=fontcl,
         ),
     )
