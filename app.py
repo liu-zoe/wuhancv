@@ -33,7 +33,7 @@ sheetnames=['Jan22_12pm', 'Jan23_12pm', 'Jan24_12pm',
 'Jan25_10pm', 'Jan26_11pm', 'Jan27_830pm',
 'Jan28_11pm', 'Jan29_9pm', 'Jan30_930pm',
 'Jan31_7pm','Feb01_11pm', 'Feb02_9pm',
-'Feb03_940pm','Feb04_1150am',
+'Feb03_940pm','Feb04_10pm',
 ]
 # Create a list of dates
 dates=['Jan22','Jan23','Jan24',
