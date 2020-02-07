@@ -33,14 +33,16 @@ sheetnames=['Jan22_12pm', 'Jan23_12pm', 'Jan24_12pm',
 'Jan25_10pm', 'Jan26_11pm', 'Jan27_830pm',
 'Jan28_11pm', 'Jan29_9pm', 'Jan30_930pm',
 'Jan31_7pm','Feb01_11pm', 'Feb02_9pm',
-'Feb03_940pm','Feb04_10pm',
+'Feb03_940pm','Feb04_10pm','Feb05_1220pm',
+'Feb06_0805pm',
 ]
 # Create a list of dates
 dates=['Jan22','Jan23','Jan24',
 'Jan25','Jan26','Jan27',
 'Jan28','Jan29','Jan30',
 'Jan31','Feb01','Feb02',
-'Feb03','Feb04',
+'Feb03','Feb04','Feb05',
+'Feb06',
 ]
 xlsxf=pd.ExcelFile(
     os.path.join(APP_PATH, filename)
@@ -151,6 +153,7 @@ app.layout = html.Div(
                                     marks={
                                         str(date_ord):{
                                             "label":dates[date_ord],
+                                            "style": {"transform": "rotate(45deg)"}
                                         } 
                                         for date_ord in range(len(dates))
                                     },
