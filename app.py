@@ -34,7 +34,7 @@ sheetnames=['Jan22_12pm', 'Jan23_12pm', 'Jan24_12pm',
 'Jan28_11pm', 'Jan29_9pm', 'Jan30_930pm',
 'Jan31_7pm','Feb01_11pm', 'Feb02_9pm',
 'Feb03_940pm','Feb04_10pm','Feb05_1220pm',
-'Feb06_0805pm',
+'Feb06_0805pm','Feb07_0813pm',
 ]
 # Create a list of dates
 dates=['Jan22','Jan23','Jan24',
@@ -42,7 +42,7 @@ dates=['Jan22','Jan23','Jan24',
 'Jan28','Jan29','Jan30',
 'Jan31','Feb01','Feb02',
 'Feb03','Feb04','Feb05',
-'Feb06',
+'Feb06','Feb07'
 ]
 xlsxf=pd.ExcelFile(
     os.path.join(APP_PATH, filename)
