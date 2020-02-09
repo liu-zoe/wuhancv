@@ -34,7 +34,7 @@ sheetnames=['Jan22_12pm', 'Jan23_12pm', 'Jan24_12pm',
 'Jan28_11pm', 'Jan29_9pm', 'Jan30_930pm',
 'Jan31_7pm','Feb01_11pm', 'Feb02_9pm',
 'Feb03_940pm','Feb04_10pm','Feb05_1220pm',
-'Feb06_0805pm','Feb07_0813pm',
+'Feb06_0805pm','Feb07_0813pm', 'Feb08_0340pm'
 ]
 # Create a list of dates
 dates=['Jan22','Jan23','Jan24',
@@ -42,7 +42,7 @@ dates=['Jan22','Jan23','Jan24',
 'Jan28','Jan29','Jan30',
 'Jan31','Feb01','Feb02',
 'Feb03','Feb04','Feb05',
-'Feb06','Feb07'
+'Feb06','Feb07','Feb08',
 ]
 xlsxf=pd.ExcelFile(
     os.path.join(APP_PATH, filename)
@@ -140,11 +140,34 @@ app.layout = html.Div(
                         html.Div(
                             id="slider-container", 
                             children=[
-                                html.P(
-                                    id="slider-text", 
-                                    children="Move the slider to advance date:",
-                                    style={'textAlign': 'left',},
-                                ), 
+                                html.Button(
+                                    id="play-button",
+                                    children="play",
+                                    n_clicks=0,
+                                    n_clicks_timestamp=-1,
+                                    type='button',
+                                    style = {
+                                        'color':markercl, 
+                                        'textAlign':'center'
+                                    },
+                                ),
+                                html.Button(
+                                    id="pause-button",
+                                    children="Pause",
+                                    n_clicks=0,
+                                    n_clicks_timestamp=-1,
+                                    type='button',
+                                    style = {
+                                        'color':markercl, 
+                                        'textAlign':'center'
+                                    },
+                                ),
+                                dcc.Interval(id='auto-stepper',
+                                    interval=2*1000, # in milliseconds
+                                    n_intervals=0,
+                                    max_intervals=0,
+                                    disabled=False,
+                                ),
                                 dcc.Slider(
                                     id="date-slider",
                                     min=0, 
@@ -308,6 +331,7 @@ app.layout = html.Div(
     ],
 )
 #----------------------------------Callback-----------------------------------#
+#~~~~~~~~~~~~Bubble Plot Slider~~~~~~~~~~~#
 @app.callback(
     Output("country-bubble", "figure"), 
     [Input("date-slider", "value")],
@@ -350,6 +374,35 @@ def update_bubble(date_index):
     )
     return fig
 
+#~~~~~~~~~~~~~~~~~Interval of the Bubble Map~~~~~~~~~~~~~~~~~~~~~~~~~~#
+@app.callback(
+    [
+        Output('date-slider', 'value'),
+        Output('auto-stepper', 'max_intervals'),
+        Output('auto-stepper', 'disabled'),
+    ],
+    [
+        Input('auto-stepper', 'n_intervals'),
+        Input('play-button','n_clicks_timestamp'),
+        Input('pause-button','n_clicks_timestamp')
+    ]
+)
+def move_frames(n_intervals, play_timestamp, pause_timestamp):
+    slider_value=0
+    max_intervals=0
+    int_disabled=True
+    if (play_timestamp==-1) & (pause_timestamp==-1):
+        return 0, 0, True
+    elif  (play_timestamp>pause_timestamp):
+        slider_value=(n_intervals+1)%(len(dates))
+        max_intervals=-1
+        int_disabled=False
+    elif (pause_timestamp>play_timestamp):
+        slider_value=(n_intervals+1)%(len(dates))
+        max_intervals=0
+        int_disabled=False
+    return slider_value, max_intervals, int_disabled
+#~~~~~~~~~~~~~~~~~~~~~Line Plot~~~~~~~~~~~~~~~~~~~~#
 @app.callback(
     Output("lineplot-title", "children"), 
     [
