@@ -34,7 +34,8 @@ sheetnames=['Jan22_12pm', 'Jan23_12pm', 'Jan24_12pm',
 'Jan28_11pm', 'Jan29_9pm', 'Jan30_930pm',
 'Jan31_7pm','Feb01_11pm', 'Feb02_9pm',
 'Feb03_940pm','Feb04_10pm','Feb05_1220pm',
-'Feb06_0805pm','Feb07_0813pm', 'Feb08_1109pm'
+'Feb06_0805pm','Feb07_0813pm', 'Feb08_1109pm',
+'Feb09_1120pm',
 ]
 # Create a list of dates
 dates=['Jan22','Jan23','Jan24',
@@ -43,6 +44,7 @@ dates=['Jan22','Jan23','Jan24',
 'Jan31','Feb01','Feb02',
 'Feb03','Feb04','Feb05',
 'Feb06','Feb07','Feb08',
+'Feb09',
 ]
 xlsxf=pd.ExcelFile(
     os.path.join(APP_PATH, filename)
@@ -65,7 +67,8 @@ def cleandat(
     indat['State']=np.where( (indat['State']=='Hong Kong') & (indat['Country']=='Hong Kong'), '',
                     np.where( (indat['State']=='Taiwan') & (indat['Country']=='Taiwan'), '',
                     np.where( (indat['State']=='Macau') & (indat['Country']=='Macau'), '',
-                    indat['State'])))
+                    np.where( indat['State']=='Cruise Ship', 'Diamond Princess cruise ship',
+                    indat['State']))))
     indat['Location']=np.where(indat['State']=='', indat['Country'],\
         indat['Country']+'-'+indat['State'])
     indat=pd.merge(indat, latlnt, how='left', on=['Country','State'])
