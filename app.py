@@ -35,7 +35,8 @@ sheetnames=['Jan22_12pm', 'Jan23_12pm', 'Jan24_12pm',
 'Jan31_7pm','Feb01_11pm', 'Feb02_9pm',
 'Feb03_940pm','Feb04_10pm','Feb05_1220pm',
 'Feb06_0805pm','Feb07_0813pm', 'Feb08_1109pm',
-'Feb09_1120pm','Feb10_1930','Feb11_1050',
+'Feb09_1120pm','Feb10_1930','Feb11_2044',
+'Feb12_1020',
 ]
 # Create a list of dates
 dates=['Jan22','Jan23','Jan24',
@@ -45,6 +46,7 @@ dates=['Jan22','Jan23','Jan24',
 'Feb03','Feb04','Feb05',
 'Feb06','Feb07','Feb08',
 'Feb09','Feb10','Feb11',
+'Feb12',
 ]
 xlsxf=pd.ExcelFile(
     os.path.join(APP_PATH, filename)
@@ -190,7 +192,7 @@ app.layout = html.Div(
                             id="bubblemap-container",
                             children=[
                                 html.H5(
-                                    "Coronavirus Cases Across The Globe ",
+                                    "Confirmed COVID-19 Cases Across The Globe ",
                                     id="bubblemap-title",
                                     style={'textAlign': 'left',},
                                 ),
