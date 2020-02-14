@@ -1,0 +1,39 @@
+Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered,Suspected,ConfnSusp,datetime,date,year,month,day,hr,min
+Hubei,Mainland China,1/24/2020  12am,549,24.0,31.0,,549,2020-01-24,Jan24,2020,1,24,0,0
+Guangdong,Mainland China,1/24/2020  12am,53,,2.0,,53,2020-01-24,Jan24,2020,1,24,0,0
+Zhejiang,Mainland China,1/24/2020  12am,43,,1.0,,43,2020-01-24,Jan24,2020,1,24,0,0
+Beijing,Mainland China,1/24/2020  12am,26,,,22.0,48,2020-01-24,Jan24,2020,1,24,0,0
+Shanghai,Mainland China,1/24/2020  12am,20,,,,20,2020-01-24,Jan24,2020,1,24,0,0
+Hunan,Mainland China,1/24/2020  12am,24,,,,24,2020-01-24,Jan24,2020,1,24,0,0
+Anhui,Mainland China,1/24/2020  12am,15,,,4.0,19,2020-01-24,Jan24,2020,1,24,0,0
+Chongqing,Mainland China,1/24/2020  12am,27,,,13.0,40,2020-01-24,Jan24,2020,1,24,0,0
+Sichuan,Mainland China,1/24/2020  12am,15,,,4.0,19,2020-01-24,Jan24,2020,1,24,0,0
+Shandong,Mainland China,1/24/2020  12am,9,,,,9,2020-01-24,Jan24,2020,1,24,0,0
+Guangxi,Mainland China,1/24/2020  12am,13,,,,13,2020-01-24,Jan24,2020,1,24,0,0
+Fujian,Mainland China,1/24/2020  12am,5,,,2.0,7,2020-01-24,Jan24,2020,1,24,0,0
+Jiangsu,Mainland China,1/24/2020  12am,9,,,,9,2020-01-24,Jan24,2020,1,24,0,0
+Henan,Mainland China,1/24/2020  12am,9,,,,9,2020-01-24,Jan24,2020,1,24,0,0
+Hainan,Mainland China,1/24/2020  12am,8,,,32.0,40,2020-01-24,Jan24,2020,1,24,0,0
+Tianjin,Mainland China,1/24/2020  12am,5,,,,5,2020-01-24,Jan24,2020,1,24,0,0
+Jiangxi,Mainland China,1/24/2020  12am,7,,,,7,2020-01-24,Jan24,2020,1,24,0,0
+Shaanxi,Mainland China,1/24/2020  12am,3,,,,3,2020-01-24,Jan24,2020,1,24,0,0
+Guizhou,Mainland China,1/24/2020  12am,3,,,,3,2020-01-24,Jan24,2020,1,24,0,0
+Liaoning,Mainland China,1/24/2020  12am,4,,,,4,2020-01-24,Jan24,2020,1,24,0,0
+Hong Kong,Hong Kong,1/24/2020  12am,2,,,36.0,38,2020-01-24,Jan24,2020,1,24,0,0
+Heilongjiang,Mainland China,1/24/2020  12am,4,1.0,,,4,2020-01-24,Jan24,2020,1,24,0,0
+Macau,Macau,1/24/2020  12am,2,,,,2,2020-01-24,Jan24,2020,1,24,0,0
+Xinjiang,Mainland China,1/24/2020  12am,2,,,,2,2020-01-24,Jan24,2020,1,24,0,0
+Gansu,Mainland China,1/24/2020  12am,2,,,,2,2020-01-24,Jan24,2020,1,24,0,0
+Yunnan,Mainland China,1/24/2020  12am,2,,,,2,2020-01-24,Jan24,2020,1,24,0,0
+Taiwan,Taiwan,1/24/2020  12am,1,,,,1,2020-01-24,Jan24,2020,1,24,0,0
+Shanxi,Mainland China,1/24/2020  12am,1,,,,1,2020-01-24,Jan24,2020,1,24,0,0
+Jilin,Mainland China,1/24/2020  12am,3,,,,3,2020-01-24,Jan24,2020,1,24,0,0
+Hebei,Mainland China,1/24/2020  12am,2,1.0,,,2,2020-01-24,Jan24,2020,1,24,0,0
+Ningxia,Mainland China,1/24/2020  12am,1,,,,1,2020-01-24,Jan24,2020,1,24,0,0
+Inner Mongolia,Mainland China,1/24/2020  12am,1,,,2.0,3,2020-01-24,Jan24,2020,1,24,0,0
+Washington,US,1/24/2020  12am,1,,,,1,2020-01-24,Jan24,2020,1,24,0,0
+,Japan,1/24/2020  12am,2,,,,2,2020-01-24,Jan24,2020,1,24,0,0
+,Thailand,1/24/2020  12am,4,,,,4,2020-01-24,Jan24,2020,1,24,0,0
+,South Korea,1/24/2020  12am,1,,,,1,2020-01-24,Jan24,2020,1,24,0,0
+,Singapore ,1/24/2020  12am,1,,,,1,2020-01-24,Jan24,2020,1,24,0,0
+,Vietnam,1/24/2020  12am,2,,,,2,2020-01-24,Jan24,2020,1,24,0,0

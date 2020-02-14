@@ -15,6 +15,7 @@ import pandas as pd
 import numpy as np
 import math
 import datetime
+from datetime import datetime
 
 # Initialize app
 app = dash.Dash(
@@ -28,54 +29,58 @@ app = dash.Dash(
 server=app.server
 #--------------------------Load Data-----------------------------------#
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
-filename='data/WHCV_JHU.xlsx'
-sheetnames=['Jan22_12pm', 'Jan23_12pm', 'Jan24_12pm',
-'Jan25_10pm', 'Jan26_11pm', 'Jan27_830pm',
-'Jan28_11pm', 'Jan29_9pm', 'Jan30_930pm',
-'Jan31_7pm','Feb01_11pm', 'Feb02_9pm',
-'Feb03_940pm','Feb04_10pm','Feb05_1220pm',
-'Feb06_0805pm','Feb07_0813pm', 'Feb08_1109pm',
-'Feb09_1120pm','Feb10_1930','Feb11_2044',
-'Feb12_1020',
+sheetnames=[
+    "01-21-2020_2200","01-22-2020_1200","01-23-2020_1200",
+    "01-24-2020_1200","01-25-2020_2200","01-26-2020_2300",
+    "01-27-2020_2030","01-28-2020_2300","01-29-2020_2100",
+    "01-30-2020_2130","01-31-2020_1400","02-01-2020_2300",
+    "02-02-2020_2100","02-03-2020_2140","02-04-2020_2200",
+    "02-05-2020_1220","02-06-2020_2005","02-07-2020_2024",
+    "02-08-2020_2304","02-09-2020_2320","02-10-2020_1930",
+    "02-11-2020_2044","02-12-2020_2200","02-13-2020_2115",
 ]
 # Create a list of dates
-dates=['Jan22','Jan23','Jan24',
-'Jan25','Jan26','Jan27',
-'Jan28','Jan29','Jan30',
-'Jan31','Feb01','Feb02',
-'Feb03','Feb04','Feb05',
-'Feb06','Feb07','Feb08',
-'Feb09','Feb10','Feb11',
-'Feb12',
+dates=[
+    'Jan21','Jan22','Jan23',
+    'Jan24','Jan25','Jan26',
+    'Jan27','Jan28','Jan29',
+    'Jan30','Jan31','Feb01',
+    'Feb02','Feb03','Feb04',
+    'Feb05','Feb06','Feb07',
+    'Feb08','Feb09','Feb10',
+    'Feb11','Feb12','Feb13',
 ]
-xlsxf=pd.ExcelFile(
-    os.path.join(APP_PATH, filename)
-    )
-df=list(map(lambda x: xlsxf.parse(x), sheetnames))
+df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 latlnt=pd.read_excel(os.path.join(APP_PATH, 'data/latlnt.xlsx'), usecols='A:D')
 latlnt=latlnt.fillna(value={'State':''})
 
 def cleandat(
     indat,
 ):
+    indat=indat[['Province/State', 'Country/Region', 'Last Update', \
+        'Confirmed', 'Deaths', 'Recovered','date'
+    ]]
+    indat.columns=['State','Country','Last Update','Confirmed','Deaths','Recovered','date']
     indat=indat.fillna(value={'State':'', 'Confirmed':0, \
-        'Recovered':0, 'Deaths':0})
+        'Deaths':0, 'Recovered':0,})
     indat['Confirmed']=indat['Confirmed'].astype('int64')
     indat['Recovered']=indat['Recovered'].astype('int64')
     indat['Deaths']=indat['Deaths'].astype('int64')
     indat['Country']=np.where(indat['Country']=='US', "United States", 
                                 np.where(indat['Country']=='Mainland China', "China", 
                                 indat['Country']))
+    indat['Country']=indat['Country'].str.strip()
     indat['State']=np.where( (indat['State']=='Hong Kong') & (indat['Country']=='Hong Kong'), '',
                     np.where( (indat['State']=='Taiwan') & (indat['Country']=='Taiwan'), '',
                     np.where( (indat['State']=='Macau') & (indat['Country']=='Macau'), '',
                     np.where( indat['State']=='Cruise Ship', 'Diamond Princess cruise ship',
-                    indat['State']))))
+                    np.where(indat['State']=='Chicago', 'Chicago, IL',
+                    indat['State'])))))
+    indat['State']=indat['State'].str.strip()
     indat['Location']=np.where(indat['State']=='', indat['Country'],\
         indat['Country']+'-'+indat['State'])
     indat=pd.merge(indat, latlnt, how='left', on=['Country','State'])
-    indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*10 if x>0 else 0)
-    indat['date']=indat['Last Update'].apply(lambda x: x.date())
+    indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*13 if x>0 else 0)
     return indat
 df=list(map(lambda x: cleandat(x), df))
 
