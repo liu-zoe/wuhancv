@@ -1,0 +1,68 @@
+Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered,date,year,month,day
+Hubei,Mainland China,2020-02-02T23:43:02,11177,350,295,Feb02,2020,2,2
+Zhejiang,Mainland China,2020-02-02T18:03:05,661,0,32,Feb02,2020,2,2
+Guangdong,Mainland China,2020-02-02T18:03:05,632,0,15,Feb02,2020,2,2
+Henan,Mainland China,2020-02-02T18:03:05,493,2,10,Feb02,2020,2,2
+Hunan,Mainland China,2020-02-02T18:03:05,463,0,16,Feb02,2020,2,2
+Anhui,Mainland China,2020-02-02T18:03:05,340,0,7,Feb02,2020,2,2
+Jiangxi,Mainland China,2020-02-02T18:03:05,333,0,12,Feb02,2020,2,2
+Chongqing,Mainland China,2020-02-02T23:33:02,300,2,7,Feb02,2020,2,2
+Jiangsu,Mainland China,2020-02-02T18:03:05,236,0,7,Feb02,2020,2,2
+Sichuan,Mainland China,2020-02-02T18:03:05,231,1,11,Feb02,2020,2,2
+Shandong,Mainland China,2020-02-02T18:03:05,230,0,6,Feb02,2020,2,2
+Beijing,Mainland China,2020-02-02T08:43:02,191,1,9,Feb02,2020,2,2
+Shanghai,Mainland China,2020-02-02T05:53:02,182,1,10,Feb02,2020,2,2
+Fujian,Mainland China,2020-02-02T03:43:01,159,0,0,Feb02,2020,2,2
+Shaanxi,Mainland China,2020-02-02T03:23:14,116,0,0,Feb02,2020,2,2
+Guangxi,Mainland China,2020-02-02T00:23:13,111,0,2,Feb02,2020,2,2
+Yunnan,Mainland China,2020-02-02T18:03:05,105,0,3,Feb02,2020,2,2
+Hebei,Mainland China,2020-02-02T02:53:02,104,1,3,Feb02,2020,2,2
+Heilongjiang,Mainland China,2020-02-02T03:23:14,95,2,2,Feb02,2020,2,2
+Liaoning,Mainland China,2020-02-02T18:03:05,70,0,1,Feb02,2020,2,2
+Shanxi,Mainland China,2020-02-02T23:23:13,66,0,3,Feb02,2020,2,2
+Hainan,Mainland China,2020-02-02T18:03:05,64,1,4,Feb02,2020,2,2
+Gansu,Mainland China,2020-02-02T23:43:02,51,0,3,Feb02,2020,2,2
+Tianjin,Mainland China,2020-02-02T09:43:01,48,0,1,Feb02,2020,2,2
+Guizhou,Mainland China,2020-02-02T01:03:32,38,0,2,Feb02,2020,2,2
+Ningxia,Mainland China,2020-02-02T01:43:02,28,0,0,Feb02,2020,2,2
+Inner Mongolia,Mainland China,2020-02-02T03:43:01,27,0,1,Feb02,2020,2,2
+Jilin,Mainland China,2020-02-02T02:33:02,23,0,1,Feb02,2020,2,2
+Xinjiang,Mainland China,2020-02-02T00:43:02,21,0,0,Feb02,2020,2,2
+,Japan,2020-02-01T18:53:03,20,0,1,Feb02,2020,2,2
+,Thailand,2020-01-31T10:37:00,19,0,5,Feb02,2020,2,2
+,Singapore,2020-02-02T01:03:32,18,0,0,Feb02,2020,2,2
+Hong Kong,Hong Kong,2020-02-02T23:53:02,15,0,0,Feb02,2020,2,2
+,South Korea,2020-02-02T02:23:13,15,0,0,Feb02,2020,2,2
+Qinghai,Mainland China,2020-02-02T05:33:03,11,0,0,Feb02,2020,2,2
+,Germany,2020-02-02T18:03:05,10,0,0,Feb02,2020,2,2
+Taiwan,Taiwan,2020-01-31T15:20:56,10,0,0,Feb02,2020,2,2
+Macau,Macau,2020-02-02T04:23:14,8,0,0,Feb02,2020,2,2
+,Malaysia,2020-01-31T08:15:53,8,0,0,Feb02,2020,2,2
+,France,2020-02-01T01:52:40,6,0,0,Feb02,2020,2,2
+,Vietnam,2020-02-01T07:38:12,6,0,1,Feb02,2020,2,2
+,United Arab Emirates,2020-02-02T05:43:01,5,0,0,Feb02,2020,2,2
+New South Wales,Australia,2020-02-01T18:12:49,4,0,2,Feb02,2020,2,2
+Victoria,Australia,2020-02-01T18:12:49,4,0,0,Feb02,2020,2,2
+Ontario,Canada,2020-02-01T18:12:49,3,0,0,Feb02,2020,2,2
+Queensland,Australia,2020-02-02T22:33:07,2,0,0,Feb02,2020,2,2
+South Australia,Australia,2020-02-02T22:33:07,2,0,0,Feb02,2020,2,2
+,India,2020-02-02T06:03:08,2,0,0,Feb02,2020,2,2
+,Italy,2020-01-31T08:15:53,2,0,0,Feb02,2020,2,2
+,Philippines,2020-02-02T03:33:07,2,1,0,Feb02,2020,2,2
+,Russia,2020-01-31T16:13:45,2,0,0,Feb02,2020,2,2
+,UK,2020-02-01T01:52:40,2,0,0,Feb02,2020,2,2
+"Chicago, IL",US,2020-02-01T19:43:03,2,0,0,Feb02,2020,2,2
+,Cambodia,2020-01-31T08:15:53,1,0,0,Feb02,2020,2,2
+British Columbia,Canada,2020-02-01T18:12:49,1,0,0,Feb02,2020,2,2
+,Finland,2020-01-31T08:15:53,1,0,0,Feb02,2020,2,2
+Tibet,Mainland China,2020-02-01T01:52:40,1,0,0,Feb02,2020,2,2
+,Nepal,2020-01-31T08:15:53,1,0,0,Feb02,2020,2,2
+,Spain,2020-02-01T23:43:02,1,0,0,Feb02,2020,2,2
+,Sri Lanka,2020-01-31T08:15:53,1,0,0,Feb02,2020,2,2
+,Sweden,2020-02-01T02:13:26,1,0,0,Feb02,2020,2,2
+"Boston, MA",US,2020-02-01T19:43:03,1,0,0,Feb02,2020,2,2
+"Los Angeles, CA",US,2020-02-01T19:53:03,1,0,0,Feb02,2020,2,2
+"Orange, CA",US,2020-02-01T19:53:03,1,0,0,Feb02,2020,2,2
+"Santa Clara, CA",US,2020-02-01T19:53:03,1,0,0,Feb02,2020,2,2
+"Seattle, WA",US,2020-02-01T19:43:03,1,0,0,Feb02,2020,2,2
+"Tempe, AZ",US,2020-02-01T19:43:03,1,0,0,Feb02,2020,2,2

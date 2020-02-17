@@ -1,0 +1,71 @@
+Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered,date,year,month,day
+Hubei,Mainland China,2020-02-04T23:43:01,16678,479,522,Feb04,2020,2,4
+Zhejiang,Mainland China,2020-02-04T13:03:07,829,0,62,Feb04,2020,2,4
+Guangdong,Mainland China,2020-02-04T13:03:07,813,0,30,Feb04,2020,2,4
+Henan,Mainland China,2020-02-04T11:53:02,675,2,27,Feb04,2020,2,4
+Hunan,Mainland China,2020-02-04T14:03:03,593,0,31,Feb04,2020,2,4
+Anhui,Mainland China,2020-02-04T05:33:01,480,0,20,Feb04,2020,2,4
+Jiangxi,Mainland China,2020-02-04T14:43:02,476,0,20,Feb04,2020,2,4
+Chongqing,Mainland China,2020-02-04T23:43:01,366,2,9,Feb04,2020,2,4
+Jiangsu,Mainland China,2020-02-04T11:53:02,308,0,12,Feb04,2020,2,4
+Sichuan,Mainland China,2020-02-04T01:43:02,282,1,14,Feb04,2020,2,4
+Shandong,Mainland China,2020-02-04T12:03:04,275,0,11,Feb04,2020,2,4
+Beijing,Mainland China,2020-02-04T08:33:01,228,1,23,Feb04,2020,2,4
+Shanghai,Mainland China,2020-02-04T06:33:02,219,1,12,Feb04,2020,2,4
+Fujian,Mainland China,2020-02-04T12:13:11,194,0,3,Feb04,2020,2,4
+Heilongjiang,Mainland China,2020-02-04T07:43:01,155,2,4,Feb04,2020,2,4
+Shaanxi,Mainland China,2020-02-04T12:33:02,142,0,2,Feb04,2020,2,4
+Guangxi,Mainland China,2020-02-04T05:53:01,139,0,10,Feb04,2020,2,4
+Hebei,Mainland China,2020-02-04T08:53:01,126,1,4,Feb04,2020,2,4
+Yunnan,Mainland China,2020-02-04T23:23:02,122,0,5,Feb04,2020,2,4
+Liaoning,Mainland China,2020-02-04T14:13:08,81,0,2,Feb04,2020,2,4
+Shanxi,Mainland China,2020-02-04T23:23:02,81,0,4,Feb04,2020,2,4
+Hainan,Mainland China,2020-02-04T11:33:03,80,1,5,Feb04,2020,2,4
+Tianjin,Mainland China,2020-02-04T13:33:02,67,0,2,Feb04,2020,2,4
+Guizhou,Mainland China,2020-02-04T10:43:02,58,0,2,Feb04,2020,2,4
+Gansu,Mainland China,2020-02-04T15:43:02,57,0,4,Feb04,2020,2,4
+Jilin,Mainland China,2020-02-04T00:23:05,42,0,1,Feb04,2020,2,4
+Inner Mongolia,Mainland China,2020-02-04T03:03:07,35,0,1,Feb04,2020,2,4
+Ningxia,Mainland China,2020-02-04T02:13:18,34,0,1,Feb04,2020,2,4
+Xinjiang,Mainland China,2020-02-04T01:33:01,29,0,0,Feb04,2020,2,4
+,Thailand,2020-02-04T15:33:03,25,0,5,Feb04,2020,2,4
+,Singapore,2020-02-04T15:33:03,24,0,0,Feb04,2020,2,4
+,Japan,2020-02-04T16:43:03,22,0,1,Feb04,2020,2,4
+Hong Kong,Hong Kong,2020-02-04T09:03:02,17,1,0,Feb04,2020,2,4
+,South Korea,2020-02-04T15:33:03,16,0,0,Feb04,2020,2,4
+Qinghai,Mainland China,2020-02-04T01:33:01,15,0,0,Feb04,2020,2,4
+,Germany,2020-02-03T20:53:02,12,0,0,Feb04,2020,2,4
+Taiwan,Taiwan,2020-02-04T14:53:02,11,0,0,Feb04,2020,2,4
+Macau,Macau,2020-02-04T04:43:02,10,0,0,Feb04,2020,2,4
+,Malaysia,2020-02-04T07:33:02,10,0,0,Feb04,2020,2,4
+,Vietnam,2020-02-03T21:43:02,8,0,1,Feb04,2020,2,4
+,France,2020-02-01T01:52:40,6,0,0,Feb04,2020,2,4
+,United Arab Emirates,2020-02-02T05:43:01,5,0,0,Feb04,2020,2,4
+New South Wales,Australia,2020-02-01T18:12:49,4,0,2,Feb04,2020,2,4
+Victoria,Australia,2020-02-01T18:12:49,4,0,0,Feb04,2020,2,4
+Queensland,Australia,2020-02-04T16:53:03,3,0,0,Feb04,2020,2,4
+,India,2020-02-03T21:43:02,3,0,0,Feb04,2020,2,4
+South Australia,Australia,2020-02-02T22:33:07,2,0,0,Feb04,2020,2,4
+"Toronto, ON",Canada,2020-02-04T00:13:06,2,0,0,Feb04,2020,2,4
+,Italy,2020-01-31T08:15:53,2,0,0,Feb04,2020,2,4
+,Philippines,2020-02-02T03:33:07,2,1,0,Feb04,2020,2,4
+,Russia,2020-01-31T16:13:45,2,0,0,Feb04,2020,2,4
+,UK,2020-02-01T01:52:40,2,0,0,Feb04,2020,2,4
+"Chicago, IL",US,2020-02-01T19:43:03,2,0,0,Feb04,2020,2,4
+"San Benito, CA",US,2020-02-03T03:53:02,2,0,0,Feb04,2020,2,4
+"Santa Clara, CA",US,2020-02-03T00:43:02,2,0,0,Feb04,2020,2,4
+,Belgium,2020-02-04T15:43:02,1,0,0,Feb04,2020,2,4
+,Cambodia,2020-01-31T08:15:53,1,0,0,Feb04,2020,2,4
+British Columbia,Canada,2020-02-01T18:12:49,1,0,0,Feb04,2020,2,4
+"London, ON",Canada,2020-02-04T00:03:11,1,0,0,Feb04,2020,2,4
+,Finland,2020-01-31T08:15:53,1,0,0,Feb04,2020,2,4
+Tibet,Mainland China,2020-02-01T01:52:40,1,0,0,Feb04,2020,2,4
+,Nepal,2020-01-31T08:15:53,1,0,0,Feb04,2020,2,4
+,Spain,2020-02-01T23:43:02,1,0,0,Feb04,2020,2,4
+,Sri Lanka,2020-01-31T08:15:53,1,0,0,Feb04,2020,2,4
+,Sweden,2020-02-01T02:13:26,1,0,0,Feb04,2020,2,4
+"Boston, MA",US,2020-02-01T19:43:03,1,0,0,Feb04,2020,2,4
+"Los Angeles, CA",US,2020-02-01T19:53:03,1,0,0,Feb04,2020,2,4
+"Orange, CA",US,2020-02-01T19:53:03,1,0,0,Feb04,2020,2,4
+"Seattle, WA",US,2020-02-01T19:43:03,1,0,0,Feb04,2020,2,4
+"Tempe, AZ",US,2020-02-01T19:43:03,1,0,0,Feb04,2020,2,4
