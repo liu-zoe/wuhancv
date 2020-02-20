@@ -39,13 +39,28 @@ sheetnames=[
     "02-09-2020","02-10-2020","02-11-2020",
     "02-12-2020","02-13-2020","02-14-2020",
     "02-15-2020","02-16-2020","02-17-2020",
-    "02-18-2020",
+    "02-18-2020","02-19-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
 for dat in df:
     dates.append(dat['date'][0])
 del dat
+
+#skip=1
+#newdates=[]
+#newdf=[]
+#i=len(dates)-1
+#while (i>=0):
+#    newdates.append(dates[i])
+#    newdf.append(df[i])
+#    i-=(skip+1)
+#newdates.reverse()
+#newdf.reverse()
+#dates=newdates
+#df=newdf
+#del skip, i, newdates, newdf
+
 latlnt=pd.read_excel(os.path.join(APP_PATH, 'data/latlnt.xlsx'), usecols='A:D')
 latlnt=latlnt.fillna(value={'State':''})
 
