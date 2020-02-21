@@ -39,7 +39,7 @@ sheetnames=[
     "02-09-2020","02-10-2020","02-11-2020",
     "02-12-2020","02-13-2020","02-14-2020",
     "02-15-2020","02-16-2020","02-17-2020",
-    "02-18-2020","02-19-2020",
+    "02-18-2020","02-19-2020","02-20-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -47,19 +47,20 @@ for dat in df:
     dates.append(dat['date'][0])
 del dat
 
-#skip=1
-#newdates=[]
-#newdf=[]
-#i=len(dates)-1
-#while (i>=0):
-#    newdates.append(dates[i])
-#    newdf.append(df[i])
-#    i-=(skip+1)
-#newdates.reverse()
-#newdf.reverse()
-#dates=newdates
-#df=newdf
-#del skip, i, newdates, newdf
+#Skip some dates to reduce the clutter
+skip=1
+newdates=[]
+newdf=[]
+i=len(dates)-1
+while (i>=0):
+    newdates.append(dates[i])
+    newdf.append(df[i])
+    i-=(skip+1)
+newdates.reverse()
+newdf.reverse()
+dates=newdates
+df=newdf
+del skip, i, newdates, newdf
 
 latlnt=pd.read_excel(os.path.join(APP_PATH, 'data/latlnt.xlsx'), usecols='A:D')
 latlnt=latlnt.fillna(value={'State':''})
@@ -218,7 +219,10 @@ app.layout = html.Div(
                                             lat = df[0]['lat'],
                                             lon = df[0]['long'],
                                             mode='markers',
-                                            hovertext =df[0]['Location']+ '<br> Confirmed:' + df[0]['Confirmed'].astype(str),
+                                            hovertext =df[0]['Location']\
+                                            + '<br> Confirmed:' + df[0]['Confirmed'].astype(str)\
+                                            + '<br> Deaths:' + df[0]['Deaths'].astype(str)\
+                                            + '<br> Recovered:' + df[0]['Recovered'].astype(str),
                                             marker = go.scattergeo.Marker(
                                                 color = markercl,
                                                 size = df[0]['conf'],
@@ -365,7 +369,9 @@ def update_bubble(date_index):
             lat = filtered_df['lat'],
             lon = filtered_df['long'],
             mode='markers',
-            hovertext =filtered_df['Location']+ '<br> Confirmed:' + filtered_df['Confirmed'].astype(str),
+            hovertext =filtered_df['Location']+ '<br> Confirmed:' + filtered_df['Confirmed'].astype(str)\
+                                              + '<br> Deaths:' + filtered_df['Deaths'].astype(str)\
+                                              + '<br> Recovered:' + filtered_df['Recovered'].astype(str),
             marker = go.scattergeo.Marker(
                     color = markercl,
                     size = filtered_df['conf'],
