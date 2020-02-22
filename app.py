@@ -40,6 +40,7 @@ sheetnames=[
     "02-12-2020","02-13-2020","02-14-2020",
     "02-15-2020","02-16-2020","02-17-2020",
     "02-18-2020","02-19-2020","02-20-2020",
+    "02-21-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -86,7 +87,8 @@ def cleandat(
                     np.where( (indat['State']=='Macau') & (indat['Country']=='Macau'), '',
                     np.where( indat['State']=='Cruise Ship', 'Diamond Princess cruise ship',
                     np.where(indat['State']=='Chicago', 'Chicago, IL',
-                    indat['State'])))))
+                    np.where( (indat['State']=='None') & (indat['Country']=='Lebanon'), '',
+                    indat['State']))))))
     indat['State']=indat['State'].str.strip()
     indat['Location']=np.where(indat['State']=='', indat['Country'],\
         indat['Country']+'-'+indat['State'])
