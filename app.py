@@ -22,8 +22,8 @@ app = dash.Dash(
     __name__,
     meta_tags=[
         {"name": "viewport", "content": "width=device-width, initial-scale=1.0"},
-        {"name": "description", "content": "A Time Lapse of the 2019-nCoV Outbreak"}, 
-        {"name": "news_keywords", "content": "2019-nCoV, Novel Coronavirus, Novel CoronaVirus, Wuhan Coronavirus"}
+        {"name": "description", "content": "A Time Lapse of the COVID-19 Outbreak"}, 
+        {"name": "news_keywords", "content": "COVID-19, Novel Coronavirus, Novel CoronaVirus, Wuhan Coronavirus"}
         ],
     )
 server=app.server
@@ -127,7 +127,7 @@ plotly_fonts=["Arial, sans-serif", "Balto, sans-serif", "Courier New, monospace"
 plotfont=plotly_fonts[10]
 
 #----------------------------------App Title------------------------------------#
-app.title='2019-nCoV Time Lapse'
+app.title='COVID-19 Time Lapse'
 #----------------------------------App Layout-----------------------------------#
 app.layout = html.Div(
     id="root",
