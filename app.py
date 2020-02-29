@@ -42,7 +42,7 @@ sheetnames=[
     "02-18-2020","02-19-2020","02-20-2020",
     "02-21-2020","02-22-2020","02-23-2020",
     "02-24-2020","02-25-2020","02-26-2020",
-    "02-27-2020",
+    "02-27-2020","02-28-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -80,6 +80,8 @@ def cleandat(
     indat['Confirmed']=indat['Confirmed'].astype('int64')
     indat['Recovered']=indat['Recovered'].astype('int64')
     indat['Deaths']=indat['Deaths'].astype('int64')
+    indexNames=indat[(indat['Confirmed']==0)&(indat['Recovered']==0)&(indat['Deaths']==0)].index
+    indat.drop(indexNames , inplace=True)
     indat['Country']=np.where(indat['Country']=='US', "United States", 
                                 np.where(indat['Country']=='Mainland China', "China", 
                                 indat['Country']))
