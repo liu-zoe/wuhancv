@@ -1,53 +1,53 @@
-Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered,date,year,month,day
-Hubei,Mainland China,1/28/2020 23:00,3554,125.0,80.0,Jan28,2020,1,28
-Guangdong,Mainland China,1/28/2020 23:00,207,,4.0,Jan28,2020,1,28
-Zhejiang,Mainland China,1/28/2020 23:00,173,,3.0,Jan28,2020,1,28
-Henan,Mainland China,1/28/2020 23:00,168,1.0,,Jan28,2020,1,28
-Hunan,Mainland China,1/28/2020 23:00,143,,,Jan28,2020,1,28
-Chongqing,Mainland China,1/28/2020 23:00,132,,,Jan28,2020,1,28
-Jiangxi,Mainland China,1/28/2020 23:00,109,,3.0,Jan28,2020,1,28
-Anhui,Mainland China,1/28/2020 23:00,106,,,Jan28,2020,1,28
-Shandong,Mainland China,1/28/2020 23:00,95,,,Jan28,2020,1,28
-Beijing,Mainland China,1/28/2020 23:00,91,1.0,4.0,Jan28,2020,1,28
-Sichuan,Mainland China,1/28/2020 23:00,90,,,Jan28,2020,1,28
-Fujian,Mainland China,1/28/2020 23:00,80,,,Jan28,2020,1,28
-Jiangsu,Mainland China,1/28/2020 23:00,70,,1.0,Jan28,2020,1,28
-Shanghai,Mainland China,1/28/2020 23:00,66,1.0,4.0,Jan28,2020,1,28
-Guangxi,Mainland China,1/28/2020 23:00,51,,2.0,Jan28,2020,1,28
-Shaanxi,Mainland China,1/28/2020 23:00,46,,,Jan28,2020,1,28
-Yunnan,Mainland China,1/28/2020 23:00,44,,,Jan28,2020,1,28
-Hainan,Mainland China,1/28/2020 23:00,40,1.0,,Jan28,2020,1,28
-Liaoning,Mainland China,1/28/2020 23:00,34,,,Jan28,2020,1,28
-Hebei,Mainland China,1/28/2020 23:00,33,1.0,,Jan28,2020,1,28
-Heilongjiang,Mainland China,1/28/2020 23:00,33,1.0,,Jan28,2020,1,28
-Shanxi,Mainland China,1/28/2020 23:00,27,,,Jan28,2020,1,28
-Tianjin,Mainland China,1/28/2020 23:00,24,,,Jan28,2020,1,28
-Gansu,Mainland China,1/28/2020 23:00,19,,,Jan28,2020,1,28
-Inner Mongolia,Mainland China,1/28/2020 23:00,15,,,Jan28,2020,1,28
-Ningxia,Mainland China,1/28/2020 23:00,11,,,Jan28,2020,1,28
-Xinjiang,Mainland China,1/28/2020 23:00,10,,,Jan28,2020,1,28
-Guizhou,Mainland China,1/28/2020 23:00,9,,,Jan28,2020,1,28
-Jilin,Mainland China,1/28/2020 23:00,8,,,Jan28,2020,1,28
-Taiwan,Taiwan,1/28/2020 23:00,8,,,Jan28,2020,1,28
-Hong Kong,Hong Kong,1/28/2020 23:00,8,,,Jan28,2020,1,28
-Macau,Macau,1/28/2020 23:00,7,,,Jan28,2020,1,28
-Qinghai,Mainland China,1/28/2020 23:00,6,,,Jan28,2020,1,28
-Washington,US,1/28/2020 23:00,1,,,Jan28,2020,1,28
-Illinois,US,1/28/2020 23:00,1,,,Jan28,2020,1,28
-California,US,1/28/2020 23:00,2,,,Jan28,2020,1,28
-Arizona,US,1/28/2020 23:00,1,,,Jan28,2020,1,28
-,Japan,1/28/2020 23:00,7,,1.0,Jan28,2020,1,28
-,Thailand,1/28/2020 23:00,14,,5.0,Jan28,2020,1,28
-,South Korea,1/28/2020 23:00,4,,,Jan28,2020,1,28
-,Singapore ,1/28/2020 23:00,7,,,Jan28,2020,1,28
-,Vietnam,1/28/2020 23:00,2,,,Jan28,2020,1,28
-,France,1/28/2020 23:00,4,,,Jan28,2020,1,28
-,Nepal,1/28/2020 23:00,1,,,Jan28,2020,1,28
-,Malaysia ,1/28/2020 23:00,4,,,Jan28,2020,1,28
-Ontario,Canada,1/28/2020 23:00,1,,,Jan28,2020,1,28
-British Columbia,Canada,1/28/2020 23:00,1,,,Jan28,2020,1,28
-,Cambodia,1/28/2020 23:00,1,,,Jan28,2020,1,28
-,Sri Lanka,1/28/2020 23:00,1,,,Jan28,2020,1,28
-New South Wales,Australia,1/28/2020 23:00,4,,,Jan28,2020,1,28
-Victoria,Australia,1/28/2020 23:00,1,,,Jan28,2020,1,28
-Bavaria,Germany,1/28/2020 23:00,4,,,Jan28,2020,1,28
+Province/State,Country/Region,Last Update,Confirmed,Deaths,Recovered,date,year,month,day,Latitude,Longitude
+Hubei,Mainland China,1/28/20 23:00,3554,125.0,80.0,Jan28,2020,1,28,30.9756,112.2707
+Guangdong,Mainland China,1/28/20 23:00,207,,4.0,Jan28,2020,1,28,23.3417,113.4244
+Zhejiang,Mainland China,1/28/20 23:00,173,,3.0,Jan28,2020,1,28,29.1832,120.0934
+Henan,Mainland China,1/28/20 23:00,168,1.0,,Jan28,2020,1,28,33.882,113.614
+Hunan,Mainland China,1/28/20 23:00,143,,,Jan28,2020,1,28,27.6104,111.7088
+Chongqing,Mainland China,1/28/20 23:00,132,,,Jan28,2020,1,28,30.0572,107.874
+Jiangxi,Mainland China,1/28/20 23:00,109,,3.0,Jan28,2020,1,28,27.614,115.7221
+Anhui,Mainland China,1/28/20 23:00,106,,,Jan28,2020,1,28,31.8257,117.2264
+Shandong,Mainland China,1/28/20 23:00,95,,,Jan28,2020,1,28,36.3427,118.1498
+Beijing,Mainland China,1/28/20 23:00,91,1.0,4.0,Jan28,2020,1,28,40.1824,116.4142
+Sichuan,Mainland China,1/28/20 23:00,90,,,Jan28,2020,1,28,30.6171,102.7103
+Fujian,Mainland China,1/28/20 23:00,80,,,Jan28,2020,1,28,26.0789,117.9874
+Jiangsu,Mainland China,1/28/20 23:00,70,,1.0,Jan28,2020,1,28,32.9711,119.455
+Shanghai,Mainland China,1/28/20 23:00,66,1.0,4.0,Jan28,2020,1,28,31.202,121.4491
+Guangxi,Mainland China,1/28/20 23:00,51,,2.0,Jan28,2020,1,28,23.8298,108.7881
+Shaanxi,Mainland China,1/28/20 23:00,46,,,Jan28,2020,1,28,35.1917,108.8701
+Yunnan,Mainland China,1/28/20 23:00,44,,,Jan28,2020,1,28,24.974,101.487
+Hainan,Mainland China,1/28/20 23:00,40,1.0,,Jan28,2020,1,28,19.1959,109.7453
+Liaoning,Mainland China,1/28/20 23:00,34,,,Jan28,2020,1,28,41.2956,122.6085
+Hebei,Mainland China,1/28/20 23:00,33,1.0,,Jan28,2020,1,28,38.0428,114.5149
+Heilongjiang,Mainland China,1/28/20 23:00,33,1.0,,Jan28,2020,1,28,47.862,127.7615
+Shanxi,Mainland China,1/28/20 23:00,27,,,Jan28,2020,1,28,37.5777,112.2922
+Tianjin,Mainland China,1/28/20 23:00,24,,,Jan28,2020,1,28,39.3054,117.323
+Gansu,Mainland China,1/28/20 23:00,19,,,Jan28,2020,1,28,36.0611,103.8343
+Inner Mongolia,Mainland China,1/28/20 23:00,15,,,Jan28,2020,1,28,44.0935,113.9448
+Ningxia,Mainland China,1/28/20 23:00,11,,,Jan28,2020,1,28,37.2692,106.1655
+Xinjiang,Mainland China,1/28/20 23:00,10,,,Jan28,2020,1,28,41.1129,85.2401
+Guizhou,Mainland China,1/28/20 23:00,9,,,Jan28,2020,1,28,26.8154,106.8748
+Jilin,Mainland China,1/28/20 23:00,8,,,Jan28,2020,1,28,43.6661,126.1923
+Taiwan,Taiwan,1/28/20 23:00,8,,,Jan28,2020,1,28,23.7,121.0
+Hong Kong,Hong Kong,1/28/20 23:00,8,,,Jan28,2020,1,28,22.3,114.2
+Macau,Macau,1/28/20 23:00,7,,,Jan28,2020,1,28,22.1667,113.55
+Qinghai,Mainland China,1/28/20 23:00,6,,,Jan28,2020,1,28,35.7452,95.9956
+Washington,US,1/28/20 23:00,1,,,Jan28,2020,1,28,47.608013,-122.335167
+Illinois,US,1/28/20 23:00,1,,,Jan28,2020,1,28,40.6331,-89.3985
+California,US,1/28/20 23:00,2,,,Jan28,2020,1,28,36.7783,-119.4179
+Arizona,US,1/28/20 23:00,1,,,Jan28,2020,1,28,34.048927,-111.093735
+,Japan,1/28/20 23:00,7,,1.0,Jan28,2020,1,28,36.0,138.0
+,Thailand,1/28/20 23:00,14,,5.0,Jan28,2020,1,28,15.0,101.0
+,South Korea,1/28/20 23:00,4,,,Jan28,2020,1,28,36.0,128.0
+,Singapore,1/28/20 23:00,7,,,Jan28,2020,1,28,1.2833,103.8333
+,Vietnam,1/28/20 23:00,2,,,Jan28,2020,1,28,16.0,108.0
+,France,1/28/20 23:00,4,,,Jan28,2020,1,28,47.0,2.0
+,Nepal,1/28/20 23:00,1,,,Jan28,2020,1,28,28.1667,84.25
+,Malaysia,1/28/20 23:00,4,,,Jan28,2020,1,28,2.5,112.5
+Ontario,Canada,1/28/20 23:00,1,,,Jan28,2020,1,28,51.2538,-85.3232
+British Columbia,Canada,1/28/20 23:00,1,,,Jan28,2020,1,28,49.2827,-123.1207
+,Cambodia,1/28/20 23:00,1,,,Jan28,2020,1,28,11.55,104.9167
+,Sri Lanka,1/28/20 23:00,1,,,Jan28,2020,1,28,7.0,81.0
+New South Wales,Australia,1/28/20 23:00,4,,,Jan28,2020,1,28,-33.8688,151.2093
+Victoria,Australia,1/28/20 23:00,1,,,Jan28,2020,1,28,-37.8136,144.9631
+Bavaria,Germany,1/28/20 23:00,4,,,Jan28,2020,1,28,48.7904,11.4979

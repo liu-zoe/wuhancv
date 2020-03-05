@@ -44,6 +44,7 @@ sheetnames=[
     "02-24-2020","02-25-2020","02-26-2020",
     "02-27-2020","02-28-2020","02-29-2020",
     "03-01-2020","03-02-2020","03-03-2020",
+    "03-04-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -73,9 +74,12 @@ def cleandat(
     indat,
 ):
     indat=indat[['Province/State', 'Country/Region', 'Last Update', \
-        'Confirmed', 'Deaths', 'Recovered','date'
+        'Confirmed', 'Deaths', 'Recovered', 'Latitude','Longitude',\
+        'date', 'year', 'month', 'day'
     ]]
-    indat.columns=['State','Country','Last Update','Confirmed','Deaths','Recovered','date']
+    indat.columns=['State','Country','Last Update',\
+    'Confirmed','Deaths','Recovered','lat', 'long',\
+    'date','year', 'month', 'day']
     indat=indat.fillna(value={'State':'', 'Confirmed':0, \
         'Deaths':0, 'Recovered':0,})
     indat['Confirmed']=indat['Confirmed'].astype('int64')
@@ -83,10 +87,11 @@ def cleandat(
     indat['Deaths']=indat['Deaths'].astype('int64')
     indexNames=indat[(indat['Confirmed']==0)&(indat['Recovered']==0)&(indat['Deaths']==0)].index
     indat.drop(indexNames , inplace=True)
+    indat['Country']=indat['Country'].str.strip()
+    indat['State']=indat['State'].str.strip()    
     indat['Country']=np.where(indat['Country']=='US', "United States", 
                                 np.where(indat['Country']=='Mainland China', "China", 
                                 indat['Country']))
-    indat['Country']=indat['Country'].str.strip()
     indat['State']=np.where( (indat['State']=='Hong Kong') & (indat['Country']=='Hong Kong'), '',
                     np.where( (indat['State']=='Taiwan') & (indat['Country']=='Taiwan'), '',
                     np.where( (indat['State']=='Macau') & (indat['Country']=='Macau'), '',
@@ -94,10 +99,8 @@ def cleandat(
                     np.where(indat['State']=='Chicago', 'Chicago, IL',
                     np.where( (indat['State']=='None') & (indat['Country'].isin(['Lebanon','Iraq','Austria'])), '',
                     indat['State']))))))
-    indat['State']=indat['State'].str.strip()
     indat['Location']=np.where(indat['State']=='', indat['Country'],\
         indat['Country']+'-'+indat['State'])
-    indat=pd.merge(indat, latlnt, how='left', on=['Country','State'])
     indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*13 if x>0 else 0)
     return indat
 df=list(map(lambda x: cleandat(x), df))
