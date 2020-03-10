@@ -45,7 +45,7 @@ sheetnames=[
     "02-27-2020","02-28-2020","02-29-2020",
     "03-01-2020","03-02-2020","03-03-2020",
     "03-04-2020","03-05-2020","03-06-2020",
-    "03-07-2020","03-08-2020",
+    "03-07-2020","03-08-2020","03-09-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -115,8 +115,11 @@ cum['recover_rate']=round(100*(cum['Recovered']/cum['Confirmed']),2)
 vars=['Confirmed','Deaths','Recovered', 'death_rate','recover_rate']
 yaxislab=['Confirmed Cases', 'Deaths Cases', 'Recovered Cases',
 'Death Rates (%)', 'Recovered Rates (%)']
-charttitle=['Number of Confirmed Cases', 'Number of Deaths Cases', 
-'Number of Recovered Cases', 'Deaths Rates', 'Recovered Rates']
+charttitle=['Number of Confirmed Cases Across Time', 
+'Number of Deaths Cases Across Time', 
+'Number of Recovered Cases Across Time', 
+'Estimated Deaths Rates Across Time (Number of deaths/Number of confirmed cases)', 
+'Recovered Rates Across Time']
 # Create a color scheme
 orcl3=cl.scales['3']['seq']['Oranges']
 grcl3=cl.scales['3']['seq']['Greys']
@@ -447,7 +450,7 @@ def move_frames(n_intervals, play_timestamp, pause_timestamp):
     ],
 )
 def update_chart_title(chart_dropdown):
-    return charttitle[chart_dropdown]+" Across Time"
+    return charttitle[chart_dropdown]
 
 @app.callback(
     Output("selected-data", "figure"),
