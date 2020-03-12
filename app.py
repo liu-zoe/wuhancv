@@ -46,7 +46,7 @@ sheetnames=[
     "03-01-2020","03-02-2020","03-03-2020",
     "03-04-2020","03-05-2020","03-06-2020",
     "03-07-2020","03-08-2020","03-09-2020",
-    "03-10-2020",
+    "03-10-2020","03-11-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -119,7 +119,7 @@ yaxislab=['Confirmed Cases', 'Deaths Cases', 'Recovered Cases',
 charttitle=['Number of Confirmed Cases Across Time', 
 'Number of Deaths Cases Across Time', 
 'Number of Recovered Cases Across Time', 
-'Estimated Deaths Rates Across Time (Number of deaths/Number of confirmed cases)', 
+'Deaths Rates* Across Time', 
 'Recovered Rates Across Time']
 # Create a color scheme
 orcl3=cl.scales['3']['seq']['Oranges']
@@ -277,31 +277,50 @@ app.layout = html.Div(
                                 children="Select Type of Cases:", 
                                 style={'textAlign': 'left',},
                         ), 
-                        dcc.Dropdown(
-                            options=[
-                                {
-                                    "label": "Confirmed Cases",
-                                    "value":0,
-                                },
-                                {
-                                    "label": "Deaths Cases",
-                                    "value":1,
-                                },
-                                {
-                                    "label": "Recovered Cases", 
-                                    "value":2,
-                                },
-                                {
-                                    "label": "Deaths Rates",
-                                    "value":3,
-                                },
-                                {
-                                    "label": "Recovered Rates",
-                                    "value":4,
-                                }
+                        html.Div(
+                            id="drop-downs",
+                            children=[
+                                dcc.Dropdown(
+                                    options=[
+                                        {
+                                            "label":"World",
+                                            "value":"World",
+                                        },
+                                        {
+                                            "label":"United States",
+                                            "value":"United States"
+                                        },
+                                    ],
+                                    value="World",
+                                    id="country-dropdown",
+                                ),
+                                dcc.Dropdown(
+                                    options=[
+                                        {
+                                            "label": "Confirmed Cases",
+                                            "value":0,
+                                        },
+                                        {
+                                            "label": "Deaths Cases",
+                                            "value":1,
+                                        },
+                                        {
+                                            "label": "Recovered Cases", 
+                                            "value":2,
+                                        },
+                                        {
+                                            "label": "Deaths Rates",
+                                            "value":3,
+                                        },
+                                        {
+                                            "label": "Recovered Rates",
+                                            "value":4,
+                                        }
+                                    ],
+                                    value=0,
+                                    id="chart-dropdown",
+                                ),
                             ],
-                            value=0,
-                            id="chart-dropdown",
                         ),
                         html.H5("Number of Confirmed Cases Across Time",
                                 id="lineplot-title",
@@ -344,6 +363,10 @@ app.layout = html.Div(
                                 ),
                             ),
                         ),
+                        html.P("",
+                                id="lineplot-footnote",
+                                style={'textAlign': 'left',},
+                                ),
                     ],
                 ),
             ],
@@ -445,25 +468,46 @@ def move_frames(n_intervals, play_timestamp, pause_timestamp):
     return slider_value, max_intervals, int_disabled
 #~~~~~~~~~~~~~~~~~~~~~Line Plot~~~~~~~~~~~~~~~~~~~~#
 @app.callback(
-    Output("lineplot-title", "children"), 
+    [
+        Output("lineplot-title", "children"), 
+        Output("lineplot-footnote","children")
+    ],
     [
         Input("chart-dropdown", "value"),
     ],
 )
 def update_chart_title(chart_dropdown):
-    return charttitle[chart_dropdown]
+    if chart_dropdown==3:
+        footnote="*Death rates are estimated by dividing number of death cases\
+            by the number of confirmed cases. Due to the delay of testing or reporting\
+                infection cases, actual death rate would be lower."
+    else:
+        footnote=""
+    return charttitle[chart_dropdown],footnote
 
 @app.callback(
     Output("selected-data", "figure"),
     [
         Input("chart-dropdown","value"),
+        Input("country-dropdown","value"),
     ],
 )
-def display_selected_data(chart_dropdown):
+def display_selected_data(chart_dropdown, country_dropdown):
+    if country_dropdown=="World":
+        cum0=cum
+    else:
+        df0=[]
+        for dataframe in df:
+            df0.append(dataframe[dataframe['Country']==country_dropdown])
+        cum0=pd.DataFrame(map(lambda x: [x.Confirmed.sum(), x.Deaths.sum(), x.Recovered.sum(),], df0))
+        cum0['date']=dates
+        cum0.columns=['Confirmed','Deaths','Recovered','date']
+        cum0['death_rate']=round(100*(cum0['Deaths']/cum0['Confirmed']),2)
+        cum0['recover_rate']=round(100*(cum0['Recovered']/cum0['Confirmed']),2)
     fig=go.Figure(
         data=go.Scatter(
-            x=cum['date'],
-            y=cum[vars[chart_dropdown]],
+            x=cum0['date'],
+            y=cum0[vars[chart_dropdown]],
             name='',
             mode='lines+markers',
             hovertemplate='%{x}'+'<br>'+yaxislab[chart_dropdown]+':%{y}',
