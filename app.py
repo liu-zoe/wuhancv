@@ -47,30 +47,13 @@ sheetnames=[
     "03-04-2020","03-05-2020","03-06-2020",
     "03-07-2020","03-08-2020","03-09-2020",
     "03-10-2020","03-11-2020","03-12-2020",
+    "03-13-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
 for dat in df:
     dates.append(dat['date'][0])
 del dat
-
-#Skip some dates to reduce the clutter
-skip=1
-newdates=[]
-newdf=[]
-i=len(dates)-1
-while (i>=0):
-    newdates.append(dates[i])
-    newdf.append(df[i])
-    i-=(skip+1)
-newdates.reverse()
-newdf.reverse()
-dates=newdates
-df=newdf
-del skip, i, newdates, newdf
-
-latlnt=pd.read_excel(os.path.join(APP_PATH, 'data/latlnt.xlsx'), usecols='A:D')
-latlnt=latlnt.fillna(value={'State':''})
 
 def cleandat(
     indat,
@@ -92,8 +75,17 @@ def cleandat(
     indat['Country']=indat['Country'].str.strip()
     indat['State']=indat['State'].str.strip()    
     indat['Country']=np.where(indat['Country']=='US', "United States", 
-                                np.where(indat['Country']=='Mainland China', "China", 
-                                indat['Country']))
+                                np.where(indat['Country']=='China', 'Mainland China',
+                                np.where(indat['Country']=='Hong Kong SAR', 'Hong Kong',
+                                np.where(indat['Country']=='Macao SAR', 'Macau',
+                                np.where(indat['Country']=='Iran (Islamic Republic of)', 'Iran', 
+                                np.where(indat['Country'].isin(['Korea, South','Republic of Korea']), 'South Korea',
+                                np.where(indat['Country'].isin(['Taiwan*','Taipei and environs']), 'Taiwan',
+                                np.where(indat['Country'].isin(['Russian Federation']), 'Russia',
+                                np.where(indat['Country'].isin(['UK']), 'United Kingdom',
+                                np.where(indat['Country'].isin(['Ivory Coast']), "Cote d'Ivoire",
+                                np.where(indat['Country'].isin(['Viet Nam']), 'Vietnam',
+                                indat['Country'])))))))))))
     indat['State']=np.where( (indat['State']=='Hong Kong') & (indat['Country']=='Hong Kong'), '',
                     np.where( (indat['State']=='Taiwan') & (indat['Country']=='Taiwan'), '',
                     np.where( (indat['State']=='Macau') & (indat['Country']=='Macau'), '',
@@ -106,6 +98,21 @@ def cleandat(
     indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*13 if x>0 else 0)
     return indat
 df=list(map(lambda x: cleandat(x), df))
+
+#Create a subset of all dates to limit the clutter on bubblemap timetrack
+skip=1
+newdates=[]
+newdf=[]
+i=len(dates)-1
+while (i>=0):
+    newdates.append(dates[i])
+    newdf.append(df[i])
+    i-=(skip+1)
+newdates.reverse()
+newdf.reverse()
+#dates=newdates
+#df=newdf
+del skip, i
 
 # Create a dataset with cumulated cases by date
 cum=pd.DataFrame(map(lambda x: [x.Confirmed.sum(), x.Deaths.sum(), x.Recovered.sum(),], df))
@@ -207,14 +214,14 @@ app.layout = html.Div(
                                 dcc.Slider(
                                     id="date-slider",
                                     min=0, 
-                                    max=len(dates)-1,
+                                    max=len(newdates)-1,
                                     value=0,
                                     marks={
                                         str(date_ord):{
-                                            "label":dates[date_ord],
+                                            "label":newdates[date_ord],
                                             "style": {"transform": "rotate(45deg)"}
                                         } 
-                                        for date_ord in range(len(dates))
+                                        for date_ord in range(len(newdates))
                                     },
                                 ),
                             ],
@@ -231,16 +238,16 @@ app.layout = html.Div(
                                     id="country-bubble", 
                                     figure = go.Figure(
                                         data=go.Scattergeo(
-                                            lat = df[0]['lat'],
-                                            lon = df[0]['long'],
+                                            lat = newdf[0]['lat'],
+                                            lon = newdf[0]['long'],
                                             mode='markers',
-                                            hovertext =df[0]['Location']\
-                                            + '<br> Confirmed:' + df[0]['Confirmed'].astype(str)\
-                                            + '<br> Deaths:' + df[0]['Deaths'].astype(str)\
-                                            + '<br> Recovered:' + df[0]['Recovered'].astype(str),
+                                            hovertext =newdf[0]['Location']\
+                                            + '<br> Confirmed:' + newdf[0]['Confirmed'].astype(str)\
+                                            + '<br> Deaths:' + newdf[0]['Deaths'].astype(str)\
+                                            + '<br> Recovered:' + newdf[0]['Recovered'].astype(str),
                                             marker = go.scattergeo.Marker(
                                                 color = markercl,
-                                                size = df[0]['conf'],
+                                                size = newdf[0]['conf'],
                                             ),
                                             opacity=0.85,
                                         ),
@@ -274,7 +281,7 @@ app.layout = html.Div(
                     id="graph-container",
                     children=[
                         html.P(id="chart-selector", 
-                                children="Select Type of Cases:", 
+                                children="Select Country and Type of Cases:", 
                                 style={'textAlign': 'left',},
                         ), 
                         html.Div(
@@ -288,7 +295,27 @@ app.layout = html.Div(
                                         },
                                         {
                                             "label":"United States",
-                                            "value":"United States"
+                                            "value":"United States",
+                                        },
+                                        {
+                                            "label":"Mainland China",
+                                            "value":"Mainland China",
+                                        },
+                                        {
+                                            "label":"South Korea",
+                                            "value":"South Korea",
+                                        },
+                                        {
+                                            "label":"Italy",
+                                            "value":"Italy",
+                                        },
+                                        {
+                                            "label":"Iran",
+                                            "value":"Iran",
+                                        },
+                                        {
+                                            "label":"Spain",
+                                            "value":"Spain",
                                         },
                                     ],
                                     value="World",
@@ -400,7 +427,7 @@ app.layout = html.Div(
 )
 
 def update_bubble(date_index):
-    filtered_df=df[date_index]
+    filtered_df=newdf[date_index]
 
     fig = go.Figure(
         data=go.Scattergeo(
@@ -458,11 +485,11 @@ def move_frames(n_intervals, play_timestamp, pause_timestamp):
     if (play_timestamp==-1) & (pause_timestamp==-1):
         return 0, 0, True
     elif  (play_timestamp>pause_timestamp):
-        slider_value=(n_intervals+1)%(len(dates))
+        slider_value=(n_intervals+1)%(len(newdates))
         max_intervals=-1
         int_disabled=False
     elif (pause_timestamp>play_timestamp):
-        slider_value=(n_intervals+1)%(len(dates))
+        slider_value=(n_intervals+1)%(len(newdates))
         max_intervals=0
         int_disabled=False
     return slider_value, max_intervals, int_disabled
@@ -504,10 +531,14 @@ def display_selected_data(chart_dropdown, country_dropdown):
         cum0.columns=['Confirmed','Deaths','Recovered','date']
         cum0['death_rate']=round(100*(cum0['Deaths']/cum0['Confirmed']),2)
         cum0['recover_rate']=round(100*(cum0['Recovered']/cum0['Confirmed']),2)
+    yvar=vars[chart_dropdown]
+    cum_one_var=cum0[cum0[yvar]>0][['date', yvar]]
     fig=go.Figure(
         data=go.Scatter(
-            x=cum0['date'],
-            y=cum0[vars[chart_dropdown]],
+            #x=cum0['date'],
+            #y=cum0[vars[chart_dropdown]],
+            x=cum_one_var['date'],
+            y=cum_one_var[yvar],
             name='',
             mode='lines+markers',
             hovertemplate='%{x}'+'<br>'+yaxislab[chart_dropdown]+':%{y}',
