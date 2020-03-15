@@ -47,7 +47,7 @@ sheetnames=[
     "03-04-2020","03-05-2020","03-06-2020",
     "03-07-2020","03-08-2020","03-09-2020",
     "03-10-2020","03-11-2020","03-12-2020",
-    "03-13-2020",
+    "03-13-2020","03-14-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -95,7 +95,7 @@ def cleandat(
                     indat['State']))))))
     indat['Location']=np.where(indat['State']=='', indat['Country'],\
         indat['Country']+'-'+indat['State'])
-    indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*13 if x>0 else 0)
+    indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*11 if x>0 else 0)
     return indat
 df=list(map(lambda x: cleandat(x), df))
 
@@ -317,6 +317,18 @@ app.layout = html.Div(
                                             "label":"Spain",
                                             "value":"Spain",
                                         },
+                                        {
+                                            "label":"France",
+                                            "value":"France",
+                                        },
+                                        {
+                                            "label":"Germany",
+                                            "value":"Germany",
+                                        },
+                                        {
+                                            "label":"Japan",
+                                            "value":"Japan",
+                                        },
                                     ],
                                     value="World",
                                     id="country-dropdown",
@@ -382,6 +394,8 @@ app.layout = html.Div(
                                                 title='Date',
                                                 color=linecl,
                                                 showgrid=False,
+                                                tickmode='auto',
+                                                nticks=17,
                                     ),
                                     font=dict(
                                         family=plotfont, size=12, 
@@ -561,6 +575,8 @@ def display_selected_data(chart_dropdown, country_dropdown):
                     title='Date',
                     color=linecl,
                     showgrid=False,
+                    tickmode='auto',
+                    nticks=17,
                     tickangle=45,
         ),
         font=dict(
