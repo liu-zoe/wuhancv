@@ -47,7 +47,7 @@ sheetnames=[
     "03-04-2020","03-05-2020","03-06-2020",
     "03-07-2020","03-08-2020","03-09-2020",
     "03-10-2020","03-11-2020","03-12-2020",
-    "03-13-2020","03-14-2020",
+    "03-13-2020","03-14-2020","03-15-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -328,6 +328,14 @@ app.layout = html.Div(
                                         {
                                             "label":"Japan",
                                             "value":"Japan",
+                                        },
+                                        {
+                                            "label":"Switzerland",
+                                            "value":"Switzerland",
+                                        },
+                                        {
+                                            "label":"United Kingdom",
+                                            "value":"United Kingdom",
                                         },
                                     ],
                                     value="World",
