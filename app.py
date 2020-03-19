@@ -48,7 +48,7 @@ sheetnames=[
     "03-07-2020","03-08-2020","03-09-2020",
     "03-10-2020","03-11-2020","03-12-2020",
     "03-13-2020","03-14-2020","03-15-2020",
-    "03-16-2020","03-17-2020",
+    "03-16-2020","03-17-2020","03-18-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -558,8 +558,6 @@ def display_selected_data(chart_dropdown, country_dropdown):
     cum_one_var=cum0[cum0[yvar]>0][['date', yvar]]
     fig=go.Figure(
         data=go.Scatter(
-            #x=cum0['date'],
-            #y=cum0[vars[chart_dropdown]],
             x=cum_one_var['date'],
             y=cum_one_var[yvar],
             name='',
