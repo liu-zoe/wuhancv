@@ -14,8 +14,8 @@ import colorlover as cl
 import pandas as pd
 import numpy as np
 import math
+from scipy.optimize import curve_fit
 import datetime
-from datetime import datetime
 
 # Initialize app
 app = dash.Dash(
@@ -49,6 +49,7 @@ sheetnames=[
     "03-10-2020","03-11-2020","03-12-2020",
     "03-13-2020","03-14-2020","03-15-2020",
     "03-16-2020","03-17-2020","03-18-2020",
+    "03-19-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -111,14 +112,14 @@ while (i>=0):
     i-=(skip+1)
 newdates.reverse()
 newdf.reverse()
-#dates=newdates
-#df=newdf
 del skip, i
 
 # Create a dataset with cumulated cases by date
 cum=pd.DataFrame(map(lambda x: [x.Confirmed.sum(), x.Deaths.sum(), x.Recovered.sum(),], df))
 cum['date']=dates
-cum.columns=['Confirmed','Deaths','Recovered','date']
+cum['Days']=np.arange(len(cum))
+cum['Days']+=1
+cum.columns=['Confirmed','Deaths','Recovered','date','Days']
 cum['death_rate']=round(100*(cum['Deaths']/cum['Confirmed']),2)
 cum['recover_rate']=round(100*(cum['Recovered']/cum['Confirmed']),2)
 vars=['Confirmed','Deaths','Recovered', 'death_rate','recover_rate']
@@ -129,6 +130,34 @@ charttitle=['Number of Confirmed Cases Across Time',
 'Number of Recovered Cases Across Time', 
 'Deaths Rates* Across Time', 
 'Recovered Rates Across Time']
+
+# Fit a growth curve
+pred_period=5 #Number of days to plot ahead of today
+days_count=len(dates)
+max_days=days_count+pred_period
+x=np.array(list(cum['Days']))
+y=np.array(list(cum['Confirmed']))
+def sigmoid_func(x, a, k, delta, L):
+    return a+((L-a)/(1+np.exp((k-x)/delta)))
+popt, pcov = curve_fit(sigmoid_func, x, y,maxfev=100000)
+xx = np.linspace(1,max_days,max_days)
+yy = sigmoid_func(xx, *popt)
+a=round(popt[0],1)
+a_char=str(a)
+k=round(popt[1],1)
+k_char=str(k)
+delta=round(popt[2],1)
+delta_char=str(delta)
+L=round(popt[3],1)
+L_char=str(L)
+fit_equation="y="+a_char+"+("+L_char+a_char+")/((1+exp^{(%s-x)/%s}" % (k_char, delta_char)
+init_date=datetime.datetime(2020,1,21)
+d=list()
+for i in range(max_days):
+    d.append(init_date+datetime.timedelta(days=i))
+dd=np.array(d)
+del i, d
+
 # Create a color scheme
 orcl3=cl.scales['3']['seq']['Oranges']
 grcl3=cl.scales['3']['seq']['Greys']
@@ -148,298 +177,471 @@ plotly_fonts=["Arial, sans-serif", "Balto, sans-serif", "Courier New, monospace"
 plotfont=plotly_fonts[10]
 
 #----------------------------------App Title------------------------------------#
-app.title='COVID-19 Time Lapse'
+app.title='COVID-19 TOutbreak'
 #----------------------------------App Layout-----------------------------------#
 app.layout = html.Div(
     id="root",
     children=[
-        #Header
-        html.Div(
-            id="header",
+            #Header,
+            html.Div(
+                id="header",
+                children=[
+                    html.Img(id="logo", src=app.get_asset_url("logo.png")),
+                    html.H3(children="Novel Coronavirus Outbreak",
+                            style={'textAlign': 'left',},
+                    ),
+                    dcc.Markdown(
+                        id="description",
+                        children=
+                        '''
+                        Data Source: Data used in this project is extracted from 
+                        [**Mapping 2019-nCoV**](https://systems.jhu.edu/research/public-health/ncov/) 
+                        by Johns Hopkins University Center Center for Systems Science and Engineering, 
+                        who collected data from various sources, including WHO, U.S. CDC, ECDC China CDC (CCDC), 
+                        NHC and DXY.                    
+                        '''),
+                    ],
+                ),        
+        dcc.Tabs(
+            parent_className='custom-tabs',
+            className='custom-tabs-container',
             children=[
-                html.Img(id="logo", src=app.get_asset_url("logo.png")),
-                html.H3(children="Novel Coronavirus Outbreak Time Lapse",
-                style={'textAlign': 'left',},
-                ),
-                dcc.Markdown(
-                    id="description",
-                    children=
-                    '''
-                    Data Source: Data used in this project is extracted from 
-                    [**Mapping 2019-nCoV**](https://systems.jhu.edu/research/public-health/ncov/) 
-                    by Johns Hopkins University Center Center for Systems Science and Engineering, 
-                    who collected data from various sources, including WHO, U.S. CDC, ECDC China CDC (CCDC), 
-                    NHC and DXY.                    
-                    '''),
-            ],
-        ),
-        #app
-        html.Div(
-            id="app-container", 
-            children=[
-                #Left Column
-                html.Div(
-                    id="left-column", 
+                dcc.Tab(
+                    label='Outbreak Map', 
+                    className='custom-tab',
+                    selected_className='custom-tab--selected',
                     children=[
+                        #app
                         html.Div(
-                            id="slider-container", 
+                            id="app-container", 
                             children=[
-                                html.Button(
-                                    id="play-button",
-                                    children="play",
-                                    n_clicks=0,
-                                    n_clicks_timestamp=-1,
-                                    type='button',
-                                    style = {
-                                        'color':markercl, 
-                                        'textAlign':'center'
-                                    },
+                                #Left Column
+                                html.Div(
+                                    id="left-column", 
+                                    children=[
+                                        html.Div(
+                                            id="slider-container", 
+                                            children=[
+                                                html.Button(
+                                                    id="play-button",
+                                                    children="play",
+                                                    n_clicks=0,
+                                                    n_clicks_timestamp=-1,
+                                                    type='button',
+                                                    style = {
+                                                        'color':markercl, 
+                                                        'textAlign':'center'
+                                                    },
+                                                ),
+                                                html.Button(
+                                                    id="pause-button",
+                                                    children="Pause",
+                                                    n_clicks=0,
+                                                    n_clicks_timestamp=-1,
+                                                    type='button',
+                                                    style = {
+                                                        'color':markercl, 
+                                                        'textAlign':'center'
+                                                    },
+                                                ),
+                                                dcc.Interval(id='auto-stepper',
+                                                    interval=2*1000, # in milliseconds
+                                                    n_intervals=0,
+                                                    max_intervals=0,
+                                                    disabled=False,
+                                                ),
+                                                dcc.Slider(
+                                                    id="date-slider",
+                                                    min=0, 
+                                                    max=len(newdates)-1,
+                                                    value=0,
+                                                    marks={
+                                                        str(date_ord):{
+                                                            "label":newdates[date_ord],
+                                                            "style": {"transform": "rotate(45deg)"}
+                                                        } 
+                                                        for date_ord in range(len(newdates))
+                                                    },
+                                                ),
+                                            ],
+                                        ),
+                                        html.Div(
+                                            id="bubblemap-container",
+                                            children=[
+                                                html.H5(
+                                                    "Confirmed COVID-19 Cases Across The Globe ",
+                                                    id="bubblemap-title",
+                                                    style={'textAlign': 'left',},
+                                                ),
+                                                dcc.Graph(
+                                                    id="country-bubble", 
+                                                    figure = go.Figure(
+                                                        data=go.Scattergeo(
+                                                            lat = df[0]['lat'],
+                                                            lon = df[0]['long'],
+                                                            mode='markers',
+                                                            hovertext =df[0]['Location']\
+                                                            + '<br> Confirmed:' + df[0]['Confirmed'].astype(str)\
+                                                            + '<br> Deaths:' + df[0]['Deaths'].astype(str)\
+                                                            + '<br> Recovered:' + df[0]['Recovered'].astype(str),
+                                                            marker = go.scattergeo.Marker(
+                                                                color = markercl,
+                                                                size = df[0]['conf'],
+                                                            ),
+                                                            opacity=0.85,
+                                                        ),
+                                                        layout=dict(                                            
+                                                            geo=dict(
+                                                                scope="world",
+                                                                projection_type="natural earth",
+                                                                showland=True,
+                                                                landcolor=bgcl,
+                                                                showcoastlines=True,
+                                                                coastlinecolor=linecl,
+                                                                showocean=True,
+                                                                oceancolor=bgcl,
+                                                                showlakes=False,
+                                                                showcountries=True,
+                                                                countrycolor = linecl,        
+                                                                bgcolor=bgcl,
+                                                            ),
+                                                            margin=dict(l=0, t=0, b=0, r=0, pad=0),
+                                                            paper_bgcolor=bgcl,
+                                                            plot_bgcolor=bgcl,
+                                                        ),
+                                                    ),                                        
+                                                ),
+                                            ],
+                                        ),
+                                    ],
                                 ),
-                                html.Button(
-                                    id="pause-button",
-                                    children="Pause",
-                                    n_clicks=0,
-                                    n_clicks_timestamp=-1,
-                                    type='button',
-                                    style = {
-                                        'color':markercl, 
-                                        'textAlign':'center'
-                                    },
-                                ),
-                                dcc.Interval(id='auto-stepper',
-                                    interval=2*1000, # in milliseconds
-                                    n_intervals=0,
-                                    max_intervals=0,
-                                    disabled=False,
-                                ),
-                                dcc.Slider(
-                                    id="date-slider",
-                                    min=0, 
-                                    max=len(newdates)-1,
-                                    value=0,
-                                    marks={
-                                        str(date_ord):{
-                                            "label":newdates[date_ord],
-                                            "style": {"transform": "rotate(45deg)"}
-                                        } 
-                                        for date_ord in range(len(newdates))
-                                    },
+                                #Right column
+                                html.Div(
+                                    id="graph-container",
+                                    children=[
+                                        html.P(id="chart-selector", 
+                                                children="Select Country and Type of Cases:", 
+                                                style={'textAlign': 'left',},
+                                        ), 
+                                        html.Div(
+                                            id="drop-downs",
+                                            children=[
+                                                dcc.Dropdown(
+                                                    options=[
+                                                        {
+                                                            "label":"World",
+                                                            "value":"World",
+                                                        },
+                                                        {
+                                                            "label":"United States",
+                                                            "value":"United States"
+                                                        },
+                                                        {
+                                                            "label":"Mainland China",
+                                                            "value":"Mainland China",
+                                                        },
+                                                        {
+                                                            "label":"South Korea",
+                                                            "value":"South Korea",
+                                                        },
+                                                        {
+                                                            "label":"Italy",
+                                                            "value":"Italy",
+                                                        },
+                                                        {
+                                                            "label":"Iran",
+                                                            "value":"Iran",
+                                                        },
+                                                        {
+                                                            "label":"Spain",
+                                                            "value":"Spain",
+                                                        },
+                                                        {
+                                                            "label":"France",
+                                                            "value":"France",
+                                                        },
+                                                        {
+                                                            "label":"Germany",
+                                                            "value":"Germany",
+                                                        },
+                                                        {
+                                                            "label":"Japan",
+                                                            "value":"Japan",
+                                                        },
+                                                        {
+                                                            "label":"Switzerland",
+                                                            "value":"Switzerland",
+                                                        },
+                                                        {
+                                                            "label":"United Kingdom",
+                                                            "value":"United Kingdom",
+                                                        },
+                                                        {
+                                                            "label":"Netherlands",
+                                                            "value":"Netherlands",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Austria",
+                                                            "value":"Austria",                                                        
+                                                        },
+                                                    ],
+                                                    value="World",
+                                                    id="country-dropdown",
+                                                ),
+                                                dcc.Dropdown(
+                                                    options=[
+                                                        {
+                                                            "label": "Confirmed Cases",
+                                                            "value":0,
+                                                        },
+                                                        {
+                                                            "label": "Deaths Cases",
+                                                            "value":1,
+                                                        },
+                                                        {
+                                                            "label": "Recovered Cases", 
+                                                            "value":2,
+                                                        },
+                                                        {
+                                                            "label": "Deaths Rates",
+                                                            "value":3,
+                                                        },
+                                                        {
+                                                            "label": "Recovered Rates",
+                                                            "value":4,
+                                                        }
+                                                    ],
+                                                    value=0,
+                                                    id="chart-dropdown",
+                                                ),
+                                            ],
+                                        ),
+                                        html.H5("Number of Confirmed Cases Across Time",
+                                                id="lineplot-title",
+                                                style={'textAlign': 'left',},
+                                                ),
+                                        dcc.Graph(
+                                            id="selected-data",
+                                            figure=go.Figure(
+                                                data=go.Scatter(
+                                                    x=cum['date'],
+                                                    y=cum['Confirmed'],
+                                                    name='Confirmed',
+                                                    mode='lines+markers',
+                                                    hovertemplate='%{x}'+'<br>Confirmed Cases:%{y}',
+                                                    marker = go.scatter.Marker(
+                                                                color = markercl,
+                                                    ),
+                                                    opacity=0.85,    
+                                                ),
+                                                layout=dict(
+                                                    paper_bgcolor=bgcl,
+                                                    plot_bgcolor=bgcl,
+                                                    margin=dict(t=0, r=0, b=0, l=0, pad=0,),
+                                                    yaxis = dict(zeroline = False,
+                                                                title='Confirmed Cases',
+                                                                color=linecl, 
+                                                                showgrid=False,
+                                                                
+                                                    ),
+                                                    xaxis = dict(zeroline = False,
+                                                                title='Date',
+                                                                color=linecl,
+                                                                showgrid=False,
+                                                                tickmode='auto',
+                                                                nticks=17,
+                                                    ),
+                                                    font=dict(
+                                                        family=plotfont, size=12, 
+                                                        color=fontcl,
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                        html.P("",
+                                                id="lineplot-footnote",
+                                                style={'textAlign': 'left',},
+                                                ),
+                                    ],
                                 ),
                             ],
                         ),
+                        #Footer
                         html.Div(
-                            id="bubblemap-container",
+                            id="footer",
                             children=[
                                 html.H5(
-                                    "Confirmed COVID-19 Cases Across The Globe ",
-                                    id="bubblemap-title",
-                                    style={'textAlign': 'left',},
+                                    [
+                                        "Create by ",
+                                        html.A("Zoe Liu", href="http://zoe-liu.com", target="_blank"),
+                                    ]
                                 ),
-                                dcc.Graph(
-                                    id="country-bubble", 
-                                    figure = go.Figure(
-                                        data=go.Scattergeo(
-                                            lat = newdf[0]['lat'],
-                                            lon = newdf[0]['long'],
-                                            mode='markers',
-                                            hovertext =newdf[0]['Location']\
-                                            + '<br> Confirmed:' + newdf[0]['Confirmed'].astype(str)\
-                                            + '<br> Deaths:' + newdf[0]['Deaths'].astype(str)\
-                                            + '<br> Recovered:' + newdf[0]['Recovered'].astype(str),
-                                            marker = go.scattergeo.Marker(
-                                                color = markercl,
-                                                size = newdf[0]['conf'],
-                                            ),
-                                            opacity=0.85,
-                                        ),
-                                        layout=dict(                                            
-                                            geo=dict(
-                                                scope="world",
-                                                projection_type="natural earth",
-                                                showland=True,
-                                                landcolor=bgcl,
-                                                showcoastlines=True,
-                                                coastlinecolor=linecl,
-                                                showocean=True,
-                                                oceancolor=bgcl,
-                                                showlakes=False,
-                                                showcountries=True,
-                                                countrycolor = linecl,        
-                                                bgcolor=bgcl,
-                                            ),
-                                            margin=dict(l=0, t=0, b=0, r=0, pad=0),
-                                            paper_bgcolor=bgcl,
-                                            plot_bgcolor=bgcl,
-                                        ),
-                                    ),                                        
-                                ),
+                                dcc.Markdown(
+                                    id="credit",
+                                    children=
+                                    '''
+                                    **Credit:** style and set-up is mostly based on the Dash sample app 
+                                    [*US Opiod Epidemic*](https://dash-gallery.plotly.host/dash-opioid-epidemic/).
+                                    '''),
                             ],
                         ),
                     ],
                 ),
-                #Right column
-                html.Div(
-                    id="graph-container",
+                dcc.Tab(
+                    label='Growth', 
+                    className='custom-tab',
+                    selected_className='custom-tab--selected',
                     children=[
-                        html.P(id="chart-selector", 
-                                children="Select Country and Type of Cases:", 
-                                style={'textAlign': 'left',},
-                        ), 
+                        #app - Growth Curve
                         html.Div(
-                            id="drop-downs",
+                            id="app-container2",
                             children=[
-                                dcc.Dropdown(
-                                    options=[
-                                        {
-                                            "label":"World",
-                                            "value":"World",
-                                        },
-                                        {
-                                            "label":"United States",
-                                            "value":"United States",
-                                        },
-                                        {
-                                            "label":"Mainland China",
-                                            "value":"Mainland China",
-                                        },
-                                        {
-                                            "label":"South Korea",
-                                            "value":"South Korea",
-                                        },
-                                        {
-                                            "label":"Italy",
-                                            "value":"Italy",
-                                        },
-                                        {
-                                            "label":"Iran",
-                                            "value":"Iran",
-                                        },
-                                        {
-                                            "label":"Spain",
-                                            "value":"Spain",
-                                        },
-                                        {
-                                            "label":"France",
-                                            "value":"France",
-                                        },
-                                        {
-                                            "label":"Germany",
-                                            "value":"Germany",
-                                        },
-                                        {
-                                            "label":"Japan",
-                                            "value":"Japan",
-                                        },
-                                        {
-                                            "label":"Switzerland",
-                                            "value":"Switzerland",
-                                        },
-                                        {
-                                            "label":"United Kingdom",
-                                            "value":"United Kingdom",
-                                        },
+                                #Left Column
+                                html.Div(
+                                    id="left-column2",
+                                    children=[
+                                        html.Div(
+                                            id="drop-downs2",
+                                            children=[
+                                                dcc.Dropdown(
+                                                    id="country-dropdown2",
+                                                    value="United States",
+                                                    options=[
+                                                        {
+                                                            "label":"United States",
+                                                            "value":"United States"
+                                                        },
+                                                        {
+                                                            "label":"Mainland China",
+                                                            "value":"Mainland China",
+                                                        },
+                                                        {
+                                                            "label":"South Korea",
+                                                            "value":"South Korea",
+                                                        },
+                                                        {
+                                                            "label":"Italy",
+                                                            "value":"Italy",
+                                                        },
+                                                        {
+                                                            "label":"Iran",
+                                                            "value":"Iran",
+                                                        },
+                                                        {
+                                                            "label":"Spain",
+                                                            "value":"Spain",
+                                                        },
+                                                        {
+                                                            "label":"France",
+                                                            "value":"France",
+                                                        },
+                                                        {
+                                                            "label":"Germany",
+                                                            "value":"Germany",
+                                                        },
+                                                        {
+                                                            "label":"Japan",
+                                                            "value":"Japan",
+                                                        },
+                                                        {
+                                                            "label":"Switzerland",
+                                                            "value":"Switzerland",
+                                                        },
+                                                        {
+                                                            "label":"United Kingdom",
+                                                            "value":"United Kingdom",
+                                                        },
+                                                        {
+                                                            "label":"Netherlands",
+                                                            "value":"Netherlands",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Austria",
+                                                            "value":"Austria",                                                        
+                                                        },
+                                                        {
+                                                            "label":"World",
+                                                            "value":"World",
+                                                        },
+                                                    ],
+                                                ),
+                                            ],
+                                        ),
+                                        html.H5("Cumulative Confirmed Cases with Fitted Curve in United States",
+                                            id="curve-title",
+                                            style={'textAlign':'left',},
+                                        ),
+                                        dcc.Graph(
+                                            id="curve-plot",
+                                            figure=go.Figure(
+                                                data=[
+                                                    go.Scatter(
+                                                        x=dd,
+                                                        y=y,
+                                                        mode='markers',
+                                                        name="Data",
+                                                        hovertemplate='Date: %{x}'+'<br>'+'Confirmed:'+'%{y}',
+                                                        marker=go.scatter.Marker(
+                                                            color=orcl3[2]
+                                                        ),
+                                                        opacity=0.85,
+                                                    ),
+                                                    go.Scatter(
+                                                        x=dd,
+                                                        y=yy,
+                                                        mode='lines',
+                                                        name="Fit",
+                                                        hovertemplate='Date: %{x}'+'<br>'+'Fit:'+'%{y}',
+                                                        marker=go.scatter.Marker(
+                                                            color='rgb(31, 119, 180)'
+                                                        ),
+                                                        opacity=0.85,   
+                                                    ),
+                                                ],
+                                                layout=dict(
+                                                    paper_bgcolor=bgcl,
+                                                    plot_bgcolor=bgcl,
+                                                    margin=dict(l=0, t=0, b=0, r=0, pad=0),
+                                                    xaxis=dict(
+                                                        zeroline=False,
+                                                        title='Date',
+                                                        showgrid=False,
+                                                        color=linecl,
+                                                        ),
+                                                    yaxis=dict(
+                                                        zeroline=False,
+                                                        title='Cumulative Confirmed Cases',
+                                                        showgrid=False,
+                                                        color=linecl,
+                                                        ),
+                                                    font=dict(
+                                                        family=plotfont, size=12, 
+                                                        color=fontcl,
+                                                    ),
+                                                    #annotations = 
+                                                    #    [dict(
+                                                    #        x=0.5,
+                                                    #        y=1,
+                                                    #        showarrow=False,
+                                                    #        text=fit_equation,
+                                                    #        xref='paper',
+                                                    #        yref='paper',
+                                                    #        ),
+                                                    #    ],
+                                                    legend = dict(
+                                                        x=0.01, y=1
+                                                    )
+                                                ),
+                                            ),
+                                        ),
                                     ],
-                                    value="World",
-                                    id="country-dropdown",
-                                ),
-                                dcc.Dropdown(
-                                    options=[
-                                        {
-                                            "label": "Confirmed Cases",
-                                            "value":0,
-                                        },
-                                        {
-                                            "label": "Deaths Cases",
-                                            "value":1,
-                                        },
-                                        {
-                                            "label": "Recovered Cases", 
-                                            "value":2,
-                                        },
-                                        {
-                                            "label": "Deaths Rates",
-                                            "value":3,
-                                        },
-                                        {
-                                            "label": "Recovered Rates",
-                                            "value":4,
-                                        }
-                                    ],
-                                    value=0,
-                                    id="chart-dropdown",
                                 ),
                             ],
                         ),
-                        html.H5("Number of Confirmed Cases Across Time",
-                                id="lineplot-title",
-                                style={'textAlign': 'left',},
-                                ),
-
-                        dcc.Graph(
-                            id="selected-data",
-                            figure=go.Figure(
-                                data=go.Scatter(
-                                    x=cum['date'],
-                                    y=cum['Confirmed'],
-                                    name='Confirmed',
-                                    mode='lines+markers',
-                                    hovertemplate='%{x}'+'<br>Confirmed Cases:%{y}',
-                                    marker = go.scatter.Marker(
-                                                color = markercl,
-                                    ),
-                                    opacity=0.85,    
-                                ),
-                                layout=dict(
-                                    paper_bgcolor=bgcl,
-                                    plot_bgcolor=bgcl,
-                                    margin=dict(t=0, r=0, b=0, l=0, pad=0,),
-                                    yaxis = dict(zeroline = False,
-                                                title='Confirmed Cases',
-                                                color=linecl, 
-                                                showgrid=False,
-                                                
-                                    ),
-                                    xaxis = dict(zeroline = False,
-                                                title='Date',
-                                                color=linecl,
-                                                showgrid=False,
-                                                tickmode='auto',
-                                                nticks=17,
-                                    ),
-                                    font=dict(
-                                        family=plotfont, size=12, 
-                                        color=fontcl,
-                                    ),
-                                ),
-                            ),
-                        ),
-                        html.P("",
-                                id="lineplot-footnote",
-                                style={'textAlign': 'left',},
-                                ),
                     ],
-                ),
+                ), 
             ],
-        ),
-        #Footer
-        html.Div(
-            id="footer",
-            children=[
-                html.H5(
-                    [
-                        "Create by ",
-                        html.A("Zoe Liu", href="http://zoe-liu.com", target="_blank"),
-                    ]
-                ),
-                dcc.Markdown(
-                    id="credit",
-                    children=
-                    '''
-                    **Credit:** style and set-up is mostly based on the Dash sample app 
-                    [*US Opiod Epidemic*](https://dash-gallery.plotly.host/dash-opioid-epidemic/).
-                    '''),
-            ],
-        ),
+        ),       
     ],
 )
 #----------------------------------Callback-----------------------------------#
@@ -516,6 +718,7 @@ def move_frames(n_intervals, play_timestamp, pause_timestamp):
         max_intervals=0
         int_disabled=False
     return slider_value, max_intervals, int_disabled
+
 #~~~~~~~~~~~~~~~~~~~~~Line Plot~~~~~~~~~~~~~~~~~~~~#
 @app.callback(
     [
@@ -593,6 +796,119 @@ def display_selected_data(chart_dropdown, country_dropdown):
         ),
     )
     return fig 
+
+#~~~~~~~~~~~~~~~~~~~~~Growth Curve Plot~~~~~~~~~~~~~~~~~~~~#
+@app.callback(
+        Output("curve-title", "children"), 
+    [
+        Input("country-dropdown2", "value"),
+    ],
+)
+def update_curve_title(country_dropdown):
+    curve_title="Cumulative Confirmed Cases with Fitted Curve in %s" %(country_dropdown)
+    return curve_title
+
+@app.callback(
+    Output("curve-plot", "figure"),
+    [
+        Input("country-dropdown2","value"),
+    ],
+)
+def display_growth_curve(country_dropdown):
+    if country_dropdown=="World":
+        cum0=cum
+    else:
+        df0=[]
+        for dataframe in df:
+            df0.append(dataframe[dataframe['Country']==country_dropdown])
+        cum0=pd.DataFrame(map(lambda x: [x.Confirmed.sum(),], df0))
+        cum0.columns=['Confirmed',]
+        cum0['Days']=np.arange(len(cum0))
+        cum0['Days']+=1
+    pred_period=5 #Number of days to plot ahead of today
+    days_count=len(dates)
+    max_days=days_count+pred_period
+    x=np.array(list(cum0['Days']))
+    y=np.array(list(cum0['Confirmed']))
+    popt, pcov = curve_fit(sigmoid_func, x, y,maxfev=100000)
+    xx = np.linspace(1,max_days,max_days)
+    yy = sigmoid_func(xx, *popt)
+    a=round(popt[0],1)
+    a_char=str(a)
+    k=round(popt[1],1)
+    k_char=str(k)
+    delta=round(popt[2],1)
+    delta_char=str(delta)
+    L=round(popt[3],1)
+    L_char=str(L)
+    fit_equation="y="+a_char+"+("+L_char+a_char+")/((1+exp^{(%s-x)/%s}" % (k_char, delta_char)
+    init_date=datetime.datetime(2020,1,21)
+    d=list()
+    for i in range(max_days):
+        d.append(init_date+datetime.timedelta(days=i))
+    dd=np.array(d)
+    del i, d
+    figure=go.Figure(
+        data=[
+            go.Scatter(
+                x=dd,
+                y=y,
+                mode='markers',
+                name="Data",
+                hovertemplate='Date: %{x}'+'<br>'+'Confirmed:'+'%{y}',
+                marker=go.scatter.Marker(
+                    color=orcl3[2]
+                ),
+                opacity=0.85,
+            ),
+            go.Scatter(
+                x=dd,
+                y=yy,
+                mode='lines',
+                name="Fit",
+                hovertemplate='Date: %{x}'+'<br>'+'Fit:'+'%{y}',
+                marker=go.scatter.Marker(
+                    color='rgb(31, 119, 180)'
+                ),
+                opacity=0.85,   
+            ),
+        ],
+        layout=dict(
+            paper_bgcolor=bgcl,
+            plot_bgcolor=bgcl,
+            margin=dict(l=0, t=0, b=0, r=0, pad=0),
+            xaxis=dict(
+                zeroline=False,
+                title='Date',
+                showgrid=False,
+                color=linecl,
+            ),
+            yaxis=dict(
+                zeroline=False,
+                title='Cumulative Confirmed Cases',
+                showgrid=False,
+                color=linecl,
+            ),
+            font=dict(
+                family=plotfont, size=12, 
+                color=fontcl,
+            ),
+            #annotations = 
+            #    [dict(
+            #        x=0.5,
+            #        y=1,
+            #        showarrow=False,
+            #        text=fit_equation,
+            #        xref='paper',
+            #        yref='paper',
+            #        ),
+            #    ],
+            legend = dict(
+                x=0.01, y=1
+                )
+        ),
+    )
+    return figure
 
 if __name__ == '__main__':
     app.run_server(debug=True)
