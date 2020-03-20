@@ -14,6 +14,7 @@ import colorlover as cl
 import pandas as pd
 import numpy as np
 import math
+import scipy
 from scipy.optimize import curve_fit
 import datetime
 
@@ -138,7 +139,8 @@ max_days=days_count+pred_period
 x=np.array(list(cum['Days']))
 y=np.array(list(cum['Confirmed']))
 def sigmoid_func(x, a, k, delta, L):
-    return a+((L-a)/(1+np.exp((k-x)/delta)))
+    y=a+((L-a)/(1+np.exp((k-x)/delta)))
+    return y
 popt, pcov = curve_fit(sigmoid_func, x, y,maxfev=100000)
 xx = np.linspace(1,max_days,max_days)
 yy = sigmoid_func(xx, *popt)

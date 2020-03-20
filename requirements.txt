@@ -1,6 +1,7 @@
 colorlover==0.3.0
 dash==1.8.0
 numpy==1.16.2
+scipy==1.2.0
 pandas==0.24.2
 plotly==4.2.1
 gunicorn==20.0.4
