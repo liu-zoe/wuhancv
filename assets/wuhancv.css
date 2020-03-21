@@ -741,15 +741,19 @@ hr {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media only screen and (max-width: 1250px) {
     /*For mobile and smaller screens*/
-    #left-column, #left-column2 {
+    .left-column {
         margin-right: 1.5%;
+        width: 100%;
+    }
+    .right-column {
+        margin-left: 1.5%;
         width: 100%;
     }
 }
 
 @media (min-width: 1251px) {
     /*For desktop*/
-    #left-column, #left-column2 {
+    .left-column {
         margin-right: 1.5%;
         display: flex;
         flex-direction: column;
@@ -757,13 +761,21 @@ hr {
         align-content: center;
         flex: 6 60%;
     }
+    .right-column {
+        margin-left: 1.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+        flex: 6 40%;
+    }
 }
 
 
 /* Graph
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-#graph-container {
+.graph-container {
     background-color: #252e3f;
     padding: 5rem;
     margin: 0;
@@ -775,7 +787,7 @@ hr {
         text-align: center;
     }
 
-    #graph-container {
+    .graph-container {
         margin-top: 5rem;
     }
 
@@ -795,7 +807,7 @@ hr {
         font-size: 1.5rem;
     }
 
-    #graph-container {
+    .graph-container {
         flex: 4 40%;
         margin: 0;
         display: flex;
@@ -810,7 +822,7 @@ hr {
 }
 
 @media (max-width: 550px) {
-    #graph-container {
+    .graph-container {
         padding: 2.5rem;
     }
 
@@ -828,12 +840,8 @@ hr {
     margin-bottom: 6.6rem;
 }
 
-#country-dropdown {
+.country-dropdown {
     width:50%;
-    float:left;
-}
-#country-dropdown2 {
-    width:20%;
     float:left;
 }
 
@@ -883,7 +891,7 @@ hr {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media only screen and (max-width: 1250px) {
     /*For mobile and smaller screens*/
-    #app-container,  #app-container2{
+    .app-container{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -895,7 +903,7 @@ hr {
 
 @media (min-width: 1251px) {
     /*For desktop*/
-    #app-container,  #app-container2 {
+    .app-container{
         display: flex;
         flex-direction: row;
         justify-content: flex-start;

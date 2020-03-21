@@ -50,7 +50,7 @@ sheetnames=[
     "03-10-2020","03-11-2020","03-12-2020",
     "03-13-2020","03-14-2020","03-15-2020",
     "03-16-2020","03-17-2020","03-18-2020",
-    "03-19-2020",
+    "03-19-2020","03-20-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -138,6 +138,9 @@ days_count=len(dates)
 max_days=days_count+pred_period
 x=np.array(list(cum['Days']))
 y=np.array(list(cum['Confirmed']))
+y_prev=np.array([0,])
+y_prev=np.append(y_prev, y[:days_count-1])
+y_change=y-y_prev
 def sigmoid_func(x, a, k, delta, L):
     y=a+((L-a)/(1+np.exp((k-x)/delta)))
     return y
@@ -153,7 +156,7 @@ delta_char=str(delta)
 L=round(popt[3],1)
 L_char=str(L)
 fit_equation="y="+a_char+"+("+L_char+a_char+")/((1+exp^{(%s-x)/%s}" % (k_char, delta_char)
-init_date=datetime.datetime(2020,1,21)
+init_date=datetime.datetime(2020,1,22)
 d=list()
 for i in range(max_days):
     d.append(init_date+datetime.timedelta(days=i))
@@ -179,7 +182,7 @@ plotly_fonts=["Arial, sans-serif", "Balto, sans-serif", "Courier New, monospace"
 plotfont=plotly_fonts[10]
 
 #----------------------------------App Title------------------------------------#
-app.title='COVID-19 TOutbreak'
+app.title='COVID-19 Outbreak'
 #----------------------------------App Layout-----------------------------------#
 app.layout = html.Div(
     id="root",
@@ -215,11 +218,11 @@ app.layout = html.Div(
                     children=[
                         #app
                         html.Div(
-                            id="app-container", 
+                            className="app-container", 
                             children=[
                                 #Left Column
                                 html.Div(
-                                    id="left-column", 
+                                    className="left-column", 
                                     children=[
                                         html.Div(
                                             id="slider-container", 
@@ -319,7 +322,7 @@ app.layout = html.Div(
                                 ),
                                 #Right column
                                 html.Div(
-                                    id="graph-container",
+                                    className="graph-container",
                                     children=[
                                         html.P(id="chart-selector", 
                                                 children="Select Country and Type of Cases:", 
@@ -329,7 +332,10 @@ app.layout = html.Div(
                                             id="drop-downs",
                                             children=[
                                                 dcc.Dropdown(
-                                                    options=[
+                                                    value="World",
+                                                    className="country-dropdown",
+                                                    id="country-dropdown1",
+                                                    options=[                                                
                                                         {
                                                             "label":"World",
                                                             "value":"World",
@@ -386,11 +392,11 @@ app.layout = html.Div(
                                                             "label":"Austria",
                                                             "value":"Austria",                                                        
                                                         },
-                                                    ],
-                                                    value="World",
-                                                    id="country-dropdown",
+                                                    ],            
                                                 ),
                                                 dcc.Dropdown(
+                                                    value=0,
+                                                    id="chart-dropdown",
                                                     options=[
                                                         {
                                                             "label": "Confirmed Cases",
@@ -412,9 +418,7 @@ app.layout = html.Div(
                                                             "label": "Recovered Rates",
                                                             "value":4,
                                                         }
-                                                    ],
-                                                    value=0,
-                                                    id="chart-dropdown",
+                                                    ],                                                    
                                                 ),
                                             ],
                                         ),
@@ -489,6 +493,7 @@ app.layout = html.Div(
                         ),
                     ],
                 ),
+                #----------------------------Tab 2: Growth Curve-----------------------------#
                 dcc.Tab(
                     label='Growth', 
                     className='custom-tab',
@@ -496,19 +501,24 @@ app.layout = html.Div(
                     children=[
                         #app - Growth Curve
                         html.Div(
-                            id="app-container2",
+                            className="app-container",
                             children=[
                                 #Left Column
                                 html.Div(
-                                    id="left-column2",
+                                    className="left-column",
                                     children=[
                                         html.Div(
                                             id="drop-downs2",
                                             children=[
                                                 dcc.Dropdown(
+                                                    className="country-dropdown",
                                                     id="country-dropdown2",
-                                                    value="United States",
+                                                    value="World",
                                                     options=[
+                                                        {
+                                                            "label":"World",
+                                                            "value":"World",
+                                                        },
                                                         {
                                                             "label":"United States",
                                                             "value":"United States"
@@ -542,10 +552,6 @@ app.layout = html.Div(
                                                             "value":"Germany",
                                                         },
                                                         {
-                                                            "label":"Japan",
-                                                            "value":"Japan",
-                                                        },
-                                                        {
                                                             "label":"Switzerland",
                                                             "value":"Switzerland",
                                                         },
@@ -561,9 +567,17 @@ app.layout = html.Div(
                                                             "label":"Austria",
                                                             "value":"Austria",                                                        
                                                         },
-                                                        {
-                                                            "label":"World",
-                                                            "value":"World",
+                                                         {
+                                                            "label":"Japan",
+                                                            "value":"Japan",
+                                                        },
+                                                         {
+                                                            "label":"Singapore",
+                                                            "value":"Singapore",
+                                                        },
+                                                         {
+                                                            "label":"Taiwan",
+                                                            "value":"Taiwan",
                                                         },
                                                     ],
                                                 ),
@@ -633,6 +647,59 @@ app.layout = html.Div(
                                                     legend = dict(
                                                         x=0.01, y=1
                                                     )
+                                                ),
+                                            ),
+                                        ),
+                                    ],
+                                ),
+                                #Right column
+                                html.Div(
+                                    className="right-column",
+                                    children=[
+                                        html.Br(),
+                                        html.Br(),
+                                        html.H5(
+                                            id="daily-title",
+                                            children="Daily New Confirmed Cases in United States",
+                                            style={'textAlign': 'left',},
+                                        ),
+                                        dcc.Graph(
+                                            id="bar-plot",
+                                            figure=go.Figure(
+                                                data=go.Bar(
+                                                        x=dd[:days_count],
+                                                        y=y_change,
+                                                        name="New Cases",
+                                                        hovertemplate='%{y} on %{x}',
+                                                        marker=dict(
+                                                            color=markercl,
+                                                            line=dict(
+                                                                width=0,
+                                                            )
+                                                        ),
+                                                        opacity=0.85,
+                                                ),
+                                                layout=dict(
+                                                        paper_bgcolor=bgcl,
+                                                        plot_bgcolor=bgcl,
+                                                        margin=dict(l=0, t=0, b=0, r=0, pad=0),
+                                                        font=dict(
+                                                            family=plotfont, 
+                                                            size=12, 
+                                                            color=fontcl,
+                                                        ),
+                                                        xaxis=dict(
+                                                            zeroline=False,
+                                                            title='Date',
+                                                            showgrid=False,
+                                                            color=linecl,
+                                                            ),
+                                                        yaxis=dict(
+                                                            zeroline=False,
+                                                            title='New Confirmed Cases',
+                                                            showgrid=False,
+                                                            color=linecl,
+                                                            ),
                                                 ),
                                             ),
                                         ),
@@ -744,7 +811,7 @@ def update_chart_title(chart_dropdown):
     Output("selected-data", "figure"),
     [
         Input("chart-dropdown","value"),
-        Input("country-dropdown","value"),
+        Input("country-dropdown1","value"),
     ],
 )
 def display_selected_data(chart_dropdown, country_dropdown):
@@ -799,17 +866,22 @@ def display_selected_data(chart_dropdown, country_dropdown):
     )
     return fig 
 
-#~~~~~~~~~~~~~~~~~~~~~Growth Curve Plot~~~~~~~~~~~~~~~~~~~~#
+#~~~~~~~~~~~~~~~~~~~~~Growth Curve Titles~~~~~~~~~~~~~~~~~~~~#
 @app.callback(
-        Output("curve-title", "children"), 
+    [
+        Output("curve-title", "children"),
+        Output("daily-title", "children"), 
+    ],
     [
         Input("country-dropdown2", "value"),
     ],
 )
 def update_curve_title(country_dropdown):
     curve_title="Cumulative Confirmed Cases with Fitted Curve in %s" %(country_dropdown)
-    return curve_title
+    daily_title="Daily New Confirmed Cases in %s" %(country_dropdown)
+    return curve_title, daily_title
 
+#~~~~~~~~~~~~~~~~~~~~~Growth Curve Plot~~~~~~~~~~~~~~~~~~~~#
 @app.callback(
     Output("curve-plot", "figure"),
     [
@@ -844,7 +916,7 @@ def display_growth_curve(country_dropdown):
     L=round(popt[3],1)
     L_char=str(L)
     fit_equation="y="+a_char+"+("+L_char+a_char+")/((1+exp^{(%s-x)/%s}" % (k_char, delta_char)
-    init_date=datetime.datetime(2020,1,21)
+    init_date=datetime.datetime(2020,1,22)
     d=list()
     for i in range(max_days):
         d.append(init_date+datetime.timedelta(days=i))
@@ -912,7 +984,75 @@ def display_growth_curve(country_dropdown):
     )
     return figure
 
+#~~~~~~~~~~~~~~~~~~~~~New Cases Plot~~~~~~~~~~~~~~~~~~~~#
+@app.callback(
+    Output("bar-plot", "figure"),
+    [
+        Input("country-dropdown2","value"),
+    ],
+)
+def display_new_cases(country_dropdown):
+    if country_dropdown=="World":
+        cum0=cum
+    else:
+        df0=[]
+        for dataframe in df:
+            df0.append(dataframe[dataframe['Country']==country_dropdown])
+        cum0=pd.DataFrame(map(lambda x: [x.Confirmed.sum(),], df0))
+        cum0.columns=['Confirmed',]
+        cum0['Days']=np.arange(len(cum0))
+        cum0['Days']+=1
+    pred_period=5 #Number of days to plot ahead of today
+    days_count=len(dates)
+    max_days=days_count+pred_period
+    x=np.array(list(cum0['Days']))
+    y=np.array(list(cum0['Confirmed']))
+    y_prev=np.append(np.array([0,]), y[:days_count-1])
+    y_change=y-y_prev
+    init_date=datetime.datetime(2020,1,22)
+    d=list()
+    for i in range(max_days):
+        d.append(init_date+datetime.timedelta(days=i))
+    dd=np.array(d)
+    del i, d
+    figure=go.Figure(
+        data=go.Bar(
+            x=dd[:days_count],
+            y=y_change,
+            name="New Cases",
+            hovertemplate='%{y} on %{x}',
+            marker=dict(
+                color=markercl,
+                line=dict(
+                    width=0,
+                )
+            ),
+            opacity=0.85,
+        ),
+        layout=dict(
+            paper_bgcolor=bgcl,
+            plot_bgcolor=bgcl,
+            margin=dict(l=0, t=0, b=0, r=0, pad=0),
+            font=dict(
+                family=plotfont,
+                size=12,
+                color=fontcl,
+            ),
+            xaxis=dict(
+                zeroline=False,
+                title='Date',
+                showgrid=False,
+                color=linecl,
+            ),
+            yaxis=dict(
+                zeroline=False,
+                title='New Confirmed Cases',
+                showgrid=False,
+                color=linecl,
+            ),
+        ),
+    )
+    return figure
+
 if __name__ == '__main__':
     app.run_server(debug=True)
-
-# %%
