@@ -50,7 +50,7 @@ sheetnames=[
     "03-10-2020","03-11-2020","03-12-2020",
     "03-13-2020","03-14-2020","03-15-2020",
     "03-16-2020","03-17-2020","03-18-2020",
-    "03-19-2020","03-20-2020",
+    "03-19-2020","03-20-2020","03-21-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -147,15 +147,15 @@ def sigmoid_func(x, a, k, delta, L):
 popt, pcov = curve_fit(sigmoid_func, x, y,maxfev=100000)
 xx = np.linspace(1,max_days,max_days)
 yy = sigmoid_func(xx, *popt)
-a=round(popt[0],1)
-a_char=str(a)
-k=round(popt[1],1)
-k_char=str(k)
-delta=round(popt[2],1)
-delta_char=str(delta)
-L=round(popt[3],1)
-L_char=str(L)
-fit_equation="y="+a_char+"+("+L_char+a_char+")/((1+exp^{(%s-x)/%s}" % (k_char, delta_char)
+#a=round(popt[0],1)
+#a_char=str(a)
+#k=round(popt[1],1)
+#k_char=str(k)
+#delta=round(popt[2],1)
+#delta_char=str(delta)
+#L=round(popt[3],1)
+#L_char=str(L)
+#fit_equation=r"$y="+a_char+"+/frac{%s+%s}{1+exp^{/frac{%s-x}{%s}}}$" % (L_char, a_char, k_char, delta_char)
 init_date=datetime.datetime(2020,1,22)
 d=list()
 for i in range(max_days):
@@ -192,7 +192,7 @@ app.layout = html.Div(
                 id="header",
                 children=[
                     html.Img(id="logo", src=app.get_asset_url("logo.png")),
-                    html.H3(children="Novel Coronavirus Outbreak",
+                    html.H3(children="COVID-19 Outbreak",
                             style={'textAlign': 'left',},
                     ),
                     dcc.Markdown(
@@ -373,10 +373,6 @@ app.layout = html.Div(
                                                             "value":"Germany",
                                                         },
                                                         {
-                                                            "label":"Japan",
-                                                            "value":"Japan",
-                                                        },
-                                                        {
                                                             "label":"Switzerland",
                                                             "value":"Switzerland",
                                                         },
@@ -391,6 +387,18 @@ app.layout = html.Div(
                                                         {
                                                             "label":"Austria",
                                                             "value":"Austria",                                                        
+                                                        },
+                                                         {
+                                                            "label":"Japan",
+                                                            "value":"Japan",
+                                                        },
+                                                         {
+                                                            "label":"Singapore",
+                                                            "value":"Singapore",
+                                                        },
+                                                         {
+                                                            "label":"Taiwan",
+                                                            "value":"Taiwan",
                                                         },
                                                     ],            
                                                 ),
@@ -636,7 +644,7 @@ app.layout = html.Div(
                                                     ),
                                                     #annotations = 
                                                     #    [dict(
-                                                    #        x=0.5,
+                                                    #        x=0.4,
                                                     #        y=1,
                                                     #        showarrow=False,
                                                     #        text=fit_equation,
@@ -650,14 +658,19 @@ app.layout = html.Div(
                                                 ),
                                             ),
                                         ),
+                                        html.P(
+                                            children="Data are fitted with Sigmoid functions.",
+                                            id="curve-plot-footnote",
+                                            style={'textAlign': 'left',},
+                                        ),
                                     ],
                                 ),
                                 #Right column
                                 html.Div(
                                     className="right-column",
                                     children=[
-                                        html.Br(),
-                                        html.Br(),
+                                        html.P("        "),
+                                        html.P("        "),
                                         html.H5(
                                             id="daily-title",
                                             children="Daily New Confirmed Cases in United States",
@@ -877,8 +890,13 @@ def display_selected_data(chart_dropdown, country_dropdown):
     ],
 )
 def update_curve_title(country_dropdown):
-    curve_title="Cumulative Confirmed Cases with Fitted Curve in %s" %(country_dropdown)
-    daily_title="Daily New Confirmed Cases in %s" %(country_dropdown)
+    if country_dropdown=="World":
+        curve_title="Cumulative Confirmed Cases with Fitted Curve in the %s" %(country_dropdown)
+        daily_title="Daily New Confirmed Cases in the %s" %(country_dropdown)
+
+    else:
+        curve_title="Cumulative Confirmed Cases with Fitted Curve in %s" %(country_dropdown)
+        daily_title="Daily New Confirmed Cases in %s" %(country_dropdown)
     return curve_title, daily_title
 
 #~~~~~~~~~~~~~~~~~~~~~Growth Curve Plot~~~~~~~~~~~~~~~~~~~~#
@@ -907,15 +925,6 @@ def display_growth_curve(country_dropdown):
     popt, pcov = curve_fit(sigmoid_func, x, y,maxfev=100000)
     xx = np.linspace(1,max_days,max_days)
     yy = sigmoid_func(xx, *popt)
-    a=round(popt[0],1)
-    a_char=str(a)
-    k=round(popt[1],1)
-    k_char=str(k)
-    delta=round(popt[2],1)
-    delta_char=str(delta)
-    L=round(popt[3],1)
-    L_char=str(L)
-    fit_equation="y="+a_char+"+("+L_char+a_char+")/((1+exp^{(%s-x)/%s}" % (k_char, delta_char)
     init_date=datetime.datetime(2020,1,22)
     d=list()
     for i in range(max_days):
@@ -967,16 +976,6 @@ def display_growth_curve(country_dropdown):
                 family=plotfont, size=12, 
                 color=fontcl,
             ),
-            #annotations = 
-            #    [dict(
-            #        x=0.5,
-            #        y=1,
-            #        showarrow=False,
-            #        text=fit_equation,
-            #        xref='paper',
-            #        yref='paper',
-            #        ),
-            #    ],
             legend = dict(
                 x=0.01, y=1
                 )
