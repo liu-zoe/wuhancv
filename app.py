@@ -51,6 +51,7 @@ sheetnames=[
     "03-13-2020","03-14-2020","03-15-2020",
     "03-16-2020","03-17-2020","03-18-2020",
     "03-19-2020","03-20-2020","03-21-2020",
+    "03-22-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -388,15 +389,27 @@ app.layout = html.Div(
                                                             "label":"Austria",
                                                             "value":"Austria",                                                        
                                                         },
-                                                         {
+                                                        {
+                                                            "label":"Belgium",
+                                                            "value":"Belgium",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Norway",
+                                                            "value":"Norway",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Sweden",
+                                                            "value":"Sweden",                                                        
+                                                        },
+                                                        {
                                                             "label":"Japan",
                                                             "value":"Japan",
                                                         },
-                                                         {
+                                                        {
                                                             "label":"Singapore",
                                                             "value":"Singapore",
                                                         },
-                                                         {
+                                                        {
                                                             "label":"Taiwan",
                                                             "value":"Taiwan",
                                                         },
@@ -575,15 +588,27 @@ app.layout = html.Div(
                                                             "label":"Austria",
                                                             "value":"Austria",                                                        
                                                         },
-                                                         {
+                                                        {
+                                                            "label":"Belgium",
+                                                            "value":"Belgium",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Norway",
+                                                            "value":"Norway",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Sweden",
+                                                            "value":"Sweden",                                                        
+                                                        },
+                                                        {
                                                             "label":"Japan",
                                                             "value":"Japan",
                                                         },
-                                                         {
+                                                        {
                                                             "label":"Singapore",
                                                             "value":"Singapore",
                                                         },
-                                                         {
+                                                        {
                                                             "label":"Taiwan",
                                                             "value":"Taiwan",
                                                         },
