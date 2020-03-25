@@ -51,7 +51,7 @@ sheetnames=[
     "03-13-2020","03-14-2020","03-15-2020",
     "03-16-2020","03-17-2020","03-18-2020",
     "03-19-2020","03-20-2020","03-21-2020",
-    "03-22-2020","03-23-2020",
+    "03-22-2020","03-23-2020","03-24-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -97,6 +97,7 @@ def cleandat(
                     np.where(indat['State']=='Chicago', 'Chicago, IL',
                     np.where( (indat['State']=='None') & (indat['Country'].isin(['Lebanon','Iraq','Austria'])), '',
                     indat['State']))))))
+    indat=indat[indat['State'].isin(['Recovered','Wuhan Evacuee'])==0]
     indat['Location']=np.where(indat['State']=='', indat['Country'],\
         indat['Country']+'-'+indat['State'])
     indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*9 if x>0 else 0)

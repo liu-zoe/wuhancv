@@ -7,6 +7,8 @@ app v1.py
 app v2.py
 scraper.py
 latlnt_old.xlsx
+US_latlnt.xlsx
+data/US
 archive_data/
 JHUCSSE_Data/
 style_sample/

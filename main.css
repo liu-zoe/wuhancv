@@ -3,16 +3,8 @@
 - Grid
 - Base Styles
 - Typography
-- Links
-- Buttons
-- Forms
-- Lists
-- Code
-- Tables
-- Spacing
-- Utilities
-- Clearing
-- Media Queries
+- AOS Fade In
+- Sticky
 */
 
 
@@ -142,4 +134,10 @@ footer p {
     padding-bottom: 15px;
     text-align: left;
 
+  }
+/*Sticky
+-----------------------------------------------------*/
+#cases {
+    position: fixed;
+    right: 0;
   }
