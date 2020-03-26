@@ -52,6 +52,7 @@ sheetnames=[
     "03-16-2020","03-17-2020","03-18-2020",
     "03-19-2020","03-20-2020","03-21-2020",
     "03-22-2020","03-23-2020","03-24-2020",
+    "03-25-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -106,15 +107,12 @@ df=list(map(lambda x: cleandat(x), df))
 
 #Create a subset of all dates to limit the clutter on bubblemap timetrack
 skip=1
-newdates=[]
-newdf=[]
+mark_index=[]
 i=len(dates)-1
 while (i>=0):
-    newdates.append(dates[i])
-    newdf.append(df[i])
+    mark_index.append(i)
     i-=(skip+1)
-newdates.reverse()
-newdf.reverse()
+mark_index.reverse()
 del skip, i
 
 # Create a dataset with cumulated cases by date
@@ -252,7 +250,7 @@ app.layout = html.Div(
                                                     },
                                                 ),
                                                 dcc.Interval(id='auto-stepper',
-                                                    interval=2*1000, # in milliseconds
+                                                    interval=1*1000, # in milliseconds
                                                     n_intervals=0,
                                                     max_intervals=0,
                                                     disabled=False,
@@ -260,14 +258,14 @@ app.layout = html.Div(
                                                 dcc.Slider(
                                                     id="date-slider",
                                                     min=0, 
-                                                    max=len(newdates)-1,
+                                                    max=len(dates)-1,
                                                     value=0,
                                                     marks={
                                                         str(date_ord):{
-                                                            "label":newdates[date_ord],
+                                                            "label":dates[date_ord],
                                                             "style": {"transform": "rotate(45deg)"}
                                                         } 
-                                                        for date_ord in range(len(newdates))
+                                                        for date_ord in mark_index
                                                     },
                                                 ),
                                             ],
@@ -276,7 +274,7 @@ app.layout = html.Div(
                                             id="bubblemap-container",
                                             children=[
                                                 html.H5(
-                                                    "Confirmed COVID-19 Cases Across The Globe ",
+                                                    "Confirmed COVID-19 Cases Across The Globe on Jan 22",
                                                     id="bubblemap-title",
                                                     style={'textAlign': 'left',},
                                                 ),
@@ -755,12 +753,15 @@ app.layout = html.Div(
 #----------------------------------Callback-----------------------------------#
 #~~~~~~~~~~~~Bubble Plot Slider~~~~~~~~~~~#
 @app.callback(
-    Output("country-bubble", "figure"), 
+    [
+        Output("country-bubble", "figure"), 
+        Output("bubblemap-title", "children"),
+    ],
     [Input("date-slider", "value")],
 )
 
 def update_bubble(date_index):
-    filtered_df=newdf[date_index]
+    filtered_df=df[date_index]
 
     fig = go.Figure(
         data=go.Scattergeo(
@@ -796,7 +797,7 @@ def update_bubble(date_index):
         paper_bgcolor=bgcl,
         plot_bgcolor=bgcl,
     )
-    return fig
+    return fig, "Confirmed COVID-19 Cases Across The Globe on "+dates[date_index]
 
 #~~~~~~~~~~~~~~~~~Interval of the Bubble Map~~~~~~~~~~~~~~~~~~~~~~~~~~#
 @app.callback(
@@ -818,11 +819,11 @@ def move_frames(n_intervals, play_timestamp, pause_timestamp):
     if (play_timestamp==-1) & (pause_timestamp==-1):
         return 0, 0, True
     elif  (play_timestamp>pause_timestamp):
-        slider_value=(n_intervals+1)%(len(newdates))
+        slider_value=(n_intervals+1)%(len(dates))
         max_intervals=-1
         int_disabled=False
     elif (pause_timestamp>play_timestamp):
-        slider_value=(n_intervals+1)%(len(newdates))
+        slider_value=(n_intervals+1)%(len(dates))
         max_intervals=0
         int_disabled=False
     return slider_value, max_intervals, int_disabled
