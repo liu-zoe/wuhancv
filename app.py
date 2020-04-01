@@ -53,7 +53,8 @@ sheetnames=[
     "03-19-2020","03-20-2020","03-21-2020",
     "03-22-2020","03-23-2020","03-24-2020",
     "03-25-2020","03-26-2020","03-27-2020",
-    "03-28-2020","03-29-2020",
+    "03-28-2020","03-29-2020","03-30-2020",
+    "03-31-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
@@ -614,6 +615,12 @@ app.layout = html.Div(
                                                         },
                                                     ],
                                                 ),
+                                                dcc.Input(
+                                                    id="days",
+                                                    placeholder='Days to project',
+                                                    type='text',
+                                                    value=''
+                                                ),  
                                             ],
                                         ),
                                         html.H5("Cumulative Confirmed Cases with Fitted Curve in United States",
@@ -932,9 +939,10 @@ def update_curve_title(country_dropdown):
     Output("curve-plot", "figure"),
     [
         Input("country-dropdown2","value"),
+        Input("days","value")
     ],
 )
-def display_growth_curve(country_dropdown):
+def display_growth_curve(country_dropdown,days):
     if country_dropdown=="World":
         cum0=cum
     else:
@@ -945,7 +953,10 @@ def display_growth_curve(country_dropdown):
         cum0.columns=['Confirmed',]
         cum0['Days']=np.arange(len(cum0))
         cum0['Days']+=1
-    pred_period=5 #Number of days to plot ahead of today
+    if days=="":
+        pred_period=5 #Number of days to plot ahead of today
+    else:
+        pred_period=int(days)
     days_count=len(dates)
     max_days=days_count+pred_period
     x=np.array(list(cum0['Days']))
