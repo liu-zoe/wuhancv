@@ -17,7 +17,7 @@ import math
 import scipy
 from scipy.optimize import curve_fit
 import datetime
-from datetime import datetime as dt
+#from datetime import datetime as dt
 # Initialize app
 app = dash.Dash(
     __name__,
@@ -56,12 +56,7 @@ dates_us=[]
 for dat in dfus:
     dates_us.append(dat['date'][0])
 del dat
-# Create a dataset with ISO FIPS and latitude/longitude data
-lookup=pd.read_csv(os.path.join(APP_PATH, 'data/')+'UID.csv')
-lookup_us_county=lookup[(lookup['Country_Region']=='US') & (lookup['FIPS']>0) &\
-     (lookup['Admin2'].isnull()==0) & (lookup['Lat'].isnull()==0)]
-lookup_us_county=lookup_us_county[['iso2','iso3','FIPS','Admin2','Province_State','Lat','Long_', 'Combined_Key']]
-del lookup
+
 def cleandat(
     indat,
 ):
@@ -106,32 +101,6 @@ def cleandat(
     indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*8 if x>0 else 0)
     return indat
 df=list(map(lambda x: cleandat(x), df))
-#Create US-county-level data Using Johns Hopkins data
-def cleanusdat(
-    indat, #Input Data
-):
-    indat=indat[['FIPS','Admin2','Province/State', 'Country/Region', 'Last Update', \
-        'Latitude','Longitude', 'Confirmed', 'Deaths', 'Recovered', \
-        'date', 'year', 'month', 'day'
-    ]]
-    indat.columns=['FIPS','Admin2','State','Country','Last Update',\
-    'lat', 'long','Confirmed','Deaths','Recovered',\
-    'date','year', 'month', 'day']
-    indat=indat.fillna(value={'State':'', 'Confirmed':0, \
-        'Deaths':0, 'Recovered':0,})
-    indat['Confirmed']=indat['Confirmed'].astype('int64')
-    indat['Recovered']=indat['Recovered'].astype('int64')
-    indat['Deaths']=indat['Deaths'].astype('int64')
-    indexNames=indat[(indat['Confirmed']==0)&(indat['Recovered']==0)&(indat['Deaths']==0)].index
-    indat.drop(indexNames , inplace=True)
-    indat['State']=indat['State'].str.strip()
-    indat['Admin2']=indat['Admin2'].str.strip()
-    indat['Location']=np.where(indat['Admin2']=='', indat['State'],\
-        indat['State']+'-'+indat['Admin2'])
-    indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*8 if x>0 else 0)
-    return indat
-dfus=list(map(lambda x: cleanusdat(x), dfus))
-dfallus=pd.concat(dfus)
 
 #Create a subset of all dates to limit the clutter on bubblemap timetrack
 skip=1
@@ -143,14 +112,6 @@ while (i>=0):
 mark_index.reverse()
 del skip, i
 
-skip_us=0
-mark_index_us=[]
-i=len(dates_us)-1
-while (i>=0):
-    mark_index_us.append(i)
-    i-=(skip_us+1)
-mark_index_us.reverse()
-del skip_us, i
 
 # Create a dataset with cumulated cases by date
 cum=pd.DataFrame(map(lambda x: [x.Confirmed.sum(), x.Deaths.sum(), x.Recovered.sum(),], df))
@@ -169,61 +130,7 @@ charttitle=['Number of Confirmed Cases Across Time',
 'Deaths Rates* Across Time', 
 'Recovered Rates Across Time']
 
-# Create a dataset with cumulated US cases by date 
-cum_us=pd.DataFrame(map(lambda x: [x.Confirmed.sum(), x.Deaths.sum(), x.Recovered.sum(),], dfus))
-cum_us['date']=dates_us
-cum_us['Days']=np.arange(len(cum_us))
-cum_us['Days']+=1
-cum_us.columns=['Confirmed','Deaths','Recovered','date','Days']
-cum_us['death_rate']=round(100*(cum_us['Deaths']/cum_us['Confirmed']),2)
-cum_us['recover_rate']=round(100*(cum_us['Recovered']/cum_us['Confirmed']),2)
-vars=['Confirmed','Deaths','Recovered', 'death_rate','recover_rate']
-yaxislab=['Confirmed Cases', 'Deaths Cases', 'Recovered Cases',
-'Death Rates (%)', 'Recovered Rates (%)']
-charttitle=['Number of Confirmed Cases Across Time', 
-'Number of Deaths Cases Across Time', 
-'Number of Recovered Cases Across Time', 
-'Deaths Rates* Across Time', 
-'Recovered Rates Across Time']
-#----------------------------------Load NYT Data-------------------------------#
-# New York Times Data
-#https://github.com/nytimes/covid-19-data
-nyt_state=pd.read_csv(os.path.join(APP_PATH, 'data/NYT/us-states.csv'))
-dates_nyt0=list(set(nyt_state['date']))
-dates_nyt0.sort()
-dates_nyt1=pd.DataFrame(dates_nyt0)
-dates_nyt1.columns=['date']
-dates_nyt1['stamp']=dates_nyt1['date'].apply(lambda x: (dt.strptime(x, '%Y-%m-%d')))
-dates_nyt1['date2']=dates_nyt1['stamp'].apply(lambda x: (dt.strftime(x, '%b%d')))
-dates_nyt=list(dates_nyt1['date2'])
-del dates_nyt0, dates_nyt1
-nyt_state['stamp']=nyt_state['date'].apply(lambda x: (dt.strptime(x, '%Y-%m-%d')))
-nyt_state['date2']=nyt_state['stamp'].apply(lambda x: (dt.strftime(x, '%b%d')))
-nyt_state=nyt_state[['date','state','fips','cases','deaths']]
-nyt_state.columns=['date','state','fips','Confirmed','Deaths']
 
-nyt_county=pd.read_csv(os.path.join(APP_PATH, 'data/NYT/us-counties.csv'))
-nyt_county['stamp']=nyt_county['date'].apply(lambda x: (dt.strptime(x, '%Y-%m-%d')))
-nyt_county['date2']=nyt_county['stamp'].apply(lambda x: (dt.strftime(x, '%b%d')))
-nyt_county=nyt_county[['date2','county','state','fips','cases','deaths']]
-nyt_county.columns=['date','county','state','fips','Confirmed','Deaths']
-nyt_county=pd.merge(nyt_county, lookup_us_county, how='left',left_on='fips',right_on='FIPS')
-nyt_county.columns=['date','county','state','fips','Confirmed','Deaths',\
-    'iso2','ios3','FIPS','Admin2','Province/State','lat','long','Combined_Key']
-nyt_county['Confirmed']=nyt_county['Confirmed'].astype('int64')
-nyt_county['Deaths']=nyt_county['Deaths'].astype('int64')
-nyt_county=nyt_county.fillna(value={'Confirmed':0, 'Deaths':0})
-nyt_county['conf']=nyt_county['Confirmed'].apply(lambda x: (math.log10(x+1))*9 if x>0 else 0)
-nyt_county_0=nyt_county[nyt_county['date']=='Jan21']
-
-skip_nyt=1
-mark_index_nyt=[]
-i=len(dates_nyt)-1
-while (i>=0):
-    mark_index_nyt.append(i)
-    i-=(skip_nyt+1)
-mark_index_nyt.reverse()
-del skip_nyt, i
 #----------------------------------Fit a growth curve-------------------------------#
 pred_period=5 #Number of days to plot ahead of today
 days_count=len(dates)
