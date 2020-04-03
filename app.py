@@ -49,13 +49,7 @@ dates=[]
 for dat in df:
     dates.append(dat['date'][0])
 del dat
-#Create a list of dates for US data
-sheetnames_us=sheetnames[61:]
-dfus=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/US/')+x+"_US.csv"), sheetnames_us))
-dates_us=[]
-for dat in dfus:
-    dates_us.append(dat['date'][0])
-del dat
+
 # Create a dataset with ISO FIPS and latitude/longitude data
 lookup=pd.read_csv(os.path.join(APP_PATH, 'data/')+'UID.csv')
 lookup_us_county=lookup[(lookup['Country_Region']=='US') & (lookup['FIPS']>0) &\
@@ -106,32 +100,6 @@ def cleandat(
     indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*8 if x>0 else 0)
     return indat
 df=list(map(lambda x: cleandat(x), df))
-#Create US-county-level data Using Johns Hopkins data
-def cleanusdat(
-    indat, #Input Data
-):
-    indat=indat[['FIPS','Admin2','Province/State', 'Country/Region', 'Last Update', \
-        'Latitude','Longitude', 'Confirmed', 'Deaths', 'Recovered', \
-        'date', 'year', 'month', 'day'
-    ]]
-    indat.columns=['FIPS','Admin2','State','Country','Last Update',\
-    'lat', 'long','Confirmed','Deaths','Recovered',\
-    'date','year', 'month', 'day']
-    indat=indat.fillna(value={'State':'', 'Confirmed':0, \
-        'Deaths':0, 'Recovered':0,})
-    indat['Confirmed']=indat['Confirmed'].astype('int64')
-    indat['Recovered']=indat['Recovered'].astype('int64')
-    indat['Deaths']=indat['Deaths'].astype('int64')
-    indexNames=indat[(indat['Confirmed']==0)&(indat['Recovered']==0)&(indat['Deaths']==0)].index
-    indat.drop(indexNames , inplace=True)
-    indat['State']=indat['State'].str.strip()
-    indat['Admin2']=indat['Admin2'].str.strip()
-    indat['Location']=np.where(indat['Admin2']=='', indat['State'],\
-        indat['State']+'-'+indat['Admin2'])
-    indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*8 if x>0 else 0)
-    return indat
-dfus=list(map(lambda x: cleanusdat(x), dfus))
-dfallus=pd.concat(dfus)
 
 #Create a subset of all dates to limit the clutter on bubblemap timetrack
 skip=1
@@ -142,15 +110,6 @@ while (i>=0):
     i-=(skip+1)
 mark_index.reverse()
 del skip, i
-
-skip_us=0
-mark_index_us=[]
-i=len(dates_us)-1
-while (i>=0):
-    mark_index_us.append(i)
-    i-=(skip_us+1)
-mark_index_us.reverse()
-del skip_us, i
 
 # Create a dataset with cumulated cases by date
 cum=pd.DataFrame(map(lambda x: [x.Confirmed.sum(), x.Deaths.sum(), x.Recovered.sum(),], df))
@@ -169,22 +128,6 @@ charttitle=['Number of Confirmed Cases Across Time',
 'Deaths Rates* Across Time', 
 'Recovered Rates Across Time']
 
-# Create a dataset with cumulated US cases by date 
-cum_us=pd.DataFrame(map(lambda x: [x.Confirmed.sum(), x.Deaths.sum(), x.Recovered.sum(),], dfus))
-cum_us['date']=dates_us
-cum_us['Days']=np.arange(len(cum_us))
-cum_us['Days']+=1
-cum_us.columns=['Confirmed','Deaths','Recovered','date','Days']
-cum_us['death_rate']=round(100*(cum_us['Deaths']/cum_us['Confirmed']),2)
-cum_us['recover_rate']=round(100*(cum_us['Recovered']/cum_us['Confirmed']),2)
-vars=['Confirmed','Deaths','Recovered', 'death_rate','recover_rate']
-yaxislab=['Confirmed Cases', 'Deaths Cases', 'Recovered Cases',
-'Death Rates (%)', 'Recovered Rates (%)']
-charttitle=['Number of Confirmed Cases Across Time', 
-'Number of Deaths Cases Across Time', 
-'Number of Recovered Cases Across Time', 
-'Deaths Rates* Across Time', 
-'Recovered Rates Across Time']
 #----------------------------------Load NYT Data-------------------------------#
 # New York Times Data
 #https://github.com/nytimes/covid-19-data
@@ -239,15 +182,6 @@ def sigmoid_func(x, a, k, delta, L):
 popt, pcov = curve_fit(sigmoid_func, x, y,maxfev=100000)
 xx = np.linspace(1,max_days,max_days)
 yy = sigmoid_func(xx, *popt)
-#a=round(popt[0],1)
-#a_char=str(a)
-#k=round(popt[1],1)
-#k_char=str(k)
-#delta=round(popt[2],1)
-#delta_char=str(delta)
-#L=round(popt[3],1)
-#L_char=str(L)
-#fit_equation=r"$y="+a_char+"+/frac{%s+%s}{1+exp^{/frac{%s-x}{%s}}}$" % (L_char, a_char, k_char, delta_char)
 init_date=datetime.datetime(2020,1,22)
 d=list()
 for i in range(max_days):
@@ -1206,16 +1140,6 @@ app.layout = html.Div(
                                                         family=plotfont, size=12, 
                                                         color=fontcl,
                                                     ),
-                                                    #annotations = 
-                                                    #    [dict(
-                                                    #        x=0.4,
-                                                    #        y=1,
-                                                    #        showarrow=False,
-                                                    #        text=fit_equation,
-                                                    #        xref='paper',
-                                                    #        yref='paper',
-                                                    #        ),
-                                                    #    ],
                                                     legend = dict(
                                                         x=0.01, y=1
                                                     )
@@ -1602,59 +1526,6 @@ def display_selected_data_us(chart_dropdown, state_dropdown):
         ),
     )
     return fig 
-'''
-def display_selected_data_us(chart_dropdown, country_dropdown):
-    if country_dropdown=="USA":
-        cum0=cum_us
-    else:
-        df0=[]
-        for dataframe in dfus:
-            df0.append(dataframe[dataframe['State']==country_dropdown])
-        cum0=pd.DataFrame(map(lambda x: [x.Confirmed.sum(), x.Deaths.sum(), x.Recovered.sum(),], df0))
-        cum0['date']=dates_us
-        cum0.columns=['Confirmed','Deaths','Recovered','date']
-        cum0['death_rate']=round(100*(cum0['Deaths']/cum0['Confirmed']),2)
-        cum0['recover_rate']=round(100*(cum0['Recovered']/cum0['Confirmed']),2)
-    yvar=vars[chart_dropdown]
-    cum_one_var=cum0[cum0[yvar]>0][['date', yvar]]
-    fig=go.Figure(
-        data=go.Scatter(
-            x=cum_one_var['date'],
-            y=cum_one_var[yvar],
-            name='',
-            mode='lines+markers',
-            hovertemplate='%{x}'+'<br>'+yaxislab[chart_dropdown]+':%{y}',
-            marker = go.scatter.Marker(
-                        color = markercl,
-            ),
-            opacity=0.85,     
-        ),
-    )
-    fig.update_layout(
-        paper_bgcolor=bgcl, 
-        plot_bgcolor=bgcl,
-        margin=dict(l=0, t=0, b=0, r=0, pad=0),
-        yaxis = dict(zeroline = False,
-                    title=yaxislab[chart_dropdown],
-                    color=linecl, 
-                    showgrid=False,
-        ),
-        xaxis = dict(zeroline = False,
-                    title='Date',
-                    color=linecl,
-                    showgrid=False,
-                    tickmode='auto',
-                    nticks=17,
-                    tickangle=45,
-        ),
-        font=dict(
-            family=plotfont, 
-            size=11, 
-            color=fontcl,
-        ),
-    )
-    return fig 
-'''
 #~~~~~~~~~~~~~~~~~~~~~Growth Curve Titles~~~~~~~~~~~~~~~~~~~~#
 @app.callback(
     [
@@ -1835,5 +1706,3 @@ def display_new_cases(country_dropdown):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
-
-# %%
