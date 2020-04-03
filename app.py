@@ -17,7 +17,7 @@ import math
 import scipy
 from scipy.optimize import curve_fit
 import datetime
-#from datetime import datetime as dt
+from datetime import datetime as dt
 # Initialize app
 app = dash.Dash(
     __name__,
@@ -56,7 +56,12 @@ dates_us=[]
 for dat in dfus:
     dates_us.append(dat['date'][0])
 del dat
-
+# Create a dataset with ISO FIPS and latitude/longitude data
+lookup=pd.read_csv(os.path.join(APP_PATH, 'data/')+'UID.csv')
+lookup_us_county=lookup[(lookup['Country_Region']=='US') & (lookup['FIPS']>0) &\
+     (lookup['Admin2'].isnull()==0) & (lookup['Lat'].isnull()==0)]
+lookup_us_county=lookup_us_county[['iso2','iso3','FIPS','Admin2','Province_State','Lat','Long_', 'Combined_Key']]
+del lookup
 def cleandat(
     indat,
 ):
@@ -101,6 +106,32 @@ def cleandat(
     indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*8 if x>0 else 0)
     return indat
 df=list(map(lambda x: cleandat(x), df))
+#Create US-county-level data Using Johns Hopkins data
+def cleanusdat(
+    indat, #Input Data
+):
+    indat=indat[['FIPS','Admin2','Province/State', 'Country/Region', 'Last Update', \
+        'Latitude','Longitude', 'Confirmed', 'Deaths', 'Recovered', \
+        'date', 'year', 'month', 'day'
+    ]]
+    indat.columns=['FIPS','Admin2','State','Country','Last Update',\
+    'lat', 'long','Confirmed','Deaths','Recovered',\
+    'date','year', 'month', 'day']
+    indat=indat.fillna(value={'State':'', 'Confirmed':0, \
+        'Deaths':0, 'Recovered':0,})
+    indat['Confirmed']=indat['Confirmed'].astype('int64')
+    indat['Recovered']=indat['Recovered'].astype('int64')
+    indat['Deaths']=indat['Deaths'].astype('int64')
+    indexNames=indat[(indat['Confirmed']==0)&(indat['Recovered']==0)&(indat['Deaths']==0)].index
+    indat.drop(indexNames , inplace=True)
+    indat['State']=indat['State'].str.strip()
+    indat['Admin2']=indat['Admin2'].str.strip()
+    indat['Location']=np.where(indat['Admin2']=='', indat['State'],\
+        indat['State']+'-'+indat['Admin2'])
+    indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*8 if x>0 else 0)
+    return indat
+dfus=list(map(lambda x: cleanusdat(x), dfus))
+dfallus=pd.concat(dfus)
 
 #Create a subset of all dates to limit the clutter on bubblemap timetrack
 skip=1
@@ -112,6 +143,14 @@ while (i>=0):
 mark_index.reverse()
 del skip, i
 
+skip_us=0
+mark_index_us=[]
+i=len(dates_us)-1
+while (i>=0):
+    mark_index_us.append(i)
+    i-=(skip_us+1)
+mark_index_us.reverse()
+del skip_us, i
 
 # Create a dataset with cumulated cases by date
 cum=pd.DataFrame(map(lambda x: [x.Confirmed.sum(), x.Deaths.sum(), x.Recovered.sum(),], df))
@@ -130,7 +169,61 @@ charttitle=['Number of Confirmed Cases Across Time',
 'Deaths Rates* Across Time', 
 'Recovered Rates Across Time']
 
+# Create a dataset with cumulated US cases by date 
+cum_us=pd.DataFrame(map(lambda x: [x.Confirmed.sum(), x.Deaths.sum(), x.Recovered.sum(),], dfus))
+cum_us['date']=dates_us
+cum_us['Days']=np.arange(len(cum_us))
+cum_us['Days']+=1
+cum_us.columns=['Confirmed','Deaths','Recovered','date','Days']
+cum_us['death_rate']=round(100*(cum_us['Deaths']/cum_us['Confirmed']),2)
+cum_us['recover_rate']=round(100*(cum_us['Recovered']/cum_us['Confirmed']),2)
+vars=['Confirmed','Deaths','Recovered', 'death_rate','recover_rate']
+yaxislab=['Confirmed Cases', 'Deaths Cases', 'Recovered Cases',
+'Death Rates (%)', 'Recovered Rates (%)']
+charttitle=['Number of Confirmed Cases Across Time', 
+'Number of Deaths Cases Across Time', 
+'Number of Recovered Cases Across Time', 
+'Deaths Rates* Across Time', 
+'Recovered Rates Across Time']
+#----------------------------------Load NYT Data-------------------------------#
+# New York Times Data
+#https://github.com/nytimes/covid-19-data
+nyt_state=pd.read_csv(os.path.join(APP_PATH, 'data/NYT/us-states.csv'))
+dates_nyt0=list(set(nyt_state['date']))
+dates_nyt0.sort()
+dates_nyt1=pd.DataFrame(dates_nyt0)
+dates_nyt1.columns=['date']
+dates_nyt1['stamp']=dates_nyt1['date'].apply(lambda x: (dt.strptime(x, '%Y-%m-%d')))
+dates_nyt1['date2']=dates_nyt1['stamp'].apply(lambda x: (dt.strftime(x, '%b%d')))
+dates_nyt=list(dates_nyt1['date2'])
+del dates_nyt0, dates_nyt1
+nyt_state['stamp']=nyt_state['date'].apply(lambda x: (dt.strptime(x, '%Y-%m-%d')))
+nyt_state['date2']=nyt_state['stamp'].apply(lambda x: (dt.strftime(x, '%b%d')))
+nyt_state=nyt_state[['date','state','fips','cases','deaths']]
+nyt_state.columns=['date','state','fips','Confirmed','Deaths']
 
+nyt_county=pd.read_csv(os.path.join(APP_PATH, 'data/NYT/us-counties.csv'))
+nyt_county['stamp']=nyt_county['date'].apply(lambda x: (dt.strptime(x, '%Y-%m-%d')))
+nyt_county['date2']=nyt_county['stamp'].apply(lambda x: (dt.strftime(x, '%b%d')))
+nyt_county=nyt_county[['date2','county','state','fips','cases','deaths']]
+nyt_county.columns=['date','county','state','fips','Confirmed','Deaths']
+nyt_county=pd.merge(nyt_county, lookup_us_county, how='left',left_on='fips',right_on='FIPS')
+nyt_county.columns=['date','county','state','fips','Confirmed','Deaths',\
+    'iso2','ios3','FIPS','Admin2','Province/State','lat','long','Combined_Key']
+nyt_county['Confirmed']=nyt_county['Confirmed'].astype('int64')
+nyt_county['Deaths']=nyt_county['Deaths'].astype('int64')
+nyt_county=nyt_county.fillna(value={'Confirmed':0, 'Deaths':0})
+nyt_county['conf']=nyt_county['Confirmed'].apply(lambda x: (math.log10(x+1))*9 if x>0 else 0)
+nyt_county_0=nyt_county[nyt_county['date']=='Jan21']
+
+skip_nyt=1
+mark_index_nyt=[]
+i=len(dates_nyt)-1
+while (i>=0):
+    mark_index_nyt.append(i)
+    i-=(skip_nyt+1)
+mark_index_nyt.reverse()
+del skip_nyt, i
 #----------------------------------Fit a growth curve-------------------------------#
 pred_period=5 #Number of days to plot ahead of today
 days_count=len(dates)
@@ -497,6 +590,436 @@ app.layout = html.Div(
                                         ),
                                         html.P("",
                                                 id="lineplot-footnote",
+                                                style={'textAlign': 'left',},
+                                                ),
+                                    ],
+                                ),
+                            ],
+                        ),
+                        #Footer
+                        html.Div(
+                            className="footer",
+                            children=[
+                                html.H5(
+                                    [
+                                        "Create by ",
+                                        html.A("Zoe Liu", href="http://zoe-liu.com", target="_blank"),
+                                    ]
+                                ),
+                                dcc.Markdown(
+                                    className="credit",
+                                    children=
+                                    '''
+                                    **Credit:** style and set-up is mostly based on the Dash sample app 
+                                    [*US Opiod Epidemic*](https://dash-gallery.plotly.host/dash-opioid-epidemic/).
+                                    '''),
+                            ],
+                        ),
+                    ],
+                ),
+                #----------------------------Tab 2: US Map-----------------------------------#
+                dcc.Tab(
+                    label='US Outbreak Map', 
+                    className='custom-tab',
+                    selected_className='custom-tab--selected',
+                    children=[
+                        #app
+                        html.Div(
+                            className="app-container", 
+                            children=[
+                                #Left Column
+                                html.Div(
+                                    className="left-column", 
+                                    children=[
+                                        html.Div(
+                                            className="slider-container", 
+                                            children=[
+                                                html.Button(
+                                                    id="play-button-us",
+                                                    children="play",
+                                                    n_clicks=0,
+                                                    n_clicks_timestamp=-1,
+                                                    type='button',
+                                                    style = {
+                                                        'color':markercl, 
+                                                        'textAlign':'center'
+                                                    },
+                                                ),
+                                                html.Button(
+                                                    id="pause-button-us",
+                                                    children="Pause",
+                                                    n_clicks=0,
+                                                    n_clicks_timestamp=-1,
+                                                    type='button',
+                                                    style = {
+                                                        'color':markercl, 
+                                                        'textAlign':'center'
+                                                    },
+                                                ),
+                                                dcc.Interval(
+                                                    id='auto-stepper-us',
+                                                    interval=1*2000, # in milliseconds
+                                                    n_intervals=0,
+                                                    max_intervals=0,
+                                                    disabled=False,
+                                                ),
+                                                dcc.Slider(
+                                                    id="date-slider-us",
+                                                    min=0, 
+                                                    max=len(dates_nyt)-1,
+                                                    value=0,
+                                                    marks={
+                                                        str(date_ord):{
+                                                            "label":dates_nyt[date_ord],
+                                                            "style": {"transform": "rotate(45deg)"}
+                                                        } 
+                                                        for date_ord in mark_index_nyt
+                                                    },
+                                                ),
+                                            ],
+                                        ),
+                                        html.Div(
+                                            className="bubblemap-container",
+                                            children=[
+                                                html.H5(
+                                                    "Confirmed COVID-19 Cases in the US on Jan 21",
+                                                    className="bubblemap-title",
+                                                    id="bubblemap-title-us",
+                                                    style={'textAlign': 'left',},
+                                                ),
+                                                dcc.Graph(
+                                                    className="country-bubble", 
+                                                    id="country-bubble-us",
+                                                    figure = go.Figure(
+                                                        data=go.Scattergeo(
+                                                            lat = nyt_county_0['lat'],
+                                                            lon = nyt_county_0['long'],
+                                                            mode='markers',
+                                                            hovertext =nyt_county_0['Combined_Key']\
+                                                            + '<br> Confirmed:' + nyt_county_0['Confirmed'].astype(str)\
+                                                            + '<br> Deaths:' + nyt_county_0['Deaths'].astype(str),
+                                                            marker = go.scattergeo.Marker(
+                                                                color = markercl,
+                                                                size = nyt_county_0['conf']),
+                                                            opacity=0.85,
+                                                        ),
+                                                        layout=dict(                                            
+                                                            geo=dict(
+                                                                scope="usa",
+                                                                showland=True,
+                                                                landcolor=bgcl,
+                                                                showcoastlines=True,
+                                                                coastlinecolor=linecl,
+                                                                showocean=True,
+                                                                oceancolor=bgcl,
+                                                                showlakes=False,
+                                                                showcountries=True,
+                                                                countrycolor = linecl,        
+                                                                bgcolor=bgcl,
+                                                            ),
+                                                            margin=dict(l=0, t=0, b=0, r=0, pad=0),
+                                                            paper_bgcolor=bgcl,
+                                                            plot_bgcolor=bgcl,
+                                                        ),
+                                                    ),                                        
+                                                ),
+                                            ],
+                                        ),
+                                    ],
+                                ),
+                                #Right column
+                                html.Div(
+                                    className="graph-container",
+                                    children=[
+                                        html.P(
+                                            className="chart-selector", 
+                                            children="Select State and Type of Cases:", 
+                                            style={'textAlign': 'left',},
+                                        ), 
+                                        html.Div(
+                                            id="drop-downs-us",
+                                            children=[
+                                                dcc.Dropdown(
+                                                    value="USA",
+                                                    className="country-dropdown",
+                                                    id="country-dropdown-us",
+                                                    options=[                                                
+                                                        {
+                                                            "label":"USA",
+                                                            "value":"USA",
+                                                        },
+                                                        {
+                                                            "label":"Alabama",
+                                                            "value":"Alabama",
+                                                        },
+                                                        {
+                                                            "label":"Alaska",
+                                                            "value":"Alaska",
+                                                        },
+                                                        {
+                                                            "label":"Arizona",
+                                                            "value":"Arizona",
+                                                        },
+                                                        {
+                                                            "label":"Arkansas",
+                                                            "value":"Arkansas",
+                                                        },
+                                                        {
+                                                            "label":"California",
+                                                            "value":"California",
+                                                        },
+                                                        {
+                                                            "label":"Colorado",
+                                                            "value":"Colorado",
+                                                        },
+                                                        {
+                                                            "label":"Connecticut",
+                                                            "value":"Connecticut",
+                                                        },
+                                                        {
+                                                            "label":"Delaware",
+                                                            "value":"Delaware",
+                                                        },
+                                                        {
+                                                            "label":"DC",
+                                                            "value":"District of Columbia",
+                                                        },
+                                                        {
+                                                            "label":"Florida",
+                                                            "value":"Florida",
+                                                        },
+                                                        {
+                                                            "label":"Georgia",
+                                                            "value":"Georgia",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Hawaii",
+                                                            "value":"Hawaii",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Idaho",
+                                                            "value":"Idaho",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Illinois",
+                                                            "value":"Illinois",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Indiana",
+                                                            "value":"Indiana",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Iowa",
+                                                            "value":"Iowa",
+                                                        },
+                                                        {
+                                                            "label":"Kansas",
+                                                            "value":"Kansas",
+                                                        },
+                                                        {
+                                                            "label":"Kentucky",
+                                                            "value":"Kentucky",
+                                                        },
+                                                        {
+                                                            "label":"Louisiana",
+                                                            "value":"Louisiana",
+                                                        },
+                                                        {
+                                                            "label":"Maine",
+                                                            "value":"Maine",
+                                                        },
+                                                        {
+                                                            "label":"Maryland",
+                                                            "value":"Maryland",
+                                                        },
+                                                        {
+                                                            "label":"Massachusetts",
+                                                            "value":"Massachusetts",
+                                                        },
+                                                        {
+                                                            "label":"Michigan",
+                                                            "value":"Michigan",
+                                                        },
+                                                        {
+                                                            "label":"Minnesota",
+                                                            "value":"Minnesota",
+                                                        },
+                                                        {
+                                                            "label":"Mississippi",
+                                                            "value":"Mississippi",
+                                                        },
+                                                        {
+                                                            "label":"Missouri",
+                                                            "value":"Missouri",
+                                                        },
+                                                        {
+                                                            "label":"Montana",
+                                                            "value":"Montana",
+                                                        },
+                                                        {
+                                                            "label":"Nebraska",
+                                                            "value":"Nebraska",
+                                                        },
+                                                        {
+                                                            "label":"Nevada",
+                                                            "value":"Nevada",
+                                                        },
+                                                        {
+                                                            "label":"New Hampshire",
+                                                            "value":"New Hampshire",
+                                                        },
+                                                        {
+                                                            "label":"New Jersey",
+                                                            "value":"New Jersey",
+                                                        },
+                                                        {
+                                                            "label":"New Mexico",
+                                                            "value":"New Mexico",
+                                                        },
+                                                        {
+                                                            "label":"New York",
+                                                            "value":"New York",
+                                                        },
+                                                        {
+                                                            "label":"North Carolina",
+                                                            "value":"North Carolina",
+                                                        },
+                                                        {
+                                                            "label":"North Dakota",
+                                                            "value":"North Dakota",
+                                                        },
+                                                        {
+                                                            "label":"Ohio",
+                                                            "value":"Ohio",
+                                                        },
+                                                        {
+                                                            "label":"Oklahoma",
+                                                            "value":"Oklahoma",
+                                                        },
+                                                        {
+                                                            "label":"Oregon",
+                                                            "value":"Oregon",
+                                                        },
+                                                        {
+                                                            "label":"Pennsylvania",
+                                                            "value":"Pennsylvania",
+                                                        },
+                                                        {
+                                                            "label":"Rhode Island",
+                                                            "value":"Rhode Island",
+                                                        },
+                                                        {
+                                                            "label":"South Carolina",
+                                                            "value":"South Carolina",
+                                                        },
+                                                        {
+                                                            "label":"South Dakota",
+                                                            "value":"South Dakota",
+                                                        },
+                                                        {
+                                                            "label":"Tennessee",
+                                                            "value":"Tennessee",
+                                                        },
+                                                        {
+                                                            "label":"Texas",
+                                                            "value":"Texas",
+                                                        },
+                                                        {
+                                                            "label":"Utah",
+                                                            "value":"Utah",
+                                                        },
+                                                        {
+                                                            "label":"Vermont",
+                                                            "value":"Vermont",
+                                                        },
+                                                        {
+                                                            "label":"Virginia",
+                                                            "value":"Virginia",
+                                                        },
+                                                        {
+                                                            "label":"Washington",
+                                                            "value":"Washington",
+                                                        },
+                                                        {
+                                                            "label":"West Virginia",
+                                                            "value":"West Virginia",
+                                                        },
+                                                        {
+                                                            "label":"Wisconsin",
+                                                            "value":"Wisconsin",
+                                                        },
+                                                        {
+                                                            "label":"Wyoming",
+                                                            "value":"Wyoming",
+                                                        },
+                                                    ],            
+                                                ),
+                                                dcc.Dropdown(
+                                                    value=0,
+                                                    id="chart-dropdown-us",
+                                                    className="chart-dropdown",
+                                                    options=[
+                                                        {
+                                                            "label": "Confirmed Cases",
+                                                            "value":0,
+                                                        },
+                                                        {
+                                                            "label": "Deaths Cases",
+                                                            "value":1,
+                                                        },
+                                                        {
+                                                            "label": "Deaths Rates",
+                                                            "value":3,
+                                                        },
+                                                    ],                                                    
+                                                ),
+                                            ],
+                                        ),
+                                        html.H5("Number of Confirmed Cases Across Time",
+                                                id="lineplot-title-us",
+                                                style={'textAlign': 'left',},
+                                                ),
+                                        dcc.Graph(
+                                            className="selected-data",
+                                            id="selected-data-us",
+                                            figure=go.Figure(
+                                                data=go.Scatter(
+                                                    x=nyt_state['date'],
+                                                    y=nyt_state['Confirmed'],
+                                                    name='Confirmed',
+                                                    mode='lines+markers',
+                                                    hovertemplate='%{x}'+'<br>Confirmed Cases:%{y}',                                          
+                                                    marker = go.scatter.Marker(
+                                                                color = markercl,
+                                                    ),
+                                                    opacity=0.85,    
+                                                ),
+                                                layout=dict(
+                                                    paper_bgcolor=bgcl,
+                                                    plot_bgcolor=bgcl,
+                                                    margin=dict(t=0, r=0, b=0, l=0, pad=0,),
+                                                    yaxis = dict(zeroline = False,
+                                                                title='Confirmed Cases',
+                                                                color=linecl, 
+                                                                showgrid=False,
+                                                                
+                                                    ),
+                                                    xaxis = dict(zeroline = False,
+                                                                title='Date',
+                                                                color=linecl,
+                                                                showgrid=False,
+                                                                tickmode='auto',
+                                                                nticks=17,
+                                                    ),
+                                                    font=dict(
+                                                        family=plotfont, size=12, 
+                                                        color=fontcl,
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                        html.P("",
+                                                id="lineplot-footnote-us",
                                                 style={'textAlign': 'left',},
                                                 ),
                                     ],
@@ -926,6 +1449,212 @@ def display_selected_data(chart_dropdown, country_dropdown):
         ),
     )
     return fig 
+#------------------------------US Bubble Map----------------------------------#
+#~~~~~~~~~~~~Bubble Plot Slider~~~~~~~~~~~#
+@app.callback(
+    [
+        Output("country-bubble-us", "figure"), 
+        Output("bubblemap-title-us", "children"),
+    ],
+    [Input("date-slider-us", "value")],
+)
+
+def update_bubble_us(date_index):
+    #filtered_df=dfus[date_index]
+    filtered_df=nyt_county[nyt_county['date']==dates_nyt[date_index]]
+    fig = go.Figure(
+        data=go.Scattergeo(
+            lat = filtered_df['lat'],
+            lon = filtered_df['long'],
+            mode='markers',
+            hovertext =filtered_df['Combined_Key']+'<br> Confirmed:'+filtered_df['Confirmed'].astype(str)\
+                                              + '<br> Deaths:' + filtered_df['Deaths'].astype(str),
+            marker = go.scattergeo.Marker(
+                    color = markercl,
+                    size = filtered_df['conf'],
+                ),
+                opacity=0.85,
+        )   
+    )
+    fig.update_layout(
+        geo=dict(
+            scope="usa",
+            showcoastlines=True,
+            coastlinecolor=linecl,
+            showland=True,
+            landcolor=bgcl,
+            showlakes=False,
+            showocean=True,
+            oceancolor=bgcl,
+            showcountries=True,
+            countrycolor = linecl,        
+            bgcolor=bgcl,
+        ),
+        margin=dict(l=0, t=0, b=0, r=0, pad=0),
+        paper_bgcolor=bgcl,
+        plot_bgcolor=bgcl,
+    )
+    return fig, "Confirmed COVID-19 Cases in the US on "+dates_nyt[date_index]
+
+#~~~~~~~~~~~~~~~~~Interval of the Bubble Map~~~~~~~~~~~~~~~~~~~~~~~~~~#
+@app.callback(
+    [
+        Output('date-slider-us', 'value'),
+        Output('auto-stepper-us', 'max_intervals'),
+        Output('auto-stepper-us', 'disabled'),
+    ],
+    [
+        Input('auto-stepper-us', 'n_intervals'),
+        Input('play-button-us','n_clicks_timestamp'),
+        Input('pause-button-us','n_clicks_timestamp')
+    ]
+)
+def move_frames_us(n_intervals, play_timestamp, pause_timestamp):
+    slider_value=0
+    max_intervals=0
+    int_disabled=True
+    if (play_timestamp==-1) & (pause_timestamp==-1):
+        return 0, 0, True
+    elif  (play_timestamp>pause_timestamp):
+        slider_value=(n_intervals+1)%(len(dates_nyt))
+        max_intervals=-1
+        int_disabled=False
+    elif (pause_timestamp>play_timestamp):
+        slider_value=(n_intervals+1)%(len(dates_nyt))
+        max_intervals=0
+        int_disabled=False
+    return slider_value, max_intervals, int_disabled
+
+#~~~~~~~~~~~~~~~~~~~~~Line Plot~~~~~~~~~~~~~~~~~~~~#
+@app.callback(
+    [
+        Output("lineplot-title-us", "children"), 
+        Output("lineplot-footnote-us","children")
+    ],
+    [
+        Input("chart-dropdown-us", "value"),
+    ],
+)
+def update_chart_title_us(chart_dropdown):
+    if chart_dropdown==3:
+        footnote="*Death rates are estimated by dividing number of death cases\
+            by the number of confirmed cases. Due to the delay of testing or reporting\
+                infection cases, actual death rate would be lower."
+    else:
+        footnote=""
+    return charttitle[chart_dropdown],footnote
+
+@app.callback(
+    Output("selected-data-us", "figure"),
+    [
+        Input("chart-dropdown-us","value"),
+        Input("country-dropdown-us","value"),
+    ],
+)
+def display_selected_data_us(chart_dropdown, state_dropdown):
+    if state_dropdown=="USA":
+        cum0=nyt_state.groupby(['date'])[['Confirmed','Deaths']].sum().reset_index()
+        cum0.columns=['date','Confirmed','Deaths']
+        cum0['death_rate']=round(100*(cum0['Deaths']/cum0['Confirmed']),2)
+    else:
+        df0=nyt_county[nyt_county['Province/State']==state_dropdown]
+        cum0=df0.groupby(['date'])[['Confirmed','Deaths']].sum().reset_index()
+        cum0.columns=['date','Confirmed','Deaths']
+        cum0['death_rate']=round(100*(cum0['Deaths']/cum0['Confirmed']),2)
+        cum0['date2']=cum0['date'].apply(lambda x:(dt.strptime('2020'+x, '%Y%b%d')))
+        cum0=cum0.sort_values(by=['date2']).reset_index()
+    yvar=vars[chart_dropdown]
+    cum_one_var=cum0[cum0[yvar]>0][['date', yvar]]
+    fig=go.Figure(
+        data=go.Scatter(
+            x=cum_one_var['date'],
+            y=cum_one_var[yvar],
+            name='',
+            mode='lines+markers',
+            hovertemplate='%{x}'+'<br>'+yaxislab[chart_dropdown]+':%{y}',
+            marker = go.scatter.Marker(
+                        color = markercl,
+            ),
+            opacity=0.85,     
+        ),
+    )
+    fig.update_layout(
+        paper_bgcolor=bgcl, 
+        plot_bgcolor=bgcl,
+        margin=dict(l=0, t=0, b=0, r=0, pad=0),
+        yaxis = dict(zeroline = False,
+                    title=yaxislab[chart_dropdown],
+                    color=linecl, 
+                    showgrid=False,
+        ),
+        xaxis = dict(zeroline = False,
+                    title='Date',
+                    color=linecl,
+                    showgrid=False,
+                    tickmode='auto',
+                    nticks=17,
+                    tickangle=45,
+        ),
+        font=dict(
+            family=plotfont, 
+            size=11, 
+            color=fontcl,
+        ),
+    )
+    return fig 
+'''
+def display_selected_data_us(chart_dropdown, country_dropdown):
+    if country_dropdown=="USA":
+        cum0=cum_us
+    else:
+        df0=[]
+        for dataframe in dfus:
+            df0.append(dataframe[dataframe['State']==country_dropdown])
+        cum0=pd.DataFrame(map(lambda x: [x.Confirmed.sum(), x.Deaths.sum(), x.Recovered.sum(),], df0))
+        cum0['date']=dates_us
+        cum0.columns=['Confirmed','Deaths','Recovered','date']
+        cum0['death_rate']=round(100*(cum0['Deaths']/cum0['Confirmed']),2)
+        cum0['recover_rate']=round(100*(cum0['Recovered']/cum0['Confirmed']),2)
+    yvar=vars[chart_dropdown]
+    cum_one_var=cum0[cum0[yvar]>0][['date', yvar]]
+    fig=go.Figure(
+        data=go.Scatter(
+            x=cum_one_var['date'],
+            y=cum_one_var[yvar],
+            name='',
+            mode='lines+markers',
+            hovertemplate='%{x}'+'<br>'+yaxislab[chart_dropdown]+':%{y}',
+            marker = go.scatter.Marker(
+                        color = markercl,
+            ),
+            opacity=0.85,     
+        ),
+    )
+    fig.update_layout(
+        paper_bgcolor=bgcl, 
+        plot_bgcolor=bgcl,
+        margin=dict(l=0, t=0, b=0, r=0, pad=0),
+        yaxis = dict(zeroline = False,
+                    title=yaxislab[chart_dropdown],
+                    color=linecl, 
+                    showgrid=False,
+        ),
+        xaxis = dict(zeroline = False,
+                    title='Date',
+                    color=linecl,
+                    showgrid=False,
+                    tickmode='auto',
+                    nticks=17,
+                    tickangle=45,
+        ),
+        font=dict(
+            family=plotfont, 
+            size=11, 
+            color=fontcl,
+        ),
+    )
+    return fig 
+'''
 #~~~~~~~~~~~~~~~~~~~~~Growth Curve Titles~~~~~~~~~~~~~~~~~~~~#
 @app.callback(
     [
