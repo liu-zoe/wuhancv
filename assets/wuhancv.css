@@ -334,7 +334,7 @@ p {
     margin-bottom: 2rem;
 }
 
-#slider-text, #chart-selector {
+#slider-text, .chart-selector {
     margin-bottom: 2rem !important;
     font-size: 2rem;
 }
@@ -342,7 +342,7 @@ p {
 #author{
     font-size:  3rem !important;  
 }
-#credit{
+.credit{
     font-size:  2rem !important;
 }
 
@@ -654,7 +654,7 @@ hr {
 /* Slider
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-#slider-container {
+.slider-container {
     background-color: #252e3f;
     padding: 2rem 6rem 4rem 4rem;
     height: 8rem;
@@ -674,23 +674,23 @@ hr {
 
 /* bubblemap
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#bubblemap-container {
+.bubblemap-container {
     margin: 2.5rem 0 0 0;
     background-color: #252e3f;
 }
 
-#bubblemap-title {
+.bubblemap-title {
     margin: 0;
     padding: 1rem;
 }
 
-#country-bubble {
+.country-bubble {
     margin: 0;
     flex-grow: 1;
 }
 
 @media (min-width: 1251px) {
-    #bubblemap-container {
+    .bubblemap-container {
         flex-grow: 1;
         display: flex;
         flex-direction: column;
@@ -699,7 +699,7 @@ hr {
 }
 
 @media (max-width: 550px) {
-    #country-bubble .annotation-text{
+    .country-bubble, .annotation-text{
         font-size: 1.2rem !important;
     }
 }
@@ -792,7 +792,7 @@ hr {
         margin-top: 5rem;
     }
 
-    #selected-data {
+    .selected-data {
         height: 55rem;
     }
 }
@@ -817,7 +817,7 @@ hr {
         justify-content: flex-start;
     }
 
-    #selected-data {
+    .selected-data {
         flex-grow: 1;
     }
 }
@@ -827,17 +827,17 @@ hr {
         padding: 2.5rem;
     }
 
-    #selected-data .xtick text{
+    .selected-data .xtick text{
         font-size: 1.1rem !important;
     }
 
-    #selected-data .gtitle{
+    .selected-data .gtitle{
         font-size: 1.7rem !important;
     }
 }
 
 
-#chart-dropdown {
+.chart-dropdown {
     margin-bottom: 6.6rem;
 }
 
@@ -846,7 +846,7 @@ hr {
     float:left;
 }
 
-#chart-dropdown {
+.chart-dropdown {
     width:50%;
     float:right;
 }
@@ -914,7 +914,7 @@ hr {
     }
 }
 
-#header, #footer {
+#header, .footer {
     margin-left: 1.5%;
 }
 

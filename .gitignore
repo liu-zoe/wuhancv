@@ -9,6 +9,7 @@ scraper.py
 latlnt_old.xlsx
 US_latlnt.xlsx
 data/US
+data/USCensus2010
 archive_data/
 JHUCSSE_Data/
 style_sample/
