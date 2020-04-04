@@ -8,7 +8,6 @@ app v2.py
 app v3.py
 scraper.py
 latlnt_old.xlsx
-US_latlnt.xlsx
 data/US
 data/USCensus2010
 archive_data/

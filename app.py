@@ -43,19 +43,21 @@ sheetnames=[
     "03-16-2020","03-17-2020","03-18-2020","03-19-2020","03-20-2020","03-21-2020",
     "03-22-2020","03-23-2020","03-24-2020","03-25-2020","03-26-2020","03-27-2020",
     "03-28-2020","03-29-2020","03-30-2020","03-31-2020",'04-01-2020',"04-02-2020",
+    "04-03-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
 for dat in df:
     dates.append(dat['date'][0])
 del dat
-
+bubble_size_index=10
 # Create a dataset with ISO FIPS and latitude/longitude data
 lookup=pd.read_csv(os.path.join(APP_PATH, 'data/')+'UID.csv')
 lookup_us_county=lookup[(lookup['Country_Region']=='US') & (lookup['FIPS']>0) &\
      (lookup['Admin2'].isnull()==0) & (lookup['Lat'].isnull()==0)]
 lookup_us_county=lookup_us_county[['iso2','iso3','FIPS','Admin2','Province_State','Lat','Long_', 'Combined_Key']]
 del lookup
+USlatlnt=pd.read_excel(os.path.join(APP_PATH, 'data/US_latlnt.xlsx'), usecols='A:D')
 def cleandat(
     indat,
 ):
@@ -94,10 +96,30 @@ def cleandat(
                     np.where(indat['State']=='Chicago', 'Chicago, IL',
                     np.where( (indat['State']=='None') & (indat['Country'].isin(['Lebanon','Iraq','Austria'])), '',
                     indat['State']))))))
-    indat=indat[indat['State'].isin(['Recovered','Wuhan Evacuee'])==0]
-    indat['Location']=np.where(indat['State']=='', indat['Country'],\
-        indat['Country']+'-'+indat['State'])
-    indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*8 if x>0 else 0)
+    indat=indat[indat['State'].isin(['Recovered'])==0]
+    indat['Location']=np.where(indat['State']=='Wuhan Evacuee', 'United States-Wuhan Evacuee', 
+                      np.where(indat['State']=='', indat['Country'],\
+                          indat['Country']+'-'+indat['State']))
+    #Redefine locations for cruises
+    indat['lat']=np.where(indat['Location']=='Australia-From Diamond Princess', -29.863278,
+                 np.where(indat['Location']=='Canada-Diamond Princess', 62.454715,
+                 np.where(indat['Location']=='Canada-Grand Princess', 61.962982,
+                 np.where(indat['Location'].isin(['United States-Grand Princess', 'United States-Grand Princess Cruise Ship']), 41.317397, 
+                 np.where(indat['Location']=='United States-Diamond Princess', 38.529235, 
+                 np.where(indat['State']=='Wuhan Evacuee', 36.921770, 
+                 np.where(indat['Location']=='United States-Unassigned Location (From Diamond Princess)', 37.98,
+                 indat['lat']
+                 )))))))
+    indat['long']=np.where(indat['Location']=='Australia-From Diamond Princess', 158.162512, 
+                  np.where(indat['Location']=='Canada-Diamond Princess', -89.830242,
+                  np.where(indat['Location']=='Canada-Grand Princess', -91.917644, 
+                  np.where(indat['Location'].isin(['United States-Grand Princess', 'United States-Grand Princess Cruise Ship']), -127.942490, 
+                  np.where(indat['Location']=='United States-Diamond Princess', -126.832871, 
+                  np.where(indat['State']=='Wuhan Evacuee',-124.399399,
+                  np.where(indat['Location']=='United States-Unassigned Location (From Diamond Princess)', -125.87,
+                  indat['long']
+                  )))))))
+    indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*bubble_size_index if x>0 else 0)
     return indat
 df=list(map(lambda x: cleandat(x), df))
 
@@ -145,18 +167,32 @@ nyt_state['date2']=nyt_state['stamp'].apply(lambda x: (dt.strftime(x, '%b%d')))
 nyt_state=nyt_state[['date','state','fips','cases','deaths']]
 nyt_state.columns=['date','state','fips','Confirmed','Deaths']
 
-nyt_county=pd.read_csv(os.path.join(APP_PATH, 'data/NYT/us-counties.csv'))
-nyt_county['stamp']=nyt_county['date'].apply(lambda x: (dt.strptime(x, '%Y-%m-%d')))
-nyt_county['date2']=nyt_county['stamp'].apply(lambda x: (dt.strftime(x, '%b%d')))
-nyt_county=nyt_county[['date2','county','state','fips','cases','deaths']]
-nyt_county.columns=['date','county','state','fips','Confirmed','Deaths']
-nyt_county=pd.merge(nyt_county, lookup_us_county, how='left',left_on='fips',right_on='FIPS')
-nyt_county.columns=['date','county','state','fips','Confirmed','Deaths',\
+nyt_county_tmp=pd.read_csv(os.path.join(APP_PATH, 'data/NYT/us-counties.csv'))
+nyt_county_tmp['stamp']=nyt_county_tmp['date'].apply(lambda x: (dt.strptime(x, '%Y-%m-%d')))
+nyt_county_tmp['date2']=nyt_county_tmp['stamp'].apply(lambda x: (dt.strftime(x, '%b%d')))
+nyt_county_tmp=nyt_county_tmp[['date2','county','state','fips','cases','deaths']]
+nyt_county_tmp.columns=['date','county','state','fips','Confirmed','Deaths']
+nyt_county_tmp=pd.merge(nyt_county_tmp, lookup_us_county, how='left',left_on='fips',right_on='FIPS')
+nyt_county_tmp.columns=['date','county','state','fips','Confirmed','Deaths',\
     'iso2','ios3','FIPS','Admin2','Province/State','lat','long','Combined_Key']
+nyt_county_tmp['lat']=np.where(nyt_county_tmp['county']=='New York City', 40.7128, 
+                      np.where(nyt_county_tmp['county']=='Kansas City', 39.0997, nyt_county_tmp['lat']))
+nyt_county_tmp['long']=np.where(nyt_county_tmp['county']=='New York City', -74.0060, 
+                      np.where(nyt_county_tmp['county']=='Kansas City', -94.5786, nyt_county_tmp['long']))
+nyt_county1=nyt_county_tmp[nyt_county_tmp['lat'].isnull()==0]
+nyt_county2=nyt_county_tmp[(nyt_county_tmp['lat'].isnull()==1) & (nyt_county_tmp['county']=='Unknown')]
+nyt_county2=pd.merge(nyt_county2, USlatlnt, how='left',left_on='state',right_on='Province_State')
+nyt_county2['lat']=nyt_county2['Latitude']
+nyt_county2['long']=nyt_county2['Longitude']
+nyt_county2=nyt_county2.drop(['Province_State','Country_Region','Latitude','Longitude'],axis=1)
+nyt_county=pd.concat([nyt_county1,nyt_county2])
+del nyt_county_tmp, nyt_county1, nyt_county2
 nyt_county['Confirmed']=nyt_county['Confirmed'].astype('int64')
 nyt_county['Deaths']=nyt_county['Deaths'].astype('int64')
 nyt_county=nyt_county.fillna(value={'Confirmed':0, 'Deaths':0})
-nyt_county['conf']=nyt_county['Confirmed'].apply(lambda x: (math.log10(x+1))*9 if x>0 else 0)
+nyt_county['conf']=nyt_county['Confirmed'].apply(lambda x: (math.log10(x+1))*bubble_size_index if x>0 else 0)
+nyt_county['Combined_Key']=np.where(nyt_county['Combined_Key'].isnull(), nyt_county['state']+'-'+nyt_county['county'], \
+        nyt_county['Combined_Key'])
 nyt_county_0=nyt_county[nyt_county['date']=='Jan21']
 
 skip_nyt=1
@@ -381,52 +417,60 @@ app.layout = html.Div(
                                                             "value":"United States"
                                                         },
                                                         {
-                                                            "label":"Mainland China",
-                                                            "value":"Mainland China",
-                                                        },
-                                                        {
-                                                            "label":"South Korea",
-                                                            "value":"South Korea",
-                                                        },
-                                                        {
                                                             "label":"Italy",
                                                             "value":"Italy",
-                                                        },
-                                                        {
-                                                            "label":"Iran",
-                                                            "value":"Iran",
                                                         },
                                                         {
                                                             "label":"Spain",
                                                             "value":"Spain",
                                                         },
                                                         {
-                                                            "label":"France",
-                                                            "value":"France",
+                                                            "label":"Mainland China",
+                                                            "value":"Mainland China",
                                                         },
-                                                        {
+                                                        {                                                                                                                
                                                             "label":"Germany",
                                                             "value":"Germany",
                                                         },
                                                         {
-                                                            "label":"Switzerland",
-                                                            "value":"Switzerland",
+                                                            "label":"France",
+                                                            "value":"France",
+                                                        },
+                                                        {
+                                                            "label":"Iran",
+                                                            "value":"Iran",
                                                         },
                                                         {
                                                             "label":"United Kingdom",
                                                             "value":"United Kingdom",
                                                         },
                                                         {
+                                                            "label":"Turkey",
+                                                            "value":"Turkey",
+                                                        },                                                        
+                                                        {
+                                                            "label":"Switzerland",
+                                                            "value":"Switzerland",
+                                                        },
+                                                        {
+                                                            "label":"Belgium",
+                                                            "value":"Belgium",                                                        
+                                                        },
+                                                        {
                                                             "label":"Netherlands",
                                                             "value":"Netherlands",                                                        
                                                         },
+                                                        {
+                                                            "label":"Canada",
+                                                            "value":"Canada",                                                        
+                                                        },                                                        
                                                         {
                                                             "label":"Austria",
                                                             "value":"Austria",                                                        
                                                         },
                                                         {
-                                                            "label":"Belgium",
-                                                            "value":"Belgium",                                                        
+                                                            "label":"South Korea",
+                                                            "value":"South Korea",
                                                         },
                                                         {
                                                             "label":"Norway",
