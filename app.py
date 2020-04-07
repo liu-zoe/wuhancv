@@ -43,14 +43,14 @@ sheetnames=[
     "03-16-2020","03-17-2020","03-18-2020","03-19-2020","03-20-2020","03-21-2020",
     "03-22-2020","03-23-2020","03-24-2020","03-25-2020","03-26-2020","03-27-2020",
     "03-28-2020","03-29-2020","03-30-2020","03-31-2020",'04-01-2020',"04-02-2020",
-    "04-03-2020","04-04-2020","04-05-2020",
+    "04-03-2020","04-04-2020","04-05-2020","04-06-2020",
 ]
 df=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/')+x+".csv"), sheetnames))
 dates=[]
 for dat in df:
     dates.append(dat['date'][0])
 del dat
-bubble_size_index=10
+bubble_size_index=7
 # Create a dataset with ISO FIPS and latitude/longitude data
 lookup=pd.read_csv(os.path.join(APP_PATH, 'data/')+'UID.csv')
 lookup_us_county=lookup[(lookup['Country_Region']=='US') & (lookup['FIPS']>0) &\
@@ -361,6 +361,7 @@ app.layout = html.Div(
                                                             marker = go.scattergeo.Marker(
                                                                 color = markercl,
                                                                 size = df[0]['conf'],
+                                                                line=dict(width=0.5),
                                                             ),
                                                             opacity=0.85,
                                                         ),
@@ -694,7 +695,9 @@ app.layout = html.Div(
                                                             + '<br> Deaths:' + nyt_county_0['Deaths'].astype(str),
                                                             marker = go.scattergeo.Marker(
                                                                 color = markercl,
-                                                                size = nyt_county_0['conf']),
+                                                                size = nyt_county_0['conf'],
+                                                                line=dict(width=0.5),
+                                                            ),
                                                             opacity=0.85,
                                                         ),
                                                         layout=dict(                                            
@@ -1326,6 +1329,7 @@ def update_bubble(date_index):
             marker = go.scattergeo.Marker(
                     color = markercl,
                     size = filtered_df['conf'],
+                    line=dict(width=0.5),
                 ),
                 opacity=0.85,
         )   
@@ -1480,6 +1484,7 @@ def update_bubble_us(date_index):
             marker = go.scattergeo.Marker(
                     color = markercl,
                     size = filtered_df['conf'],
+                    line=dict(width=0.5),
                 ),
                 opacity=0.85,
         )   
