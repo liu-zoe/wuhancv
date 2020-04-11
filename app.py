@@ -32,7 +32,7 @@ server=app.server
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
 init_date=datetime.datetime(2020,1,22)
 sheetnames=list()
-for i in range(79): #<-Update the range number everyday
+for i in range(80): #<-Update the range number everyday
     x=dt.strftime(init_date+datetime.timedelta(days=i),'%m-%d-%Y')
     sheetnames.append(x)
 del i,x
@@ -115,7 +115,7 @@ def cleandat(
 df=list(map(lambda x: cleandat(x), df))
 
 #Create a subset of all dates to limit the clutter on bubblemap timetrack
-skip=1
+skip=2
 mark_index=[]
 i=len(dates)-1
 while (i>=0):
@@ -186,7 +186,7 @@ nyt_county['Combined_Key']=np.where(nyt_county['Combined_Key'].isnull(), nyt_cou
         nyt_county['Combined_Key'])
 nyt_county_0=nyt_county[nyt_county['date']=='Jan21']
 
-skip_nyt=1
+skip_nyt=2
 mark_index_nyt=[]
 i=len(dates_nyt)-1
 while (i>=0):
