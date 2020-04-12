@@ -32,7 +32,7 @@ server=app.server
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
 init_date=datetime.datetime(2020,1,22)
 sheetnames=list()
-for i in range(80): #<-Update the range number everyday
+for i in range(81): #<-Update the range number everyday
     x=dt.strftime(init_date+datetime.timedelta(days=i),'%m-%d-%Y')
     sheetnames.append(x)
 del i,x
