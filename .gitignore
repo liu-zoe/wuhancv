@@ -11,6 +11,7 @@ scraper.py
 latlnt_old.xlsx
 data/US
 data/USCensus2010
+data/GoogleTrends
 archive_data/
 JHUCSSE_Data/
 style_sample/
