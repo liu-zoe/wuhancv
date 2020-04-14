@@ -32,7 +32,7 @@ server=app.server
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
 init_date=datetime.datetime(2020,1,22)
 sheetnames=list()
-for i in range(82): #<-Update the range number everyday
+for i in range(83): #<-Update the range number everyday
     x=dt.strftime(init_date+datetime.timedelta(days=i),'%m-%d-%Y')
     sheetnames.append(x)
 del i,x
@@ -99,8 +99,10 @@ def cleandat(
                  np.where(indat['Location']=='United States-Diamond Princess', 38.529235, 
                  np.where(indat['State']=='Wuhan Evacuee', 36.921770, 
                  np.where(indat['Location']=='United States-Unassigned Location (From Diamond Princess)', 37.98,
+                 np.where(indat['Location']=='Diamond Princess', 43.623240,
+                 np.where(indat['Location']=='MS Zaandam',13.066745,
                  indat['lat']
-                 )))))))
+                 )))))))))
     indat['long']=np.where(indat['Location']=='Australia-From Diamond Princess', 158.162512, 
                   np.where(indat['Location']=='Canada-Diamond Princess', -89.830242,
                   np.where(indat['Location']=='Canada-Grand Princess', -91.917644, 
@@ -108,8 +110,10 @@ def cleandat(
                   np.where(indat['Location']=='United States-Diamond Princess', -126.832871, 
                   np.where(indat['State']=='Wuhan Evacuee',-124.399399,
                   np.where(indat['Location']=='United States-Unassigned Location (From Diamond Princess)', -125.87,
+                  np.where(indat['Location']=='Diamond Princess', 162.719737,
+                  np.where(indat['Location']=='MS Zaandam', -106.753463,
                   indat['long']
-                  )))))))
+                  )))))))))
     indat['conf']=indat['Confirmed'].apply(lambda x: (math.log10(x+1))*bubble_size_index if x>0 else 0)
     return indat
 df=list(map(lambda x: cleandat(x), df))
