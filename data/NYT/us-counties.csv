@@ -56068,7 +56068,7 @@
 56066,2020-04-13,Deaf Smith,Texas,48117.0,8,0
 56067,2020-04-13,Delta,Texas,48119.0,1,0
 56068,2020-04-13,Denton,Texas,48121.0,507,13
-56069,2020-04-13,Dickens,Texas,48125.0,2,0
+56069,2020-04-13,Dickens,Texas,48125.0,1,0
 56070,2020-04-13,Dimmit,Texas,48127.0,1,0
 56071,2020-04-13,Donley,Texas,48129.0,23,0
 56072,2020-04-13,Eastland,Texas,48133.0,3,0
@@ -58772,7 +58772,7 @@
 58770,2020-04-14,Deaf Smith,Texas,48117.0,11,0
 58771,2020-04-14,Delta,Texas,48119.0,1,0
 58772,2020-04-14,Denton,Texas,48121.0,521,14
-58773,2020-04-14,Dickens,Texas,48125.0,2,0
+58773,2020-04-14,Dickens,Texas,48125.0,1,0
 58774,2020-04-14,Dimmit,Texas,48127.0,1,0
 58775,2020-04-14,Donley,Texas,48129.0,23,0
 58776,2020-04-14,Duval,Texas,48131.0,1,0
@@ -61492,7 +61492,7 @@
 61490,2020-04-15,Deaf Smith,Texas,48117.0,11,0
 61491,2020-04-15,Delta,Texas,48119.0,1,0
 61492,2020-04-15,Denton,Texas,48121.0,521,14
-61493,2020-04-15,Dickens,Texas,48125.0,2,0
+61493,2020-04-15,Dickens,Texas,48125.0,1,0
 61494,2020-04-15,Dimmit,Texas,48127.0,1,0
 61495,2020-04-15,Donley,Texas,48129.0,23,0
 61496,2020-04-15,Duval,Texas,48131.0,1,0
@@ -64221,7 +64221,7 @@
 64219,2020-04-16,Deaf Smith,Texas,48117.0,11,0
 64220,2020-04-16,Delta,Texas,48119.0,1,0
 64221,2020-04-16,Denton,Texas,48121.0,564,15
-64222,2020-04-16,Dickens,Texas,48125.0,2,0
+64222,2020-04-16,Dickens,Texas,48125.0,1,0
 64223,2020-04-16,Dimmit,Texas,48127.0,1,0
 64224,2020-04-16,Donley,Texas,48129.0,23,0
 64225,2020-04-16,Duval,Texas,48131.0,1,0
@@ -64353,356 +64353,3105 @@
 64351,2020-04-16,Victoria,Texas,48469.0,89,1
 64352,2020-04-16,Walker,Texas,48471.0,58,0
 64353,2020-04-16,Waller,Texas,48473.0,22,0
-64354,2020-04-16,Ward,Texas,48475.0,0,3
-64355,2020-04-16,Washington,Texas,48477.0,46,3
-64356,2020-04-16,Webb,Texas,48479.0,245,11
-64357,2020-04-16,Wharton,Texas,48481.0,32,0
-64358,2020-04-16,Wichita,Texas,48485.0,57,1
-64359,2020-04-16,Wilbarger,Texas,48487.0,1,0
-64360,2020-04-16,Willacy,Texas,48489.0,7,1
-64361,2020-04-16,Williamson,Texas,48491.0,140,4
-64362,2020-04-16,Wilson,Texas,48493.0,13,1
-64363,2020-04-16,Winkler,Texas,48495.0,2,0
-64364,2020-04-16,Wise,Texas,48497.0,7,1
-64365,2020-04-16,Wood,Texas,48499.0,6,0
-64366,2020-04-16,Young,Texas,48503.0,4,1
-64367,2020-04-16,Zapata,Texas,48505.0,4,0
-64368,2020-04-16,Box Elder,Utah,49003.0,13,0
-64369,2020-04-16,Cache,Utah,49005.0,36,0
-64370,2020-04-16,Carbon,Utah,49007.0,2,0
-64371,2020-04-16,Davis,Utah,49011.0,220,2
-64372,2020-04-16,Duchesne,Utah,49013.0,3,0
-64373,2020-04-16,Emery,Utah,49015.0,3,0
-64374,2020-04-16,Garfield,Utah,49017.0,1,0
-64375,2020-04-16,Grand,Utah,49019.0,1,0
-64376,2020-04-16,Iron,Utah,49021.0,15,0
-64377,2020-04-16,Juab,Utah,49023.0,2,0
-64378,2020-04-16,Kane,Utah,49025.0,3,0
-64379,2020-04-16,Millard,Utah,49027.0,4,0
-64380,2020-04-16,Morgan,Utah,49029.0,7,0
-64381,2020-04-16,Salt Lake,Utah,49035.0,1377,12
-64382,2020-04-16,San Juan,Utah,49037.0,9,0
-64383,2020-04-16,Sevier,Utah,49041.0,2,0
-64384,2020-04-16,Summit,Utah,49043.0,308,0
-64385,2020-04-16,Tooele,Utah,49045.0,38,0
-64386,2020-04-16,Uintah,Utah,49047.0,6,0
-64387,2020-04-16,Unknown,Utah,,3,1
-64388,2020-04-16,Utah,Utah,49049.0,387,4
-64389,2020-04-16,Wasatch,Utah,49051.0,103,1
-64390,2020-04-16,Washington,Utah,49053.0,39,0
-64391,2020-04-16,Weber,Utah,49057.0,101,1
-64392,2020-04-16,Addison,Vermont,50001.0,56,1
-64393,2020-04-16,Bennington,Vermont,50003.0,33,1
-64394,2020-04-16,Caledonia,Vermont,50005.0,9,0
-64395,2020-04-16,Chittenden,Vermont,50007.0,377,22
-64396,2020-04-16,Essex,Vermont,50009.0,1,0
-64397,2020-04-16,Franklin,Vermont,50011.0,86,3
-64398,2020-04-16,Grand Isle,Vermont,50013.0,3,0
-64399,2020-04-16,Lamoille,Vermont,50015.0,22,2
-64400,2020-04-16,Orange,Vermont,50017.0,5,0
-64401,2020-04-16,Orleans,Vermont,50019.0,8,0
-64402,2020-04-16,Rutland,Vermont,50021.0,41,1
-64403,2020-04-16,Unknown,Vermont,,9,0
-64404,2020-04-16,Washington,Vermont,50023.0,29,1
-64405,2020-04-16,Windham,Vermont,50025.0,58,2
-64406,2020-04-16,Windsor,Vermont,50027.0,31,2
-64407,2020-04-16,Unknown,Virgin Islands,,51,1
-64408,2020-04-16,Accomack,Virginia,51001.0,19,0
-64409,2020-04-16,Albemarle,Virginia,51003.0,54,0
-64410,2020-04-16,Alexandria city,Virginia,51510.0,275,6
-64411,2020-04-16,Alleghany,Virginia,51005.0,4,0
-64412,2020-04-16,Amelia,Virginia,51007.0,13,0
-64413,2020-04-16,Amherst,Virginia,51009.0,10,0
-64414,2020-04-16,Appomattox,Virginia,51011.0,7,0
-64415,2020-04-16,Arlington,Virginia,51013.0,453,12
-64416,2020-04-16,Augusta,Virginia,51015.0,19,0
-64417,2020-04-16,Bedford,Virginia,51019.0,16,0
-64418,2020-04-16,Botetourt,Virginia,51023.0,23,0
-64419,2020-04-16,Bristol city,Virginia,51520.0,1,0
-64420,2020-04-16,Brunswick,Virginia,51025.0,10,0
-64421,2020-04-16,Buchanan,Virginia,51027.0,12,0
-64422,2020-04-16,Buckingham,Virginia,51029.0,23,0
-64423,2020-04-16,Buena Vista city,Virginia,51530.0,4,0
-64424,2020-04-16,Campbell,Virginia,51031.0,9,0
-64425,2020-04-16,Caroline,Virginia,51033.0,11,0
-64426,2020-04-16,Carroll,Virginia,51035.0,3,0
-64427,2020-04-16,Charles City,Virginia,51036.0,9,0
-64428,2020-04-16,Charlotte,Virginia,51037.0,8,0
-64429,2020-04-16,Charlottesville city,Virginia,51540.0,38,1
-64430,2020-04-16,Chesapeake city,Virginia,51550.0,143,3
-64431,2020-04-16,Chesterfield,Virginia,51041.0,267,5
-64432,2020-04-16,Clarke,Virginia,51043.0,6,0
-64433,2020-04-16,Colonial Heights city,Virginia,51570.0,18,0
-64434,2020-04-16,Covington city,Virginia,51580.0,1,0
-64435,2020-04-16,Craig,Virginia,51045.0,2,0
-64436,2020-04-16,Culpeper,Virginia,51047.0,29,0
-64437,2020-04-16,Cumberland,Virginia,51049.0,7,0
-64438,2020-04-16,Danville city,Virginia,51590.0,22,0
-64439,2020-04-16,Dinwiddie,Virginia,51053.0,7,0
-64440,2020-04-16,Emporia city,Virginia,51595.0,7,0
-64441,2020-04-16,Essex,Virginia,51057.0,2,0
-64442,2020-04-16,Fairfax,Virginia,51059.0,1375,30
-64443,2020-04-16,Fairfax city,Virginia,51600.0,1,0
-64444,2020-04-16,Falls Church city,Virginia,51610.0,2,0
-64445,2020-04-16,Fauquier,Virginia,51061.0,32,0
-64446,2020-04-16,Floyd,Virginia,51063.0,1,0
-64447,2020-04-16,Fluvanna,Virginia,51065.0,64,0
-64448,2020-04-16,Franklin,Virginia,51067.0,15,0
-64449,2020-04-16,Franklin city,Virginia,51620.0,9,0
-64450,2020-04-16,Frederick,Virginia,51069.0,72,0
-64451,2020-04-16,Fredericksburg city,Virginia,51630.0,15,0
-64452,2020-04-16,Galax city,Virginia,51640.0,1,0
-64453,2020-04-16,Giles,Virginia,51071.0,4,0
-64454,2020-04-16,Gloucester,Virginia,51073.0,20,0
-64455,2020-04-16,Goochland,Virginia,51075.0,41,1
-64456,2020-04-16,Greene,Virginia,51079.0,5,0
-64457,2020-04-16,Greensville,Virginia,51081.0,16,0
-64458,2020-04-16,Halifax,Virginia,51083.0,7,0
-64459,2020-04-16,Hampton city,Virginia,51650.0,77,1
-64460,2020-04-16,Hanover,Virginia,51085.0,61,0
-64461,2020-04-16,Harrisonburg city,Virginia,51660.0,119,0
-64462,2020-04-16,Henrico,Virginia,51087.0,497,45
-64463,2020-04-16,Henry,Virginia,51089.0,8,0
-64464,2020-04-16,Hopewell city,Virginia,51670.0,14,0
-64465,2020-04-16,Isle of Wight,Virginia,51093.0,63,0
-64466,2020-04-16,James City,Virginia,51095.0,135,3
-64467,2020-04-16,King George,Virginia,51099.0,18,0
-64468,2020-04-16,King William,Virginia,51101.0,2,0
-64469,2020-04-16,King and Queen,Virginia,51097.0,2,0
-64470,2020-04-16,Lancaster,Virginia,51103.0,1,0
-64471,2020-04-16,Lee,Virginia,51105.0,6,0
-64472,2020-04-16,Lexington city,Virginia,51678.0,3,0
-64473,2020-04-16,Loudoun,Virginia,51107.0,378,5
-64474,2020-04-16,Louisa,Virginia,51109.0,30,0
-64475,2020-04-16,Lunenburg,Virginia,51111.0,3,0
-64476,2020-04-16,Lynchburg city,Virginia,51680.0,34,0
-64477,2020-04-16,Madison,Virginia,51113.0,8,0
-64478,2020-04-16,Manassas Park city,Virginia,51685.0,16,0
-64479,2020-04-16,Manassas city,Virginia,51683.0,62,0
-64480,2020-04-16,Mathews,Virginia,51115.0,3,0
-64481,2020-04-16,Mecklenburg,Virginia,51117.0,61,0
-64482,2020-04-16,Middlesex,Virginia,51119.0,3,0
-64483,2020-04-16,Montgomery,Virginia,51121.0,34,0
-64484,2020-04-16,Nelson,Virginia,51125.0,5,0
-64485,2020-04-16,New Kent,Virginia,51127.0,16,0
-64486,2020-04-16,Newport News city,Virginia,51700.0,97,1
-64487,2020-04-16,Norfolk city,Virginia,51710.0,105,1
-64488,2020-04-16,Northampton,Virginia,51131.0,4,0
-64489,2020-04-16,Northumberland,Virginia,51133.0,5,0
-64490,2020-04-16,Nottoway,Virginia,51135.0,5,0
-64491,2020-04-16,Orange,Virginia,51137.0,18,0
-64492,2020-04-16,Page,Virginia,51139.0,7,0
-64493,2020-04-16,Petersburg city,Virginia,51730.0,19,0
-64494,2020-04-16,Pittsylvania,Virginia,51143.0,5,0
-64495,2020-04-16,Poquoson city,Virginia,51735.0,6,0
-64496,2020-04-16,Portsmouth city,Virginia,51740.0,62,4
-64497,2020-04-16,Powhatan,Virginia,51145.0,5,0
-64498,2020-04-16,Prince Edward,Virginia,51147.0,15,1
-64499,2020-04-16,Prince George,Virginia,51149.0,26,0
-64500,2020-04-16,Prince William,Virginia,51153.0,582,1
-64501,2020-04-16,Pulaski,Virginia,51155.0,5,0
-64502,2020-04-16,Radford city,Virginia,51750.0,1,0
-64503,2020-04-16,Rappahannock,Virginia,51157.0,1,0
-64504,2020-04-16,Richmond,Virginia,51159.0,7,0
-64505,2020-04-16,Richmond city,Virginia,51760.0,188,7
-64506,2020-04-16,Roanoke,Virginia,51161.0,19,0
-64507,2020-04-16,Roanoke city,Virginia,51770.0,24,0
-64508,2020-04-16,Rockbridge,Virginia,51163.0,3,0
-64509,2020-04-16,Rockingham,Virginia,51165.0,69,0
-64510,2020-04-16,Russell,Virginia,51167.0,2,0
-64511,2020-04-16,Salem city,Virginia,51775.0,4,0
-64512,2020-04-16,Scott,Virginia,51169.0,3,0
-64513,2020-04-16,Shenandoah,Virginia,51171.0,28,1
-64514,2020-04-16,Smyth,Virginia,51173.0,11,0
-64515,2020-04-16,Southampton,Virginia,51175.0,6,0
-64516,2020-04-16,Spotsylvania,Virginia,51177.0,62,0
-64517,2020-04-16,Stafford,Virginia,51179.0,120,1
-64518,2020-04-16,Staunton city,Virginia,51790.0,3,0
-64519,2020-04-16,Suffolk city,Virginia,51800.0,65,0
-64520,2020-04-16,Surry,Virginia,51181.0,3,0
-64521,2020-04-16,Sussex,Virginia,51183.0,9,0
-64522,2020-04-16,Tazewell,Virginia,51185.0,4,0
-64523,2020-04-16,Unknown,Virginia,,0,71
-64524,2020-04-16,Virginia Beach city,Virginia,51810.0,258,5
-64525,2020-04-16,Warren,Virginia,51187.0,21,0
-64526,2020-04-16,Washington,Virginia,51191.0,27,0
-64527,2020-04-16,Waynesboro city,Virginia,51820.0,6,0
-64528,2020-04-16,Westmoreland,Virginia,51193.0,9,0
-64529,2020-04-16,Williamsburg city,Virginia,51830.0,19,1
-64530,2020-04-16,Winchester city,Virginia,51840.0,21,0
-64531,2020-04-16,Wise,Virginia,51195.0,18,1
-64532,2020-04-16,Wythe,Virginia,51197.0,7,0
-64533,2020-04-16,York,Virginia,51199.0,37,1
-64534,2020-04-16,Adams,Washington,53001.0,40,0
-64535,2020-04-16,Asotin,Washington,53003.0,10,0
-64536,2020-04-16,Benton,Washington,53005.0,284,34
-64537,2020-04-16,Chelan,Washington,53007.0,63,6
-64538,2020-04-16,Clallam,Washington,53009.0,15,0
-64539,2020-04-16,Clark,Washington,53011.0,265,15
-64540,2020-04-16,Columbia,Washington,53013.0,1,0
-64541,2020-04-16,Cowlitz,Washington,53015.0,26,0
-64542,2020-04-16,Douglas,Washington,53017.0,32,1
-64543,2020-04-16,Ferry,Washington,53019.0,1,0
-64544,2020-04-16,Franklin,Washington,53021.0,156,2
-64545,2020-04-16,Grant,Washington,53025.0,132,1
-64546,2020-04-16,Grays Harbor,Washington,53027.0,12,0
-64547,2020-04-16,Island,Washington,53029.0,163,8
-64548,2020-04-16,Jefferson,Washington,53031.0,28,0
-64549,2020-04-16,King,Washington,53033.0,4811,322
-64550,2020-04-16,Kitsap,Washington,53035.0,132,1
-64551,2020-04-16,Kittitas,Washington,53037.0,14,0
-64552,2020-04-16,Klickitat,Washington,53039.0,16,2
-64553,2020-04-16,Lewis,Washington,53041.0,19,2
-64554,2020-04-16,Lincoln,Washington,53043.0,2,0
-64555,2020-04-16,Mason,Washington,53045.0,21,0
-64556,2020-04-16,Okanogan,Washington,53047.0,14,0
-64557,2020-04-16,Pacific,Washington,53049.0,1,0
-64558,2020-04-16,Pend Oreille,Washington,53051.0,1,0
-64559,2020-04-16,Pierce,Washington,53053.0,1064,30
-64560,2020-04-16,San Juan,Washington,53055.0,13,0
-64561,2020-04-16,Skagit,Washington,53057.0,218,6
-64562,2020-04-16,Skamania,Washington,53059.0,3,0
-64563,2020-04-16,Snohomish,Washington,53061.0,2031,85
-64564,2020-04-16,Spokane,Washington,53063.0,297,17
-64565,2020-04-16,Stevens,Washington,53065.0,7,1
-64566,2020-04-16,Thurston,Washington,53067.0,86,1
-64567,2020-04-16,Unknown,Washington,,154,0
-64568,2020-04-16,Wahkiakum,Washington,53069.0,2,0
-64569,2020-04-16,Walla Walla,Washington,53071.0,27,0
-64570,2020-04-16,Whatcom,Washington,53073.0,271,25
-64571,2020-04-16,Whitman,Washington,53075.0,13,0
-64572,2020-04-16,Yakima,Washington,53077.0,707,29
-64573,2020-04-16,Barbour,West Virginia,54001.0,4,0
-64574,2020-04-16,Berkeley,West Virginia,54003.0,105,1
-64575,2020-04-16,Boone,West Virginia,54005.0,2,0
-64576,2020-04-16,Braxton,West Virginia,54007.0,1,0
-64577,2020-04-16,Brooke,West Virginia,54009.0,3,0
-64578,2020-04-16,Cabell,West Virginia,54011.0,28,0
-64579,2020-04-16,Fayette,West Virginia,54019.0,2,0
-64580,2020-04-16,Grant,West Virginia,54023.0,1,0
-64581,2020-04-16,Greenbrier,West Virginia,54025.0,3,0
-64582,2020-04-16,Hampshire,West Virginia,54027.0,6,0
-64583,2020-04-16,Hancock,West Virginia,54029.0,7,0
-64584,2020-04-16,Hardy,West Virginia,54031.0,3,0
-64585,2020-04-16,Harrison,West Virginia,54033.0,29,1
-64586,2020-04-16,Jackson,West Virginia,54035.0,37,1
-64587,2020-04-16,Jefferson,West Virginia,54037.0,57,0
-64588,2020-04-16,Kanawha,West Virginia,54039.0,91,0
-64589,2020-04-16,Lewis,West Virginia,54041.0,2,0
-64590,2020-04-16,Lincoln,West Virginia,54043.0,1,0
-64591,2020-04-16,Logan,West Virginia,54045.0,8,1
-64592,2020-04-16,Marion,West Virginia,54049.0,39,2
-64593,2020-04-16,Marshall,West Virginia,54051.0,7,0
-64594,2020-04-16,Mason,West Virginia,54053.0,10,0
-64595,2020-04-16,McDowell,West Virginia,54047.0,6,0
-64596,2020-04-16,Mercer,West Virginia,54055.0,8,0
-64597,2020-04-16,Mineral,West Virginia,54057.0,7,0
-64598,2020-04-16,Mingo,West Virginia,54059.0,2,1
-64599,2020-04-16,Monongalia,West Virginia,54061.0,83,4
-64600,2020-04-16,Monroe,West Virginia,54063.0,2,0
-64601,2020-04-16,Morgan,West Virginia,54065.0,7,0
-64602,2020-04-16,Nicholas,West Virginia,54067.0,3,0
-64603,2020-04-16,Ohio,West Virginia,54069.0,22,1
-64604,2020-04-16,Pendleton,West Virginia,54071.0,1,0
-64605,2020-04-16,Pleasants,West Virginia,54073.0,1,0
-64606,2020-04-16,Preston,West Virginia,54077.0,6,0
-64607,2020-04-16,Putnam,West Virginia,54079.0,13,0
-64608,2020-04-16,Raleigh,West Virginia,54081.0,6,0
-64609,2020-04-16,Randolph,West Virginia,54083.0,4,0
-64610,2020-04-16,Roane,West Virginia,54087.0,2,0
-64611,2020-04-16,Summers,West Virginia,54089.0,1,0
-64612,2020-04-16,Taylor,West Virginia,54091.0,4,0
-64613,2020-04-16,Tucker,West Virginia,54093.0,4,0
-64614,2020-04-16,Tyler,West Virginia,54095.0,3,0
-64615,2020-04-16,Upshur,West Virginia,54097.0,3,0
-64616,2020-04-16,Wayne,West Virginia,54099.0,72,1
-64617,2020-04-16,Wetzel,West Virginia,54103.0,3,0
-64618,2020-04-16,Wirt,West Virginia,54105.0,2,0
-64619,2020-04-16,Wood,West Virginia,54107.0,27,0
-64620,2020-04-16,Wyoming,West Virginia,54109.0,1,0
-64621,2020-04-16,Adams,Wisconsin,55001.0,3,1
-64622,2020-04-16,Ashland,Wisconsin,55003.0,2,0
-64623,2020-04-16,Barron,Wisconsin,55005.0,6,0
-64624,2020-04-16,Bayfield,Wisconsin,55007.0,3,0
-64625,2020-04-16,Brown,Wisconsin,55009.0,139,1
-64626,2020-04-16,Buffalo,Wisconsin,55011.0,4,1
-64627,2020-04-16,Calumet,Wisconsin,55015.0,5,0
-64628,2020-04-16,Chippewa,Wisconsin,55017.0,20,0
-64629,2020-04-16,Clark,Wisconsin,55019.0,10,0
-64630,2020-04-16,Columbia,Wisconsin,55021.0,27,1
-64631,2020-04-16,Crawford,Wisconsin,55023.0,3,0
-64632,2020-04-16,Dane,Wisconsin,55025.0,352,16
-64633,2020-04-16,Dodge,Wisconsin,55027.0,19,1
-64634,2020-04-16,Door,Wisconsin,55029.0,9,1
-64635,2020-04-16,Douglas,Wisconsin,55031.0,7,0
-64636,2020-04-16,Dunn,Wisconsin,55033.0,9,0
-64637,2020-04-16,Eau Claire,Wisconsin,55035.0,22,0
-64638,2020-04-16,Florence,Wisconsin,55037.0,2,0
-64639,2020-04-16,Fond du Lac,Wisconsin,55039.0,59,3
-64640,2020-04-16,Grant,Wisconsin,55043.0,10,1
-64641,2020-04-16,Green,Wisconsin,55045.0,9,0
-64642,2020-04-16,Green Lake,Wisconsin,55047.0,1,0
-64643,2020-04-16,Iowa,Wisconsin,55049.0,5,0
-64644,2020-04-16,Iron,Wisconsin,55051.0,2,1
-64645,2020-04-16,Jackson,Wisconsin,55053.0,11,1
-64646,2020-04-16,Jefferson,Wisconsin,55055.0,24,0
-64647,2020-04-16,Juneau,Wisconsin,55057.0,7,1
-64648,2020-04-16,Kenosha,Wisconsin,55059.0,208,5
-64649,2020-04-16,Kewaunee,Wisconsin,55061.0,6,1
-64650,2020-04-16,La Crosse,Wisconsin,55063.0,25,0
-64651,2020-04-16,Lafayette,Wisconsin,55065.0,3,0
-64652,2020-04-16,Manitowoc,Wisconsin,55071.0,5,0
-64653,2020-04-16,Marathon,Wisconsin,55073.0,14,1
-64654,2020-04-16,Marinette,Wisconsin,55075.0,4,1
-64655,2020-04-16,Marquette,Wisconsin,55077.0,3,0
-64656,2020-04-16,Menominee,Wisconsin,55078.0,1,0
-64657,2020-04-16,Milwaukee,Wisconsin,55079.0,1947,114
-64658,2020-04-16,Monroe,Wisconsin,55081.0,12,0
-64659,2020-04-16,Oconto,Wisconsin,55083.0,4,0
-64660,2020-04-16,Oneida,Wisconsin,55085.0,6,0
-64661,2020-04-16,Outagamie,Wisconsin,55087.0,31,2
-64662,2020-04-16,Ozaukee,Wisconsin,55089.0,77,9
-64663,2020-04-16,Pierce,Wisconsin,55093.0,7,0
-64664,2020-04-16,Polk,Wisconsin,55095.0,3,0
-64665,2020-04-16,Portage,Wisconsin,55097.0,4,0
-64666,2020-04-16,Price,Wisconsin,55099.0,1,0
-64667,2020-04-16,Racine,Wisconsin,55101.0,143,6
-64668,2020-04-16,Richland,Wisconsin,55103.0,7,1
-64669,2020-04-16,Rock,Wisconsin,55105.0,63,4
-64670,2020-04-16,Rusk,Wisconsin,55107.0,3,0
-64671,2020-04-16,Sauk,Wisconsin,55111.0,31,3
-64672,2020-04-16,Sawyer,Wisconsin,55113.0,2,0
-64673,2020-04-16,Shawano,Wisconsin,55115.0,6,0
-64674,2020-04-16,Sheboygan,Wisconsin,55117.0,37,2
-64675,2020-04-16,St. Croix,Wisconsin,55109.0,11,0
-64676,2020-04-16,Trempealeau,Wisconsin,55121.0,1,0
-64677,2020-04-16,Vilas,Wisconsin,55125.0,4,0
-64678,2020-04-16,Walworth,Wisconsin,55127.0,71,3
-64679,2020-04-16,Washburn,Wisconsin,55129.0,1,0
-64680,2020-04-16,Washington,Wisconsin,55131.0,79,3
-64681,2020-04-16,Waukesha,Wisconsin,55133.0,245,11
-64682,2020-04-16,Waupaca,Wisconsin,55135.0,4,1
-64683,2020-04-16,Waushara,Wisconsin,55137.0,2,0
-64684,2020-04-16,Winnebago,Wisconsin,55139.0,32,1
-64685,2020-04-16,Wood,Wisconsin,55141.0,2,0
-64686,2020-04-16,Albany,Wyoming,56001.0,5,0
-64687,2020-04-16,Big Horn,Wyoming,56003.0,1,0
-64688,2020-04-16,Campbell,Wyoming,56005.0,13,0
-64689,2020-04-16,Carbon,Wyoming,56007.0,4,0
-64690,2020-04-16,Converse,Wyoming,56009.0,8,0
-64691,2020-04-16,Crook,Wyoming,56011.0,4,0
-64692,2020-04-16,Fremont,Wyoming,56013.0,43,0
-64693,2020-04-16,Goshen,Wyoming,56015.0,3,0
-64694,2020-04-16,Hot Springs,Wyoming,56017.0,2,0
-64695,2020-04-16,Johnson,Wyoming,56019.0,11,1
-64696,2020-04-16,Laramie,Wyoming,56021.0,67,1
-64697,2020-04-16,Lincoln,Wyoming,56023.0,5,0
-64698,2020-04-16,Natrona,Wyoming,56025.0,37,0
-64699,2020-04-16,Niobrara,Wyoming,56027.0,1,0
-64700,2020-04-16,Park,Wyoming,56029.0,1,0
-64701,2020-04-16,Sheridan,Wyoming,56033.0,12,0
-64702,2020-04-16,Sublette,Wyoming,56035.0,1,0
-64703,2020-04-16,Sweetwater,Wyoming,56037.0,10,0
-64704,2020-04-16,Teton,Wyoming,56039.0,59,0
-64705,2020-04-16,Uinta,Wyoming,56041.0,4,0
-64706,2020-04-16,Washakie,Wyoming,56043.0,4,0
+64354,2020-04-16,Washington,Texas,48477.0,46,3
+64355,2020-04-16,Webb,Texas,48479.0,245,11
+64356,2020-04-16,Wharton,Texas,48481.0,32,0
+64357,2020-04-16,Wichita,Texas,48485.0,57,1
+64358,2020-04-16,Wilbarger,Texas,48487.0,1,0
+64359,2020-04-16,Willacy,Texas,48489.0,7,1
+64360,2020-04-16,Williamson,Texas,48491.0,140,4
+64361,2020-04-16,Wilson,Texas,48493.0,13,1
+64362,2020-04-16,Winkler,Texas,48495.0,2,0
+64363,2020-04-16,Wise,Texas,48497.0,7,1
+64364,2020-04-16,Wood,Texas,48499.0,6,0
+64365,2020-04-16,Young,Texas,48503.0,4,1
+64366,2020-04-16,Zapata,Texas,48505.0,4,0
+64367,2020-04-16,Box Elder,Utah,49003.0,13,0
+64368,2020-04-16,Cache,Utah,49005.0,36,0
+64369,2020-04-16,Carbon,Utah,49007.0,2,0
+64370,2020-04-16,Davis,Utah,49011.0,220,2
+64371,2020-04-16,Duchesne,Utah,49013.0,3,0
+64372,2020-04-16,Emery,Utah,49015.0,3,0
+64373,2020-04-16,Garfield,Utah,49017.0,1,0
+64374,2020-04-16,Grand,Utah,49019.0,1,0
+64375,2020-04-16,Iron,Utah,49021.0,15,0
+64376,2020-04-16,Juab,Utah,49023.0,2,0
+64377,2020-04-16,Kane,Utah,49025.0,3,0
+64378,2020-04-16,Millard,Utah,49027.0,4,0
+64379,2020-04-16,Morgan,Utah,49029.0,7,0
+64380,2020-04-16,Salt Lake,Utah,49035.0,1377,12
+64381,2020-04-16,San Juan,Utah,49037.0,9,0
+64382,2020-04-16,Sevier,Utah,49041.0,2,0
+64383,2020-04-16,Summit,Utah,49043.0,308,0
+64384,2020-04-16,Tooele,Utah,49045.0,38,0
+64385,2020-04-16,Uintah,Utah,49047.0,6,0
+64386,2020-04-16,Unknown,Utah,,3,1
+64387,2020-04-16,Utah,Utah,49049.0,387,4
+64388,2020-04-16,Wasatch,Utah,49051.0,103,1
+64389,2020-04-16,Washington,Utah,49053.0,39,0
+64390,2020-04-16,Weber,Utah,49057.0,101,1
+64391,2020-04-16,Addison,Vermont,50001.0,56,1
+64392,2020-04-16,Bennington,Vermont,50003.0,33,1
+64393,2020-04-16,Caledonia,Vermont,50005.0,9,0
+64394,2020-04-16,Chittenden,Vermont,50007.0,377,22
+64395,2020-04-16,Essex,Vermont,50009.0,1,0
+64396,2020-04-16,Franklin,Vermont,50011.0,86,3
+64397,2020-04-16,Grand Isle,Vermont,50013.0,3,0
+64398,2020-04-16,Lamoille,Vermont,50015.0,22,2
+64399,2020-04-16,Orange,Vermont,50017.0,5,0
+64400,2020-04-16,Orleans,Vermont,50019.0,8,0
+64401,2020-04-16,Rutland,Vermont,50021.0,41,1
+64402,2020-04-16,Unknown,Vermont,,9,0
+64403,2020-04-16,Washington,Vermont,50023.0,29,1
+64404,2020-04-16,Windham,Vermont,50025.0,58,2
+64405,2020-04-16,Windsor,Vermont,50027.0,31,2
+64406,2020-04-16,Unknown,Virgin Islands,,51,1
+64407,2020-04-16,Accomack,Virginia,51001.0,19,0
+64408,2020-04-16,Albemarle,Virginia,51003.0,54,0
+64409,2020-04-16,Alexandria city,Virginia,51510.0,275,6
+64410,2020-04-16,Alleghany,Virginia,51005.0,4,0
+64411,2020-04-16,Amelia,Virginia,51007.0,13,0
+64412,2020-04-16,Amherst,Virginia,51009.0,10,0
+64413,2020-04-16,Appomattox,Virginia,51011.0,7,0
+64414,2020-04-16,Arlington,Virginia,51013.0,453,12
+64415,2020-04-16,Augusta,Virginia,51015.0,19,0
+64416,2020-04-16,Bedford,Virginia,51019.0,16,0
+64417,2020-04-16,Botetourt,Virginia,51023.0,23,0
+64418,2020-04-16,Bristol city,Virginia,51520.0,1,0
+64419,2020-04-16,Brunswick,Virginia,51025.0,10,0
+64420,2020-04-16,Buchanan,Virginia,51027.0,12,0
+64421,2020-04-16,Buckingham,Virginia,51029.0,23,0
+64422,2020-04-16,Buena Vista city,Virginia,51530.0,4,0
+64423,2020-04-16,Campbell,Virginia,51031.0,9,0
+64424,2020-04-16,Caroline,Virginia,51033.0,11,0
+64425,2020-04-16,Carroll,Virginia,51035.0,3,0
+64426,2020-04-16,Charles City,Virginia,51036.0,9,0
+64427,2020-04-16,Charlotte,Virginia,51037.0,8,0
+64428,2020-04-16,Charlottesville city,Virginia,51540.0,38,1
+64429,2020-04-16,Chesapeake city,Virginia,51550.0,143,3
+64430,2020-04-16,Chesterfield,Virginia,51041.0,267,5
+64431,2020-04-16,Clarke,Virginia,51043.0,6,0
+64432,2020-04-16,Colonial Heights city,Virginia,51570.0,18,0
+64433,2020-04-16,Covington city,Virginia,51580.0,1,0
+64434,2020-04-16,Craig,Virginia,51045.0,2,0
+64435,2020-04-16,Culpeper,Virginia,51047.0,29,0
+64436,2020-04-16,Cumberland,Virginia,51049.0,7,0
+64437,2020-04-16,Danville city,Virginia,51590.0,22,0
+64438,2020-04-16,Dinwiddie,Virginia,51053.0,7,0
+64439,2020-04-16,Emporia city,Virginia,51595.0,7,0
+64440,2020-04-16,Essex,Virginia,51057.0,2,0
+64441,2020-04-16,Fairfax,Virginia,51059.0,1375,30
+64442,2020-04-16,Fairfax city,Virginia,51600.0,1,0
+64443,2020-04-16,Falls Church city,Virginia,51610.0,2,0
+64444,2020-04-16,Fauquier,Virginia,51061.0,32,0
+64445,2020-04-16,Floyd,Virginia,51063.0,1,0
+64446,2020-04-16,Fluvanna,Virginia,51065.0,64,0
+64447,2020-04-16,Franklin,Virginia,51067.0,15,0
+64448,2020-04-16,Franklin city,Virginia,51620.0,9,0
+64449,2020-04-16,Frederick,Virginia,51069.0,72,0
+64450,2020-04-16,Fredericksburg city,Virginia,51630.0,15,0
+64451,2020-04-16,Galax city,Virginia,51640.0,1,0
+64452,2020-04-16,Giles,Virginia,51071.0,4,0
+64453,2020-04-16,Gloucester,Virginia,51073.0,20,0
+64454,2020-04-16,Goochland,Virginia,51075.0,41,1
+64455,2020-04-16,Greene,Virginia,51079.0,5,0
+64456,2020-04-16,Greensville,Virginia,51081.0,16,0
+64457,2020-04-16,Halifax,Virginia,51083.0,7,0
+64458,2020-04-16,Hampton city,Virginia,51650.0,77,1
+64459,2020-04-16,Hanover,Virginia,51085.0,61,0
+64460,2020-04-16,Harrisonburg city,Virginia,51660.0,119,0
+64461,2020-04-16,Henrico,Virginia,51087.0,497,45
+64462,2020-04-16,Henry,Virginia,51089.0,8,0
+64463,2020-04-16,Hopewell city,Virginia,51670.0,14,0
+64464,2020-04-16,Isle of Wight,Virginia,51093.0,63,0
+64465,2020-04-16,James City,Virginia,51095.0,135,3
+64466,2020-04-16,King George,Virginia,51099.0,18,0
+64467,2020-04-16,King William,Virginia,51101.0,2,0
+64468,2020-04-16,King and Queen,Virginia,51097.0,2,0
+64469,2020-04-16,Lancaster,Virginia,51103.0,1,0
+64470,2020-04-16,Lee,Virginia,51105.0,6,0
+64471,2020-04-16,Lexington city,Virginia,51678.0,3,0
+64472,2020-04-16,Loudoun,Virginia,51107.0,378,5
+64473,2020-04-16,Louisa,Virginia,51109.0,30,0
+64474,2020-04-16,Lunenburg,Virginia,51111.0,3,0
+64475,2020-04-16,Lynchburg city,Virginia,51680.0,34,0
+64476,2020-04-16,Madison,Virginia,51113.0,8,0
+64477,2020-04-16,Manassas Park city,Virginia,51685.0,16,0
+64478,2020-04-16,Manassas city,Virginia,51683.0,62,0
+64479,2020-04-16,Mathews,Virginia,51115.0,3,0
+64480,2020-04-16,Mecklenburg,Virginia,51117.0,61,0
+64481,2020-04-16,Middlesex,Virginia,51119.0,3,0
+64482,2020-04-16,Montgomery,Virginia,51121.0,34,0
+64483,2020-04-16,Nelson,Virginia,51125.0,5,0
+64484,2020-04-16,New Kent,Virginia,51127.0,16,0
+64485,2020-04-16,Newport News city,Virginia,51700.0,97,1
+64486,2020-04-16,Norfolk city,Virginia,51710.0,105,1
+64487,2020-04-16,Northampton,Virginia,51131.0,4,0
+64488,2020-04-16,Northumberland,Virginia,51133.0,5,0
+64489,2020-04-16,Nottoway,Virginia,51135.0,5,0
+64490,2020-04-16,Orange,Virginia,51137.0,18,0
+64491,2020-04-16,Page,Virginia,51139.0,7,0
+64492,2020-04-16,Petersburg city,Virginia,51730.0,19,0
+64493,2020-04-16,Pittsylvania,Virginia,51143.0,5,0
+64494,2020-04-16,Poquoson city,Virginia,51735.0,6,0
+64495,2020-04-16,Portsmouth city,Virginia,51740.0,62,4
+64496,2020-04-16,Powhatan,Virginia,51145.0,5,0
+64497,2020-04-16,Prince Edward,Virginia,51147.0,15,1
+64498,2020-04-16,Prince George,Virginia,51149.0,26,0
+64499,2020-04-16,Prince William,Virginia,51153.0,582,1
+64500,2020-04-16,Pulaski,Virginia,51155.0,5,0
+64501,2020-04-16,Radford city,Virginia,51750.0,1,0
+64502,2020-04-16,Rappahannock,Virginia,51157.0,1,0
+64503,2020-04-16,Richmond,Virginia,51159.0,7,0
+64504,2020-04-16,Richmond city,Virginia,51760.0,188,7
+64505,2020-04-16,Roanoke,Virginia,51161.0,19,0
+64506,2020-04-16,Roanoke city,Virginia,51770.0,24,0
+64507,2020-04-16,Rockbridge,Virginia,51163.0,3,0
+64508,2020-04-16,Rockingham,Virginia,51165.0,69,0
+64509,2020-04-16,Russell,Virginia,51167.0,2,0
+64510,2020-04-16,Salem city,Virginia,51775.0,4,0
+64511,2020-04-16,Scott,Virginia,51169.0,3,0
+64512,2020-04-16,Shenandoah,Virginia,51171.0,28,1
+64513,2020-04-16,Smyth,Virginia,51173.0,11,0
+64514,2020-04-16,Southampton,Virginia,51175.0,6,0
+64515,2020-04-16,Spotsylvania,Virginia,51177.0,62,0
+64516,2020-04-16,Stafford,Virginia,51179.0,120,1
+64517,2020-04-16,Staunton city,Virginia,51790.0,3,0
+64518,2020-04-16,Suffolk city,Virginia,51800.0,65,0
+64519,2020-04-16,Surry,Virginia,51181.0,3,0
+64520,2020-04-16,Sussex,Virginia,51183.0,9,0
+64521,2020-04-16,Tazewell,Virginia,51185.0,4,0
+64522,2020-04-16,Unknown,Virginia,,0,71
+64523,2020-04-16,Virginia Beach city,Virginia,51810.0,258,5
+64524,2020-04-16,Warren,Virginia,51187.0,21,0
+64525,2020-04-16,Washington,Virginia,51191.0,27,0
+64526,2020-04-16,Waynesboro city,Virginia,51820.0,6,0
+64527,2020-04-16,Westmoreland,Virginia,51193.0,9,0
+64528,2020-04-16,Williamsburg city,Virginia,51830.0,19,1
+64529,2020-04-16,Winchester city,Virginia,51840.0,21,0
+64530,2020-04-16,Wise,Virginia,51195.0,18,1
+64531,2020-04-16,Wythe,Virginia,51197.0,7,0
+64532,2020-04-16,York,Virginia,51199.0,37,1
+64533,2020-04-16,Adams,Washington,53001.0,40,0
+64534,2020-04-16,Asotin,Washington,53003.0,10,0
+64535,2020-04-16,Benton,Washington,53005.0,284,34
+64536,2020-04-16,Chelan,Washington,53007.0,63,6
+64537,2020-04-16,Clallam,Washington,53009.0,15,0
+64538,2020-04-16,Clark,Washington,53011.0,265,15
+64539,2020-04-16,Columbia,Washington,53013.0,1,0
+64540,2020-04-16,Cowlitz,Washington,53015.0,26,0
+64541,2020-04-16,Douglas,Washington,53017.0,32,1
+64542,2020-04-16,Ferry,Washington,53019.0,1,0
+64543,2020-04-16,Franklin,Washington,53021.0,156,2
+64544,2020-04-16,Grant,Washington,53025.0,132,1
+64545,2020-04-16,Grays Harbor,Washington,53027.0,12,0
+64546,2020-04-16,Island,Washington,53029.0,163,8
+64547,2020-04-16,Jefferson,Washington,53031.0,28,0
+64548,2020-04-16,King,Washington,53033.0,4811,322
+64549,2020-04-16,Kitsap,Washington,53035.0,132,1
+64550,2020-04-16,Kittitas,Washington,53037.0,14,0
+64551,2020-04-16,Klickitat,Washington,53039.0,16,2
+64552,2020-04-16,Lewis,Washington,53041.0,19,2
+64553,2020-04-16,Lincoln,Washington,53043.0,2,0
+64554,2020-04-16,Mason,Washington,53045.0,21,0
+64555,2020-04-16,Okanogan,Washington,53047.0,14,0
+64556,2020-04-16,Pacific,Washington,53049.0,1,0
+64557,2020-04-16,Pend Oreille,Washington,53051.0,1,0
+64558,2020-04-16,Pierce,Washington,53053.0,1064,30
+64559,2020-04-16,San Juan,Washington,53055.0,13,0
+64560,2020-04-16,Skagit,Washington,53057.0,218,6
+64561,2020-04-16,Skamania,Washington,53059.0,3,0
+64562,2020-04-16,Snohomish,Washington,53061.0,2031,85
+64563,2020-04-16,Spokane,Washington,53063.0,297,17
+64564,2020-04-16,Stevens,Washington,53065.0,7,1
+64565,2020-04-16,Thurston,Washington,53067.0,86,1
+64566,2020-04-16,Unknown,Washington,,154,0
+64567,2020-04-16,Wahkiakum,Washington,53069.0,2,0
+64568,2020-04-16,Walla Walla,Washington,53071.0,27,0
+64569,2020-04-16,Whatcom,Washington,53073.0,271,25
+64570,2020-04-16,Whitman,Washington,53075.0,13,0
+64571,2020-04-16,Yakima,Washington,53077.0,707,29
+64572,2020-04-16,Barbour,West Virginia,54001.0,4,0
+64573,2020-04-16,Berkeley,West Virginia,54003.0,105,1
+64574,2020-04-16,Boone,West Virginia,54005.0,2,0
+64575,2020-04-16,Braxton,West Virginia,54007.0,1,0
+64576,2020-04-16,Brooke,West Virginia,54009.0,3,0
+64577,2020-04-16,Cabell,West Virginia,54011.0,28,0
+64578,2020-04-16,Fayette,West Virginia,54019.0,2,0
+64579,2020-04-16,Grant,West Virginia,54023.0,1,0
+64580,2020-04-16,Greenbrier,West Virginia,54025.0,3,0
+64581,2020-04-16,Hampshire,West Virginia,54027.0,6,0
+64582,2020-04-16,Hancock,West Virginia,54029.0,7,0
+64583,2020-04-16,Hardy,West Virginia,54031.0,3,0
+64584,2020-04-16,Harrison,West Virginia,54033.0,29,1
+64585,2020-04-16,Jackson,West Virginia,54035.0,37,1
+64586,2020-04-16,Jefferson,West Virginia,54037.0,57,0
+64587,2020-04-16,Kanawha,West Virginia,54039.0,91,0
+64588,2020-04-16,Lewis,West Virginia,54041.0,2,0
+64589,2020-04-16,Lincoln,West Virginia,54043.0,1,0
+64590,2020-04-16,Logan,West Virginia,54045.0,8,1
+64591,2020-04-16,Marion,West Virginia,54049.0,39,2
+64592,2020-04-16,Marshall,West Virginia,54051.0,7,0
+64593,2020-04-16,Mason,West Virginia,54053.0,10,0
+64594,2020-04-16,McDowell,West Virginia,54047.0,6,0
+64595,2020-04-16,Mercer,West Virginia,54055.0,8,0
+64596,2020-04-16,Mineral,West Virginia,54057.0,7,0
+64597,2020-04-16,Mingo,West Virginia,54059.0,2,1
+64598,2020-04-16,Monongalia,West Virginia,54061.0,83,4
+64599,2020-04-16,Monroe,West Virginia,54063.0,2,0
+64600,2020-04-16,Morgan,West Virginia,54065.0,7,0
+64601,2020-04-16,Nicholas,West Virginia,54067.0,3,0
+64602,2020-04-16,Ohio,West Virginia,54069.0,22,1
+64603,2020-04-16,Pendleton,West Virginia,54071.0,1,0
+64604,2020-04-16,Pleasants,West Virginia,54073.0,1,0
+64605,2020-04-16,Preston,West Virginia,54077.0,6,0
+64606,2020-04-16,Putnam,West Virginia,54079.0,13,0
+64607,2020-04-16,Raleigh,West Virginia,54081.0,6,0
+64608,2020-04-16,Randolph,West Virginia,54083.0,4,0
+64609,2020-04-16,Roane,West Virginia,54087.0,2,0
+64610,2020-04-16,Summers,West Virginia,54089.0,1,0
+64611,2020-04-16,Taylor,West Virginia,54091.0,4,0
+64612,2020-04-16,Tucker,West Virginia,54093.0,4,0
+64613,2020-04-16,Tyler,West Virginia,54095.0,3,0
+64614,2020-04-16,Upshur,West Virginia,54097.0,3,0
+64615,2020-04-16,Wayne,West Virginia,54099.0,72,1
+64616,2020-04-16,Wetzel,West Virginia,54103.0,3,0
+64617,2020-04-16,Wirt,West Virginia,54105.0,2,0
+64618,2020-04-16,Wood,West Virginia,54107.0,27,0
+64619,2020-04-16,Wyoming,West Virginia,54109.0,1,0
+64620,2020-04-16,Adams,Wisconsin,55001.0,3,1
+64621,2020-04-16,Ashland,Wisconsin,55003.0,2,0
+64622,2020-04-16,Barron,Wisconsin,55005.0,6,0
+64623,2020-04-16,Bayfield,Wisconsin,55007.0,3,0
+64624,2020-04-16,Brown,Wisconsin,55009.0,139,1
+64625,2020-04-16,Buffalo,Wisconsin,55011.0,4,1
+64626,2020-04-16,Calumet,Wisconsin,55015.0,5,0
+64627,2020-04-16,Chippewa,Wisconsin,55017.0,20,0
+64628,2020-04-16,Clark,Wisconsin,55019.0,10,0
+64629,2020-04-16,Columbia,Wisconsin,55021.0,27,1
+64630,2020-04-16,Crawford,Wisconsin,55023.0,3,0
+64631,2020-04-16,Dane,Wisconsin,55025.0,352,16
+64632,2020-04-16,Dodge,Wisconsin,55027.0,19,1
+64633,2020-04-16,Door,Wisconsin,55029.0,9,1
+64634,2020-04-16,Douglas,Wisconsin,55031.0,7,0
+64635,2020-04-16,Dunn,Wisconsin,55033.0,9,0
+64636,2020-04-16,Eau Claire,Wisconsin,55035.0,22,0
+64637,2020-04-16,Florence,Wisconsin,55037.0,2,0
+64638,2020-04-16,Fond du Lac,Wisconsin,55039.0,59,3
+64639,2020-04-16,Grant,Wisconsin,55043.0,10,1
+64640,2020-04-16,Green,Wisconsin,55045.0,9,0
+64641,2020-04-16,Green Lake,Wisconsin,55047.0,1,0
+64642,2020-04-16,Iowa,Wisconsin,55049.0,5,0
+64643,2020-04-16,Iron,Wisconsin,55051.0,2,1
+64644,2020-04-16,Jackson,Wisconsin,55053.0,11,1
+64645,2020-04-16,Jefferson,Wisconsin,55055.0,24,0
+64646,2020-04-16,Juneau,Wisconsin,55057.0,7,1
+64647,2020-04-16,Kenosha,Wisconsin,55059.0,208,5
+64648,2020-04-16,Kewaunee,Wisconsin,55061.0,6,1
+64649,2020-04-16,La Crosse,Wisconsin,55063.0,25,0
+64650,2020-04-16,Lafayette,Wisconsin,55065.0,3,0
+64651,2020-04-16,Manitowoc,Wisconsin,55071.0,5,0
+64652,2020-04-16,Marathon,Wisconsin,55073.0,14,1
+64653,2020-04-16,Marinette,Wisconsin,55075.0,4,1
+64654,2020-04-16,Marquette,Wisconsin,55077.0,3,0
+64655,2020-04-16,Menominee,Wisconsin,55078.0,1,0
+64656,2020-04-16,Milwaukee,Wisconsin,55079.0,1947,114
+64657,2020-04-16,Monroe,Wisconsin,55081.0,12,0
+64658,2020-04-16,Oconto,Wisconsin,55083.0,4,0
+64659,2020-04-16,Oneida,Wisconsin,55085.0,6,0
+64660,2020-04-16,Outagamie,Wisconsin,55087.0,31,2
+64661,2020-04-16,Ozaukee,Wisconsin,55089.0,77,9
+64662,2020-04-16,Pierce,Wisconsin,55093.0,7,0
+64663,2020-04-16,Polk,Wisconsin,55095.0,3,0
+64664,2020-04-16,Portage,Wisconsin,55097.0,4,0
+64665,2020-04-16,Price,Wisconsin,55099.0,1,0
+64666,2020-04-16,Racine,Wisconsin,55101.0,143,6
+64667,2020-04-16,Richland,Wisconsin,55103.0,7,1
+64668,2020-04-16,Rock,Wisconsin,55105.0,63,4
+64669,2020-04-16,Rusk,Wisconsin,55107.0,3,0
+64670,2020-04-16,Sauk,Wisconsin,55111.0,31,3
+64671,2020-04-16,Sawyer,Wisconsin,55113.0,2,0
+64672,2020-04-16,Shawano,Wisconsin,55115.0,6,0
+64673,2020-04-16,Sheboygan,Wisconsin,55117.0,37,2
+64674,2020-04-16,St. Croix,Wisconsin,55109.0,11,0
+64675,2020-04-16,Trempealeau,Wisconsin,55121.0,1,0
+64676,2020-04-16,Vilas,Wisconsin,55125.0,4,0
+64677,2020-04-16,Walworth,Wisconsin,55127.0,71,3
+64678,2020-04-16,Washburn,Wisconsin,55129.0,1,0
+64679,2020-04-16,Washington,Wisconsin,55131.0,79,3
+64680,2020-04-16,Waukesha,Wisconsin,55133.0,245,11
+64681,2020-04-16,Waupaca,Wisconsin,55135.0,4,1
+64682,2020-04-16,Waushara,Wisconsin,55137.0,2,0
+64683,2020-04-16,Winnebago,Wisconsin,55139.0,32,1
+64684,2020-04-16,Wood,Wisconsin,55141.0,2,0
+64685,2020-04-16,Albany,Wyoming,56001.0,5,0
+64686,2020-04-16,Big Horn,Wyoming,56003.0,1,0
+64687,2020-04-16,Campbell,Wyoming,56005.0,13,0
+64688,2020-04-16,Carbon,Wyoming,56007.0,4,0
+64689,2020-04-16,Converse,Wyoming,56009.0,8,0
+64690,2020-04-16,Crook,Wyoming,56011.0,4,0
+64691,2020-04-16,Fremont,Wyoming,56013.0,43,0
+64692,2020-04-16,Goshen,Wyoming,56015.0,3,0
+64693,2020-04-16,Hot Springs,Wyoming,56017.0,2,0
+64694,2020-04-16,Johnson,Wyoming,56019.0,11,1
+64695,2020-04-16,Laramie,Wyoming,56021.0,67,1
+64696,2020-04-16,Lincoln,Wyoming,56023.0,5,0
+64697,2020-04-16,Natrona,Wyoming,56025.0,37,0
+64698,2020-04-16,Niobrara,Wyoming,56027.0,1,0
+64699,2020-04-16,Park,Wyoming,56029.0,1,0
+64700,2020-04-16,Sheridan,Wyoming,56033.0,12,0
+64701,2020-04-16,Sublette,Wyoming,56035.0,1,0
+64702,2020-04-16,Sweetwater,Wyoming,56037.0,10,0
+64703,2020-04-16,Teton,Wyoming,56039.0,59,0
+64704,2020-04-16,Uinta,Wyoming,56041.0,4,0
+64705,2020-04-16,Washakie,Wyoming,56043.0,4,0
+64706,2020-04-17,Autauga,Alabama,1001.0,26,2
+64707,2020-04-17,Baldwin,Alabama,1003.0,103,2
+64708,2020-04-17,Barbour,Alabama,1005.0,15,0
+64709,2020-04-17,Bibb,Alabama,1007.0,23,0
+64710,2020-04-17,Blount,Alabama,1009.0,20,0
+64711,2020-04-17,Bullock,Alabama,1011.0,8,0
+64712,2020-04-17,Butler,Alabama,1013.0,16,0
+64713,2020-04-17,Calhoun,Alabama,1015.0,63,2
+64714,2020-04-17,Chambers,Alabama,1017.0,236,11
+64715,2020-04-17,Cherokee,Alabama,1019.0,12,0
+64716,2020-04-17,Chilton,Alabama,1021.0,37,0
+64717,2020-04-17,Choctaw,Alabama,1023.0,13,0
+64718,2020-04-17,Clarke,Alabama,1025.0,24,0
+64719,2020-04-17,Clay,Alabama,1027.0,14,0
+64720,2020-04-17,Cleburne,Alabama,1029.0,12,0
+64721,2020-04-17,Coffee,Alabama,1031.0,50,0
+64722,2020-04-17,Colbert,Alabama,1033.0,13,1
+64723,2020-04-17,Conecuh,Alabama,1035.0,8,0
+64724,2020-04-17,Coosa,Alabama,1037.0,20,1
+64725,2020-04-17,Covington,Alabama,1039.0,19,1
+64726,2020-04-17,Crenshaw,Alabama,1041.0,5,0
+64727,2020-04-17,Cullman,Alabama,1043.0,53,1
+64728,2020-04-17,Dale,Alabama,1045.0,14,0
+64729,2020-04-17,Dallas,Alabama,1047.0,21,2
+64730,2020-04-17,DeKalb,Alabama,1049.0,34,2
+64731,2020-04-17,Elmore,Alabama,1051.0,54,1
+64732,2020-04-17,Escambia,Alabama,1053.0,14,0
+64733,2020-04-17,Etowah,Alabama,1055.0,88,8
+64734,2020-04-17,Fayette,Alabama,1057.0,4,0
+64735,2020-04-17,Franklin,Alabama,1059.0,18,1
+64736,2020-04-17,Geneva,Alabama,1061.0,2,0
+64737,2020-04-17,Greene,Alabama,1063.0,24,0
+64738,2020-04-17,Hale,Alabama,1065.0,22,0
+64739,2020-04-17,Henry,Alabama,1067.0,16,0
+64740,2020-04-17,Houston,Alabama,1069.0,64,3
+64741,2020-04-17,Jackson,Alabama,1071.0,32,2
+64742,2020-04-17,Jefferson,Alabama,1073.0,645,24
+64743,2020-04-17,Lamar,Alabama,1075.0,7,0
+64744,2020-04-17,Lauderdale,Alabama,1077.0,23,4
+64745,2020-04-17,Lawrence,Alabama,1079.0,8,0
+64746,2020-04-17,Lee,Alabama,1081.0,300,13
+64747,2020-04-17,Limestone,Alabama,1083.0,40,0
+64748,2020-04-17,Lowndes,Alabama,1085.0,25,0
+64749,2020-04-17,Macon,Alabama,1087.0,24,2
+64750,2020-04-17,Madison,Alabama,1089.0,216,4
+64751,2020-04-17,Marengo,Alabama,1091.0,24,1
+64752,2020-04-17,Marion,Alabama,1093.0,62,5
+64753,2020-04-17,Marshall,Alabama,1095.0,123,4
+64754,2020-04-17,Mobile,Alabama,1097.0,627,25
+64755,2020-04-17,Monroe,Alabama,1099.0,7,1
+64756,2020-04-17,Montgomery,Alabama,1101.0,207,5
+64757,2020-04-17,Morgan,Alabama,1103.0,47,0
+64758,2020-04-17,Perry,Alabama,1105.0,9,0
+64759,2020-04-17,Pickens,Alabama,1107.0,32,0
+64760,2020-04-17,Pike,Alabama,1109.0,29,0
+64761,2020-04-17,Randolph,Alabama,1111.0,51,4
+64762,2020-04-17,Russell,Alabama,1113.0,35,0
+64763,2020-04-17,Shelby,Alabama,1117.0,248,8
+64764,2020-04-17,St. Clair,Alabama,1115.0,52,0
+64765,2020-04-17,Sumter,Alabama,1119.0,33,0
+64766,2020-04-17,Talladega,Alabama,1121.0,42,1
+64767,2020-04-17,Tallapoosa,Alabama,1123.0,160,9
+64768,2020-04-17,Tuscaloosa,Alabama,1125.0,153,0
+64769,2020-04-17,Walker,Alabama,1127.0,83,0
+64770,2020-04-17,Washington,Alabama,1129.0,14,1
+64771,2020-04-17,Wilcox,Alabama,1131.0,40,0
+64772,2020-04-17,Winston,Alabama,1133.0,9,0
+64773,2020-04-17,Anchorage,Alaska,2020.0,150,4
+64774,2020-04-17,Bethel Census Area,Alaska,2050.0,1,0
+64775,2020-04-17,Fairbanks North Star Borough,Alaska,2090.0,79,2
+64776,2020-04-17,Juneau City and Borough,Alaska,2110.0,24,0
+64777,2020-04-17,Kenai Peninsula Borough,Alaska,2122.0,16,0
+64778,2020-04-17,Ketchikan Gateway Borough,Alaska,2130.0,15,0
+64779,2020-04-17,Kodiak Island Borough,Alaska,2150.0,1,0
+64780,2020-04-17,Matanuska-Susitna Borough,Alaska,2170.0,15,1
+64781,2020-04-17,Nome Census Area,Alaska,2180.0,1,0
+64782,2020-04-17,Petersburg Borough,Alaska,2195.0,1,0
+64783,2020-04-17,Prince of Wales-Hyder Census Area,Alaska,2198.0,2,0
+64784,2020-04-17,Southeast Fairbanks Census Area,Alaska,2240.0,1,0
+64785,2020-04-17,Yukon-Koyukuk Census Area,Alaska,2290.0,1,0
+64786,2020-04-17,Apache,Arizona,4001.0,141,4
+64787,2020-04-17,Cochise,Arizona,4003.0,20,0
+64788,2020-04-17,Coconino,Arizona,4005.0,304,29
+64789,2020-04-17,Gila,Arizona,4007.0,5,0
+64790,2020-04-17,Graham,Arizona,4009.0,2,0
+64791,2020-04-17,Greenlee,Arizona,4011.0,2,0
+64792,2020-04-17,La Paz,Arizona,4012.0,5,1
+64793,2020-04-17,Maricopa,Arizona,4013.0,2404,69
+64794,2020-04-17,Mohave,Arizona,4015.0,51,2
+64795,2020-04-17,Navajo,Arizona,4017.0,435,11
+64796,2020-04-17,Pima,Arizona,4019.0,819,51
+64797,2020-04-17,Pinal,Arizona,4021.0,212,5
+64798,2020-04-17,Santa Cruz,Arizona,4023.0,15,0
+64799,2020-04-17,Yavapai,Arizona,4025.0,69,1
+64800,2020-04-17,Yuma,Arizona,4027.0,23,1
+64801,2020-04-17,Arkansas,Arkansas,5001.0,2,0
+64802,2020-04-17,Ashley,Arkansas,5003.0,11,0
+64803,2020-04-17,Baxter,Arkansas,5005.0,4,0
+64804,2020-04-17,Benton,Arkansas,5007.0,62,0
+64805,2020-04-17,Boone,Arkansas,5009.0,3,0
+64806,2020-04-17,Bradley,Arkansas,5011.0,7,0
+64807,2020-04-17,Carroll,Arkansas,5015.0,2,0
+64808,2020-04-17,Chicot,Arkansas,5017.0,7,0
+64809,2020-04-17,Clark,Arkansas,5019.0,27,0
+64810,2020-04-17,Clay,Arkansas,5021.0,1,0
+64811,2020-04-17,Cleburne,Arkansas,5023.0,70,4
+64812,2020-04-17,Cleveland,Arkansas,5025.0,8,0
+64813,2020-04-17,Columbia,Arkansas,5027.0,4,0
+64814,2020-04-17,Conway,Arkansas,5029.0,5,1
+64815,2020-04-17,Craighead,Arkansas,5031.0,40,1
+64816,2020-04-17,Crawford,Arkansas,5033.0,4,0
+64817,2020-04-17,Crittenden,Arkansas,5035.0,127,4
+64818,2020-04-17,Cross,Arkansas,5037.0,8,0
+64819,2020-04-17,Dallas,Arkansas,5039.0,1,0
+64820,2020-04-17,Desha,Arkansas,5041.0,6,0
+64821,2020-04-17,Drew,Arkansas,5043.0,6,1
+64822,2020-04-17,Faulkner,Arkansas,5045.0,59,2
+64823,2020-04-17,Franklin,Arkansas,5047.0,1,0
+64824,2020-04-17,Garland,Arkansas,5051.0,107,0
+64825,2020-04-17,Grant,Arkansas,5053.0,11,0
+64826,2020-04-17,Greene,Arkansas,5055.0,6,0
+64827,2020-04-17,Hempstead,Arkansas,5057.0,4,1
+64828,2020-04-17,Hot Spring,Arkansas,5059.0,8,0
+64829,2020-04-17,Howard,Arkansas,5061.0,12,0
+64830,2020-04-17,Independence,Arkansas,5063.0,7,0
+64831,2020-04-17,Izard,Arkansas,5065.0,2,0
+64832,2020-04-17,Jackson,Arkansas,5067.0,1,0
+64833,2020-04-17,Jefferson,Arkansas,5069.0,113,6
+64834,2020-04-17,Johnson,Arkansas,5071.0,20,0
+64835,2020-04-17,Lafayette,Arkansas,5073.0,5,0
+64836,2020-04-17,Lawrence,Arkansas,5075.0,24,1
+64837,2020-04-17,Lee,Arkansas,5077.0,3,1
+64838,2020-04-17,Lincoln,Arkansas,5079.0,94,0
+64839,2020-04-17,Logan,Arkansas,5083.0,2,0
+64840,2020-04-17,Lonoke,Arkansas,5085.0,30,0
+64841,2020-04-17,Madison,Arkansas,5087.0,1,0
+64842,2020-04-17,Marion,Arkansas,5089.0,1,0
+64843,2020-04-17,Miller,Arkansas,5091.0,29,0
+64844,2020-04-17,Mississippi,Arkansas,5093.0,8,0
+64845,2020-04-17,Monroe,Arkansas,5095.0,2,0
+64846,2020-04-17,Nevada,Arkansas,5099.0,1,0
+64847,2020-04-17,Newton,Arkansas,5101.0,2,0
+64848,2020-04-17,Ouachita,Arkansas,5103.0,5,0
+64849,2020-04-17,Perry,Arkansas,5105.0,3,0
+64850,2020-04-17,Phillips,Arkansas,5107.0,4,1
+64851,2020-04-17,Pike,Arkansas,5109.0,2,0
+64852,2020-04-17,Poinsett,Arkansas,5111.0,10,0
+64853,2020-04-17,Polk,Arkansas,5113.0,7,0
+64854,2020-04-17,Pope,Arkansas,5115.0,33,0
+64855,2020-04-17,Prairie,Arkansas,5117.0,2,0
+64856,2020-04-17,Pulaski,Arkansas,5119.0,360,11
+64857,2020-04-17,Randolph,Arkansas,5121.0,10,0
+64858,2020-04-17,Saline,Arkansas,5125.0,37,1
+64859,2020-04-17,Scott,Arkansas,5127.0,1,0
+64860,2020-04-17,Searcy,Arkansas,5129.0,6,0
+64861,2020-04-17,Sebastian,Arkansas,5131.0,11,0
+64862,2020-04-17,Sevier,Arkansas,5133.0,8,0
+64863,2020-04-17,Sharp,Arkansas,5135.0,2,0
+64864,2020-04-17,St. Francis,Arkansas,5123.0,63,0
+64865,2020-04-17,Stone,Arkansas,5137.0,7,0
+64866,2020-04-17,Union,Arkansas,5139.0,20,0
+64867,2020-04-17,Unknown,Arkansas,,43,0
+64868,2020-04-17,Van Buren,Arkansas,5141.0,26,2
+64869,2020-04-17,Washington,Arkansas,5143.0,45,0
+64870,2020-04-17,White,Arkansas,5145.0,29,0
+64871,2020-04-17,Woodruff,Arkansas,5147.0,1,0
+64872,2020-04-17,Yell,Arkansas,5149.0,2,0
+64873,2020-04-17,Alameda,California,6001.0,1084,40
+64874,2020-04-17,Alpine,California,6003.0,1,0
+64875,2020-04-17,Amador,California,6005.0,6,0
+64876,2020-04-17,Butte,California,6007.0,16,0
+64877,2020-04-17,Calaveras,California,6009.0,12,0
+64878,2020-04-17,Colusa,California,6011.0,3,0
+64879,2020-04-17,Contra Costa,California,6013.0,648,19
+64880,2020-04-17,Del Norte,California,6015.0,2,0
+64881,2020-04-17,El Dorado,California,6017.0,36,0
+64882,2020-04-17,Fresno,California,6019.0,311,7
+64883,2020-04-17,Glenn,California,6021.0,4,0
+64884,2020-04-17,Humboldt,California,6023.0,52,0
+64885,2020-04-17,Imperial,California,6025.0,155,2
+64886,2020-04-17,Inyo,California,6027.0,18,0
+64887,2020-04-17,Kern,California,6029.0,553,3
+64888,2020-04-17,Kings,California,6031.0,20,1
+64889,2020-04-17,Lake,California,6033.0,6,0
+64890,2020-04-17,Los Angeles,California,6037.0,11391,495
+64891,2020-04-17,Madera,California,6039.0,33,2
+64892,2020-04-17,Marin,California,6041.0,187,10
+64893,2020-04-17,Mendocino,California,6045.0,4,0
+64894,2020-04-17,Merced,California,6047.0,85,3
+64895,2020-04-17,Mono,California,6051.0,23,1
+64896,2020-04-17,Monterey,California,6053.0,119,3
+64897,2020-04-17,Napa,California,6055.0,45,2
+64898,2020-04-17,Nevada,California,6057.0,36,1
+64899,2020-04-17,Orange,California,6059.0,1501,28
+64900,2020-04-17,Placer,California,6061.0,130,8
+64901,2020-04-17,Plumas,California,6063.0,4,0
+64902,2020-04-17,Riverside,California,6065.0,2457,69
+64903,2020-04-17,Sacramento,California,6067.0,896,32
+64904,2020-04-17,San Benito,California,6069.0,44,2
+64905,2020-04-17,San Bernardino,California,6071.0,1096,55
+64906,2020-04-17,San Diego,California,6073.0,2158,70
+64907,2020-04-17,San Francisco,California,6075.0,1061,20
+64908,2020-04-17,San Joaquin,California,6077.0,398,17
+64909,2020-04-17,San Luis Obispo,California,6079.0,127,1
+64910,2020-04-17,San Mateo,California,6081.0,797,28
+64911,2020-04-17,Santa Barbara,California,6083.0,373,3
+64912,2020-04-17,Santa Clara,California,6085.0,1870,74
+64913,2020-04-17,Santa Cruz,California,6087.0,98,2
+64914,2020-04-17,Shasta,California,6089.0,26,3
+64915,2020-04-17,Siskiyou,California,6093.0,5,0
+64916,2020-04-17,Solano,California,6095.0,174,2
+64917,2020-04-17,Sonoma,California,6097.0,180,2
+64918,2020-04-17,Stanislaus,California,6099.0,206,4
+64919,2020-04-17,Sutter,California,6101.0,25,2
+64920,2020-04-17,Tehama,California,6103.0,1,0
+64921,2020-04-17,Tulare,California,6107.0,382,17
+64922,2020-04-17,Tuolumne,California,6109.0,2,0
+64923,2020-04-17,Ventura,California,6111.0,396,13
+64924,2020-04-17,Yolo,California,6113.0,126,8
+64925,2020-04-17,Yuba,California,6115.0,15,1
+64926,2020-04-17,Adams,Colorado,8001.0,860,31
+64927,2020-04-17,Alamosa,Colorado,8003.0,7,2
+64928,2020-04-17,Arapahoe,Colorado,8005.0,1419,58
+64929,2020-04-17,Archuleta,Colorado,8007.0,6,0
+64930,2020-04-17,Baca,Colorado,8009.0,10,0
+64931,2020-04-17,Boulder,Colorado,8013.0,327,15
+64932,2020-04-17,Broomfield,Colorado,8014.0,98,2
+64933,2020-04-17,Chaffee,Colorado,8015.0,35,4
+64934,2020-04-17,Clear Creek,Colorado,8019.0,11,0
+64935,2020-04-17,Costilla,Colorado,8023.0,3,0
+64936,2020-04-17,Crowley,Colorado,8025.0,2,1
+64937,2020-04-17,Custer,Colorado,8027.0,2,0
+64938,2020-04-17,Delta,Colorado,8029.0,16,1
+64939,2020-04-17,Denver,Colorado,8031.0,1636,66
+64940,2020-04-17,Douglas,Colorado,8035.0,353,15
+64941,2020-04-17,Eagle,Colorado,8037.0,482,6
+64942,2020-04-17,El Paso,Colorado,8041.0,708,49
+64943,2020-04-17,Elbert,Colorado,8039.0,20,1
+64944,2020-04-17,Fremont,Colorado,8043.0,9,0
+64945,2020-04-17,Garfield,Colorado,8045.0,65,2
+64946,2020-04-17,Gilpin,Colorado,8047.0,1,0
+64947,2020-04-17,Grand,Colorado,8049.0,4,0
+64948,2020-04-17,Gunnison,Colorado,8051.0,112,3
+64949,2020-04-17,Hinsdale,Colorado,8053.0,3,0
+64950,2020-04-17,Huerfano,Colorado,8055.0,1,0
+64951,2020-04-17,Jefferson,Colorado,8059.0,888,35
+64952,2020-04-17,Kit Carson,Colorado,8063.0,13,1
+64953,2020-04-17,La Plata,Colorado,8067.0,51,0
+64954,2020-04-17,Lake,Colorado,8065.0,8,0
+64955,2020-04-17,Larimer,Colorado,8069.0,224,10
+64956,2020-04-17,Las Animas,Colorado,8071.0,3,0
+64957,2020-04-17,Lincoln,Colorado,8073.0,3,0
+64958,2020-04-17,Logan,Colorado,8075.0,17,1
+64959,2020-04-17,Mesa,Colorado,8077.0,34,0
+64960,2020-04-17,Mineral,Colorado,8079.0,2,0
+64961,2020-04-17,Moffat,Colorado,8081.0,3,0
+64962,2020-04-17,Montezuma,Colorado,8083.0,13,2
+64963,2020-04-17,Montrose,Colorado,8085.0,70,7
+64964,2020-04-17,Morgan,Colorado,8087.0,135,2
+64965,2020-04-17,Otero,Colorado,8089.0,6,0
+64966,2020-04-17,Ouray,Colorado,8091.0,5,1
+64967,2020-04-17,Park,Colorado,8093.0,6,0
+64968,2020-04-17,Phillips,Colorado,8095.0,5,0
+64969,2020-04-17,Pitkin,Colorado,8097.0,51,2
+64970,2020-04-17,Prowers,Colorado,8099.0,1,0
+64971,2020-04-17,Pueblo,Colorado,8101.0,78,6
+64972,2020-04-17,Rio Blanco,Colorado,8103.0,1,0
+64973,2020-04-17,Rio Grande,Colorado,8105.0,7,0
+64974,2020-04-17,Routt,Colorado,8107.0,46,1
+64975,2020-04-17,Saguache,Colorado,8109.0,3,0
+64976,2020-04-17,San Miguel,Colorado,8113.0,13,0
+64977,2020-04-17,Summit,Colorado,8117.0,82,1
+64978,2020-04-17,Teller,Colorado,8119.0,18,2
+64979,2020-04-17,Unknown,Colorado,,78,1
+64980,2020-04-17,Washington,Colorado,8121.0,5,0
+64981,2020-04-17,Weld,Colorado,8123.0,986,61
+64982,2020-04-17,Yuma,Colorado,8125.0,2,0
+64983,2020-04-17,Fairfield,Connecticut,9001.0,7146,425
+64984,2020-04-17,Hartford,Connecticut,9003.0,3015,266
+64985,2020-04-17,Litchfield,Connecticut,9005.0,569,46
+64986,2020-04-17,Middlesex,Connecticut,9007.0,422,32
+64987,2020-04-17,New Haven,Connecticut,9009.0,4520,229
+64988,2020-04-17,New London,Connecticut,9011.0,292,10
+64989,2020-04-17,Tolland,Connecticut,9013.0,258,24
+64990,2020-04-17,Unknown,Connecticut,,495,2
+64991,2020-04-17,Windham,Connecticut,9015.0,92,2
+64992,2020-04-17,Kent,Delaware,10001.0,384,9
+64993,2020-04-17,New Castle,Delaware,10003.0,1100,30
+64994,2020-04-17,Sussex,Delaware,10005.0,811,22
+64995,2020-04-17,Unknown,Delaware,,28,0
+64996,2020-04-17,District of Columbia,District of Columbia,11001.0,2476,86
+64997,2020-04-17,Alachua,Florida,12001.0,201,0
+64998,2020-04-17,Baker,Florida,12003.0,17,3
+64999,2020-04-17,Bay,Florida,12005.0,43,2
+65000,2020-04-17,Bradford,Florida,12007.0,40,2
+65001,2020-04-17,Brevard,Florida,12009.0,205,7
+65002,2020-04-17,Broward,Florida,12011.0,3688,107
+65003,2020-04-17,Calhoun,Florida,12013.0,6,0
+65004,2020-04-17,Charlotte,Florida,12015.0,131,9
+65005,2020-04-17,Citrus,Florida,12017.0,82,8
+65006,2020-04-17,Clay,Florida,12019.0,216,9
+65007,2020-04-17,Collier,Florida,12021.0,445,8
+65008,2020-04-17,Columbia,Florida,12023.0,35,0
+65009,2020-04-17,DeSoto,Florida,12027.0,23,3
+65010,2020-04-17,Dixie,Florida,12029.0,3,0
+65011,2020-04-17,Duval,Florida,12031.0,817,15
+65012,2020-04-17,Escambia,Florida,12033.0,290,6
+65013,2020-04-17,Flagler,Florida,12035.0,55,2
+65014,2020-04-17,Franklin,Florida,12037.0,2,0
+65015,2020-04-17,Gadsden,Florida,12039.0,46,0
+65016,2020-04-17,Gilchrist,Florida,12041.0,4,0
+65017,2020-04-17,Glades,Florida,12043.0,5,1
+65018,2020-04-17,Gulf,Florida,12045.0,1,0
+65019,2020-04-17,Hamilton,Florida,12047.0,3,0
+65020,2020-04-17,Hardee,Florida,12049.0,4,0
+65021,2020-04-17,Hendry,Florida,12051.0,31,0
+65022,2020-04-17,Hernando,Florida,12053.0,83,2
+65023,2020-04-17,Highlands,Florida,12055.0,66,6
+65024,2020-04-17,Hillsborough,Florida,12057.0,924,19
+65025,2020-04-17,Holmes,Florida,12059.0,5,0
+65026,2020-04-17,Indian River,Florida,12061.0,83,2
+65027,2020-04-17,Jackson,Florida,12063.0,8,0
+65028,2020-04-17,Jefferson,Florida,12065.0,23,1
+65029,2020-04-17,Lafayette,Florida,12067.0,1,0
+65030,2020-04-17,Lake,Florida,12069.0,197,5
+65031,2020-04-17,Lee,Florida,12071.0,720,25
+65032,2020-04-17,Leon,Florida,12073.0,173,1
+65033,2020-04-17,Levy,Florida,12075.0,9,0
+65034,2020-04-17,Liberty,Florida,12077.0,2,0
+65035,2020-04-17,Madison,Florida,12079.0,19,0
+65036,2020-04-17,Manatee,Florida,12081.0,326,29
+65037,2020-04-17,Marion,Florida,12083.0,116,3
+65038,2020-04-17,Martin,Florida,12085.0,147,4
+65039,2020-04-17,Miami-Dade,Florida,12086.0,8823,195
+65040,2020-04-17,Monroe,Florida,12087.0,68,3
+65041,2020-04-17,Nassau,Florida,12089.0,42,0
+65042,2020-04-17,Okaloosa,Florida,12091.0,123,1
+65043,2020-04-17,Okeechobee,Florida,12093.0,5,0
+65044,2020-04-17,Orange,Florida,12095.0,1157,23
+65045,2020-04-17,Osceola,Florida,12097.0,392,5
+65046,2020-04-17,Palm Beach,Florida,12099.0,2086,115
+65047,2020-04-17,Pasco,Florida,12101.0,192,3
+65048,2020-04-17,Pinellas,Florida,12103.0,565,16
+65049,2020-04-17,Polk,Florida,12105.0,316,12
+65050,2020-04-17,Putnam,Florida,12107.0,52,1
+65051,2020-04-17,Santa Rosa,Florida,12113.0,130,6
+65052,2020-04-17,Sarasota,Florida,12115.0,274,22
+65053,2020-04-17,Seminole,Florida,12117.0,313,4
+65054,2020-04-17,St. Johns,Florida,12109.0,186,4
+65055,2020-04-17,St. Lucie,Florida,12111.0,191,11
+65056,2020-04-17,Sumter,Florida,12119.0,120,11
+65057,2020-04-17,Suwannee,Florida,12121.0,87,5
+65058,2020-04-17,Taylor,Florida,12123.0,1,0
+65059,2020-04-17,Union,Florida,12125.0,2,0
+65060,2020-04-17,Unknown,Florida,,4,0
+65061,2020-04-17,Volusia,Florida,12127.0,270,9
+65062,2020-04-17,Wakulla,Florida,12129.0,14,1
+65063,2020-04-17,Walton,Florida,12131.0,31,0
+65064,2020-04-17,Washington,Florida,12133.0,6,0
+65065,2020-04-17,Appling,Georgia,13001.0,18,0
+65066,2020-04-17,Atkinson,Georgia,13003.0,5,0
+65067,2020-04-17,Bacon,Georgia,13005.0,17,1
+65068,2020-04-17,Baker,Georgia,13007.0,16,2
+65069,2020-04-17,Baldwin,Georgia,13009.0,112,2
+65070,2020-04-17,Banks,Georgia,13011.0,13,0
+65071,2020-04-17,Barrow,Georgia,13013.0,85,3
+65072,2020-04-17,Bartow,Georgia,13015.0,245,22
+65073,2020-04-17,Ben Hill,Georgia,13017.0,13,0
+65074,2020-04-17,Berrien,Georgia,13019.0,10,0
+65075,2020-04-17,Bibb,Georgia,13021.0,191,1
+65076,2020-04-17,Bleckley,Georgia,13023.0,6,0
+65077,2020-04-17,Brantley,Georgia,13025.0,17,2
+65078,2020-04-17,Brooks,Georgia,13027.0,23,5
+65079,2020-04-17,Bryan,Georgia,13029.0,31,2
+65080,2020-04-17,Bulloch,Georgia,13031.0,26,1
+65081,2020-04-17,Burke,Georgia,13033.0,38,2
+65082,2020-04-17,Butts,Georgia,13035.0,40,0
+65083,2020-04-17,Calhoun,Georgia,13037.0,57,2
+65084,2020-04-17,Camden,Georgia,13039.0,27,0
+65085,2020-04-17,Candler,Georgia,13043.0,4,0
+65086,2020-04-17,Carroll,Georgia,13045.0,261,8
+65087,2020-04-17,Catoosa,Georgia,13047.0,19,0
+65088,2020-04-17,Charlton,Georgia,13049.0,5,0
+65089,2020-04-17,Chatham,Georgia,13051.0,174,5
+65090,2020-04-17,Chattahoochee,Georgia,13053.0,6,0
+65091,2020-04-17,Chattooga,Georgia,13055.0,9,1
+65092,2020-04-17,Cherokee,Georgia,13057.0,274,8
+65093,2020-04-17,Clarke,Georgia,13059.0,106,13
+65094,2020-04-17,Clay,Georgia,13061.0,19,2
+65095,2020-04-17,Clayton,Georgia,13063.0,499,16
+65096,2020-04-17,Clinch,Georgia,13065.0,7,0
+65097,2020-04-17,Cobb,Georgia,13067.0,1085,51
+65098,2020-04-17,Coffee,Georgia,13069.0,74,3
+65099,2020-04-17,Colquitt,Georgia,13071.0,108,5
+65100,2020-04-17,Columbia,Georgia,13073.0,91,1
+65101,2020-04-17,Cook,Georgia,13075.0,12,1
+65102,2020-04-17,Coweta,Georgia,13077.0,153,3
+65103,2020-04-17,Crawford,Georgia,13079.0,13,0
+65104,2020-04-17,Crisp,Georgia,13081.0,113,2
+65105,2020-04-17,Dade,Georgia,13083.0,8,1
+65106,2020-04-17,Dawson,Georgia,13085.0,42,1
+65107,2020-04-17,DeKalb,Georgia,13089.0,1366,23
+65108,2020-04-17,Decatur,Georgia,13087.0,55,0
+65109,2020-04-17,Dodge,Georgia,13091.0,19,0
+65110,2020-04-17,Dooly,Georgia,13093.0,69,4
+65111,2020-04-17,Dougherty,Georgia,13095.0,1385,91
+65112,2020-04-17,Douglas,Georgia,13097.0,222,6
+65113,2020-04-17,Early,Georgia,13099.0,163,8
+65114,2020-04-17,Echols,Georgia,13101.0,4,0
+65115,2020-04-17,Effingham,Georgia,13103.0,25,1
+65116,2020-04-17,Elbert,Georgia,13105.0,7,0
+65117,2020-04-17,Emanuel,Georgia,13107.0,12,0
+65118,2020-04-17,Evans,Georgia,13109.0,2,0
+65119,2020-04-17,Fannin,Georgia,13111.0,15,0
+65120,2020-04-17,Fayette,Georgia,13113.0,134,5
+65121,2020-04-17,Floyd,Georgia,13115.0,121,8
+65122,2020-04-17,Forsyth,Georgia,13117.0,185,6
+65123,2020-04-17,Franklin,Georgia,13119.0,10,0
+65124,2020-04-17,Fulton,Georgia,13121.0,2037,74
+65125,2020-04-17,Gilmer,Georgia,13123.0,10,0
+65126,2020-04-17,Glynn,Georgia,13127.0,46,0
+65127,2020-04-17,Gordon,Georgia,13129.0,55,5
+65128,2020-04-17,Grady,Georgia,13131.0,27,1
+65129,2020-04-17,Greene,Georgia,13133.0,40,1
+65130,2020-04-17,Gwinnett,Georgia,13135.0,1037,36
+65131,2020-04-17,Habersham,Georgia,13137.0,72,2
+65132,2020-04-17,Hall,Georgia,13139.0,605,6
+65133,2020-04-17,Hancock,Georgia,13141.0,6,0
+65134,2020-04-17,Haralson,Georgia,13143.0,20,1
+65135,2020-04-17,Harris,Georgia,13145.0,36,2
+65136,2020-04-17,Hart,Georgia,13147.0,5,0
+65137,2020-04-17,Heard,Georgia,13149.0,5,1
+65138,2020-04-17,Henry,Georgia,13151.0,350,7
+65139,2020-04-17,Houston,Georgia,13153.0,164,10
+65140,2020-04-17,Irwin,Georgia,13155.0,15,0
+65141,2020-04-17,Jackson,Georgia,13157.0,46,1
+65142,2020-04-17,Jasper,Georgia,13159.0,14,0
+65143,2020-04-17,Jeff Davis,Georgia,13161.0,5,0
+65144,2020-04-17,Jefferson,Georgia,13163.0,11,1
+65145,2020-04-17,Jenkins,Georgia,13165.0,12,1
+65146,2020-04-17,Johnson,Georgia,13167.0,33,1
+65147,2020-04-17,Jones,Georgia,13169.0,16,0
+65148,2020-04-17,Lamar,Georgia,13171.0,22,0
+65149,2020-04-17,Lanier,Georgia,13173.0,6,1
+65150,2020-04-17,Laurens,Georgia,13175.0,39,1
+65151,2020-04-17,Lee,Georgia,13177.0,269,15
+65152,2020-04-17,Liberty,Georgia,13179.0,32,0
+65153,2020-04-17,Lincoln,Georgia,13181.0,9,0
+65154,2020-04-17,Long,Georgia,13183.0,2,0
+65155,2020-04-17,Lowndes,Georgia,13185.0,83,3
+65156,2020-04-17,Lumpkin,Georgia,13187.0,22,0
+65157,2020-04-17,Macon,Georgia,13193.0,46,0
+65158,2020-04-17,Madison,Georgia,13195.0,14,1
+65159,2020-04-17,Marion,Georgia,13197.0,26,1
+65160,2020-04-17,McDuffie,Georgia,13189.0,35,2
+65161,2020-04-17,McIntosh,Georgia,13191.0,4,0
+65162,2020-04-17,Meriwether,Georgia,13199.0,40,0
+65163,2020-04-17,Miller,Georgia,13201.0,20,0
+65164,2020-04-17,Mitchell,Georgia,13205.0,209,23
+65165,2020-04-17,Monroe,Georgia,13207.0,15,1
+65166,2020-04-17,Montgomery,Georgia,13209.0,2,0
+65167,2020-04-17,Morgan,Georgia,13211.0,19,0
+65168,2020-04-17,Murray,Georgia,13213.0,18,0
+65169,2020-04-17,Muscogee,Georgia,13215.0,210,4
+65170,2020-04-17,Newton,Georgia,13217.0,121,3
+65171,2020-04-17,Oconee,Georgia,13219.0,48,0
+65172,2020-04-17,Oglethorpe,Georgia,13221.0,32,2
+65173,2020-04-17,Paulding,Georgia,13223.0,132,5
+65174,2020-04-17,Peach,Georgia,13225.0,32,2
+65175,2020-04-17,Pickens,Georgia,13227.0,16,2
+65176,2020-04-17,Pierce,Georgia,13229.0,49,2
+65177,2020-04-17,Pike,Georgia,13231.0,29,1
+65178,2020-04-17,Polk,Georgia,13233.0,29,0
+65179,2020-04-17,Pulaski,Georgia,13235.0,16,1
+65180,2020-04-17,Putnam,Georgia,13237.0,17,1
+65181,2020-04-17,Quitman,Georgia,13239.0,3,1
+65182,2020-04-17,Rabun,Georgia,13241.0,7,0
+65183,2020-04-17,Randolph,Georgia,13243.0,140,12
+65184,2020-04-17,Richmond,Georgia,13245.0,246,10
+65185,2020-04-17,Rockdale,Georgia,13247.0,117,6
+65186,2020-04-17,Schley,Georgia,13249.0,15,1
+65187,2020-04-17,Screven,Georgia,13251.0,11,1
+65188,2020-04-17,Seminole,Georgia,13253.0,20,2
+65189,2020-04-17,Spalding,Georgia,13255.0,124,7
+65190,2020-04-17,Stephens,Georgia,13257.0,30,1
+65191,2020-04-17,Stewart,Georgia,13259.0,15,0
+65192,2020-04-17,Sumter,Georgia,13261.0,306,14
+65193,2020-04-17,Talbot,Georgia,13263.0,16,1
+65194,2020-04-17,Tattnall,Georgia,13267.0,5,0
+65195,2020-04-17,Taylor,Georgia,13269.0,10,2
+65196,2020-04-17,Telfair,Georgia,13271.0,14,0
+65197,2020-04-17,Terrell,Georgia,13273.0,142,14
+65198,2020-04-17,Thomas,Georgia,13275.0,115,13
+65199,2020-04-17,Tift,Georgia,13277.0,80,3
+65200,2020-04-17,Toombs,Georgia,13279.0,19,2
+65201,2020-04-17,Towns,Georgia,13281.0,10,0
+65202,2020-04-17,Treutlen,Georgia,13283.0,1,0
+65203,2020-04-17,Troup,Georgia,13285.0,80,4
+65204,2020-04-17,Turner,Georgia,13287.0,51,2
+65205,2020-04-17,Twiggs,Georgia,13289.0,4,0
+65206,2020-04-17,Union,Georgia,13291.0,10,1
+65207,2020-04-17,Unknown,Georgia,,264,0
+65208,2020-04-17,Upson,Georgia,13293.0,164,8
+65209,2020-04-17,Walker,Georgia,13295.0,13,0
+65210,2020-04-17,Walton,Georgia,13297.0,58,3
+65211,2020-04-17,Ware,Georgia,13299.0,77,5
+65212,2020-04-17,Warren,Georgia,13301.0,10,0
+65213,2020-04-17,Washington,Georgia,13303.0,24,1
+65214,2020-04-17,Wayne,Georgia,13305.0,7,0
+65215,2020-04-17,Webster,Georgia,13307.0,5,0
+65216,2020-04-17,Wheeler,Georgia,13309.0,3,0
+65217,2020-04-17,White,Georgia,13311.0,20,0
+65218,2020-04-17,Whitfield,Georgia,13313.0,41,3
+65219,2020-04-17,Wilcox,Georgia,13315.0,38,0
+65220,2020-04-17,Wilkes,Georgia,13317.0,11,0
+65221,2020-04-17,Wilkinson,Georgia,13319.0,20,1
+65222,2020-04-17,Worth,Georgia,13321.0,116,4
+65223,2020-04-17,Unknown,Guam,,796,6
+65224,2020-04-17,Hawaii,Hawaii,15001.0,44,0
+65225,2020-04-17,Honolulu,Hawaii,15003.0,380,6
+65226,2020-04-17,Kauai,Hawaii,15007.0,21,0
+65227,2020-04-17,Maui,Hawaii,15009.0,102,3
+65228,2020-04-17,Ada,Idaho,16001.0,567,9
+65229,2020-04-17,Adams,Idaho,16003.0,1,0
+65230,2020-04-17,Bannock,Idaho,16005.0,5,0
+65231,2020-04-17,Bingham,Idaho,16011.0,3,0
+65232,2020-04-17,Blaine,Idaho,16013.0,469,5
+65233,2020-04-17,Bonner,Idaho,16017.0,4,0
+65234,2020-04-17,Bonneville,Idaho,16019.0,16,0
+65235,2020-04-17,Camas,Idaho,16025.0,1,0
+65236,2020-04-17,Canyon,Idaho,16027.0,181,5
+65237,2020-04-17,Caribou,Idaho,16029.0,1,0
+65238,2020-04-17,Cassia,Idaho,16031.0,10,1
+65239,2020-04-17,Custer,Idaho,16037.0,2,0
+65240,2020-04-17,Elmore,Idaho,16039.0,20,0
+65241,2020-04-17,Fremont,Idaho,16043.0,2,0
+65242,2020-04-17,Gem,Idaho,16045.0,9,0
+65243,2020-04-17,Gooding,Idaho,16047.0,6,0
+65244,2020-04-17,Idaho,Idaho,16049.0,3,0
+65245,2020-04-17,Jefferson,Idaho,16051.0,4,0
+65246,2020-04-17,Jerome,Idaho,16053.0,36,2
+65247,2020-04-17,Kootenai,Idaho,16055.0,50,0
+65248,2020-04-17,Latah,Idaho,16057.0,3,0
+65249,2020-04-17,Lincoln,Idaho,16063.0,16,0
+65250,2020-04-17,Madison,Idaho,16065.0,5,0
+65251,2020-04-17,Minidoka,Idaho,16067.0,7,0
+65252,2020-04-17,Nez Perce,Idaho,16069.0,22,11
+65253,2020-04-17,Owyhee,Idaho,16073.0,4,0
+65254,2020-04-17,Payette,Idaho,16075.0,9,1
+65255,2020-04-17,Power,Idaho,16077.0,2,0
+65256,2020-04-17,Teton,Idaho,16081.0,7,0
+65257,2020-04-17,Twin Falls,Idaho,16083.0,98,9
+65258,2020-04-17,Valley,Idaho,16085.0,2,0
+65259,2020-04-17,Washington,Idaho,16087.0,1,0
+65260,2020-04-17,Adams,Illinois,17001.0,30,0
+65261,2020-04-17,Alexander,Illinois,17003.0,1,0
+65262,2020-04-17,Bond,Illinois,17005.0,4,1
+65263,2020-04-17,Boone,Illinois,17007.0,21,2
+65264,2020-04-17,Bureau,Illinois,17011.0,7,0
+65265,2020-04-17,Calhoun,Illinois,17013.0,1,0
+65266,2020-04-17,Carroll,Illinois,17015.0,5,1
+65267,2020-04-17,Champaign,Illinois,17019.0,92,4
+65268,2020-04-17,Christian,Illinois,17021.0,25,5
+65269,2020-04-17,Clark,Illinois,17023.0,4,0
+65270,2020-04-17,Clay,Illinois,17025.0,1,0
+65271,2020-04-17,Clinton,Illinois,17027.0,42,0
+65272,2020-04-17,Coles,Illinois,17029.0,9,0
+65273,2020-04-17,Cook,Illinois,17031.0,19391,760
+65274,2020-04-17,Crawford,Illinois,17033.0,4,0
+65275,2020-04-17,Cumberland,Illinois,17035.0,2,0
+65276,2020-04-17,De Witt,Illinois,17039.0,2,0
+65277,2020-04-17,DeKalb,Illinois,17037.0,46,1
+65278,2020-04-17,Douglas,Illinois,17041.0,12,0
+65279,2020-04-17,DuPage,Illinois,17043.0,1560,77
+65280,2020-04-17,Effingham,Illinois,17049.0,3,1
+65281,2020-04-17,Fayette,Illinois,17051.0,12,1
+65282,2020-04-17,Ford,Illinois,17053.0,5,1
+65283,2020-04-17,Franklin,Illinois,17055.0,5,0
+65284,2020-04-17,Fulton,Illinois,17057.0,1,0
+65285,2020-04-17,Gallatin,Illinois,17059.0,2,0
+65286,2020-04-17,Greene,Illinois,17061.0,1,0
+65287,2020-04-17,Grundy,Illinois,17063.0,24,0
+65288,2020-04-17,Hancock,Illinois,17067.0,3,0
+65289,2020-04-17,Henderson,Illinois,17071.0,1,0
+65290,2020-04-17,Henry,Illinois,17073.0,28,0
+65291,2020-04-17,Iroquois,Illinois,17075.0,12,0
+65292,2020-04-17,Jackson,Illinois,17077.0,40,4
+65293,2020-04-17,Jasper,Illinois,17079.0,4,1
+65294,2020-04-17,Jefferson,Illinois,17081.0,11,0
+65295,2020-04-17,Jersey,Illinois,17083.0,8,0
+65296,2020-04-17,Jo Daviess,Illinois,17085.0,11,0
+65297,2020-04-17,Johnson,Illinois,17087.0,2,0
+65298,2020-04-17,Kane,Illinois,17089.0,538,28
+65299,2020-04-17,Kankakee,Illinois,17091.0,260,13
+65300,2020-04-17,Kendall,Illinois,17093.0,123,2
+65301,2020-04-17,Knox,Illinois,17095.0,3,0
+65302,2020-04-17,LaSalle,Illinois,17099.0,27,1
+65303,2020-04-17,Lake,Illinois,17097.0,1914,71
+65304,2020-04-17,Lawrence,Illinois,17101.0,2,0
+65305,2020-04-17,Lee,Illinois,17103.0,17,0
+65306,2020-04-17,Livingston,Illinois,17105.0,18,0
+65307,2020-04-17,Logan,Illinois,17107.0,4,0
+65308,2020-04-17,Macon,Illinois,17115.0,47,6
+65309,2020-04-17,Macoupin,Illinois,17117.0,17,0
+65310,2020-04-17,Madison,Illinois,17119.0,157,5
+65311,2020-04-17,Marion,Illinois,17121.0,17,0
+65312,2020-04-17,Marshall,Illinois,17123.0,2,0
+65313,2020-04-17,Mason,Illinois,17125.0,4,0
+65314,2020-04-17,Massac,Illinois,17127.0,3,0
+65315,2020-04-17,McDonough,Illinois,17109.0,3,0
+65316,2020-04-17,McHenry,Illinois,17111.0,306,13
+65317,2020-04-17,McLean,Illinois,17113.0,83,3
+65318,2020-04-17,Menard,Illinois,17129.0,2,0
+65319,2020-04-17,Mercer,Illinois,17131.0,4,0
+65320,2020-04-17,Monroe,Illinois,17133.0,52,6
+65321,2020-04-17,Montgomery,Illinois,17135.0,11,0
+65322,2020-04-17,Morgan,Illinois,17137.0,12,1
+65323,2020-04-17,Moultrie,Illinois,17139.0,2,0
+65324,2020-04-17,Ogle,Illinois,17141.0,40,1
+65325,2020-04-17,Peoria,Illinois,17143.0,34,1
+65326,2020-04-17,Perry,Illinois,17145.0,1,0
+65327,2020-04-17,Piatt,Illinois,17147.0,7,0
+65328,2020-04-17,Pike,Illinois,17149.0,1,0
+65329,2020-04-17,Pulaski,Illinois,17153.0,5,0
+65330,2020-04-17,Randolph,Illinois,17157.0,48,1
+65331,2020-04-17,Richland,Illinois,17159.0,2,0
+65332,2020-04-17,Rock Island,Illinois,17161.0,167,4
+65333,2020-04-17,Saline,Illinois,17165.0,3,0
+65334,2020-04-17,Sangamon,Illinois,17167.0,58,4
+65335,2020-04-17,Schuyler,Illinois,17169.0,1,0
+65336,2020-04-17,Shelby,Illinois,17173.0,4,0
+65337,2020-04-17,St. Clair,Illinois,17163.0,254,17
+65338,2020-04-17,Stark,Illinois,17175.0,1,0
+65339,2020-04-17,Stephenson,Illinois,17177.0,10,0
+65340,2020-04-17,Tazewell,Illinois,17179.0,21,3
+65341,2020-04-17,Union,Illinois,17181.0,4,0
+65342,2020-04-17,Unknown,Illinois,,71,0
+65343,2020-04-17,Vermilion,Illinois,17183.0,8,0
+65344,2020-04-17,Wabash,Illinois,17185.0,1,0
+65345,2020-04-17,Warren,Illinois,17187.0,2,0
+65346,2020-04-17,Washington,Illinois,17189.0,5,0
+65347,2020-04-17,Wayne,Illinois,17191.0,1,0
+65348,2020-04-17,Whiteside,Illinois,17195.0,31,3
+65349,2020-04-17,Will,Illinois,17197.0,1566,92
+65350,2020-04-17,Williamson,Illinois,17199.0,13,0
+65351,2020-04-17,Winnebago,Illinois,17201.0,145,8
+65352,2020-04-17,Woodford,Illinois,17203.0,11,0
+65353,2020-04-17,Adams,Indiana,18001.0,6,1
+65354,2020-04-17,Allen,Indiana,18003.0,271,16
+65355,2020-04-17,Bartholomew,Indiana,18005.0,130,6
+65356,2020-04-17,Benton,Indiana,18007.0,4,0
+65357,2020-04-17,Blackford,Indiana,18009.0,6,1
+65358,2020-04-17,Boone,Indiana,18011.0,145,7
+65359,2020-04-17,Brown,Indiana,18013.0,14,1
+65360,2020-04-17,Carroll,Indiana,18015.0,6,1
+65361,2020-04-17,Cass,Indiana,18017.0,50,1
+65362,2020-04-17,Clark,Indiana,18019.0,151,10
+65363,2020-04-17,Clay,Indiana,18021.0,14,0
+65364,2020-04-17,Clinton,Indiana,18023.0,16,1
+65365,2020-04-17,Crawford,Indiana,18025.0,12,0
+65366,2020-04-17,Daviess,Indiana,18027.0,27,1
+65367,2020-04-17,DeKalb,Indiana,18033.0,11,1
+65368,2020-04-17,Dearborn,Indiana,18029.0,63,5
+65369,2020-04-17,Decatur,Indiana,18031.0,165,17
+65370,2020-04-17,Delaware,Indiana,18035.0,91,5
+65371,2020-04-17,Dubois,Indiana,18037.0,14,0
+65372,2020-04-17,Elkhart,Indiana,18039.0,130,3
+65373,2020-04-17,Fayette,Indiana,18041.0,21,4
+65374,2020-04-17,Floyd,Indiana,18043.0,130,6
+65375,2020-04-17,Fountain,Indiana,18045.0,4,2
+65376,2020-04-17,Franklin,Indiana,18047.0,87,7
+65377,2020-04-17,Fulton,Indiana,18049.0,4,0
+65378,2020-04-17,Gibson,Indiana,18051.0,4,0
+65379,2020-04-17,Grant,Indiana,18053.0,47,2
+65380,2020-04-17,Greene,Indiana,18055.0,37,3
+65381,2020-04-17,Hamilton,Indiana,18057.0,542,31
+65382,2020-04-17,Hancock,Indiana,18059.0,132,6
+65383,2020-04-17,Harrison,Indiana,18061.0,65,2
+65384,2020-04-17,Hendricks,Indiana,18063.0,407,17
+65385,2020-04-17,Henry,Indiana,18065.0,26,1
+65386,2020-04-17,Howard,Indiana,18067.0,61,4
+65387,2020-04-17,Huntington,Indiana,18069.0,6,1
+65388,2020-04-17,Jackson,Indiana,18071.0,77,0
+65389,2020-04-17,Jasper,Indiana,18073.0,22,1
+65390,2020-04-17,Jay,Indiana,18075.0,8,0
+65391,2020-04-17,Jefferson,Indiana,18077.0,18,0
+65392,2020-04-17,Jennings,Indiana,18079.0,63,0
+65393,2020-04-17,Johnson,Indiana,18081.0,371,30
+65394,2020-04-17,Knox,Indiana,18083.0,16,0
+65395,2020-04-17,Kosciusko,Indiana,18085.0,22,1
+65396,2020-04-17,LaGrange,Indiana,18087.0,16,1
+65397,2020-04-17,LaPorte,Indiana,18091.0,129,5
+65398,2020-04-17,Lake,Indiana,18089.0,1026,42
+65399,2020-04-17,Lawrence,Indiana,18093.0,76,9
+65400,2020-04-17,Madison,Indiana,18095.0,305,28
+65401,2020-04-17,Marion,Indiana,18097.0,3518,182
+65402,2020-04-17,Marshall,Indiana,18099.0,22,0
+65403,2020-04-17,Martin,Indiana,18101.0,5,0
+65404,2020-04-17,Miami,Indiana,18103.0,21,0
+65405,2020-04-17,Monroe,Indiana,18105.0,108,3
+65406,2020-04-17,Montgomery,Indiana,18107.0,25,0
+65407,2020-04-17,Morgan,Indiana,18109.0,111,3
+65408,2020-04-17,Newton,Indiana,18111.0,29,4
+65409,2020-04-17,Noble,Indiana,18113.0,29,1
+65410,2020-04-17,Ohio,Indiana,18115.0,1,0
+65411,2020-04-17,Orange,Indiana,18117.0,24,4
+65412,2020-04-17,Owen,Indiana,18119.0,21,1
+65413,2020-04-17,Parke,Indiana,18121.0,8,0
+65414,2020-04-17,Perry,Indiana,18123.0,4,0
+65415,2020-04-17,Pike,Indiana,18125.0,1,0
+65416,2020-04-17,Porter,Indiana,18127.0,155,2
+65417,2020-04-17,Posey,Indiana,18129.0,6,0
+65418,2020-04-17,Pulaski,Indiana,18131.0,1,0
+65419,2020-04-17,Putnam,Indiana,18133.0,47,4
+65420,2020-04-17,Randolph,Indiana,18135.0,10,1
+65421,2020-04-17,Ripley,Indiana,18137.0,77,3
+65422,2020-04-17,Rush,Indiana,18139.0,20,1
+65423,2020-04-17,Scott,Indiana,18143.0,20,2
+65424,2020-04-17,Shelby,Indiana,18145.0,97,4
+65425,2020-04-17,Spencer,Indiana,18147.0,4,0
+65426,2020-04-17,St. Joseph,Indiana,18141.0,358,7
+65427,2020-04-17,Starke,Indiana,18149.0,10,1
+65428,2020-04-17,Steuben,Indiana,18151.0,16,1
+65429,2020-04-17,Sullivan,Indiana,18153.0,7,0
+65430,2020-04-17,Switzerland,Indiana,18155.0,12,0
+65431,2020-04-17,Tippecanoe,Indiana,18157.0,53,2
+65432,2020-04-17,Tipton,Indiana,18159.0,10,1
+65433,2020-04-17,Union,Indiana,18161.0,6,0
+65434,2020-04-17,Vanderburgh,Indiana,18163.0,76,1
+65435,2020-04-17,Vermillion,Indiana,18165.0,5,0
+65436,2020-04-17,Vigo,Indiana,18167.0,48,3
+65437,2020-04-17,Wabash,Indiana,18169.0,9,0
+65438,2020-04-17,Warren,Indiana,18171.0,5,1
+65439,2020-04-17,Warrick,Indiana,18173.0,53,4
+65440,2020-04-17,Washington,Indiana,18175.0,27,0
+65441,2020-04-17,Wayne,Indiana,18177.0,22,2
+65442,2020-04-17,Wells,Indiana,18179.0,5,0
+65443,2020-04-17,White,Indiana,18181.0,6,0
+65444,2020-04-17,Whitley,Indiana,18183.0,14,1
+65445,2020-04-17,Adair,Iowa,19001.0,1,0
+65446,2020-04-17,Allamakee,Iowa,19005.0,27,3
+65447,2020-04-17,Appanoose,Iowa,19007.0,2,1
+65448,2020-04-17,Audubon,Iowa,19009.0,1,0
+65449,2020-04-17,Benton,Iowa,19011.0,21,1
+65450,2020-04-17,Black Hawk,Iowa,19013.0,138,1
+65451,2020-04-17,Boone,Iowa,19015.0,4,0
+65452,2020-04-17,Bremer,Iowa,19017.0,23,0
+65453,2020-04-17,Buchanan,Iowa,19019.0,8,0
+65454,2020-04-17,Buena Vista,Iowa,19021.0,2,0
+65455,2020-04-17,Butler,Iowa,19023.0,1,0
+65456,2020-04-17,Carroll,Iowa,19027.0,1,0
+65457,2020-04-17,Cass,Iowa,19029.0,1,0
+65458,2020-04-17,Cedar,Iowa,19031.0,23,0
+65459,2020-04-17,Cerro Gordo,Iowa,19033.0,14,0
+65460,2020-04-17,Chickasaw,Iowa,19037.0,2,0
+65461,2020-04-17,Clarke,Iowa,19039.0,2,0
+65462,2020-04-17,Clay,Iowa,19041.0,2,0
+65463,2020-04-17,Clayton,Iowa,19043.0,7,1
+65464,2020-04-17,Clinton,Iowa,19045.0,39,0
+65465,2020-04-17,Crawford,Iowa,19047.0,6,1
+65466,2020-04-17,Dallas,Iowa,19049.0,44,0
+65467,2020-04-17,Delaware,Iowa,19055.0,2,0
+65468,2020-04-17,Des Moines,Iowa,19057.0,8,0
+65469,2020-04-17,Dickinson,Iowa,19059.0,1,0
+65470,2020-04-17,Dubuque,Iowa,19061.0,40,1
+65471,2020-04-17,Fayette,Iowa,19065.0,6,0
+65472,2020-04-17,Franklin,Iowa,19069.0,1,0
+65473,2020-04-17,Greene,Iowa,19073.0,1,0
+65474,2020-04-17,Grundy,Iowa,19075.0,2,0
+65475,2020-04-17,Guthrie,Iowa,19077.0,3,0
+65476,2020-04-17,Hamilton,Iowa,19079.0,2,0
+65477,2020-04-17,Hancock,Iowa,19081.0,3,0
+65478,2020-04-17,Hardin,Iowa,19083.0,1,0
+65479,2020-04-17,Harrison,Iowa,19085.0,12,0
+65480,2020-04-17,Henry,Iowa,19087.0,26,1
+65481,2020-04-17,Howard,Iowa,19089.0,2,0
+65482,2020-04-17,Iowa,Iowa,19095.0,8,0
+65483,2020-04-17,Jackson,Iowa,19097.0,4,0
+65484,2020-04-17,Jasper,Iowa,19099.0,28,0
+65485,2020-04-17,Jefferson,Iowa,19101.0,4,0
+65486,2020-04-17,Johnson,Iowa,19103.0,246,3
+65487,2020-04-17,Jones,Iowa,19105.0,13,0
+65488,2020-04-17,Keokuk,Iowa,19107.0,2,0
+65489,2020-04-17,Kossuth,Iowa,19109.0,1,0
+65490,2020-04-17,Lee,Iowa,19111.0,3,0
+65491,2020-04-17,Linn,Iowa,19113.0,304,22
+65492,2020-04-17,Louisa,Iowa,19115.0,169,1
+65493,2020-04-17,Lyon,Iowa,19119.0,5,0
+65494,2020-04-17,Madison,Iowa,19121.0,3,1
+65495,2020-04-17,Mahaska,Iowa,19123.0,7,0
+65496,2020-04-17,Marion,Iowa,19125.0,3,0
+65497,2020-04-17,Marshall,Iowa,19127.0,75,0
+65498,2020-04-17,Mills,Iowa,19129.0,2,0
+65499,2020-04-17,Mitchell,Iowa,19131.0,2,0
+65500,2020-04-17,Monona,Iowa,19133.0,6,0
+65501,2020-04-17,Montgomery,Iowa,19137.0,1,0
+65502,2020-04-17,Muscatine,Iowa,19139.0,163,2
+65503,2020-04-17,O'Brien,Iowa,19141.0,3,0
+65504,2020-04-17,Osceola,Iowa,19143.0,2,0
+65505,2020-04-17,Page,Iowa,19145.0,3,0
+65506,2020-04-17,Plymouth,Iowa,19149.0,6,0
+65507,2020-04-17,Polk,Iowa,19153.0,277,10
+65508,2020-04-17,Pottawattamie,Iowa,19155.0,18,1
+65509,2020-04-17,Poweshiek,Iowa,19157.0,7,1
+65510,2020-04-17,Scott,Iowa,19163.0,155,3
+65511,2020-04-17,Shelby,Iowa,19165.0,9,0
+65512,2020-04-17,Sioux,Iowa,19167.0,7,0
+65513,2020-04-17,Story,Iowa,19169.0,17,0
+65514,2020-04-17,Tama,Iowa,19171.0,121,5
+65515,2020-04-17,Taylor,Iowa,19173.0,1,0
+65516,2020-04-17,Union,Iowa,19175.0,1,0
+65517,2020-04-17,Unknown,Iowa,,1,0
+65518,2020-04-17,Van Buren,Iowa,19177.0,8,0
+65519,2020-04-17,Wapello,Iowa,19179.0,6,0
+65520,2020-04-17,Warren,Iowa,19181.0,17,0
+65521,2020-04-17,Washington,Iowa,19183.0,109,5
+65522,2020-04-17,Webster,Iowa,19187.0,2,0
+65523,2020-04-17,Winnebago,Iowa,19189.0,2,0
+65524,2020-04-17,Winneshiek,Iowa,19191.0,5,0
+65525,2020-04-17,Woodbury,Iowa,19193.0,25,0
+65526,2020-04-17,Worth,Iowa,19195.0,1,0
+65527,2020-04-17,Wright,Iowa,19197.0,1,0
+65528,2020-04-17,Anderson,Kansas,20003.0,1,0
+65529,2020-04-17,Atchison,Kansas,20005.0,4,0
+65530,2020-04-17,Barber,Kansas,20007.0,1,0
+65531,2020-04-17,Barton,Kansas,20009.0,5,0
+65532,2020-04-17,Bourbon,Kansas,20011.0,7,1
+65533,2020-04-17,Butler,Kansas,20015.0,12,0
+65534,2020-04-17,Chase,Kansas,20017.0,1,0
+65535,2020-04-17,Chautauqua,Kansas,20019.0,3,0
+65536,2020-04-17,Cherokee,Kansas,20021.0,7,0
+65537,2020-04-17,Clay,Kansas,20027.0,2,0
+65538,2020-04-17,Cloud,Kansas,20029.0,3,0
+65539,2020-04-17,Coffey,Kansas,20031.0,45,6
+65540,2020-04-17,Cowley,Kansas,20035.0,1,1
+65541,2020-04-17,Crawford,Kansas,20037.0,6,1
+65542,2020-04-17,Dickinson,Kansas,20041.0,1,0
+65543,2020-04-17,Doniphan,Kansas,20043.0,1,0
+65544,2020-04-17,Douglas,Kansas,20045.0,42,0
+65545,2020-04-17,Ellis,Kansas,20051.0,4,0
+65546,2020-04-17,Finney,Kansas,20055.0,25,1
+65547,2020-04-17,Ford,Kansas,20057.0,85,0
+65548,2020-04-17,Franklin,Kansas,20059.0,12,0
+65549,2020-04-17,Geary,Kansas,20061.0,10,0
+65550,2020-04-17,Gove,Kansas,20063.0,1,0
+65551,2020-04-17,Greenwood,Kansas,20073.0,1,0
+65552,2020-04-17,Hamilton,Kansas,20075.0,1,0
+65553,2020-04-17,Harvey,Kansas,20079.0,5,0
+65554,2020-04-17,Jackson,Kansas,20085.0,1,0
+65555,2020-04-17,Jefferson,Kansas,20087.0,6,0
+65556,2020-04-17,Jewell,Kansas,20089.0,3,0
+65557,2020-04-17,Johnson,Kansas,20091.0,358,23
+65558,2020-04-17,Kearny,Kansas,20093.0,1,0
+65559,2020-04-17,Labette,Kansas,20099.0,20,0
+65560,2020-04-17,Leavenworth,Kansas,20103.0,117,2
+65561,2020-04-17,Linn,Kansas,20107.0,6,0
+65562,2020-04-17,Lyon,Kansas,20111.0,47,0
+65563,2020-04-17,Marion,Kansas,20115.0,5,0
+65564,2020-04-17,McPherson,Kansas,20113.0,15,0
+65565,2020-04-17,Miami,Kansas,20121.0,4,0
+65566,2020-04-17,Mitchell,Kansas,20123.0,2,0
+65567,2020-04-17,Montgomery,Kansas,20125.0,12,2
+65568,2020-04-17,Morris,Kansas,20127.0,2,0
+65569,2020-04-17,Morton,Kansas,20129.0,2,0
+65570,2020-04-17,Neosho,Kansas,20133.0,2,0
+65571,2020-04-17,Osage,Kansas,20139.0,4,0
+65572,2020-04-17,Osborne,Kansas,20141.0,2,0
+65573,2020-04-17,Ottawa,Kansas,20143.0,3,0
+65574,2020-04-17,Phillips,Kansas,20147.0,1,0
+65575,2020-04-17,Pottawatomie,Kansas,20149.0,5,0
+65576,2020-04-17,Pratt,Kansas,20151.0,1,0
+65577,2020-04-17,Reno,Kansas,20155.0,14,0
+65578,2020-04-17,Republic,Kansas,20157.0,4,0
+65579,2020-04-17,Riley,Kansas,20161.0,27,0
+65580,2020-04-17,Rooks,Kansas,20163.0,3,0
+65581,2020-04-17,Saline,Kansas,20169.0,15,2
+65582,2020-04-17,Scott,Kansas,20171.0,1,0
+65583,2020-04-17,Sedgwick,Kansas,20173.0,231,3
+65584,2020-04-17,Seward,Kansas,20175.0,24,0
+65585,2020-04-17,Shawnee,Kansas,20177.0,90,5
+65586,2020-04-17,Sherman,Kansas,20181.0,1,0
+65587,2020-04-17,Smith,Kansas,20183.0,2,0
+65588,2020-04-17,Stafford,Kansas,20185.0,1,0
+65589,2020-04-17,Stanton,Kansas,20187.0,3,0
+65590,2020-04-17,Stevens,Kansas,20189.0,3,0
+65591,2020-04-17,Sumner,Kansas,20191.0,3,1
+65592,2020-04-17,Unknown,Kansas,,0,1
+65593,2020-04-17,Wabaunsee,Kansas,20197.0,1,0
+65594,2020-04-17,Wilson,Kansas,20205.0,1,0
+65595,2020-04-17,Woodson,Kansas,20207.0,4,0
+65596,2020-04-17,Wyandotte,Kansas,20209.0,400,35
+65597,2020-04-17,Adair,Kentucky,21001.0,46,3
+65598,2020-04-17,Allen,Kentucky,21003.0,4,0
+65599,2020-04-17,Anderson,Kentucky,21005.0,5,1
+65600,2020-04-17,Ballard,Kentucky,21007.0,4,0
+65601,2020-04-17,Barren,Kentucky,21009.0,7,0
+65602,2020-04-17,Bath,Kentucky,21011.0,3,0
+65603,2020-04-17,Boone,Kentucky,21015.0,73,2
+65604,2020-04-17,Bourbon,Kentucky,21017.0,5,1
+65605,2020-04-17,Boyd,Kentucky,21019.0,29,2
+65606,2020-04-17,Boyle,Kentucky,21021.0,14,0
+65607,2020-04-17,Bracken,Kentucky,21023.0,7,0
+65608,2020-04-17,Breathitt,Kentucky,21025.0,3,0
+65609,2020-04-17,Breckinridge,Kentucky,21027.0,5,0
+65610,2020-04-17,Bullitt,Kentucky,21029.0,32,2
+65611,2020-04-17,Butler,Kentucky,21031.0,52,3
+65612,2020-04-17,Caldwell,Kentucky,21033.0,11,0
+65613,2020-04-17,Calloway,Kentucky,21035.0,22,1
+65614,2020-04-17,Campbell,Kentucky,21037.0,55,6
+65615,2020-04-17,Carroll,Kentucky,21041.0,2,0
+65616,2020-04-17,Carter,Kentucky,21043.0,5,0
+65617,2020-04-17,Casey,Kentucky,21045.0,1,0
+65618,2020-04-17,Christian,Kentucky,21047.0,81,3
+65619,2020-04-17,Clark,Kentucky,21049.0,18,0
+65620,2020-04-17,Clinton,Kentucky,21053.0,2,0
+65621,2020-04-17,Crittenden,Kentucky,21055.0,3,0
+65622,2020-04-17,Cumberland,Kentucky,21057.0,2,0
+65623,2020-04-17,Daviess,Kentucky,21059.0,105,3
+65624,2020-04-17,Edmonson,Kentucky,21061.0,7,0
+65625,2020-04-17,Fayette,Kentucky,21067.0,214,7
+65626,2020-04-17,Fleming,Kentucky,21069.0,2,0
+65627,2020-04-17,Floyd,Kentucky,21071.0,4,0
+65628,2020-04-17,Franklin,Kentucky,21073.0,12,0
+65629,2020-04-17,Gallatin,Kentucky,21077.0,1,0
+65630,2020-04-17,Garrard,Kentucky,21079.0,3,0
+65631,2020-04-17,Grant,Kentucky,21081.0,16,1
+65632,2020-04-17,Graves,Kentucky,21083.0,28,2
+65633,2020-04-17,Grayson,Kentucky,21085.0,8,0
+65634,2020-04-17,Green,Kentucky,21087.0,1,0
+65635,2020-04-17,Greenup,Kentucky,21089.0,10,0
+65636,2020-04-17,Hancock,Kentucky,21091.0,6,0
+65637,2020-04-17,Hardin,Kentucky,21093.0,29,0
+65638,2020-04-17,Harrison,Kentucky,21097.0,16,0
+65639,2020-04-17,Hart,Kentucky,21099.0,2,0
+65640,2020-04-17,Henderson,Kentucky,21101.0,30,0
+65641,2020-04-17,Henry,Kentucky,21103.0,3,0
+65642,2020-04-17,Hopkins,Kentucky,21107.0,116,9
+65643,2020-04-17,Jackson,Kentucky,21109.0,43,2
+65644,2020-04-17,Jefferson,Kentucky,21111.0,600,60
+65645,2020-04-17,Jessamine,Kentucky,21113.0,31,0
+65646,2020-04-17,Johnson,Kentucky,21115.0,1,0
+65647,2020-04-17,Kenton,Kentucky,21117.0,121,11
+65648,2020-04-17,Knott,Kentucky,21119.0,2,0
+65649,2020-04-17,Knox,Kentucky,21121.0,4,0
+65650,2020-04-17,Larue,Kentucky,21123.0,5,0
+65651,2020-04-17,Laurel,Kentucky,21125.0,13,2
+65652,2020-04-17,Lawrence,Kentucky,21127.0,1,0
+65653,2020-04-17,Leslie,Kentucky,21131.0,2,0
+65654,2020-04-17,Letcher,Kentucky,21133.0,1,0
+65655,2020-04-17,Lewis,Kentucky,21135.0,2,0
+65656,2020-04-17,Lincoln,Kentucky,21137.0,4,1
+65657,2020-04-17,Livingston,Kentucky,21139.0,1,0
+65658,2020-04-17,Logan,Kentucky,21141.0,8,0
+65659,2020-04-17,Lyon,Kentucky,21143.0,13,2
+65660,2020-04-17,Madison,Kentucky,21151.0,21,1
+65661,2020-04-17,Marion,Kentucky,21155.0,13,0
+65662,2020-04-17,Marshall,Kentucky,21157.0,12,0
+65663,2020-04-17,Martin,Kentucky,21159.0,2,0
+65664,2020-04-17,Mason,Kentucky,21161.0,6,0
+65665,2020-04-17,McCracken,Kentucky,21145.0,27,2
+65666,2020-04-17,McCreary,Kentucky,21147.0,9,0
+65667,2020-04-17,McLean,Kentucky,21149.0,7,0
+65668,2020-04-17,Meade,Kentucky,21163.0,2,1
+65669,2020-04-17,Menifee,Kentucky,21165.0,3,0
+65670,2020-04-17,Mercer,Kentucky,21167.0,9,0
+65671,2020-04-17,Monroe,Kentucky,21171.0,3,0
+65672,2020-04-17,Montgomery,Kentucky,21173.0,9,0
+65673,2020-04-17,Morgan,Kentucky,21175.0,1,0
+65674,2020-04-17,Muhlenberg,Kentucky,21177.0,60,2
+65675,2020-04-17,Nelson,Kentucky,21179.0,14,0
+65676,2020-04-17,Nicholas,Kentucky,21181.0,1,0
+65677,2020-04-17,Ohio,Kentucky,21183.0,11,0
+65678,2020-04-17,Oldham,Kentucky,21185.0,23,0
+65679,2020-04-17,Owsley,Kentucky,21189.0,2,0
+65680,2020-04-17,Pendleton,Kentucky,21191.0,5,0
+65681,2020-04-17,Perry,Kentucky,21193.0,4,0
+65682,2020-04-17,Pike,Kentucky,21195.0,6,1
+65683,2020-04-17,Powell,Kentucky,21197.0,1,0
+65684,2020-04-17,Pulaski,Kentucky,21199.0,34,2
+65685,2020-04-17,Rockcastle,Kentucky,21203.0,11,0
+65686,2020-04-17,Rowan,Kentucky,21205.0,2,0
+65687,2020-04-17,Russell,Kentucky,21207.0,11,2
+65688,2020-04-17,Scott,Kentucky,21209.0,27,0
+65689,2020-04-17,Shelby,Kentucky,21211.0,22,2
+65690,2020-04-17,Simpson,Kentucky,21213.0,20,2
+65691,2020-04-17,Spencer,Kentucky,21215.0,8,0
+65692,2020-04-17,Taylor,Kentucky,21217.0,4,0
+65693,2020-04-17,Todd,Kentucky,21219.0,10,0
+65694,2020-04-17,Trigg,Kentucky,21221.0,4,0
+65695,2020-04-17,Trimble,Kentucky,21223.0,2,0
+65696,2020-04-17,Union,Kentucky,21225.0,6,0
+65697,2020-04-17,Unknown,Kentucky,,25,0
+65698,2020-04-17,Warren,Kentucky,21227.0,82,0
+65699,2020-04-17,Washington,Kentucky,21229.0,3,0
+65700,2020-04-17,Wayne,Kentucky,21231.0,6,0
+65701,2020-04-17,Webster,Kentucky,21233.0,12,0
+65702,2020-04-17,Whitley,Kentucky,21235.0,8,0
+65703,2020-04-17,Woodford,Kentucky,21239.0,18,0
+65704,2020-04-17,Acadia,Louisiana,22001.0,110,6
+65705,2020-04-17,Allen,Louisiana,22003.0,79,9
+65706,2020-04-17,Ascension,Louisiana,22005.0,468,30
+65707,2020-04-17,Assumption,Louisiana,22007.0,137,1
+65708,2020-04-17,Avoyelles,Louisiana,22009.0,68,3
+65709,2020-04-17,Beauregard,Louisiana,22011.0,35,2
+65710,2020-04-17,Bienville,Louisiana,22013.0,58,9
+65711,2020-04-17,Bossier,Louisiana,22015.0,230,11
+65712,2020-04-17,Caddo,Louisiana,22017.0,1220,56
+65713,2020-04-17,Calcasieu,Louisiana,22019.0,309,16
+65714,2020-04-17,Caldwell,Louisiana,22021.0,19,0
+65715,2020-04-17,Cameron,Louisiana,22023.0,2,0
+65716,2020-04-17,Catahoula,Louisiana,22025.0,23,1
+65717,2020-04-17,Claiborne,Louisiana,22027.0,48,4
+65718,2020-04-17,Concordia,Louisiana,22029.0,23,2
+65719,2020-04-17,De Soto,Louisiana,22031.0,145,8
+65720,2020-04-17,East Baton Rouge,Louisiana,22033.0,1424,66
+65721,2020-04-17,East Carroll,Louisiana,22035.0,1,0
+65722,2020-04-17,East Feliciana,Louisiana,22037.0,90,7
+65723,2020-04-17,Evangeline,Louisiana,22039.0,42,0
+65724,2020-04-17,Franklin,Louisiana,22041.0,67,2
+65725,2020-04-17,Grant,Louisiana,22043.0,12,0
+65726,2020-04-17,Iberia,Louisiana,22045.0,175,8
+65727,2020-04-17,Iberville,Louisiana,22047.0,267,19
+65728,2020-04-17,Jackson,Louisiana,22049.0,14,0
+65729,2020-04-17,Jefferson,Louisiana,22051.0,5476,269
+65730,2020-04-17,Jefferson Davis,Louisiana,22053.0,52,5
+65731,2020-04-17,LaSalle,Louisiana,22059.0,13,0
+65732,2020-04-17,Lafayette,Louisiana,22055.0,396,17
+65733,2020-04-17,Lafourche,Louisiana,22057.0,542,21
+65734,2020-04-17,Lincoln,Louisiana,22061.0,47,2
+65735,2020-04-17,Livingston,Louisiana,22063.0,142,7
+65736,2020-04-17,Madison,Louisiana,22065.0,4,0
+65737,2020-04-17,Morehouse,Louisiana,22067.0,34,2
+65738,2020-04-17,Natchitoches,Louisiana,22069.0,50,1
+65739,2020-04-17,Orleans,Louisiana,22071.0,5906,317
+65740,2020-04-17,Ouachita,Louisiana,22073.0,470,11
+65741,2020-04-17,Plaquemines,Louisiana,22075.0,152,11
+65742,2020-04-17,Pointe Coupee,Louisiana,22077.0,62,5
+65743,2020-04-17,Rapides,Louisiana,22079.0,196,7
+65744,2020-04-17,Red River,Louisiana,22081.0,18,3
+65745,2020-04-17,Richland,Louisiana,22083.0,27,0
+65746,2020-04-17,Sabine,Louisiana,22085.0,13,0
+65747,2020-04-17,St. Bernard,Louisiana,22087.0,404,11
+65748,2020-04-17,St. Charles,Louisiana,22089.0,471,26
+65749,2020-04-17,St. Helena,Louisiana,22091.0,18,1
+65750,2020-04-17,St. James,Louisiana,22093.0,216,14
+65751,2020-04-17,St. John the Baptist,Louisiana,22095.0,623,50
+65752,2020-04-17,St. Landry,Louisiana,22097.0,119,18
+65753,2020-04-17,St. Martin,Louisiana,22099.0,184,10
+65754,2020-04-17,St. Mary,Louisiana,22101.0,137,9
+65755,2020-04-17,St. Tammany,Louisiana,22103.0,961,66
+65756,2020-04-17,Tangipahoa,Louisiana,22105.0,435,18
+65757,2020-04-17,Tensas,Louisiana,22107.0,1,0
+65758,2020-04-17,Terrebonne,Louisiana,22109.0,293,18
+65759,2020-04-17,Union,Louisiana,22111.0,71,5
+65760,2020-04-17,Unknown,Louisiana,,56,1
+65761,2020-04-17,Vermilion,Louisiana,22113.0,28,1
+65762,2020-04-17,Vernon,Louisiana,22115.0,14,1
+65763,2020-04-17,Washington,Louisiana,22117.0,184,11
+65764,2020-04-17,Webster,Louisiana,22119.0,74,4
+65765,2020-04-17,West Baton Rouge,Louisiana,22121.0,83,9
+65766,2020-04-17,West Carroll,Louisiana,22123.0,4,0
+65767,2020-04-17,West Feliciana,Louisiana,22125.0,60,0
+65768,2020-04-17,Winn,Louisiana,22127.0,16,2
+65769,2020-04-17,Androscoggin,Maine,23001.0,32,1
+65770,2020-04-17,Aroostook,Maine,23003.0,3,0
+65771,2020-04-17,Cumberland,Maine,23005.0,360,14
+65772,2020-04-17,Franklin,Maine,23007.0,10,0
+65773,2020-04-17,Hancock,Maine,23009.0,6,0
+65774,2020-04-17,Kennebec,Maine,23011.0,95,3
+65775,2020-04-17,Knox,Maine,23013.0,12,0
+65776,2020-04-17,Lincoln,Maine,23015.0,12,0
+65777,2020-04-17,Oxford,Maine,23017.0,13,0
+65778,2020-04-17,Penobscot,Maine,23019.0,40,0
+65779,2020-04-17,Sagadahoc,Maine,23023.0,15,0
+65780,2020-04-17,Somerset,Maine,23025.0,15,0
+65781,2020-04-17,Unknown,Maine,,2,0
+65782,2020-04-17,Waldo,Maine,23027.0,42,5
+65783,2020-04-17,Washington,Maine,23029.0,2,0
+65784,2020-04-17,York,Maine,23031.0,170,6
+65785,2020-04-17,Allegany,Maryland,24001.0,26,1
+65786,2020-04-17,Anne Arundel,Maryland,24003.0,966,34
+65787,2020-04-17,Baltimore,Maryland,24005.0,1569,37
+65788,2020-04-17,Baltimore city,Maryland,24510.0,1273,38
+65789,2020-04-17,Calvert,Maryland,24009.0,109,2
+65790,2020-04-17,Caroline,Maryland,24011.0,28,0
+65791,2020-04-17,Carroll,Maryland,24013.0,288,28
+65792,2020-04-17,Cecil,Maryland,24015.0,127,2
+65793,2020-04-17,Charles,Maryland,24017.0,337,15
+65794,2020-04-17,Dorchester,Maryland,24019.0,20,1
+65795,2020-04-17,Frederick,Maryland,24021.0,525,23
+65796,2020-04-17,Garrett,Maryland,24023.0,4,0
+65797,2020-04-17,Harford,Maryland,24025.0,176,0
+65798,2020-04-17,Howard,Maryland,24027.0,475,10
+65799,2020-04-17,Kent,Maryland,24029.0,14,1
+65800,2020-04-17,Montgomery,Maryland,24031.0,2280,63
+65801,2020-04-17,Prince George's,Maryland,24033.0,2966,77
+65802,2020-04-17,Queen Anne's,Maryland,24035.0,19,1
+65803,2020-04-17,Somerset,Maryland,24039.0,9,0
+65804,2020-04-17,St. Mary's,Maryland,24037.0,100,1
+65805,2020-04-17,Talbot,Maryland,24041.0,14,1
+65806,2020-04-17,Unknown,Maryland,,0,71
+65807,2020-04-17,Washington,Maryland,24043.0,116,1
+65808,2020-04-17,Wicomico,Maryland,24045.0,103,1
+65809,2020-04-17,Worcester,Maryland,24047.0,28,0
+65810,2020-04-17,Barnstable,Massachusetts,25001.0,573,20
+65811,2020-04-17,Berkshire,Massachusetts,25003.0,383,26
+65812,2020-04-17,Bristol,Massachusetts,25005.0,1659,75
+65813,2020-04-17,Dukes,Massachusetts,25007.0,12,0
+65814,2020-04-17,Essex,Massachusetts,25009.0,4584,178
+65815,2020-04-17,Franklin,Massachusetts,25011.0,173,25
+65816,2020-04-17,Hampden,Massachusetts,25013.0,2134,184
+65817,2020-04-17,Hampshire,Massachusetts,25015.0,258,6
+65818,2020-04-17,Middlesex,Massachusetts,25017.0,7744,294
+65819,2020-04-17,Nantucket,Massachusetts,25019.0,9,0
+65820,2020-04-17,Norfolk,Massachusetts,25021.0,3499,195
+65821,2020-04-17,Plymouth,Massachusetts,25023.0,2577,111
+65822,2020-04-17,Suffolk,Massachusetts,25025.0,7272,132
+65823,2020-04-17,Unknown,Massachusetts,,760,40
+65824,2020-04-17,Worcester,Massachusetts,25027.0,2765,118
+65825,2020-04-17,Alcona,Michigan,26001.0,1,0
+65826,2020-04-17,Allegan,Michigan,26005.0,29,0
+65827,2020-04-17,Alpena,Michigan,26007.0,2,1
+65828,2020-04-17,Antrim,Michigan,26009.0,8,0
+65829,2020-04-17,Arenac,Michigan,26011.0,7,0
+65830,2020-04-17,Baraga,Michigan,26013.0,1,0
+65831,2020-04-17,Barry,Michigan,26015.0,21,1
+65832,2020-04-17,Bay,Michigan,26017.0,69,2
+65833,2020-04-17,Berrien,Michigan,26021.0,144,8
+65834,2020-04-17,Branch,Michigan,26023.0,35,2
+65835,2020-04-17,Calhoun,Michigan,26025.0,130,5
+65836,2020-04-17,Cass,Michigan,26027.0,22,1
+65837,2020-04-17,Charlevoix,Michigan,26029.0,11,1
+65838,2020-04-17,Cheboygan,Michigan,26031.0,12,1
+65839,2020-04-17,Chippewa,Michigan,26033.0,1,1
+65840,2020-04-17,Clare,Michigan,26035.0,7,1
+65841,2020-04-17,Clinton,Michigan,26037.0,103,6
+65842,2020-04-17,Crawford,Michigan,26039.0,22,2
+65843,2020-04-17,Delta,Michigan,26041.0,10,1
+65844,2020-04-17,Dickinson,Michigan,26043.0,3,2
+65845,2020-04-17,Eaton,Michigan,26045.0,87,5
+65846,2020-04-17,Emmet,Michigan,26047.0,21,2
+65847,2020-04-17,Genesee,Michigan,26049.0,1197,106
+65848,2020-04-17,Gladwin,Michigan,26051.0,8,0
+65849,2020-04-17,Gogebic,Michigan,26053.0,4,1
+65850,2020-04-17,Grand Traverse,Michigan,26055.0,17,4
+65851,2020-04-17,Gratiot,Michigan,26057.0,7,0
+65852,2020-04-17,Hillsdale,Michigan,26059.0,85,10
+65853,2020-04-17,Houghton,Michigan,26061.0,2,0
+65854,2020-04-17,Huron,Michigan,26063.0,8,0
+65855,2020-04-17,Ingham,Michigan,26065.0,298,6
+65856,2020-04-17,Ionia,Michigan,26067.0,20,2
+65857,2020-04-17,Iosco,Michigan,26069.0,8,1
+65858,2020-04-17,Isabella,Michigan,26073.0,46,6
+65859,2020-04-17,Jackson,Michigan,26075.0,227,9
+65860,2020-04-17,Kalamazoo,Michigan,26077.0,130,9
+65861,2020-04-17,Kalkaska,Michigan,26079.0,17,2
+65862,2020-04-17,Kent,Michigan,26081.0,430,20
+65863,2020-04-17,Lake,Michigan,26085.0,2,0
+65864,2020-04-17,Lapeer,Michigan,26087.0,140,13
+65865,2020-04-17,Leelanau,Michigan,26089.0,7,0
+65866,2020-04-17,Lenawee,Michigan,26091.0,59,0
+65867,2020-04-17,Livingston,Michigan,26093.0,269,9
+65868,2020-04-17,Luce,Michigan,26095.0,1,0
+65869,2020-04-17,Mackinac,Michigan,26097.0,5,0
+65870,2020-04-17,Macomb,Michigan,26099.0,4145,373
+65871,2020-04-17,Manistee,Michigan,26101.0,11,0
+65872,2020-04-17,Marquette,Michigan,26103.0,29,5
+65873,2020-04-17,Mason,Michigan,26105.0,4,0
+65874,2020-04-17,Mecosta,Michigan,26107.0,12,1
+65875,2020-04-17,Menominee,Michigan,26109.0,1,0
+65876,2020-04-17,Midland,Michigan,26111.0,42,1
+65877,2020-04-17,Missaukee,Michigan,26113.0,3,1
+65878,2020-04-17,Monroe,Michigan,26115.0,223,10
+65879,2020-04-17,Montcalm,Michigan,26117.0,24,1
+65880,2020-04-17,Montmorency,Michigan,26119.0,3,0
+65881,2020-04-17,Muskegon,Michigan,26121.0,128,5
+65882,2020-04-17,Newaygo,Michigan,26123.0,7,0
+65883,2020-04-17,Oakland,Michigan,26125.0,5901,442
+65884,2020-04-17,Oceana,Michigan,26127.0,4,1
+65885,2020-04-17,Ogemaw,Michigan,26129.0,5,0
+65886,2020-04-17,Osceola,Michigan,26133.0,6,0
+65887,2020-04-17,Oscoda,Michigan,26135.0,4,0
+65888,2020-04-17,Otsego,Michigan,26137.0,45,3
+65889,2020-04-17,Ottawa,Michigan,26139.0,88,5
+65890,2020-04-17,Presque Isle,Michigan,26141.0,2,0
+65891,2020-04-17,Roscommon,Michigan,26143.0,9,0
+65892,2020-04-17,Saginaw,Michigan,26145.0,369,24
+65893,2020-04-17,Sanilac,Michigan,26151.0,27,3
+65894,2020-04-17,Schoolcraft,Michigan,26153.0,3,0
+65895,2020-04-17,Shiawassee,Michigan,26155.0,86,2
+65896,2020-04-17,St. Clair,Michigan,26147.0,236,8
+65897,2020-04-17,St. Joseph,Michigan,26149.0,23,1
+65898,2020-04-17,Tuscola,Michigan,26157.0,54,10
+65899,2020-04-17,Unknown,Michigan,,604,19
+65900,2020-04-17,Van Buren,Michigan,26159.0,28,2
+65901,2020-04-17,Washtenaw,Michigan,26161.0,855,25
+65902,2020-04-17,Wayne,Michigan,26163.0,13233,1044
+65903,2020-04-17,Wexford,Michigan,26165.0,7,1
+65904,2020-04-17,Aitkin,Minnesota,27001.0,1,0
+65905,2020-04-17,Anoka,Minnesota,27003.0,83,1
+65906,2020-04-17,Becker,Minnesota,27005.0,1,0
+65907,2020-04-17,Beltrami,Minnesota,27007.0,5,0
+65908,2020-04-17,Benton,Minnesota,27009.0,4,0
+65909,2020-04-17,Big Stone,Minnesota,27011.0,1,0
+65910,2020-04-17,Blue Earth,Minnesota,27013.0,23,0
+65911,2020-04-17,Brown,Minnesota,27015.0,7,1
+65912,2020-04-17,Carlton,Minnesota,27017.0,32,0
+65913,2020-04-17,Carver,Minnesota,27019.0,14,0
+65914,2020-04-17,Cass,Minnesota,27021.0,4,0
+65915,2020-04-17,Chisago,Minnesota,27025.0,7,1
+65916,2020-04-17,Clay,Minnesota,27027.0,44,2
+65917,2020-04-17,Clearwater,Minnesota,27029.0,3,0
+65918,2020-04-17,Cottonwood,Minnesota,27033.0,6,0
+65919,2020-04-17,Crow Wing,Minnesota,27035.0,17,0
+65920,2020-04-17,Dakota,Minnesota,27037.0,110,5
+65921,2020-04-17,Dodge,Minnesota,27039.0,17,0
+65922,2020-04-17,Douglas,Minnesota,27041.0,1,0
+65923,2020-04-17,Faribault,Minnesota,27043.0,4,0
+65924,2020-04-17,Fillmore,Minnesota,27045.0,10,0
+65925,2020-04-17,Freeborn,Minnesota,27047.0,28,0
+65926,2020-04-17,Goodhue,Minnesota,27049.0,18,0
+65927,2020-04-17,Hennepin,Minnesota,27053.0,806,61
+65928,2020-04-17,Houston,Minnesota,27055.0,1,0
+65929,2020-04-17,Isanti,Minnesota,27059.0,4,0
+65930,2020-04-17,Itasca,Minnesota,27061.0,2,0
+65931,2020-04-17,Jackson,Minnesota,27063.0,1,0
+65932,2020-04-17,Kandiyohi,Minnesota,27067.0,2,0
+65933,2020-04-17,Koochiching,Minnesota,27071.0,1,0
+65934,2020-04-17,Lac qui Parle,Minnesota,27073.0,1,0
+65935,2020-04-17,Le Sueur,Minnesota,27079.0,22,0
+65936,2020-04-17,Lincoln,Minnesota,27081.0,2,0
+65937,2020-04-17,Lyon,Minnesota,27083.0,6,0
+65938,2020-04-17,Mahnomen,Minnesota,27087.0,1,0
+65939,2020-04-17,Martin,Minnesota,27091.0,39,4
+65940,2020-04-17,McLeod,Minnesota,27085.0,2,0
+65941,2020-04-17,Meeker,Minnesota,27093.0,3,0
+65942,2020-04-17,Mille Lacs,Minnesota,27095.0,1,0
+65943,2020-04-17,Mower,Minnesota,27099.0,25,0
+65944,2020-04-17,Murray,Minnesota,27101.0,2,0
+65945,2020-04-17,Nicollet,Minnesota,27103.0,7,2
+65946,2020-04-17,Nobles,Minnesota,27105.0,12,0
+65947,2020-04-17,Norman,Minnesota,27107.0,2,0
+65948,2020-04-17,Olmsted,Minnesota,27109.0,174,2
+65949,2020-04-17,Otter Tail,Minnesota,27111.0,4,0
+65950,2020-04-17,Pine,Minnesota,27115.0,9,0
+65951,2020-04-17,Pipestone,Minnesota,27117.0,1,0
+65952,2020-04-17,Polk,Minnesota,27119.0,2,0
+65953,2020-04-17,Ramsey,Minnesota,27123.0,178,9
+65954,2020-04-17,Red Lake,Minnesota,27125.0,1,0
+65955,2020-04-17,Redwood,Minnesota,27127.0,1,0
+65956,2020-04-17,Renville,Minnesota,27129.0,3,0
+65957,2020-04-17,Rice,Minnesota,27131.0,6,1
+65958,2020-04-17,Rock,Minnesota,27133.0,3,0
+65959,2020-04-17,Roseau,Minnesota,27135.0,1,0
+65960,2020-04-17,Scott,Minnesota,27139.0,23,1
+65961,2020-04-17,Sherburne,Minnesota,27141.0,12,0
+65962,2020-04-17,Sibley,Minnesota,27143.0,1,0
+65963,2020-04-17,St. Louis,Minnesota,27137.0,45,7
+65964,2020-04-17,Stearns,Minnesota,27145.0,14,0
+65965,2020-04-17,Steele,Minnesota,27147.0,9,0
+65966,2020-04-17,Swift,Minnesota,27151.0,1,0
+65967,2020-04-17,Todd,Minnesota,27153.0,2,0
+65968,2020-04-17,Traverse,Minnesota,27155.0,2,0
+65969,2020-04-17,Unknown,Minnesota,,1,0
+65970,2020-04-17,Wabasha,Minnesota,27157.0,8,0
+65971,2020-04-17,Waseca,Minnesota,27161.0,3,0
+65972,2020-04-17,Washington,Minnesota,27163.0,92,3
+65973,2020-04-17,Watonwan,Minnesota,27165.0,4,0
+65974,2020-04-17,Wilkin,Minnesota,27167.0,7,2
+65975,2020-04-17,Winona,Minnesota,27169.0,56,8
+65976,2020-04-17,Wright,Minnesota,27171.0,23,1
+65977,2020-04-17,Yellow Medicine,Minnesota,27173.0,3,0
+65978,2020-04-17,Adams,Mississippi,28001.0,73,5
+65979,2020-04-17,Alcorn,Mississippi,28003.0,7,0
+65980,2020-04-17,Amite,Mississippi,28005.0,17,1
+65981,2020-04-17,Attala,Mississippi,28007.0,31,0
+65982,2020-04-17,Benton,Mississippi,28009.0,6,0
+65983,2020-04-17,Bolivar,Mississippi,28011.0,76,5
+65984,2020-04-17,Calhoun,Mississippi,28013.0,32,2
+65985,2020-04-17,Carroll,Mississippi,28015.0,10,1
+65986,2020-04-17,Chickasaw,Mississippi,28017.0,39,2
+65987,2020-04-17,Choctaw,Mississippi,28019.0,11,1
+65988,2020-04-17,Claiborne,Mississippi,28021.0,8,0
+65989,2020-04-17,Clarke,Mississippi,28023.0,21,1
+65990,2020-04-17,Clay,Mississippi,28025.0,22,1
+65991,2020-04-17,Coahoma,Mississippi,28027.0,45,1
+65992,2020-04-17,Copiah,Mississippi,28029.0,40,1
+65993,2020-04-17,Covington,Mississippi,28031.0,22,0
+65994,2020-04-17,DeSoto,Mississippi,28033.0,213,3
+65995,2020-04-17,Forrest,Mississippi,28035.0,137,2
+65996,2020-04-17,Franklin,Mississippi,28037.0,14,0
+65997,2020-04-17,George,Mississippi,28039.0,9,0
+65998,2020-04-17,Greene,Mississippi,28041.0,3,0
+65999,2020-04-17,Grenada,Mississippi,28043.0,15,0
+66000,2020-04-17,Hancock,Mississippi,28045.0,50,5
+66001,2020-04-17,Harrison,Mississippi,28047.0,137,5
+66002,2020-04-17,Hinds,Mississippi,28049.0,314,5
+66003,2020-04-17,Holmes,Mississippi,28051.0,54,4
+66004,2020-04-17,Humphreys,Mississippi,28053.0,12,3
+66005,2020-04-17,Itawamba,Mississippi,28057.0,13,1
+66006,2020-04-17,Jackson,Mississippi,28059.0,196,6
+66007,2020-04-17,Jasper,Mississippi,28061.0,20,1
+66008,2020-04-17,Jefferson,Mississippi,28063.0,4,0
+66009,2020-04-17,Jefferson Davis,Mississippi,28065.0,8,1
+66010,2020-04-17,Jones,Mississippi,28067.0,56,0
+66011,2020-04-17,Kemper,Mississippi,28069.0,16,0
+66012,2020-04-17,Lafayette,Mississippi,28071.0,39,2
+66013,2020-04-17,Lamar,Mississippi,28073.0,57,1
+66014,2020-04-17,Lauderdale,Mississippi,28075.0,181,13
+66015,2020-04-17,Lawrence,Mississippi,28077.0,12,0
+66016,2020-04-17,Leake,Mississippi,28079.0,60,1
+66017,2020-04-17,Lee,Mississippi,28081.0,49,4
+66018,2020-04-17,Leflore,Mississippi,28083.0,70,6
+66019,2020-04-17,Lincoln,Mississippi,28085.0,95,6
+66020,2020-04-17,Lowndes,Mississippi,28087.0,30,1
+66021,2020-04-17,Madison,Mississippi,28089.0,123,3
+66022,2020-04-17,Marion,Mississippi,28091.0,38,0
+66023,2020-04-17,Marshall,Mississippi,28093.0,37,2
+66024,2020-04-17,Monroe,Mississippi,28095.0,58,3
+66025,2020-04-17,Montgomery,Mississippi,28097.0,15,1
+66026,2020-04-17,Neshoba,Mississippi,28099.0,46,1
+66027,2020-04-17,Newton,Mississippi,28101.0,19,0
+66028,2020-04-17,Noxubee,Mississippi,28103.0,20,0
+66029,2020-04-17,Oktibbeha,Mississippi,28105.0,42,2
+66030,2020-04-17,Panola,Mississippi,28107.0,27,2
+66031,2020-04-17,Pearl River,Mississippi,28109.0,115,8
+66032,2020-04-17,Perry,Mississippi,28111.0,21,1
+66033,2020-04-17,Pike,Mississippi,28113.0,93,2
+66034,2020-04-17,Pontotoc,Mississippi,28115.0,17,2
+66035,2020-04-17,Prentiss,Mississippi,28117.0,16,0
+66036,2020-04-17,Quitman,Mississippi,28119.0,13,0
+66037,2020-04-17,Rankin,Mississippi,28121.0,128,2
+66038,2020-04-17,Scott,Mississippi,28123.0,96,0
+66039,2020-04-17,Sharkey,Mississippi,28125.0,3,0
+66040,2020-04-17,Simpson,Mississippi,28127.0,14,0
+66041,2020-04-17,Smith,Mississippi,28129.0,38,1
+66042,2020-04-17,Stone,Mississippi,28131.0,17,0
+66043,2020-04-17,Sunflower,Mississippi,28133.0,45,2
+66044,2020-04-17,Tallahatchie,Mississippi,28135.0,8,1
+66045,2020-04-17,Tate,Mississippi,28137.0,27,0
+66046,2020-04-17,Tippah,Mississippi,28139.0,45,6
+66047,2020-04-17,Tishomingo,Mississippi,28141.0,2,0
+66048,2020-04-17,Tunica,Mississippi,28143.0,28,1
+66049,2020-04-17,Union,Mississippi,28145.0,9,1
+66050,2020-04-17,Walthall,Mississippi,28147.0,22,0
+66051,2020-04-17,Warren,Mississippi,28149.0,17,1
+66052,2020-04-17,Washington,Mississippi,28151.0,68,2
+66053,2020-04-17,Wayne,Mississippi,28153.0,10,0
+66054,2020-04-17,Webster,Mississippi,28155.0,17,1
+66055,2020-04-17,Wilkinson,Mississippi,28157.0,53,3
+66056,2020-04-17,Winston,Mississippi,28159.0,27,0
+66057,2020-04-17,Yalobusha,Mississippi,28161.0,14,0
+66058,2020-04-17,Yazoo,Mississippi,28163.0,81,1
+66059,2020-04-17,Adair,Missouri,29001.0,12,0
+66060,2020-04-17,Andrew,Missouri,29003.0,1,0
+66061,2020-04-17,Atchison,Missouri,29005.0,2,0
+66062,2020-04-17,Barry,Missouri,29009.0,3,0
+66063,2020-04-17,Bates,Missouri,29013.0,6,1
+66064,2020-04-17,Benton,Missouri,29015.0,3,0
+66065,2020-04-17,Bollinger,Missouri,29017.0,3,0
+66066,2020-04-17,Boone,Missouri,29019.0,93,1
+66067,2020-04-17,Buchanan,Missouri,29021.0,28,1
+66068,2020-04-17,Butler,Missouri,29023.0,22,0
+66069,2020-04-17,Caldwell,Missouri,29025.0,2,0
+66070,2020-04-17,Callaway,Missouri,29027.0,21,1
+66071,2020-04-17,Camden,Missouri,29029.0,32,1
+66072,2020-04-17,Cape Girardeau,Missouri,29031.0,35,1
+66073,2020-04-17,Carter,Missouri,29035.0,3,1
+66074,2020-04-17,Cass,Missouri,29037.0,50,5
+66075,2020-04-17,Cedar,Missouri,29039.0,5,0
+66076,2020-04-17,Chariton,Missouri,29041.0,4,0
+66077,2020-04-17,Christian,Missouri,29043.0,17,0
+66078,2020-04-17,Clark,Missouri,29045.0,1,0
+66079,2020-04-17,Clay,Missouri,29047.0,55,1
+66080,2020-04-17,Clinton,Missouri,29049.0,11,0
+66081,2020-04-17,Cole,Missouri,29051.0,42,1
+66082,2020-04-17,Cooper,Missouri,29053.0,4,0
+66083,2020-04-17,Crawford,Missouri,29055.0,6,0
+66084,2020-04-17,Dallas,Missouri,29059.0,2,0
+66085,2020-04-17,Daviess,Missouri,29061.0,2,0
+66086,2020-04-17,DeKalb,Missouri,29063.0,3,0
+66087,2020-04-17,Dunklin,Missouri,29069.0,18,2
+66088,2020-04-17,Franklin,Missouri,29071.0,91,5
+66089,2020-04-17,Gasconade,Missouri,29073.0,2,0
+66090,2020-04-17,Gentry,Missouri,29075.0,1,0
+66091,2020-04-17,Greene,Missouri,29077.0,83,8
+66092,2020-04-17,Harrison,Missouri,29081.0,6,0
+66093,2020-04-17,Henry,Missouri,29083.0,6,1
+66094,2020-04-17,Holt,Missouri,29087.0,1,0
+66095,2020-04-17,Howard,Missouri,29089.0,2,0
+66096,2020-04-17,Howell,Missouri,29091.0,5,0
+66097,2020-04-17,Iron,Missouri,29093.0,1,0
+66098,2020-04-17,Jackson,Missouri,29095.0,267,11
+66099,2020-04-17,Jasper,Missouri,29097.0,22,0
+66100,2020-04-17,Jefferson,Missouri,29099.0,179,4
+66101,2020-04-17,Johnson,Missouri,29101.0,48,0
+66102,2020-04-17,Kansas City,Missouri,,401,13
+66103,2020-04-17,Lafayette,Missouri,29107.0,29,1
+66104,2020-04-17,Lincoln,Missouri,29113.0,30,1
+66105,2020-04-17,Linn,Missouri,29115.0,5,1
+66106,2020-04-17,Livingston,Missouri,29117.0,2,0
+66107,2020-04-17,Macon,Missouri,29121.0,2,0
+66108,2020-04-17,Madison,Missouri,29123.0,1,0
+66109,2020-04-17,Maries,Missouri,29125.0,2,0
+66110,2020-04-17,McDonald,Missouri,29119.0,4,0
+66111,2020-04-17,Miller,Missouri,29131.0,1,0
+66112,2020-04-17,Moniteau,Missouri,29135.0,15,0
+66113,2020-04-17,Montgomery,Missouri,29139.0,7,0
+66114,2020-04-17,Morgan,Missouri,29141.0,2,0
+66115,2020-04-17,New Madrid,Missouri,29143.0,8,0
+66116,2020-04-17,Newton,Missouri,29145.0,9,0
+66117,2020-04-17,Nodaway,Missouri,29147.0,3,0
+66118,2020-04-17,Oregon,Missouri,29149.0,1,0
+66119,2020-04-17,Osage,Missouri,29151.0,4,0
+66120,2020-04-17,Pemiscot,Missouri,29155.0,11,0
+66121,2020-04-17,Perry,Missouri,29157.0,39,0
+66122,2020-04-17,Pettis,Missouri,29159.0,10,0
+66123,2020-04-17,Phelps,Missouri,29161.0,1,0
+66124,2020-04-17,Pike,Missouri,29163.0,6,0
+66125,2020-04-17,Platte,Missouri,29165.0,27,0
+66126,2020-04-17,Polk,Missouri,29167.0,1,0
+66127,2020-04-17,Pulaski,Missouri,29169.0,23,1
+66128,2020-04-17,Ralls,Missouri,29173.0,1,0
+66129,2020-04-17,Randolph,Missouri,29175.0,8,0
+66130,2020-04-17,Ray,Missouri,29177.0,7,0
+66131,2020-04-17,Reynolds,Missouri,29179.0,2,0
+66132,2020-04-17,Ripley,Missouri,29181.0,3,0
+66133,2020-04-17,Saline,Missouri,29195.0,51,0
+66134,2020-04-17,Scotland,Missouri,29199.0,4,0
+66135,2020-04-17,Scott,Missouri,29201.0,42,0
+66136,2020-04-17,Shelby,Missouri,29205.0,1,0
+66137,2020-04-17,St. Charles,Missouri,29183.0,417,17
+66138,2020-04-17,St. Clair,Missouri,29185.0,2,0
+66139,2020-04-17,St. Francois,Missouri,29187.0,24,1
+66140,2020-04-17,St. Louis,Missouri,29189.0,2088,72
+66141,2020-04-17,St. Louis city,Missouri,29510.0,711,30
+66142,2020-04-17,Ste. Genevieve,Missouri,29186.0,7,1
+66143,2020-04-17,Stoddard,Missouri,29207.0,15,0
+66144,2020-04-17,Stone,Missouri,29209.0,3,0
+66145,2020-04-17,Taney,Missouri,29213.0,8,1
+66146,2020-04-17,Unknown,Missouri,,4,0
+66147,2020-04-17,Vernon,Missouri,29217.0,4,0
+66148,2020-04-17,Warren,Missouri,29219.0,17,0
+66149,2020-04-17,Washington,Missouri,29221.0,4,0
+66150,2020-04-17,Webster,Missouri,29225.0,6,0
+66151,2020-04-17,Worth,Missouri,29227.0,1,0
+66152,2020-04-17,Wright,Missouri,29229.0,9,0
+66153,2020-04-17,Beaverhead,Montana,30001.0,1,0
+66154,2020-04-17,Big Horn,Montana,30003.0,3,0
+66155,2020-04-17,Broadwater,Montana,30007.0,4,0
+66156,2020-04-17,Carbon,Montana,30009.0,6,0
+66157,2020-04-17,Cascade,Montana,30013.0,13,0
+66158,2020-04-17,Deer Lodge,Montana,30023.0,3,0
+66159,2020-04-17,Flathead,Montana,30029.0,37,1
+66160,2020-04-17,Gallatin,Montana,30031.0,142,0
+66161,2020-04-17,Glacier,Montana,30035.0,4,0
+66162,2020-04-17,Golden Valley,Montana,30037.0,3,0
+66163,2020-04-17,Hill,Montana,30041.0,1,0
+66164,2020-04-17,Jefferson,Montana,30043.0,2,0
+66165,2020-04-17,Lake,Montana,30047.0,5,0
+66166,2020-04-17,Lewis and Clark,Montana,30049.0,16,0
+66167,2020-04-17,Liberty,Montana,30051.0,1,0
+66168,2020-04-17,Lincoln,Montana,30053.0,7,1
+66169,2020-04-17,Madison,Montana,30057.0,8,1
+66170,2020-04-17,Meagher,Montana,30059.0,1,0
+66171,2020-04-17,Missoula,Montana,30063.0,34,1
+66172,2020-04-17,Musselshell,Montana,30065.0,1,0
+66173,2020-04-17,Park,Montana,30067.0,7,0
+66174,2020-04-17,Pondera,Montana,30073.0,1,0
+66175,2020-04-17,Ravalli,Montana,30081.0,5,0
+66176,2020-04-17,Richland,Montana,30083.0,3,0
+66177,2020-04-17,Roosevelt,Montana,30085.0,6,0
+66178,2020-04-17,Silver Bow,Montana,30093.0,11,0
+66179,2020-04-17,Stillwater,Montana,30095.0,1,0
+66180,2020-04-17,Toole,Montana,30101.0,29,4
+66181,2020-04-17,Yellowstone,Montana,30111.0,67,0
+66182,2020-04-17,Adams,Nebraska,31001.0,85,0
+66183,2020-04-17,Antelope,Nebraska,31003.0,1,0
+66184,2020-04-17,Box Butte,Nebraska,31013.0,1,0
+66185,2020-04-17,Buffalo,Nebraska,31019.0,47,1
+66186,2020-04-17,Burt,Nebraska,31021.0,1,0
+66187,2020-04-17,Butler,Nebraska,31023.0,1,0
+66188,2020-04-17,Cass,Nebraska,31025.0,3,0
+66189,2020-04-17,Cherry,Nebraska,31031.0,1,0
+66190,2020-04-17,Cheyenne,Nebraska,31033.0,4,0
+66191,2020-04-17,Clay,Nebraska,31035.0,3,0
+66192,2020-04-17,Colfax,Nebraska,31037.0,4,0
+66193,2020-04-17,Cuming,Nebraska,31039.0,2,0
+66194,2020-04-17,Custer,Nebraska,31041.0,19,2
+66195,2020-04-17,Dakota,Nebraska,31043.0,22,0
+66196,2020-04-17,Dawson,Nebraska,31047.0,30,0
+66197,2020-04-17,Dodge,Nebraska,31053.0,12,0
+66198,2020-04-17,Douglas,Nebraska,31055.0,287,8
+66199,2020-04-17,Franklin,Nebraska,31061.0,3,0
+66200,2020-04-17,Gage,Nebraska,31067.0,27,2
+66201,2020-04-17,Gosper,Nebraska,31073.0,3,0
+66202,2020-04-17,Hall,Nebraska,31079.0,403,5
+66203,2020-04-17,Hamilton,Nebraska,31081.0,16,1
+66204,2020-04-17,Howard,Nebraska,31093.0,3,0
+66205,2020-04-17,Johnson,Nebraska,31097.0,2,0
+66206,2020-04-17,Kearney,Nebraska,31099.0,3,0
+66207,2020-04-17,Kimball,Nebraska,31105.0,10,0
+66208,2020-04-17,Knox,Nebraska,31107.0,2,0
+66209,2020-04-17,Lancaster,Nebraska,31109.0,63,1
+66210,2020-04-17,Lincoln,Nebraska,31111.0,18,1
+66211,2020-04-17,Madison,Nebraska,31119.0,8,2
+66212,2020-04-17,Merrick,Nebraska,31121.0,6,0
+66213,2020-04-17,Morrill,Nebraska,31123.0,1,0
+66214,2020-04-17,Nance,Nebraska,31125.0,1,0
+66215,2020-04-17,Nemaha,Nebraska,31127.0,1,0
+66216,2020-04-17,Otoe,Nebraska,31131.0,1,0
+66217,2020-04-17,Phelps,Nebraska,31137.0,1,0
+66218,2020-04-17,Pierce,Nebraska,31139.0,1,0
+66219,2020-04-17,Platte,Nebraska,31141.0,6,0
+66220,2020-04-17,Polk,Nebraska,31143.0,5,0
+66221,2020-04-17,Red Willow,Nebraska,31145.0,1,0
+66222,2020-04-17,Saline,Nebraska,31151.0,4,0
+66223,2020-04-17,Sarpy,Nebraska,31153.0,48,0
+66224,2020-04-17,Saunders,Nebraska,31155.0,6,0
+66225,2020-04-17,Scotts Bluff,Nebraska,31157.0,18,0
+66226,2020-04-17,Seward,Nebraska,31159.0,1,0
+66227,2020-04-17,Stanton,Nebraska,31167.0,2,0
+66228,2020-04-17,Washington,Nebraska,31177.0,20,1
+66229,2020-04-17,Wayne,Nebraska,31179.0,1,0
+66230,2020-04-17,Webster,Nebraska,31181.0,2,0
+66231,2020-04-17,York,Nebraska,31185.0,6,0
+66232,2020-04-17,Carson City,Nevada,32510.0,27,0
+66233,2020-04-17,Churchill,Nevada,32001.0,3,0
+66234,2020-04-17,Clark,Nevada,32003.0,2738,124
+66235,2020-04-17,Douglas,Nevada,32005.0,14,0
+66236,2020-04-17,Elko,Nevada,32007.0,12,1
+66237,2020-04-17,Humboldt,Nevada,32013.0,26,1
+66238,2020-04-17,Lyon,Nevada,32019.0,12,0
+66239,2020-04-17,Nye,Nevada,32023.0,21,0
+66240,2020-04-17,Unknown,Nevada,,80,0
+66241,2020-04-17,Washoe,Nevada,32031.0,588,16
+66242,2020-04-17,White Pine,Nevada,32033.0,3,0
+66243,2020-04-17,Belknap,New Hampshire,33001.0,25,0
+66244,2020-04-17,Carroll,New Hampshire,33003.0,32,0
+66245,2020-04-17,Cheshire,New Hampshire,33005.0,27,2
+66246,2020-04-17,Coos,New Hampshire,33007.0,2,0
+66247,2020-04-17,Grafton,New Hampshire,33009.0,44,0
+66248,2020-04-17,Hillsborough,New Hampshire,33011.0,525,25
+66249,2020-04-17,Merrimack,New Hampshire,33013.0,88,3
+66250,2020-04-17,Rockingham,New Hampshire,33015.0,449,9
+66251,2020-04-17,Strafford,New Hampshire,33017.0,84,0
+66252,2020-04-17,Sullivan,New Hampshire,33019.0,9,1
+66253,2020-04-17,Unknown,New Hampshire,,2,0
+66254,2020-04-17,Atlantic,New Jersey,34001.0,370,17
+66255,2020-04-17,Bergen,New Jersey,34003.0,11863,714
+66256,2020-04-17,Burlington,New Jersey,34005.0,1366,54
+66257,2020-04-17,Camden,New Jersey,34007.0,1807,64
+66258,2020-04-17,Cape May,New Jersey,34009.0,189,14
+66259,2020-04-17,Cumberland,New Jersey,34011.0,263,3
+66260,2020-04-17,Essex,New Jersey,34013.0,9672,684
+66261,2020-04-17,Gloucester,New Jersey,34015.0,664,22
+66262,2020-04-17,Hudson,New Jersey,34017.0,9636,420
+66263,2020-04-17,Hunterdon,New Jersey,34019.0,385,16
+66264,2020-04-17,Mercer,New Jersey,34021.0,2123,101
+66265,2020-04-17,Middlesex,New Jersey,34023.0,7308,309
+66266,2020-04-17,Monmouth,New Jersey,34025.0,4414,206
+66267,2020-04-17,Morris,New Jersey,34027.0,3822,232
+66268,2020-04-17,Ocean,New Jersey,34029.0,4424,201
+66269,2020-04-17,Passaic,New Jersey,34031.0,7604,221
+66270,2020-04-17,Salem,New Jersey,34033.0,102,4
+66271,2020-04-17,Somerset,New Jersey,34035.0,2195,135
+66272,2020-04-17,Sussex,New Jersey,34037.0,591,54
+66273,2020-04-17,Union,New Jersey,34039.0,8429,330
+66274,2020-04-17,Unknown,New Jersey,,719,3
+66275,2020-04-17,Warren,New Jersey,34041.0,521,36
+66276,2020-04-17,Bernalillo,New Mexico,35001.0,514,22
+66277,2020-04-17,Catron,New Mexico,35003.0,1,0
+66278,2020-04-17,Chaves,New Mexico,35005.0,21,0
+66279,2020-04-17,Cibola,New Mexico,35006.0,32,2
+66280,2020-04-17,Colfax,New Mexico,35007.0,4,0
+66281,2020-04-17,Curry,New Mexico,35009.0,10,0
+66282,2020-04-17,Doña Ana,New Mexico,35013.0,65,1
+66283,2020-04-17,Eddy,New Mexico,35015.0,9,1
+66284,2020-04-17,Grant,New Mexico,35017.0,13,0
+66285,2020-04-17,Lea,New Mexico,35025.0,2,0
+66286,2020-04-17,Lincoln,New Mexico,35027.0,1,0
+66287,2020-04-17,Los Alamos,New Mexico,35028.0,6,0
+66288,2020-04-17,Luna,New Mexico,35029.0,3,0
+66289,2020-04-17,McKinley,New Mexico,35031.0,316,4
+66290,2020-04-17,Otero,New Mexico,35035.0,3,0
+66291,2020-04-17,Quay,New Mexico,35037.0,1,0
+66292,2020-04-17,Rio Arriba,New Mexico,35039.0,10,0
+66293,2020-04-17,Roosevelt,New Mexico,35041.0,1,0
+66294,2020-04-17,San Juan,New Mexico,35045.0,243,14
+66295,2020-04-17,San Miguel,New Mexico,35047.0,2,0
+66296,2020-04-17,Sandoval,New Mexico,35043.0,301,6
+66297,2020-04-17,Santa Fe,New Mexico,35049.0,80,0
+66298,2020-04-17,Socorro,New Mexico,35053.0,20,1
+66299,2020-04-17,Taos,New Mexico,35055.0,15,0
+66300,2020-04-17,Torrance,New Mexico,35057.0,12,0
+66301,2020-04-17,Valencia,New Mexico,35061.0,26,0
+66302,2020-04-17,Albany,New York,36001.0,619,26
+66303,2020-04-17,Allegany,New York,36003.0,29,0
+66304,2020-04-17,Broome,New York,36007.0,178,6
+66305,2020-04-17,Cattaraugus,New York,36009.0,34,0
+66306,2020-04-17,Cayuga,New York,36011.0,36,1
+66307,2020-04-17,Chautauqua,New York,36013.0,25,1
+66308,2020-04-17,Chemung,New York,36015.0,71,2
+66309,2020-04-17,Chenango,New York,36017.0,76,0
+66310,2020-04-17,Clinton,New York,36019.0,47,3
+66311,2020-04-17,Columbia,New York,36021.0,101,13
+66312,2020-04-17,Cortland,New York,36023.0,25,0
+66313,2020-04-17,Delaware,New York,36025.0,48,0
+66314,2020-04-17,Dutchess,New York,36027.0,2142,45
+66315,2020-04-17,Erie,New York,36029.0,1929,115
+66316,2020-04-17,Essex,New York,36031.0,15,0
+66317,2020-04-17,Franklin,New York,36033.0,13,0
+66318,2020-04-17,Fulton,New York,36035.0,27,0
+66319,2020-04-17,Genesee,New York,36037.0,83,2
+66320,2020-04-17,Greene,New York,36039.0,77,0
+66321,2020-04-17,Hamilton,New York,36041.0,3,0
+66322,2020-04-17,Herkimer,New York,36043.0,46,1
+66323,2020-04-17,Jefferson,New York,36045.0,50,0
+66324,2020-04-17,Lewis,New York,36049.0,8,0
+66325,2020-04-17,Livingston,New York,36051.0,34,1
+66326,2020-04-17,Madison,New York,36053.0,105,1
+66327,2020-04-17,Monroe,New York,36055.0,975,49
+66328,2020-04-17,Montgomery,New York,36057.0,33,1
+66329,2020-04-17,Nassau,New York,36059.0,28539,1356
+66330,2020-04-17,New York City,New York,,127352,8632
+66331,2020-04-17,Niagara,New York,36063.0,227,8
+66332,2020-04-17,Oneida,New York,36065.0,261,4
+66333,2020-04-17,Onondaga,New York,36067.0,483,15
+66334,2020-04-17,Ontario,New York,36069.0,67,2
+66335,2020-04-17,Orange,New York,36071.0,6084,144
+66336,2020-04-17,Orleans,New York,36073.0,34,0
+66337,2020-04-17,Oswego,New York,36075.0,45,0
+66338,2020-04-17,Otsego,New York,36077.0,44,4
+66339,2020-04-17,Putnam,New York,36079.0,578,29
+66340,2020-04-17,Rensselaer,New York,36083.0,150,9
+66341,2020-04-17,Rockland,New York,36087.0,8987,234
+66342,2020-04-17,Saratoga,New York,36091.0,236,1
+66343,2020-04-17,Schenectady,New York,36093.0,250,17
+66344,2020-04-17,Schoharie,New York,36095.0,20,0
+66345,2020-04-17,Schuyler,New York,36097.0,6,0
+66346,2020-04-17,Seneca,New York,36099.0,18,1
+66347,2020-04-17,St. Lawrence,New York,36089.0,96,1
+66348,2020-04-17,Steuben,New York,36101.0,154,5
+66349,2020-04-17,Suffolk,New York,36103.0,25035,706
+66350,2020-04-17,Sullivan,New York,36105.0,505,7
+66351,2020-04-17,Tioga,New York,36107.0,30,0
+66352,2020-04-17,Tompkins,New York,36109.0,117,2
+66353,2020-04-17,Ulster,New York,36111.0,788,2
+66354,2020-04-17,Unknown,New York,,0,630
+66355,2020-04-17,Warren,New York,36113.0,91,5
+66356,2020-04-17,Washington,New York,36115.0,48,0
+66357,2020-04-17,Wayne,New York,36117.0,49,0
+66358,2020-04-17,Westchester,New York,36119.0,22476,738
+66359,2020-04-17,Wyoming,New York,36121.0,35,3
+66360,2020-04-17,Yates,New York,36123.0,8,0
+66361,2020-04-17,Alamance,North Carolina,37001.0,48,0
+66362,2020-04-17,Alexander,North Carolina,37003.0,3,0
+66363,2020-04-17,Alleghany,North Carolina,37005.0,2,0
+66364,2020-04-17,Anson,North Carolina,37007.0,14,0
+66365,2020-04-17,Ashe,North Carolina,37009.0,4,0
+66366,2020-04-17,Beaufort,North Carolina,37013.0,13,0
+66367,2020-04-17,Bertie,North Carolina,37015.0,18,1
+66368,2020-04-17,Bladen,North Carolina,37017.0,1,0
+66369,2020-04-17,Brunswick,North Carolina,37019.0,36,2
+66370,2020-04-17,Buncombe,North Carolina,37021.0,42,3
+66371,2020-04-17,Burke,North Carolina,37023.0,64,5
+66372,2020-04-17,Cabarrus,North Carolina,37025.0,201,3
+66373,2020-04-17,Caldwell,North Carolina,37027.0,22,0
+66374,2020-04-17,Carteret,North Carolina,37031.0,22,1
+66375,2020-04-17,Caswell,North Carolina,37033.0,7,0
+66376,2020-04-17,Catawba,North Carolina,37035.0,40,1
+66377,2020-04-17,Chatham,North Carolina,37037.0,85,0
+66378,2020-04-17,Cherokee,North Carolina,37039.0,14,1
+66379,2020-04-17,Chowan,North Carolina,37041.0,6,0
+66380,2020-04-17,Clay,North Carolina,37043.0,5,0
+66381,2020-04-17,Cleveland,North Carolina,37045.0,42,1
+66382,2020-04-17,Columbus,North Carolina,37047.0,50,2
+66383,2020-04-17,Craven,North Carolina,37049.0,33,1
+66384,2020-04-17,Cumberland,North Carolina,37051.0,97,3
+66385,2020-04-17,Currituck,North Carolina,37053.0,2,0
+66386,2020-04-17,Dare,North Carolina,37055.0,11,1
+66387,2020-04-17,Davidson,North Carolina,37057.0,94,2
+66388,2020-04-17,Davie,North Carolina,37059.0,23,2
+66389,2020-04-17,Duplin,North Carolina,37061.0,19,0
+66390,2020-04-17,Durham,North Carolina,37063.0,360,4
+66391,2020-04-17,Edgecombe,North Carolina,37065.0,44,1
+66392,2020-04-17,Forsyth,North Carolina,37067.0,122,5
+66393,2020-04-17,Franklin,North Carolina,37069.0,67,5
+66394,2020-04-17,Gaston,North Carolina,37071.0,104,3
+66395,2020-04-17,Gates,North Carolina,37073.0,4,0
+66396,2020-04-17,Granville,North Carolina,37077.0,108,4
+66397,2020-04-17,Greene,North Carolina,37079.0,12,0
+66398,2020-04-17,Guilford,North Carolina,37081.0,162,12
+66399,2020-04-17,Halifax,North Carolina,37083.0,28,1
+66400,2020-04-17,Harnett,North Carolina,37085.0,54,3
+66401,2020-04-17,Haywood,North Carolina,37087.0,4,0
+66402,2020-04-17,Henderson,North Carolina,37089.0,106,11
+66403,2020-04-17,Hertford,North Carolina,37091.0,7,1
+66404,2020-04-17,Hoke,North Carolina,37093.0,22,0
+66405,2020-04-17,Iredell,North Carolina,37097.0,75,2
+66406,2020-04-17,Jackson,North Carolina,37099.0,2,0
+66407,2020-04-17,Johnston,North Carolina,37101.0,118,9
+66408,2020-04-17,Jones,North Carolina,37103.0,8,1
+66409,2020-04-17,Lee,North Carolina,37105.0,21,0
+66410,2020-04-17,Lenoir,North Carolina,37107.0,17,0
+66411,2020-04-17,Lincoln,North Carolina,37109.0,20,0
+66412,2020-04-17,Macon,North Carolina,37113.0,2,1
+66413,2020-04-17,Martin,North Carolina,37117.0,8,0
+66414,2020-04-17,McDowell,North Carolina,37111.0,19,0
+66415,2020-04-17,Mecklenburg,North Carolina,37119.0,1136,21
+66416,2020-04-17,Mitchell,North Carolina,37121.0,5,0
+66417,2020-04-17,Montgomery,North Carolina,37123.0,17,1
+66418,2020-04-17,Moore,North Carolina,37125.0,67,0
+66419,2020-04-17,Nash,North Carolina,37127.0,50,1
+66420,2020-04-17,New Hanover,North Carolina,37129.0,60,1
+66421,2020-04-17,Northampton,North Carolina,37131.0,69,1
+66422,2020-04-17,Onslow,North Carolina,37133.0,32,1
+66423,2020-04-17,Orange,North Carolina,37135.0,175,3
+66424,2020-04-17,Pamlico,North Carolina,37137.0,6,0
+66425,2020-04-17,Pasquotank,North Carolina,37139.0,20,0
+66426,2020-04-17,Pender,North Carolina,37141.0,5,0
+66427,2020-04-17,Perquimans,North Carolina,37143.0,8,0
+66428,2020-04-17,Person,North Carolina,37145.0,14,0
+66429,2020-04-17,Pitt,North Carolina,37147.0,83,1
+66430,2020-04-17,Polk,North Carolina,37149.0,9,0
+66431,2020-04-17,Randolph,North Carolina,37151.0,67,2
+66432,2020-04-17,Richmond,North Carolina,37153.0,17,2
+66433,2020-04-17,Robeson,North Carolina,37155.0,17,0
+66434,2020-04-17,Rockingham,North Carolina,37157.0,16,2
+66435,2020-04-17,Rowan,North Carolina,37159.0,220,10
+66436,2020-04-17,Rutherford,North Carolina,37161.0,59,2
+66437,2020-04-17,Sampson,North Carolina,37163.0,18,0
+66438,2020-04-17,Scotland,North Carolina,37165.0,11,0
+66439,2020-04-17,Stanly,North Carolina,37167.0,20,1
+66440,2020-04-17,Stokes,North Carolina,37169.0,10,0
+66441,2020-04-17,Surry,North Carolina,37171.0,16,0
+66442,2020-04-17,Transylvania,North Carolina,37175.0,6,0
+66443,2020-04-17,Tyrrell,North Carolina,37177.0,4,0
+66444,2020-04-17,Union,North Carolina,37179.0,137,3
+66445,2020-04-17,Vance,North Carolina,37181.0,28,1
+66446,2020-04-17,Wake,North Carolina,37183.0,566,3
+66447,2020-04-17,Warren,North Carolina,37185.0,3,0
+66448,2020-04-17,Washington,North Carolina,37187.0,18,2
+66449,2020-04-17,Watauga,North Carolina,37189.0,8,0
+66450,2020-04-17,Wayne,North Carolina,37191.0,239,4
+66451,2020-04-17,Wilkes,North Carolina,37193.0,4,1
+66452,2020-04-17,Wilson,North Carolina,37195.0,96,3
+66453,2020-04-17,Yadkin,North Carolina,37197.0,11,1
+66454,2020-04-17,Barnes,North Dakota,38003.0,2,0
+66455,2020-04-17,Bowman,North Dakota,38011.0,1,0
+66456,2020-04-17,Burke,North Dakota,38013.0,2,0
+66457,2020-04-17,Burleigh,North Dakota,38015.0,57,0
+66458,2020-04-17,Cass,North Dakota,38017.0,181,2
+66459,2020-04-17,Divide,North Dakota,38023.0,1,0
+66460,2020-04-17,Dunn,North Dakota,38025.0,5,0
+66461,2020-04-17,Eddy,North Dakota,38027.0,1,0
+66462,2020-04-17,Emmons,North Dakota,38029.0,1,1
+66463,2020-04-17,Foster,North Dakota,38031.0,1,0
+66464,2020-04-17,Grand Forks,North Dakota,38035.0,32,0
+66465,2020-04-17,Grant,North Dakota,38037.0,1,0
+66466,2020-04-17,McHenry,North Dakota,38049.0,1,1
+66467,2020-04-17,McIntosh,North Dakota,38051.0,1,0
+66468,2020-04-17,McKenzie,North Dakota,38053.0,10,0
+66469,2020-04-17,McLean,North Dakota,38055.0,3,0
+66470,2020-04-17,Morton,North Dakota,38059.0,21,2
+66471,2020-04-17,Mountrail,North Dakota,38061.0,29,0
+66472,2020-04-17,Oliver,North Dakota,38065.0,1,0
+66473,2020-04-17,Pierce,North Dakota,38069.0,2,0
+66474,2020-04-17,Ramsey,North Dakota,38071.0,3,0
+66475,2020-04-17,Richland,North Dakota,38077.0,5,0
+66476,2020-04-17,Rolette,North Dakota,38079.0,1,0
+66477,2020-04-17,Sargent,North Dakota,38081.0,1,0
+66478,2020-04-17,Sioux,North Dakota,38085.0,1,0
+66479,2020-04-17,Slope,North Dakota,38087.0,3,0
+66480,2020-04-17,Stark,North Dakota,38089.0,39,2
+66481,2020-04-17,Stutsman,North Dakota,38093.0,1,0
+66482,2020-04-17,Unknown,North Dakota,,1,0
+66483,2020-04-17,Walsh,North Dakota,38099.0,3,0
+66484,2020-04-17,Ward,North Dakota,38101.0,20,1
+66485,2020-04-17,Williams,North Dakota,38105.0,9,0
+66486,2020-04-17,Unknown,Northern Mariana Islands,,11,2
+66487,2020-04-17,Adams,Ohio,39001.0,3,0
+66488,2020-04-17,Allen,Ohio,39003.0,65,9
+66489,2020-04-17,Ashland,Ohio,39005.0,5,0
+66490,2020-04-17,Ashtabula,Ohio,39007.0,54,4
+66491,2020-04-17,Athens,Ohio,39009.0,3,1
+66492,2020-04-17,Auglaize,Ohio,39011.0,21,1
+66493,2020-04-17,Belmont,Ohio,39013.0,63,3
+66494,2020-04-17,Brown,Ohio,39015.0,8,1
+66495,2020-04-17,Butler,Ohio,39017.0,155,2
+66496,2020-04-17,Carroll,Ohio,39019.0,15,0
+66497,2020-04-17,Champaign,Ohio,39021.0,6,1
+66498,2020-04-17,Clark,Ohio,39023.0,25,0
+66499,2020-04-17,Clermont,Ohio,39025.0,66,1
+66500,2020-04-17,Clinton,Ohio,39027.0,26,0
+66501,2020-04-17,Columbiana,Ohio,39029.0,154,11
+66502,2020-04-17,Coshocton,Ohio,39031.0,16,0
+66503,2020-04-17,Crawford,Ohio,39033.0,28,0
+66504,2020-04-17,Cuyahoga,Ohio,39035.0,1383,48
+66505,2020-04-17,Darke,Ohio,39037.0,55,10
+66506,2020-04-17,Defiance,Ohio,39039.0,13,0
+66507,2020-04-17,Delaware,Ohio,39041.0,119,3
+66508,2020-04-17,Erie,Ohio,39043.0,23,1
+66509,2020-04-17,Fairfield,Ohio,39045.0,95,2
+66510,2020-04-17,Fayette,Ohio,39047.0,12,0
+66511,2020-04-17,Franklin,Ohio,39049.0,1320,22
+66512,2020-04-17,Fulton,Ohio,39051.0,13,0
+66513,2020-04-17,Gallia,Ohio,39053.0,6,1
+66514,2020-04-17,Geauga,Ohio,39055.0,96,4
+66515,2020-04-17,Greene,Ohio,39057.0,33,2
+66516,2020-04-17,Guernsey,Ohio,39059.0,10,0
+66517,2020-04-17,Hamilton,Ohio,39061.0,658,30
+66518,2020-04-17,Hancock,Ohio,39063.0,27,1
+66519,2020-04-17,Hardin,Ohio,39065.0,13,0
+66520,2020-04-17,Harrison,Ohio,39067.0,2,0
+66521,2020-04-17,Henry,Ohio,39069.0,3,0
+66522,2020-04-17,Highland,Ohio,39071.0,7,0
+66523,2020-04-17,Hocking,Ohio,39073.0,4,0
+66524,2020-04-17,Holmes,Ohio,39075.0,3,0
+66525,2020-04-17,Huron,Ohio,39077.0,16,1
+66526,2020-04-17,Jackson,Ohio,39079.0,3,0
+66527,2020-04-17,Jefferson,Ohio,39081.0,24,0
+66528,2020-04-17,Knox,Ohio,39083.0,11,1
+66529,2020-04-17,Lake,Ohio,39085.0,130,6
+66530,2020-04-17,Lawrence,Ohio,39087.0,20,0
+66531,2020-04-17,Licking,Ohio,39089.0,94,4
+66532,2020-04-17,Logan,Ohio,39091.0,12,0
+66533,2020-04-17,Lorain,Ohio,39093.0,245,14
+66534,2020-04-17,Lucas,Ohio,39095.0,682,28
+66535,2020-04-17,Madison,Ohio,39097.0,27,3
+66536,2020-04-17,Mahoning,Ohio,39099.0,547,44
+66537,2020-04-17,Marion,Ohio,39101.0,428,1
+66538,2020-04-17,Medina,Ohio,39103.0,130,10
+66539,2020-04-17,Meigs,Ohio,39105.0,2,0
+66540,2020-04-17,Mercer,Ohio,39107.0,13,1
+66541,2020-04-17,Miami,Ohio,39109.0,129,22
+66542,2020-04-17,Monroe,Ohio,39111.0,2,0
+66543,2020-04-17,Montgomery,Ohio,39113.0,222,8
+66544,2020-04-17,Morgan,Ohio,39115.0,3,0
+66545,2020-04-17,Morrow,Ohio,39117.0,16,0
+66546,2020-04-17,Muskingum,Ohio,39119.0,8,0
+66547,2020-04-17,Noble,Ohio,39121.0,3,0
+66548,2020-04-17,Ottawa,Ohio,39123.0,21,0
+66549,2020-04-17,Paulding,Ohio,39125.0,5,0
+66550,2020-04-17,Perry,Ohio,39127.0,8,0
+66551,2020-04-17,Pickaway,Ohio,39129.0,253,4
+66552,2020-04-17,Pike,Ohio,39131.0,1,0
+66553,2020-04-17,Portage,Ohio,39133.0,166,24
+66554,2020-04-17,Preble,Ohio,39135.0,21,1
+66555,2020-04-17,Putnam,Ohio,39137.0,13,0
+66556,2020-04-17,Richland,Ohio,39139.0,50,1
+66557,2020-04-17,Ross,Ohio,39141.0,28,0
+66558,2020-04-17,Sandusky,Ohio,39143.0,16,2
+66559,2020-04-17,Scioto,Ohio,39145.0,5,0
+66560,2020-04-17,Seneca,Ohio,39147.0,11,1
+66561,2020-04-17,Shelby,Ohio,39149.0,28,0
+66562,2020-04-17,Stark,Ohio,39151.0,210,22
+66563,2020-04-17,Summit,Ohio,39153.0,323,17
+66564,2020-04-17,Trumbull,Ohio,39155.0,213,15
+66565,2020-04-17,Tuscarawas,Ohio,39157.0,31,0
+66566,2020-04-17,Union,Ohio,39159.0,12,0
+66567,2020-04-17,Van Wert,Ohio,39161.0,2,0
+66568,2020-04-17,Warren,Ohio,39165.0,93,5
+66569,2020-04-17,Washington,Ohio,39167.0,55,5
+66570,2020-04-17,Wayne,Ohio,39169.0,72,11
+66571,2020-04-17,Williams,Ohio,39171.0,6,1
+66572,2020-04-17,Wood,Ohio,39173.0,73,6
+66573,2020-04-17,Wyandot,Ohio,39175.0,16,2
+66574,2020-04-17,Adair,Oklahoma,40001.0,38,3
+66575,2020-04-17,Alfalfa,Oklahoma,40003.0,1,0
+66576,2020-04-17,Atoka,Oklahoma,40005.0,1,0
+66577,2020-04-17,Beaver,Oklahoma,40007.0,1,0
+66578,2020-04-17,Beckham,Oklahoma,40009.0,2,0
+66579,2020-04-17,Bryan,Oklahoma,40013.0,5,0
+66580,2020-04-17,Caddo,Oklahoma,40015.0,51,2
+66581,2020-04-17,Canadian,Oklahoma,40017.0,69,3
+66582,2020-04-17,Carter,Oklahoma,40019.0,1,0
+66583,2020-04-17,Cherokee,Oklahoma,40021.0,24,1
+66584,2020-04-17,Choctaw,Oklahoma,40023.0,3,0
+66585,2020-04-17,Cleveland,Oklahoma,40027.0,306,21
+66586,2020-04-17,Comanche,Oklahoma,40031.0,65,0
+66587,2020-04-17,Cotton,Oklahoma,40033.0,5,0
+66588,2020-04-17,Craig,Oklahoma,40035.0,7,0
+66589,2020-04-17,Creek,Oklahoma,40037.0,62,4
+66590,2020-04-17,Custer,Oklahoma,40039.0,7,0
+66591,2020-04-17,Delaware,Oklahoma,40041.0,76,4
+66592,2020-04-17,Dewey,Oklahoma,40043.0,2,0
+66593,2020-04-17,Garfield,Oklahoma,40047.0,9,1
+66594,2020-04-17,Garvin,Oklahoma,40049.0,10,0
+66595,2020-04-17,Grady,Oklahoma,40051.0,19,1
+66596,2020-04-17,Grant,Oklahoma,40053.0,2,0
+66597,2020-04-17,Greer,Oklahoma,40055.0,54,5
+66598,2020-04-17,Haskell,Oklahoma,40061.0,1,0
+66599,2020-04-17,Jackson,Oklahoma,40065.0,6,0
+66600,2020-04-17,Jefferson,Oklahoma,40067.0,1,0
+66601,2020-04-17,Johnston,Oklahoma,40069.0,3,0
+66602,2020-04-17,Kay,Oklahoma,40071.0,46,4
+66603,2020-04-17,Kingfisher,Oklahoma,40073.0,6,0
+66604,2020-04-17,Kiowa,Oklahoma,40075.0,2,0
+66605,2020-04-17,Latimer,Oklahoma,40077.0,4,1
+66606,2020-04-17,Le Flore,Oklahoma,40079.0,6,0
+66607,2020-04-17,Lincoln,Oklahoma,40081.0,11,0
+66608,2020-04-17,Logan,Oklahoma,40083.0,9,0
+66609,2020-04-17,Love,Oklahoma,40085.0,2,0
+66610,2020-04-17,Major,Oklahoma,40093.0,2,1
+66611,2020-04-17,Marshall,Oklahoma,40095.0,1,0
+66612,2020-04-17,Mayes,Oklahoma,40097.0,19,3
+66613,2020-04-17,McClain,Oklahoma,40087.0,21,0
+66614,2020-04-17,McCurtain,Oklahoma,40089.0,7,0
+66615,2020-04-17,McIntosh,Oklahoma,40091.0,1,0
+66616,2020-04-17,Murray,Oklahoma,40099.0,1,0
+66617,2020-04-17,Muskogee,Oklahoma,40101.0,25,3
+66618,2020-04-17,Noble,Oklahoma,40103.0,6,0
+66619,2020-04-17,Nowata,Oklahoma,40105.0,11,0
+66620,2020-04-17,Okfuskee,Oklahoma,40107.0,1,0
+66621,2020-04-17,Oklahoma,Oklahoma,40109.0,520,22
+66622,2020-04-17,Okmulgee,Oklahoma,40111.0,15,0
+66623,2020-04-17,Osage,Oklahoma,40113.0,61,8
+66624,2020-04-17,Ottawa,Oklahoma,40115.0,26,0
+66625,2020-04-17,Pawnee,Oklahoma,40117.0,28,2
+66626,2020-04-17,Payne,Oklahoma,40119.0,36,0
+66627,2020-04-17,Pittsburg,Oklahoma,40121.0,15,1
+66628,2020-04-17,Pontotoc,Oklahoma,40123.0,10,1
+66629,2020-04-17,Pottawatomie,Oklahoma,40125.0,33,3
+66630,2020-04-17,Rogers,Oklahoma,40131.0,34,2
+66631,2020-04-17,Seminole,Oklahoma,40133.0,7,1
+66632,2020-04-17,Sequoyah,Oklahoma,40135.0,10,2
+66633,2020-04-17,Stephens,Oklahoma,40137.0,15,1
+66634,2020-04-17,Texas,Oklahoma,40139.0,9,1
+66635,2020-04-17,Tillman,Oklahoma,40141.0,2,0
+66636,2020-04-17,Tulsa,Oklahoma,40143.0,390,22
+66637,2020-04-17,Wagoner,Oklahoma,40145.0,107,7
+66638,2020-04-17,Washington,Oklahoma,40147.0,133,6
+66639,2020-04-17,Woods,Oklahoma,40151.0,1,0
+66640,2020-04-17,Woodward,Oklahoma,40153.0,1,0
+66641,2020-04-17,Benton,Oregon,41003.0,27,4
+66642,2020-04-17,Clackamas,Oregon,41005.0,153,4
+66643,2020-04-17,Clatsop,Oregon,41007.0,6,0
+66644,2020-04-17,Columbia,Oregon,41009.0,14,0
+66645,2020-04-17,Coos,Oregon,41011.0,1,0
+66646,2020-04-17,Crook,Oregon,41013.0,1,0
+66647,2020-04-17,Curry,Oregon,41015.0,3,0
+66648,2020-04-17,Deschutes,Oregon,41017.0,61,0
+66649,2020-04-17,Douglas,Oregon,41019.0,22,0
+66650,2020-04-17,Grant,Oregon,41023.0,1,0
+66651,2020-04-17,Hood River,Oregon,41027.0,4,0
+66652,2020-04-17,Jackson,Oregon,41029.0,48,0
+66653,2020-04-17,Jefferson,Oregon,41031.0,1,0
+66654,2020-04-17,Josephine,Oregon,41033.0,19,1
+66655,2020-04-17,Klamath,Oregon,41035.0,29,0
+66656,2020-04-17,Lane,Oregon,41039.0,46,1
+66657,2020-04-17,Lincoln,Oregon,41041.0,4,0
+66658,2020-04-17,Linn,Oregon,41043.0,57,6
+66659,2020-04-17,Malheur,Oregon,41045.0,5,0
+66660,2020-04-17,Marion,Oregon,41047.0,317,12
+66661,2020-04-17,Morrow,Oregon,41049.0,5,0
+66662,2020-04-17,Multnomah,Oregon,41051.0,467,28
+66663,2020-04-17,Polk,Oregon,41053.0,31,1
+66664,2020-04-17,Sherman,Oregon,41055.0,1,0
+66665,2020-04-17,Tillamook,Oregon,41057.0,6,0
+66666,2020-04-17,Umatilla,Oregon,41059.0,23,0
+66667,2020-04-17,Union,Oregon,41061.0,4,0
+66668,2020-04-17,Wallowa,Oregon,41063.0,1,0
+66669,2020-04-17,Wasco,Oregon,41065.0,10,0
+66670,2020-04-17,Washington,Oregon,41067.0,383,7
+66671,2020-04-17,Yamhill,Oregon,41071.0,35,6
+66672,2020-04-17,Adams,Pennsylvania,42001.0,70,1
+66673,2020-04-17,Allegheny,Pennsylvania,42003.0,947,43
+66674,2020-04-17,Armstrong,Pennsylvania,42005.0,32,2
+66675,2020-04-17,Beaver,Pennsylvania,42007.0,178,15
+66676,2020-04-17,Bedford,Pennsylvania,42009.0,13,1
+66677,2020-04-17,Berks,Pennsylvania,42011.0,1537,34
+66678,2020-04-17,Blair,Pennsylvania,42013.0,14,0
+66679,2020-04-17,Bradford,Pennsylvania,42015.0,20,0
+66680,2020-04-17,Bucks,Pennsylvania,42017.0,1689,77
+66681,2020-04-17,Butler,Pennsylvania,42019.0,157,5
+66682,2020-04-17,Cambria,Pennsylvania,42021.0,14,1
+66683,2020-04-17,Cameron,Pennsylvania,42023.0,1,0
+66684,2020-04-17,Carbon,Pennsylvania,42025.0,118,7
+66685,2020-04-17,Centre,Pennsylvania,42027.0,73,1
+66686,2020-04-17,Chester,Pennsylvania,42029.0,773,30
+66687,2020-04-17,Clarion,Pennsylvania,42031.0,18,0
+66688,2020-04-17,Clearfield,Pennsylvania,42033.0,9,0
+66689,2020-04-17,Clinton,Pennsylvania,42035.0,10,0
+66690,2020-04-17,Columbia,Pennsylvania,42037.0,166,3
+66691,2020-04-17,Crawford,Pennsylvania,42039.0,16,0
+66692,2020-04-17,Cumberland,Pennsylvania,42041.0,154,4
+66693,2020-04-17,Dauphin,Pennsylvania,42043.0,311,7
+66694,2020-04-17,Delaware,Pennsylvania,42045.0,2281,74
+66695,2020-04-17,Elk,Pennsylvania,42047.0,2,0
+66696,2020-04-17,Erie,Pennsylvania,42049.0,49,1
+66697,2020-04-17,Fayette,Pennsylvania,42051.0,66,3
+66698,2020-04-17,Forest,Pennsylvania,42053.0,7,0
+66699,2020-04-17,Franklin,Pennsylvania,42055.0,89,0
+66700,2020-04-17,Fulton,Pennsylvania,42057.0,2,0
+66701,2020-04-17,Greene,Pennsylvania,42059.0,24,0
+66702,2020-04-17,Huntingdon,Pennsylvania,42061.0,12,0
+66703,2020-04-17,Indiana,Pennsylvania,42063.0,45,3
+66704,2020-04-17,Jefferson,Pennsylvania,42065.0,2,0
+66705,2020-04-17,Juniata,Pennsylvania,42067.0,63,0
+66706,2020-04-17,Lackawanna,Pennsylvania,42069.0,592,30
+66707,2020-04-17,Lancaster,Pennsylvania,42071.0,1030,85
+66708,2020-04-17,Lawrence,Pennsylvania,42073.0,59,5
+66709,2020-04-17,Lebanon,Pennsylvania,42075.0,424,2
+66710,2020-04-17,Lehigh,Pennsylvania,42077.0,2092,29
+66711,2020-04-17,Luzerne,Pennsylvania,42079.0,1668,31
+66712,2020-04-17,Lycoming,Pennsylvania,42081.0,32,0
+66713,2020-04-17,McKean,Pennsylvania,42083.0,4,0
+66714,2020-04-17,Mercer,Pennsylvania,42085.0,56,1
+66715,2020-04-17,Mifflin,Pennsylvania,42087.0,17,0
+66716,2020-04-17,Monroe,Pennsylvania,42089.0,929,29
+66717,2020-04-17,Montgomery,Pennsylvania,42091.0,2684,135
+66718,2020-04-17,Montour,Pennsylvania,42093.0,48,0
+66719,2020-04-17,Northampton,Pennsylvania,42095.0,1335,27
+66720,2020-04-17,Northumberland,Pennsylvania,42097.0,60,0
+66721,2020-04-17,Perry,Pennsylvania,42099.0,18,1
+66722,2020-04-17,Philadelphia,Pennsylvania,42101.0,8563,298
+66723,2020-04-17,Pike,Pennsylvania,42103.0,290,8
+66724,2020-04-17,Potter,Pennsylvania,42105.0,4,0
+66725,2020-04-17,Schuylkill,Pennsylvania,42107.0,244,4
+66726,2020-04-17,Snyder,Pennsylvania,42109.0,25,1
+66727,2020-04-17,Somerset,Pennsylvania,42111.0,15,0
+66728,2020-04-17,Sullivan,Pennsylvania,42113.0,1,0
+66729,2020-04-17,Susquehanna,Pennsylvania,42115.0,58,1
+66730,2020-04-17,Tioga,Pennsylvania,42117.0,14,1
+66731,2020-04-17,Union,Pennsylvania,42119.0,26,0
+66732,2020-04-17,Venango,Pennsylvania,42121.0,6,0
+66733,2020-04-17,Warren,Pennsylvania,42123.0,1,0
+66734,2020-04-17,Washington,Pennsylvania,42125.0,75,1
+66735,2020-04-17,Wayne,Pennsylvania,42127.0,81,2
+66736,2020-04-17,Westmoreland,Pennsylvania,42129.0,249,19
+66737,2020-04-17,Wyoming,Pennsylvania,42131.0,16,1
+66738,2020-04-17,York,Pennsylvania,42133.0,443,4
+66739,2020-04-17,Unknown,Puerto Rico,,1068,58
+66740,2020-04-17,Bristol,Rhode Island,44001.0,57,0
+66741,2020-04-17,Kent,Rhode Island,44003.0,299,0
+66742,2020-04-17,Newport,Rhode Island,44005.0,103,0
+66743,2020-04-17,Providence,Rhode Island,44007.0,2703,20
+66744,2020-04-17,Unknown,Rhode Island,,832,98
+66745,2020-04-17,Washington,Rhode Island,44009.0,183,0
+66746,2020-04-17,Abbeville,South Carolina,45001.0,10,0
+66747,2020-04-17,Aiken,South Carolina,45003.0,66,3
+66748,2020-04-17,Allendale,South Carolina,45005.0,6,0
+66749,2020-04-17,Anderson,South Carolina,45007.0,127,5
+66750,2020-04-17,Bamberg,South Carolina,45009.0,7,0
+66751,2020-04-17,Barnwell,South Carolina,45011.0,5,0
+66752,2020-04-17,Beaufort,South Carolina,45013.0,214,6
+66753,2020-04-17,Berkeley,South Carolina,45015.0,123,3
+66754,2020-04-17,Calhoun,South Carolina,45017.0,6,1
+66755,2020-04-17,Charleston,South Carolina,45019.0,385,3
+66756,2020-04-17,Cherokee,South Carolina,45021.0,13,0
+66757,2020-04-17,Chester,South Carolina,45023.0,23,0
+66758,2020-04-17,Chesterfield,South Carolina,45025.0,31,0
+66759,2020-04-17,Clarendon,South Carolina,45027.0,106,6
+66760,2020-04-17,Colleton,South Carolina,45029.0,21,1
+66761,2020-04-17,Darlington,South Carolina,45031.0,52,0
+66762,2020-04-17,Dillon,South Carolina,45033.0,11,0
+66763,2020-04-17,Dorchester,South Carolina,45035.0,83,1
+66764,2020-04-17,Edgefield,South Carolina,45037.0,10,0
+66765,2020-04-17,Fairfield,South Carolina,45039.0,25,0
+66766,2020-04-17,Florence,South Carolina,45041.0,121,8
+66767,2020-04-17,Georgetown,South Carolina,45043.0,34,2
+66768,2020-04-17,Greenville,South Carolina,45045.0,447,11
+66769,2020-04-17,Greenwood,South Carolina,45047.0,32,0
+66770,2020-04-17,Hampton,South Carolina,45049.0,18,0
+66771,2020-04-17,Horry,South Carolina,45051.0,167,10
+66772,2020-04-17,Jasper,South Carolina,45053.0,15,0
+66773,2020-04-17,Kershaw,South Carolina,45055.0,190,8
+66774,2020-04-17,Lancaster,South Carolina,45057.0,73,2
+66775,2020-04-17,Laurens,South Carolina,45059.0,19,1
+66776,2020-04-17,Lee,South Carolina,45061.0,40,5
+66777,2020-04-17,Lexington,South Carolina,45063.0,254,9
+66778,2020-04-17,Marion,South Carolina,45067.0,14,1
+66779,2020-04-17,Marlboro,South Carolina,45069.0,25,0
+66780,2020-04-17,McCormick,South Carolina,45065.0,5,1
+66781,2020-04-17,Newberry,South Carolina,45071.0,23,1
+66782,2020-04-17,Oconee,South Carolina,45073.0,14,0
+66783,2020-04-17,Orangeburg,South Carolina,45075.0,41,0
+66784,2020-04-17,Pickens,South Carolina,45077.0,36,0
+66785,2020-04-17,Richland,South Carolina,45079.0,612,14
+66786,2020-04-17,Saluda,South Carolina,45081.0,9,0
+66787,2020-04-17,Spartanburg,South Carolina,45083.0,204,5
+66788,2020-04-17,Sumter,South Carolina,45085.0,176,6
+66789,2020-04-17,Union,South Carolina,45087.0,23,0
+66790,2020-04-17,Williamsburg,South Carolina,45089.0,19,0
+66791,2020-04-17,York,South Carolina,45091.0,151,3
+66792,2020-04-17,Aurora,South Dakota,46003.0,1,0
+66793,2020-04-17,Beadle,South Dakota,46005.0,21,2
+66794,2020-04-17,Bon Homme,South Dakota,46009.0,4,0
+66795,2020-04-17,Brookings,South Dakota,46011.0,9,0
+66796,2020-04-17,Brown,South Dakota,46013.0,17,0
+66797,2020-04-17,Brule,South Dakota,46015.0,1,0
+66798,2020-04-17,Charles Mix,South Dakota,46023.0,4,0
+66799,2020-04-17,Clark,South Dakota,46025.0,1,0
+66800,2020-04-17,Clay,South Dakota,46027.0,5,0
+66801,2020-04-17,Codington,South Dakota,46029.0,13,0
+66802,2020-04-17,Corson,South Dakota,46031.0,1,0
+66803,2020-04-17,Davison,South Dakota,46035.0,3,1
+66804,2020-04-17,Deuel,South Dakota,46039.0,1,0
+66805,2020-04-17,Fall River,South Dakota,46047.0,1,0
+66806,2020-04-17,Faulk,South Dakota,46049.0,1,0
+66807,2020-04-17,Hamlin,South Dakota,46057.0,2,0
+66808,2020-04-17,Hughes,South Dakota,46065.0,5,0
+66809,2020-04-17,Hutchinson,South Dakota,46067.0,2,0
+66810,2020-04-17,Hyde,South Dakota,46069.0,1,0
+66811,2020-04-17,Jerauld,South Dakota,46073.0,4,0
+66812,2020-04-17,Lake,South Dakota,46079.0,3,0
+66813,2020-04-17,Lawrence,South Dakota,46081.0,9,0
+66814,2020-04-17,Lincoln,South Dakota,46083.0,77,0
+66815,2020-04-17,Lyman,South Dakota,46085.0,2,0
+66816,2020-04-17,Marshall,South Dakota,46091.0,1,0
+66817,2020-04-17,McCook,South Dakota,46087.0,3,1
+66818,2020-04-17,Meade,South Dakota,46093.0,1,0
+66819,2020-04-17,Miner,South Dakota,46097.0,1,0
+66820,2020-04-17,Minnehaha,South Dakota,46099.0,1157,3
+66821,2020-04-17,Moody,South Dakota,46101.0,1,0
+66822,2020-04-17,Oglala Lakota,South Dakota,46102.0,1,0
+66823,2020-04-17,Pennington,South Dakota,46103.0,10,0
+66824,2020-04-17,Roberts,South Dakota,46109.0,4,0
+66825,2020-04-17,Sanborn,South Dakota,46111.0,3,0
+66826,2020-04-17,Spink,South Dakota,46115.0,3,0
+66827,2020-04-17,Sully,South Dakota,46119.0,1,0
+66828,2020-04-17,Todd,South Dakota,46121.0,1,0
+66829,2020-04-17,Turner,South Dakota,46125.0,5,0
+66830,2020-04-17,Union,South Dakota,46127.0,4,0
+66831,2020-04-17,Walworth,South Dakota,46129.0,5,0
+66832,2020-04-17,Yankton,South Dakota,46135.0,23,0
+66833,2020-04-17,Anderson,Tennessee,47001.0,15,1
+66834,2020-04-17,Bedford,Tennessee,47003.0,48,2
+66835,2020-04-17,Benton,Tennessee,47005.0,4,0
+66836,2020-04-17,Bledsoe,Tennessee,47007.0,8,0
+66837,2020-04-17,Blount,Tennessee,47009.0,46,3
+66838,2020-04-17,Bradley,Tennessee,47011.0,38,1
+66839,2020-04-17,Campbell,Tennessee,47013.0,13,1
+66840,2020-04-17,Cannon,Tennessee,47015.0,9,0
+66841,2020-04-17,Carroll,Tennessee,47017.0,13,0
+66842,2020-04-17,Carter,Tennessee,47019.0,5,1
+66843,2020-04-17,Cheatham,Tennessee,47021.0,21,0
+66844,2020-04-17,Chester,Tennessee,47023.0,6,0
+66845,2020-04-17,Claiborne,Tennessee,47025.0,5,0
+66846,2020-04-17,Clay,Tennessee,47027.0,5,0
+66847,2020-04-17,Cocke,Tennessee,47029.0,11,0
+66848,2020-04-17,Coffee,Tennessee,47031.0,18,0
+66849,2020-04-17,Cumberland,Tennessee,47035.0,56,0
+66850,2020-04-17,Davidson,Tennessee,47037.0,1597,20
+66851,2020-04-17,DeKalb,Tennessee,47041.0,10,0
+66852,2020-04-17,Decatur,Tennessee,47039.0,5,0
+66853,2020-04-17,Dickson,Tennessee,47043.0,42,0
+66854,2020-04-17,Dyer,Tennessee,47045.0,24,0
+66855,2020-04-17,Fayette,Tennessee,47047.0,44,1
+66856,2020-04-17,Fentress,Tennessee,47049.0,4,0
+66857,2020-04-17,Franklin,Tennessee,47051.0,23,1
+66858,2020-04-17,Gibson,Tennessee,47053.0,27,0
+66859,2020-04-17,Giles,Tennessee,47055.0,5,0
+66860,2020-04-17,Grainger,Tennessee,47057.0,4,0
+66861,2020-04-17,Greene,Tennessee,47059.0,30,2
+66862,2020-04-17,Grundy,Tennessee,47061.0,25,1
+66863,2020-04-17,Hamblen,Tennessee,47063.0,7,1
+66864,2020-04-17,Hamilton,Tennessee,47065.0,115,12
+66865,2020-04-17,Hardeman,Tennessee,47069.0,7,0
+66866,2020-04-17,Hardin,Tennessee,47071.0,4,0
+66867,2020-04-17,Hawkins,Tennessee,47073.0,27,2
+66868,2020-04-17,Haywood,Tennessee,47075.0,12,1
+66869,2020-04-17,Henderson,Tennessee,47077.0,2,0
+66870,2020-04-17,Henry,Tennessee,47079.0,9,0
+66871,2020-04-17,Hickman,Tennessee,47081.0,2,0
+66872,2020-04-17,Houston,Tennessee,47083.0,4,0
+66873,2020-04-17,Humphreys,Tennessee,47085.0,4,0
+66874,2020-04-17,Jackson,Tennessee,47087.0,6,0
+66875,2020-04-17,Jefferson,Tennessee,47089.0,14,0
+66876,2020-04-17,Johnson,Tennessee,47091.0,2,0
+66877,2020-04-17,Knox,Tennessee,47093.0,194,4
+66878,2020-04-17,Lake,Tennessee,47095.0,4,0
+66879,2020-04-17,Lauderdale,Tennessee,47097.0,13,0
+66880,2020-04-17,Lawrence,Tennessee,47099.0,15,0
+66881,2020-04-17,Lewis,Tennessee,47101.0,2,0
+66882,2020-04-17,Lincoln,Tennessee,47103.0,9,0
+66883,2020-04-17,Loudon,Tennessee,47105.0,21,0
+66884,2020-04-17,Macon,Tennessee,47111.0,46,7
+66885,2020-04-17,Madison,Tennessee,47113.0,83,0
+66886,2020-04-17,Marion,Tennessee,47115.0,28,1
+66887,2020-04-17,Marshall,Tennessee,47117.0,13,1
+66888,2020-04-17,Maury,Tennessee,47119.0,34,1
+66889,2020-04-17,McMinn,Tennessee,47107.0,6,0
+66890,2020-04-17,McNairy,Tennessee,47109.0,9,0
+66891,2020-04-17,Meigs,Tennessee,47121.0,3,0
+66892,2020-04-17,Monroe,Tennessee,47123.0,10,1
+66893,2020-04-17,Montgomery,Tennessee,47125.0,108,2
+66894,2020-04-17,Moore,Tennessee,47127.0,1,0
+66895,2020-04-17,Morgan,Tennessee,47129.0,5,0
+66896,2020-04-17,Obion,Tennessee,47131.0,9,1
+66897,2020-04-17,Overton,Tennessee,47133.0,7,0
+66898,2020-04-17,Perry,Tennessee,47135.0,6,0
+66899,2020-04-17,Polk,Tennessee,47139.0,5,0
+66900,2020-04-17,Putnam,Tennessee,47141.0,94,2
+66901,2020-04-17,Rhea,Tennessee,47143.0,1,0
+66902,2020-04-17,Roane,Tennessee,47145.0,8,0
+66903,2020-04-17,Robertson,Tennessee,47147.0,105,0
+66904,2020-04-17,Rutherford,Tennessee,47149.0,295,6
+66905,2020-04-17,Scott,Tennessee,47151.0,11,0
+66906,2020-04-17,Sequatchie,Tennessee,47153.0,3,0
+66907,2020-04-17,Sevier,Tennessee,47155.0,24,1
+66908,2020-04-17,Shelby,Tennessee,47157.0,1682,35
+66909,2020-04-17,Smith,Tennessee,47159.0,12,1
+66910,2020-04-17,Stewart,Tennessee,47161.0,5,0
+66911,2020-04-17,Sullivan,Tennessee,47163.0,45,1
+66912,2020-04-17,Sumner,Tennessee,47165.0,497,29
+66913,2020-04-17,Tipton,Tennessee,47167.0,55,0
+66914,2020-04-17,Trousdale,Tennessee,47169.0,20,1
+66915,2020-04-17,Unicoi,Tennessee,47171.0,1,0
+66916,2020-04-17,Union,Tennessee,47173.0,3,0
+66917,2020-04-17,Van Buren,Tennessee,47175.0,1,0
+66918,2020-04-17,Warren,Tennessee,47177.0,4,0
+66919,2020-04-17,Washington,Tennessee,47179.0,46,0
+66920,2020-04-17,Wayne,Tennessee,47181.0,2,0
+66921,2020-04-17,Weakley,Tennessee,47183.0,6,0
+66922,2020-04-17,White,Tennessee,47185.0,4,0
+66923,2020-04-17,Williamson,Tennessee,47187.0,336,5
+66924,2020-04-17,Wilson,Tennessee,47189.0,171,1
+66925,2020-04-17,Anderson,Texas,48001.0,6,0
+66926,2020-04-17,Andrews,Texas,48003.0,19,0
+66927,2020-04-17,Angelina,Texas,48005.0,23,0
+66928,2020-04-17,Aransas,Texas,48007.0,2,0
+66929,2020-04-17,Armstrong,Texas,48011.0,1,0
+66930,2020-04-17,Atascosa,Texas,48013.0,9,0
+66931,2020-04-17,Austin,Texas,48015.0,12,0
+66932,2020-04-17,Bandera,Texas,48019.0,4,0
+66933,2020-04-17,Bastrop,Texas,48021.0,44,2
+66934,2020-04-17,Bee,Texas,48025.0,5,0
+66935,2020-04-17,Bell,Texas,48027.0,124,3
+66936,2020-04-17,Bexar,Texas,48029.0,970,37
+66937,2020-04-17,Blanco,Texas,48031.0,5,0
+66938,2020-04-17,Bosque,Texas,48035.0,1,0
+66939,2020-04-17,Bowie,Texas,48037.0,76,5
+66940,2020-04-17,Brazoria,Texas,48039.0,302,3
+66941,2020-04-17,Brazos,Texas,48041.0,164,15
+66942,2020-04-17,Brown,Texas,48049.0,12,1
+66943,2020-04-17,Burleson,Texas,48051.0,9,0
+66944,2020-04-17,Burnet,Texas,48053.0,8,0
+66945,2020-04-17,Caldwell,Texas,48055.0,7,0
+66946,2020-04-17,Calhoun,Texas,48057.0,21,0
+66947,2020-04-17,Callahan,Texas,48059.0,1,0
+66948,2020-04-17,Cameron,Texas,48061.0,279,5
+66949,2020-04-17,Camp,Texas,48063.0,6,0
+66950,2020-04-17,Cass,Texas,48067.0,8,2
+66951,2020-04-17,Castro,Texas,48069.0,11,1
+66952,2020-04-17,Chambers,Texas,48071.0,35,0
+66953,2020-04-17,Cherokee,Texas,48073.0,8,1
+66954,2020-04-17,Clay,Texas,48077.0,3,0
+66955,2020-04-17,Collin,Texas,48085.0,521,12
+66956,2020-04-17,Colorado,Texas,48089.0,7,0
+66957,2020-04-17,Comal,Texas,48091.0,43,6
+66958,2020-04-17,Comanche,Texas,48093.0,3,0
+66959,2020-04-17,Concho,Texas,48095.0,1,0
+66960,2020-04-17,Cooke,Texas,48097.0,2,0
+66961,2020-04-17,Coryell,Texas,48099.0,71,1
+66962,2020-04-17,Crane,Texas,48103.0,2,0
+66963,2020-04-17,Crosby,Texas,48107.0,1,1
+66964,2020-04-17,Dallam,Texas,48111.0,3,0
+66965,2020-04-17,Dallas,Texas,48113.0,2190,55
+66966,2020-04-17,Dawson,Texas,48115.0,12,1
+66967,2020-04-17,DeWitt,Texas,48123.0,10,0
+66968,2020-04-17,Deaf Smith,Texas,48117.0,11,0
+66969,2020-04-17,Delta,Texas,48119.0,1,0
+66970,2020-04-17,Denton,Texas,48121.0,585,15
+66971,2020-04-17,Dickens,Texas,48125.0,1,0
+66972,2020-04-17,Dimmit,Texas,48127.0,1,0
+66973,2020-04-17,Donley,Texas,48129.0,23,0
+66974,2020-04-17,Duval,Texas,48131.0,1,0
+66975,2020-04-17,Eastland,Texas,48133.0,3,0
+66976,2020-04-17,Ector,Texas,48135.0,58,4
+66977,2020-04-17,El Paso,Texas,48141.0,482,7
+66978,2020-04-17,Ellis,Texas,48139.0,94,3
+66979,2020-04-17,Erath,Texas,48143.0,12,1
+66980,2020-04-17,Falls,Texas,48145.0,1,0
+66981,2020-04-17,Fannin,Texas,48147.0,5,0
+66982,2020-04-17,Fayette,Texas,48149.0,15,0
+66983,2020-04-17,Floyd,Texas,48153.0,2,0
+66984,2020-04-17,Fort Bend,Texas,48157.0,695,17
+66985,2020-04-17,Franklin,Texas,48159.0,1,0
+66986,2020-04-17,Freestone,Texas,48161.0,1,0
+66987,2020-04-17,Frio,Texas,48163.0,1,0
+66988,2020-04-17,Gaines,Texas,48165.0,2,0
+66989,2020-04-17,Galveston,Texas,48167.0,438,14
+66990,2020-04-17,Gillespie,Texas,48171.0,2,0
+66991,2020-04-17,Goliad,Texas,48175.0,5,0
+66992,2020-04-17,Gonzales,Texas,48177.0,2,0
+66993,2020-04-17,Gray,Texas,48179.0,19,0
+66994,2020-04-17,Grayson,Texas,48181.0,19,0
+66995,2020-04-17,Gregg,Texas,48183.0,48,0
+66996,2020-04-17,Grimes,Texas,48185.0,10,1
+66997,2020-04-17,Guadalupe,Texas,48187.0,53,0
+66998,2020-04-17,Hale,Texas,48189.0,11,2
+66999,2020-04-17,Hamilton,Texas,48193.0,5,0
+67000,2020-04-17,Hansford,Texas,48195.0,1,0
+67001,2020-04-17,Hardin,Texas,48199.0,75,2
+67002,2020-04-17,Harris,Texas,48201.0,4460,67
+67003,2020-04-17,Harrison,Texas,48203.0,40,2
+67004,2020-04-17,Hays,Texas,48209.0,121,1
+67005,2020-04-17,Hemphill,Texas,48211.0,1,0
+67006,2020-04-17,Henderson,Texas,48213.0,12,0
+67007,2020-04-17,Hidalgo,Texas,48215.0,242,3
+67008,2020-04-17,Hill,Texas,48217.0,10,1
+67009,2020-04-17,Hockley,Texas,48219.0,15,1
+67010,2020-04-17,Hood,Texas,48221.0,17,3
+67011,2020-04-17,Hopkins,Texas,48223.0,4,0
+67012,2020-04-17,Howard,Texas,48227.0,1,1
+67013,2020-04-17,Hunt,Texas,48231.0,25,2
+67014,2020-04-17,Hutchinson,Texas,48233.0,6,0
+67015,2020-04-17,Jack,Texas,48237.0,4,0
+67016,2020-04-17,Jackson,Texas,48239.0,4,0
+67017,2020-04-17,Jasper,Texas,48241.0,7,1
+67018,2020-04-17,Jefferson,Texas,48245.0,157,7
+67019,2020-04-17,Jim Wells,Texas,48249.0,2,0
+67020,2020-04-17,Johnson,Texas,48251.0,44,1
+67021,2020-04-17,Jones,Texas,48253.0,3,0
+67022,2020-04-17,Karnes,Texas,48255.0,3,0
+67023,2020-04-17,Kaufman,Texas,48257.0,38,0
+67024,2020-04-17,Kendall,Texas,48259.0,14,0
+67025,2020-04-17,Kerr,Texas,48265.0,4,0
+67026,2020-04-17,Kleberg,Texas,48273.0,5,1
+67027,2020-04-17,Knox,Texas,48275.0,1,0
+67028,2020-04-17,La Salle,Texas,48283.0,1,0
+67029,2020-04-17,Lamar,Texas,48277.0,8,0
+67030,2020-04-17,Lamb,Texas,48279.0,2,0
+67031,2020-04-17,Lampasas,Texas,48281.0,3,0
+67032,2020-04-17,Lavaca,Texas,48285.0,4,0
+67033,2020-04-17,Lee,Texas,48287.0,2,0
+67034,2020-04-17,Leon,Texas,48289.0,5,0
+67035,2020-04-17,Liberty,Texas,48291.0,25,0
+67036,2020-04-17,Limestone,Texas,48293.0,11,1
+67037,2020-04-17,Live Oak,Texas,48297.0,3,0
+67038,2020-04-17,Llano,Texas,48299.0,3,0
+67039,2020-04-17,Lubbock,Texas,48303.0,407,28
+67040,2020-04-17,Lynn,Texas,48305.0,5,0
+67041,2020-04-17,Madison,Texas,48313.0,1,0
+67042,2020-04-17,Marion,Texas,48315.0,3,0
+67043,2020-04-17,Martin,Texas,48317.0,2,0
+67044,2020-04-17,Mason,Texas,48319.0,1,0
+67045,2020-04-17,Matagorda,Texas,48321.0,51,3
+67046,2020-04-17,Maverick,Texas,48323.0,12,0
+67047,2020-04-17,McCulloch,Texas,48307.0,3,0
+67048,2020-04-17,McLennan,Texas,48309.0,76,4
+67049,2020-04-17,Medina,Texas,48325.0,15,2
+67050,2020-04-17,Midland,Texas,48329.0,42,3
+67051,2020-04-17,Milam,Texas,48331.0,9,0
+67052,2020-04-17,Mitchell,Texas,48335.0,1,0
+67053,2020-04-17,Montague,Texas,48337.0,5,0
+67054,2020-04-17,Montgomery,Texas,48339.0,370,7
+67055,2020-04-17,Moore,Texas,48341.0,75,0
+67056,2020-04-17,Morris,Texas,48343.0,4,0
+67057,2020-04-17,Motley,Texas,48345.0,1,0
+67058,2020-04-17,Nacogdoches,Texas,48347.0,75,6
+67059,2020-04-17,Navarro,Texas,48349.0,20,2
+67060,2020-04-17,Newton,Texas,48351.0,2,0
+67061,2020-04-17,Nueces,Texas,48355.0,89,0
+67062,2020-04-17,Oldham,Texas,48359.0,3,1
+67063,2020-04-17,Orange,Texas,48361.0,48,0
+67064,2020-04-17,Palo Pinto,Texas,48363.0,6,1
+67065,2020-04-17,Panola,Texas,48365.0,35,1
+67066,2020-04-17,Parker,Texas,48367.0,20,0
+67067,2020-04-17,Pecos,Texas,48371.0,5,0
+67068,2020-04-17,Polk,Texas,48373.0,14,0
+67069,2020-04-17,Potter,Texas,48375.0,101,2
+67070,2020-04-17,Rains,Texas,48379.0,2,0
+67071,2020-04-17,Randall,Texas,48381.0,93,2
+67072,2020-04-17,Red River,Texas,48387.0,1,0
+67073,2020-04-17,Roberts,Texas,48393.0,2,0
+67074,2020-04-17,Robertson,Texas,48395.0,2,0
+67075,2020-04-17,Rockwall,Texas,48397.0,32,0
+67076,2020-04-17,Rusk,Texas,48401.0,25,1
+67077,2020-04-17,Sabine,Texas,48403.0,1,0
+67078,2020-04-17,San Augustine,Texas,48405.0,14,1
+67079,2020-04-17,San Jacinto,Texas,48407.0,10,0
+67080,2020-04-17,San Patricio,Texas,48409.0,8,0
+67081,2020-04-17,Scurry,Texas,48415.0,2,0
+67082,2020-04-17,Shelby,Texas,48419.0,53,0
+67083,2020-04-17,Sherman,Texas,48421.0,6,0
+67084,2020-04-17,Smith,Texas,48423.0,116,2
+67085,2020-04-17,Starr,Texas,48427.0,7,0
+67086,2020-04-17,Stephens,Texas,48429.0,1,0
+67087,2020-04-17,Swisher,Texas,48437.0,4,0
+67088,2020-04-17,Tarrant,Texas,48439.0,1175,35
+67089,2020-04-17,Taylor,Texas,48441.0,89,2
+67090,2020-04-17,Terry,Texas,48445.0,10,0
+67091,2020-04-17,Titus,Texas,48449.0,8,0
+67092,2020-04-17,Tom Green,Texas,48451.0,41,1
+67093,2020-04-17,Travis,Texas,48453.0,1074,21
+67094,2020-04-17,Trinity,Texas,48455.0,7,0
+67095,2020-04-17,Tyler,Texas,48457.0,4,0
+67096,2020-04-17,Upshur,Texas,48459.0,9,0
+67097,2020-04-17,Uvalde,Texas,48463.0,7,0
+67098,2020-04-17,Val Verde,Texas,48465.0,12,0
+67099,2020-04-17,Van Zandt,Texas,48467.0,11,1
+67100,2020-04-17,Victoria,Texas,48469.0,89,1
+67101,2020-04-17,Walker,Texas,48471.0,67,0
+67102,2020-04-17,Waller,Texas,48473.0,23,0
+67103,2020-04-17,Washington,Texas,48477.0,47,4
+67104,2020-04-17,Webb,Texas,48479.0,253,11
+67105,2020-04-17,Wharton,Texas,48481.0,34,0
+67106,2020-04-17,Wichita,Texas,48485.0,58,1
+67107,2020-04-17,Wilbarger,Texas,48487.0,1,0
+67108,2020-04-17,Willacy,Texas,48489.0,7,1
+67109,2020-04-17,Williamson,Texas,48491.0,146,4
+67110,2020-04-17,Wilson,Texas,48493.0,19,1
+67111,2020-04-17,Winkler,Texas,48495.0,3,0
+67112,2020-04-17,Wise,Texas,48497.0,8,2
+67113,2020-04-17,Wood,Texas,48499.0,6,0
+67114,2020-04-17,Young,Texas,48503.0,4,1
+67115,2020-04-17,Zapata,Texas,48505.0,6,0
+67116,2020-04-17,Zavala,Texas,48507.0,1,0
+67117,2020-04-17,Box Elder,Utah,49003.0,16,0
+67118,2020-04-17,Cache,Utah,49005.0,38,0
+67119,2020-04-17,Carbon,Utah,49007.0,2,0
+67120,2020-04-17,Davis,Utah,49011.0,227,2
+67121,2020-04-17,Duchesne,Utah,49013.0,4,0
+67122,2020-04-17,Emery,Utah,49015.0,4,0
+67123,2020-04-17,Garfield,Utah,49017.0,1,0
+67124,2020-04-17,Grand,Utah,49019.0,1,0
+67125,2020-04-17,Iron,Utah,49021.0,16,0
+67126,2020-04-17,Juab,Utah,49023.0,2,0
+67127,2020-04-17,Kane,Utah,49025.0,3,0
+67128,2020-04-17,Millard,Utah,49027.0,6,0
+67129,2020-04-17,Morgan,Utah,49029.0,7,0
+67130,2020-04-17,Salt Lake,Utah,49035.0,1456,12
+67131,2020-04-17,San Juan,Utah,49037.0,17,2
+67132,2020-04-17,Sevier,Utah,49041.0,4,0
+67133,2020-04-17,Summit,Utah,49043.0,311,0
+67134,2020-04-17,Tooele,Utah,49045.0,38,0
+67135,2020-04-17,Uintah,Utah,49047.0,6,0
+67136,2020-04-17,Unknown,Utah,,2,1
+67137,2020-04-17,Utah,Utah,49049.0,403,4
+67138,2020-04-17,Wasatch,Utah,49051.0,103,1
+67139,2020-04-17,Washington,Utah,49053.0,41,0
+67140,2020-04-17,Weber,Utah,49057.0,105,1
+67141,2020-04-17,Addison,Vermont,50001.0,57,1
+67142,2020-04-17,Bennington,Vermont,50003.0,33,1
+67143,2020-04-17,Caledonia,Vermont,50005.0,10,0
+67144,2020-04-17,Chittenden,Vermont,50007.0,378,22
+67145,2020-04-17,Essex,Vermont,50009.0,1,0
+67146,2020-04-17,Franklin,Vermont,50011.0,88,3
+67147,2020-04-17,Grand Isle,Vermont,50013.0,3,0
+67148,2020-04-17,Lamoille,Vermont,50015.0,22,2
+67149,2020-04-17,Orange,Vermont,50017.0,5,0
+67150,2020-04-17,Orleans,Vermont,50019.0,8,0
+67151,2020-04-17,Rutland,Vermont,50021.0,41,1
+67152,2020-04-17,Unknown,Vermont,,10,0
+67153,2020-04-17,Washington,Vermont,50023.0,30,1
+67154,2020-04-17,Windham,Vermont,50025.0,60,2
+67155,2020-04-17,Windsor,Vermont,50027.0,33,2
+67156,2020-04-17,Unknown,Virgin Islands,,51,2
+67157,2020-04-17,Accomack,Virginia,51001.0,28,0
+67158,2020-04-17,Albemarle,Virginia,51003.0,56,0
+67159,2020-04-17,Alexandria city,Virginia,51510.0,321,6
+67160,2020-04-17,Alleghany,Virginia,51005.0,4,0
+67161,2020-04-17,Amelia,Virginia,51007.0,13,0
+67162,2020-04-17,Amherst,Virginia,51009.0,10,0
+67163,2020-04-17,Appomattox,Virginia,51011.0,7,0
+67164,2020-04-17,Arlington,Virginia,51013.0,485,12
+67165,2020-04-17,Augusta,Virginia,51015.0,19,0
+67166,2020-04-17,Bedford,Virginia,51019.0,17,0
+67167,2020-04-17,Botetourt,Virginia,51023.0,23,0
+67168,2020-04-17,Bristol city,Virginia,51520.0,1,0
+67169,2020-04-17,Brunswick,Virginia,51025.0,10,0
+67170,2020-04-17,Buchanan,Virginia,51027.0,12,0
+67171,2020-04-17,Buckingham,Virginia,51029.0,24,0
+67172,2020-04-17,Buena Vista city,Virginia,51530.0,5,0
+67173,2020-04-17,Campbell,Virginia,51031.0,9,0
+67174,2020-04-17,Caroline,Virginia,51033.0,11,0
+67175,2020-04-17,Carroll,Virginia,51035.0,3,0
+67176,2020-04-17,Charles City,Virginia,51036.0,10,0
+67177,2020-04-17,Charlotte,Virginia,51037.0,8,0
+67178,2020-04-17,Charlottesville city,Virginia,51540.0,40,1
+67179,2020-04-17,Chesapeake city,Virginia,51550.0,147,3
+67180,2020-04-17,Chesterfield,Virginia,51041.0,291,5
+67181,2020-04-17,Clarke,Virginia,51043.0,6,0
+67182,2020-04-17,Colonial Heights city,Virginia,51570.0,19,0
+67183,2020-04-17,Covington city,Virginia,51580.0,1,0
+67184,2020-04-17,Craig,Virginia,51045.0,2,0
+67185,2020-04-17,Culpeper,Virginia,51047.0,32,0
+67186,2020-04-17,Cumberland,Virginia,51049.0,8,0
+67187,2020-04-17,Danville city,Virginia,51590.0,22,0
+67188,2020-04-17,Dinwiddie,Virginia,51053.0,7,0
+67189,2020-04-17,Emporia city,Virginia,51595.0,7,0
+67190,2020-04-17,Essex,Virginia,51057.0,2,0
+67191,2020-04-17,Fairfax,Virginia,51059.0,1476,37
+67192,2020-04-17,Fairfax city,Virginia,51600.0,2,0
+67193,2020-04-17,Falls Church city,Virginia,51610.0,2,0
+67194,2020-04-17,Fauquier,Virginia,51061.0,35,0
+67195,2020-04-17,Floyd,Virginia,51063.0,1,0
+67196,2020-04-17,Fluvanna,Virginia,51065.0,64,0
+67197,2020-04-17,Franklin,Virginia,51067.0,15,0
+67198,2020-04-17,Franklin city,Virginia,51620.0,9,0
+67199,2020-04-17,Frederick,Virginia,51069.0,76,0
+67200,2020-04-17,Fredericksburg city,Virginia,51630.0,15,0
+67201,2020-04-17,Galax city,Virginia,51640.0,1,0
+67202,2020-04-17,Giles,Virginia,51071.0,4,0
+67203,2020-04-17,Gloucester,Virginia,51073.0,20,0
+67204,2020-04-17,Goochland,Virginia,51075.0,52,1
+67205,2020-04-17,Greene,Virginia,51079.0,7,0
+67206,2020-04-17,Greensville,Virginia,51081.0,18,0
+67207,2020-04-17,Halifax,Virginia,51083.0,7,0
+67208,2020-04-17,Hampton city,Virginia,51650.0,78,1
+67209,2020-04-17,Hanover,Virginia,51085.0,70,0
+67210,2020-04-17,Harrisonburg city,Virginia,51660.0,214,0
+67211,2020-04-17,Henrico,Virginia,51087.0,532,45
+67212,2020-04-17,Henry,Virginia,51089.0,10,0
+67213,2020-04-17,Hopewell city,Virginia,51670.0,14,0
+67214,2020-04-17,Isle of Wight,Virginia,51093.0,69,0
+67215,2020-04-17,James City,Virginia,51095.0,138,3
+67216,2020-04-17,King George,Virginia,51099.0,18,0
+67217,2020-04-17,King William,Virginia,51101.0,2,0
+67218,2020-04-17,King and Queen,Virginia,51097.0,2,0
+67219,2020-04-17,Lancaster,Virginia,51103.0,1,0
+67220,2020-04-17,Lee,Virginia,51105.0,7,0
+67221,2020-04-17,Lexington city,Virginia,51678.0,3,0
+67222,2020-04-17,Loudoun,Virginia,51107.0,385,5
+67223,2020-04-17,Louisa,Virginia,51109.0,33,0
+67224,2020-04-17,Lunenburg,Virginia,51111.0,3,0
+67225,2020-04-17,Lynchburg city,Virginia,51680.0,38,0
+67226,2020-04-17,Madison,Virginia,51113.0,8,0
+67227,2020-04-17,Manassas Park city,Virginia,51685.0,21,0
+67228,2020-04-17,Manassas city,Virginia,51683.0,72,0
+67229,2020-04-17,Mathews,Virginia,51115.0,3,0
+67230,2020-04-17,Mecklenburg,Virginia,51117.0,62,0
+67231,2020-04-17,Middlesex,Virginia,51119.0,3,0
+67232,2020-04-17,Montgomery,Virginia,51121.0,40,0
+67233,2020-04-17,Nelson,Virginia,51125.0,5,0
+67234,2020-04-17,New Kent,Virginia,51127.0,17,0
+67235,2020-04-17,Newport News city,Virginia,51700.0,100,1
+67236,2020-04-17,Norfolk city,Virginia,51710.0,108,1
+67237,2020-04-17,Northampton,Virginia,51131.0,5,0
+67238,2020-04-17,Northumberland,Virginia,51133.0,5,0
+67239,2020-04-17,Nottoway,Virginia,51135.0,5,0
+67240,2020-04-17,Orange,Virginia,51137.0,19,0
+67241,2020-04-17,Page,Virginia,51139.0,10,0
+67242,2020-04-17,Petersburg city,Virginia,51730.0,21,0
+67243,2020-04-17,Pittsylvania,Virginia,51143.0,6,0
+67244,2020-04-17,Poquoson city,Virginia,51735.0,6,0
+67245,2020-04-17,Portsmouth city,Virginia,51740.0,63,4
+67246,2020-04-17,Powhatan,Virginia,51145.0,7,0
+67247,2020-04-17,Prince Edward,Virginia,51147.0,17,1
+67248,2020-04-17,Prince George,Virginia,51149.0,28,0
+67249,2020-04-17,Prince William,Virginia,51153.0,644,1
+67250,2020-04-17,Pulaski,Virginia,51155.0,8,0
+67251,2020-04-17,Radford city,Virginia,51750.0,1,0
+67252,2020-04-17,Rappahannock,Virginia,51157.0,1,0
+67253,2020-04-17,Richmond,Virginia,51159.0,8,0
+67254,2020-04-17,Richmond city,Virginia,51760.0,201,7
+67255,2020-04-17,Roanoke,Virginia,51161.0,20,0
+67256,2020-04-17,Roanoke city,Virginia,51770.0,24,0
+67257,2020-04-17,Rockbridge,Virginia,51163.0,5,0
+67258,2020-04-17,Rockingham,Virginia,51165.0,83,0
+67259,2020-04-17,Russell,Virginia,51167.0,2,0
+67260,2020-04-17,Salem city,Virginia,51775.0,6,0
+67261,2020-04-17,Scott,Virginia,51169.0,3,0
+67262,2020-04-17,Shenandoah,Virginia,51171.0,33,1
+67263,2020-04-17,Smyth,Virginia,51173.0,11,0
+67264,2020-04-17,Southampton,Virginia,51175.0,7,0
+67265,2020-04-17,Spotsylvania,Virginia,51177.0,69,0
+67266,2020-04-17,Stafford,Virginia,51179.0,128,1
+67267,2020-04-17,Staunton city,Virginia,51790.0,4,0
+67268,2020-04-17,Suffolk city,Virginia,51800.0,70,0
+67269,2020-04-17,Surry,Virginia,51181.0,3,0
+67270,2020-04-17,Sussex,Virginia,51183.0,11,0
+67271,2020-04-17,Tazewell,Virginia,51185.0,4,0
+67272,2020-04-17,Unknown,Virginia,,0,94
+67273,2020-04-17,Virginia Beach city,Virginia,51810.0,265,5
+67274,2020-04-17,Warren,Virginia,51187.0,22,0
+67275,2020-04-17,Washington,Virginia,51191.0,28,0
+67276,2020-04-17,Waynesboro city,Virginia,51820.0,7,0
+67277,2020-04-17,Westmoreland,Virginia,51193.0,9,0
+67278,2020-04-17,Williamsburg city,Virginia,51830.0,19,1
+67279,2020-04-17,Winchester city,Virginia,51840.0,22,0
+67280,2020-04-17,Wise,Virginia,51195.0,17,1
+67281,2020-04-17,Wythe,Virginia,51197.0,8,0
+67282,2020-04-17,York,Virginia,51199.0,38,1
+67283,2020-04-17,Adams,Washington,53001.0,40,0
+67284,2020-04-17,Asotin,Washington,53003.0,11,0
+67285,2020-04-17,Benton,Washington,53005.0,295,34
+67286,2020-04-17,Chelan,Washington,53007.0,67,6
+67287,2020-04-17,Clallam,Washington,53009.0,14,0
+67288,2020-04-17,Clark,Washington,53011.0,277,16
+67289,2020-04-17,Columbia,Washington,53013.0,1,0
+67290,2020-04-17,Cowlitz,Washington,53015.0,29,0
+67291,2020-04-17,Douglas,Washington,53017.0,30,1
+67292,2020-04-17,Ferry,Washington,53019.0,1,0
+67293,2020-04-17,Franklin,Washington,53021.0,167,4
+67294,2020-04-17,Grant,Washington,53025.0,139,1
+67295,2020-04-17,Grays Harbor,Washington,53027.0,12,0
+67296,2020-04-17,Island,Washington,53029.0,165,8
+67297,2020-04-17,Jefferson,Washington,53031.0,28,0
+67298,2020-04-17,King,Washington,53033.0,4904,333
+67299,2020-04-17,Kitsap,Washington,53035.0,135,1
+67300,2020-04-17,Kittitas,Washington,53037.0,14,0
+67301,2020-04-17,Klickitat,Washington,53039.0,16,3
+67302,2020-04-17,Lewis,Washington,53041.0,21,2
+67303,2020-04-17,Lincoln,Washington,53043.0,2,0
+67304,2020-04-17,Mason,Washington,53045.0,22,0
+67305,2020-04-17,Okanogan,Washington,53047.0,14,0
+67306,2020-04-17,Pacific,Washington,53049.0,1,0
+67307,2020-04-17,Pend Oreille,Washington,53051.0,2,0
+67308,2020-04-17,Pierce,Washington,53053.0,1092,30
+67309,2020-04-17,San Juan,Washington,53055.0,15,0
+67310,2020-04-17,Skagit,Washington,53057.0,226,6
+67311,2020-04-17,Skamania,Washington,53059.0,3,0
+67312,2020-04-17,Snohomish,Washington,53061.0,2055,87
+67313,2020-04-17,Spokane,Washington,53063.0,302,17
+67314,2020-04-17,Stevens,Washington,53065.0,8,1
+67315,2020-04-17,Thurston,Washington,53067.0,89,1
+67316,2020-04-17,Unknown,Washington,,174,0
+67317,2020-04-17,Wahkiakum,Washington,53069.0,2,0
+67318,2020-04-17,Walla Walla,Washington,53071.0,28,0
+67319,2020-04-17,Whatcom,Washington,53073.0,271,25
+67320,2020-04-17,Whitman,Washington,53075.0,14,0
+67321,2020-04-17,Yakima,Washington,53077.0,759,34
+67322,2020-04-17,Barbour,West Virginia,54001.0,4,0
+67323,2020-04-17,Berkeley,West Virginia,54003.0,106,1
+67324,2020-04-17,Boone,West Virginia,54005.0,2,0
+67325,2020-04-17,Braxton,West Virginia,54007.0,1,0
+67326,2020-04-17,Brooke,West Virginia,54009.0,3,0
+67327,2020-04-17,Cabell,West Virginia,54011.0,28,0
+67328,2020-04-17,Fayette,West Virginia,54019.0,4,0
+67329,2020-04-17,Grant,West Virginia,54023.0,1,0
+67330,2020-04-17,Greenbrier,West Virginia,54025.0,3,0
+67331,2020-04-17,Hampshire,West Virginia,54027.0,6,0
+67332,2020-04-17,Hancock,West Virginia,54029.0,7,0
+67333,2020-04-17,Hardy,West Virginia,54031.0,3,0
+67334,2020-04-17,Harrison,West Virginia,54033.0,29,1
+67335,2020-04-17,Jackson,West Virginia,54035.0,40,1
+67336,2020-04-17,Jefferson,West Virginia,54037.0,60,0
+67337,2020-04-17,Kanawha,West Virginia,54039.0,104,0
+67338,2020-04-17,Lewis,West Virginia,54041.0,2,0
+67339,2020-04-17,Lincoln,West Virginia,54043.0,1,0
+67340,2020-04-17,Logan,West Virginia,54045.0,8,1
+67341,2020-04-17,Marion,West Virginia,54049.0,42,2
+67342,2020-04-17,Marshall,West Virginia,54051.0,8,0
+67343,2020-04-17,Mason,West Virginia,54053.0,10,0
+67344,2020-04-17,McDowell,West Virginia,54047.0,6,0
+67345,2020-04-17,Mercer,West Virginia,54055.0,8,0
+67346,2020-04-17,Mineral,West Virginia,54057.0,8,0
+67347,2020-04-17,Mingo,West Virginia,54059.0,2,1
+67348,2020-04-17,Monongalia,West Virginia,54061.0,83,4
+67349,2020-04-17,Monroe,West Virginia,54063.0,2,0
+67350,2020-04-17,Morgan,West Virginia,54065.0,8,0
+67351,2020-04-17,Nicholas,West Virginia,54067.0,3,0
+67352,2020-04-17,Ohio,West Virginia,54069.0,22,1
+67353,2020-04-17,Pendleton,West Virginia,54071.0,2,0
+67354,2020-04-17,Pleasants,West Virginia,54073.0,1,0
+67355,2020-04-17,Preston,West Virginia,54077.0,6,0
+67356,2020-04-17,Putnam,West Virginia,54079.0,14,0
+67357,2020-04-17,Raleigh,West Virginia,54081.0,7,0
+67358,2020-04-17,Randolph,West Virginia,54083.0,4,0
+67359,2020-04-17,Roane,West Virginia,54087.0,2,0
+67360,2020-04-17,Summers,West Virginia,54089.0,1,0
+67361,2020-04-17,Taylor,West Virginia,54091.0,5,0
+67362,2020-04-17,Tucker,West Virginia,54093.0,4,0
+67363,2020-04-17,Tyler,West Virginia,54095.0,3,0
+67364,2020-04-17,Upshur,West Virginia,54097.0,4,0
+67365,2020-04-17,Wayne,West Virginia,54099.0,74,3
+67366,2020-04-17,Wetzel,West Virginia,54103.0,3,0
+67367,2020-04-17,Wirt,West Virginia,54105.0,2,0
+67368,2020-04-17,Wood,West Virginia,54107.0,29,1
+67369,2020-04-17,Wyoming,West Virginia,54109.0,1,0
+67370,2020-04-17,Adams,Wisconsin,55001.0,4,1
+67371,2020-04-17,Ashland,Wisconsin,55003.0,2,0
+67372,2020-04-17,Barron,Wisconsin,55005.0,6,0
+67373,2020-04-17,Bayfield,Wisconsin,55007.0,3,0
+67374,2020-04-17,Brown,Wisconsin,55009.0,180,1
+67375,2020-04-17,Buffalo,Wisconsin,55011.0,4,1
+67376,2020-04-17,Calumet,Wisconsin,55015.0,5,0
+67377,2020-04-17,Chippewa,Wisconsin,55017.0,20,0
+67378,2020-04-17,Clark,Wisconsin,55019.0,12,0
+67379,2020-04-17,Columbia,Wisconsin,55021.0,27,1
+67380,2020-04-17,Crawford,Wisconsin,55023.0,3,0
+67381,2020-04-17,Dane,Wisconsin,55025.0,351,16
+67382,2020-04-17,Dodge,Wisconsin,55027.0,20,1
+67383,2020-04-17,Door,Wisconsin,55029.0,9,1
+67384,2020-04-17,Douglas,Wisconsin,55031.0,7,0
+67385,2020-04-17,Dunn,Wisconsin,55033.0,9,0
+67386,2020-04-17,Eau Claire,Wisconsin,55035.0,22,0
+67387,2020-04-17,Florence,Wisconsin,55037.0,2,0
+67388,2020-04-17,Fond du Lac,Wisconsin,55039.0,61,3
+67389,2020-04-17,Grant,Wisconsin,55043.0,13,1
+67390,2020-04-17,Green,Wisconsin,55045.0,9,0
+67391,2020-04-17,Green Lake,Wisconsin,55047.0,1,0
+67392,2020-04-17,Iowa,Wisconsin,55049.0,6,0
+67393,2020-04-17,Iron,Wisconsin,55051.0,2,1
+67394,2020-04-17,Jackson,Wisconsin,55053.0,11,1
+67395,2020-04-17,Jefferson,Wisconsin,55055.0,27,0
+67396,2020-04-17,Juneau,Wisconsin,55057.0,7,1
+67397,2020-04-17,Kenosha,Wisconsin,55059.0,218,5
+67398,2020-04-17,Kewaunee,Wisconsin,55061.0,8,1
+67399,2020-04-17,La Crosse,Wisconsin,55063.0,25,0
+67400,2020-04-17,Lafayette,Wisconsin,55065.0,3,0
+67401,2020-04-17,Manitowoc,Wisconsin,55071.0,5,0
+67402,2020-04-17,Marathon,Wisconsin,55073.0,16,1
+67403,2020-04-17,Marinette,Wisconsin,55075.0,4,1
+67404,2020-04-17,Marquette,Wisconsin,55077.0,3,0
+67405,2020-04-17,Menominee,Wisconsin,55078.0,1,0
+67406,2020-04-17,Milwaukee,Wisconsin,55079.0,2013,120
+67407,2020-04-17,Monroe,Wisconsin,55081.0,13,0
+67408,2020-04-17,Oconto,Wisconsin,55083.0,4,0
+67409,2020-04-17,Oneida,Wisconsin,55085.0,6,0
+67410,2020-04-17,Outagamie,Wisconsin,55087.0,31,2
+67411,2020-04-17,Ozaukee,Wisconsin,55089.0,78,9
+67412,2020-04-17,Pierce,Wisconsin,55093.0,7,0
+67413,2020-04-17,Polk,Wisconsin,55095.0,4,0
+67414,2020-04-17,Portage,Wisconsin,55097.0,4,0
+67415,2020-04-17,Price,Wisconsin,55099.0,1,0
+67416,2020-04-17,Racine,Wisconsin,55101.0,157,8
+67417,2020-04-17,Richland,Wisconsin,55103.0,8,1
+67418,2020-04-17,Rock,Wisconsin,55105.0,63,4
+67419,2020-04-17,Rusk,Wisconsin,55107.0,3,0
+67420,2020-04-17,Sauk,Wisconsin,55111.0,31,3
+67421,2020-04-17,Sawyer,Wisconsin,55113.0,2,0
+67422,2020-04-17,Shawano,Wisconsin,55115.0,6,0
+67423,2020-04-17,Sheboygan,Wisconsin,55117.0,38,2
+67424,2020-04-17,St. Croix,Wisconsin,55109.0,11,0
+67425,2020-04-17,Trempealeau,Wisconsin,55121.0,1,0
+67426,2020-04-17,Vilas,Wisconsin,55125.0,4,0
+67427,2020-04-17,Walworth,Wisconsin,55127.0,75,3
+67428,2020-04-17,Washburn,Wisconsin,55129.0,1,0
+67429,2020-04-17,Washington,Wisconsin,55131.0,81,3
+67430,2020-04-17,Waukesha,Wisconsin,55133.0,255,11
+67431,2020-04-17,Waupaca,Wisconsin,55135.0,4,1
+67432,2020-04-17,Waushara,Wisconsin,55137.0,2,0
+67433,2020-04-17,Winnebago,Wisconsin,55139.0,34,1
+67434,2020-04-17,Wood,Wisconsin,55141.0,2,0
+67435,2020-04-17,Albany,Wyoming,56001.0,6,0
+67436,2020-04-17,Big Horn,Wyoming,56003.0,1,0
+67437,2020-04-17,Campbell,Wyoming,56005.0,13,0
+67438,2020-04-17,Carbon,Wyoming,56007.0,4,0
+67439,2020-04-17,Converse,Wyoming,56009.0,8,0
+67440,2020-04-17,Crook,Wyoming,56011.0,4,0
+67441,2020-04-17,Fremont,Wyoming,56013.0,45,0
+67442,2020-04-17,Goshen,Wyoming,56015.0,3,0
+67443,2020-04-17,Hot Springs,Wyoming,56017.0,2,0
+67444,2020-04-17,Johnson,Wyoming,56019.0,11,1
+67445,2020-04-17,Laramie,Wyoming,56021.0,69,1
+67446,2020-04-17,Lincoln,Wyoming,56023.0,5,0
+67447,2020-04-17,Natrona,Wyoming,56025.0,38,0
+67448,2020-04-17,Niobrara,Wyoming,56027.0,1,0
+67449,2020-04-17,Park,Wyoming,56029.0,1,0
+67450,2020-04-17,Sheridan,Wyoming,56033.0,12,0
+67451,2020-04-17,Sublette,Wyoming,56035.0,1,0
+67452,2020-04-17,Sweetwater,Wyoming,56037.0,10,0
+67453,2020-04-17,Teton,Wyoming,56039.0,61,0
+67454,2020-04-17,Uinta,Wyoming,56041.0,6,0
+67455,2020-04-17,Washakie,Wyoming,56043.0,4,0
