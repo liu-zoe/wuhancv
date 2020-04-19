@@ -29,6 +29,7 @@ app = dash.Dash(
         ],
     )
 server=app.server
+
 #--------------------------Load And Process Data----------------------------#
 APP_PATH = str(pathlib.Path(__file__).parent.resolve())
 #Load data
