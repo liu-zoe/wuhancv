@@ -43,8 +43,8 @@ rawdf=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/TimeSeries/'+x
 
 # Create a list of dates
 init_date=datetime.date(2020,1,22)
-today=datetime.date(2020,4,18)
-#today=date.today()
+#today=datetime.date(2020,4,18)
+today=date.today()
 dates_real=[init_date] #list of dates as datetime object
 dates=['1/22/20'] #list of dates to extract variables 
 dates_short=['Jan22']
@@ -87,7 +87,7 @@ bubble_us0=bubble_us0.assign(Confirmed=rawdf[3]['1/22/20'])
 bubble_us0=bubble_us0.assign(Deaths=rawdf[4]['1/22/20'])
 bubble_us0=bubble_us0.assign(conf=bubble_us0['Confirmed'].apply(lambda x: (math.log10(x+1))*bubble_size_index if x>0 else 0))
 
-# Write a function to sum up counts by date and then pivot
+# Write a function to sum up counts by date
 def sumbydate(
     indat, #Input Data
 ):
@@ -330,100 +330,124 @@ app.layout = html.Div(
                                                         },
                                                         {
                                                             "label":"United States",
-                                                            "value":"US",
-                                                        },
-                                                        {
-                                                            "label":"Italy",
-                                                            "value":"Italy",
+                                                            "value":'US',
                                                         },
                                                         {
                                                             "label":"Spain",
                                                             "value":"Spain",
                                                         },
                                                         {
-                                                            "label":"China",
-                                                            "value":"China",
-                                                        },
-                                                        {                                                                                                                
-                                                            "label":"Germany",
-                                                            "value":"Germany",
+                                                            "label":"Italy",
+                                                            "value":"Italy",
                                                         },
                                                         {
                                                             "label":"France",
                                                             "value":"France",
-                                                        },
+                                                        },                                                        
                                                         {
-                                                            "label":"Iran",
-                                                            "value":"Iran",
+				                                            "label":"Germany",
+                                                            "value":"Germany",
                                                         },
                                                         {
                                                             "label":"United Kingdom",
                                                             "value":"United Kingdom",
                                                         },
                                                         {
+                                                            "label":"China",
+                                                            "value":"China",
+                                                        },
+                                                        {
                                                             "label":"Turkey",
                                                             "value":"Turkey",
-                                                        },                                                        
+                                                        },
                                                         {
-                                                            "label":"Switzerland",
-                                                            "value":"Switzerland",
+                                                            "label":"Iran",
+                                                            "value":"Iran",
                                                         },
                                                         {
                                                             "label":"Belgium",
                                                             "value":"Belgium",                                                        
                                                         },
                                                         {
-                                                            "label":"Netherlands",
-                                                            "value":"Netherlands",                                                        
-                                                        },
-                                                        {
-                                                            "label":"Canada",
-                                                            "value":"Canada",                                                        
-                                                        },                                                        
-                                                        {
-                                                            "label":"Austria",
-                                                            "value":"Austria",                                                        
-                                                        },
-                                                        {
-                                                            "label":"Portugal",
-                                                            "value":"Portugal",                                                        
-                                                        },
-                                                        {
-                                                            "label":"South Korea",
-                                                            "value":"Korea, South",
+                                                            "label":"Russia",
+                                                            "value":"Russia",
                                                         },
                                                         {
                                                             "label":"Brazil",
                                                             "value":"Brazil",                                                        
                                                         },
                                                         {
-                                                            "label":"Israel",
-                                                            "value":"Israel",                                                        
-                                                        },                                    
+                                                            "label":"Canada",
+                                                            "value":"Canada",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Netherlands",
+                                                            "value":"Netherlands",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Switzerland",
+                                                            "value":"Switzerland",
+                                                        },
+                                                        {
+                                                            "label":"Portugal",
+                                                            "value":"Portugal",                                                        
+                                                        },
+                                                        {
+                                                            "label":"India",
+                                                            "value":"India",
+                                                        },
+                                                        {
+                                                            "label":"Ireland",
+                                                            "value":"Ireland",
+                                                        },
+                                                        {
+                                                            "label":"Austria",
+                                                            "value":"Austria",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Peru",
+                                                            "value":"Peru",
+                                                        },
                                                         {
                                                             "label":"Sweden",
                                                             "value":"Sweden",                                                        
                                                         },
                                                         {
-                                                            "label":"Australia",
-                                                            "value":"Australia",                                                        
+                                                            "label":"Israel",
+                                                            "value":"Israel",                                                        
                                                         },
                                                         {
-                                                            "label":"Norway",
-                                                            "value":"Norway",                                                        
+                                                            "label":"South Korea",
+                                                            "value":"Korea, South",
                                                         },
                                                         {
                                                             "label":"Japan",
                                                             "value":"Japan",
+                                                        },                                                         
+                                                        {
+                                                            "label":"Chile",
+                                                            "value":"Chile",   
                                                         },
                                                         {
-                                                            "label":"Singapore",
-                                                            "value":"Singapore",
+                                                            "label":"Ecuador",
+                                                            "value":"Ecuador",
                                                         },
                                                         {
-                                                            "label":"Taiwan",
-                                                            "value":"Taiwan*",
+                                                            "label":"Poland",
+                                                            "value":"Poland",
                                                         },
+                                                        {
+                                                            "label":"Romania",
+                                                            "value":"Romania",
+                                                        },
+                                                        {
+                                                            "label":"Saudi Arabia",
+                                                            "value":"Saudi Arabia",
+                                                        },
+                                                        {
+                                                            "label":"Pakistan",
+                                                            "value":"Pakistan",
+                                                        },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
                                                     ],            
                                                 ),
                                                 dcc.Dropdown(
@@ -985,101 +1009,125 @@ app.layout = html.Div(
                                                             "label":"World",
                                                             "value":"World",
                                                         },
-                                                                                                                {
-                                                            "label":"United States",
-                                                            "value":"US"
-                                                        },
                                                         {
-                                                            "label":"Italy",
-                                                            "value":"Italy",
+                                                            "label":"United States",
+                                                            "value":'US',
                                                         },
                                                         {
                                                             "label":"Spain",
                                                             "value":"Spain",
                                                         },
                                                         {
-                                                            "label":"China",
-                                                            "value":"China",
+                                                            "label":"Italy",
+                                                            "value":"Italy",
                                                         },
-                                                        {                                                                                                                
-                                                            "label":"Germany",
+                                                        #{
+                                                        #    "label":"France",
+                                                        #    "value":"France",
+                                                        #},                                                        
+                                                        {
+				                                            "label":"Germany",
                                                             "value":"Germany",
-                                                        },
-                                                        {
-                                                            "label":"France",
-                                                            "value":"France",
-                                                        },
-                                                        {
-                                                            "label":"Iran",
-                                                            "value":"Iran",
                                                         },
                                                         {
                                                             "label":"United Kingdom",
                                                             "value":"United Kingdom",
                                                         },
                                                         {
+                                                            "label":"China",
+                                                            "value":"China",
+                                                        },
+                                                        {
                                                             "label":"Turkey",
                                                             "value":"Turkey",
-                                                        },                                                        
+                                                        },
                                                         {
-                                                            "label":"Switzerland",
-                                                            "value":"Switzerland",
+                                                            "label":"Iran",
+                                                            "value":"Iran",
                                                         },
                                                         {
                                                             "label":"Belgium",
                                                             "value":"Belgium",                                                        
                                                         },
                                                         {
-                                                            "label":"Netherlands",
-                                                            "value":"Netherlands",                                                        
-                                                        },
-                                                        {
-                                                            "label":"Canada",
-                                                            "value":"Canada",                                                        
-                                                        },                                                        
-                                                        {
-                                                            "label":"Austria",
-                                                            "value":"Austria",                                                        
-                                                        },
-                                                        {
-                                                            "label":"Portugal",
-                                                            "value":"Portugal",                                                        
-                                                        },
-                                                        {
-                                                            "label":"South Korea",
-                                                            "value":"Korea, South",
+                                                            "label":"Russia",
+                                                            "value":"Russia",
                                                         },
                                                         {
                                                             "label":"Brazil",
                                                             "value":"Brazil",                                                        
                                                         },
                                                         {
-                                                            "label":"Israel",
-                                                            "value":"Israel",                                                        
-                                                        },                                    
+                                                            "label":"Canada",
+                                                            "value":"Canada",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Netherlands",
+                                                            "value":"Netherlands",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Switzerland",
+                                                            "value":"Switzerland",
+                                                        },
+                                                        {
+                                                            "label":"Portugal",
+                                                            "value":"Portugal",                                                        
+                                                        },
+                                                        {
+                                                            "label":"India",
+                                                            "value":"India",
+                                                        },
+                                                        {
+                                                            "label":"Ireland",
+                                                            "value":"Ireland",
+                                                        },
+                                                        {
+                                                            "label":"Austria",
+                                                            "value":"Austria",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Peru",
+                                                            "value":"Peru",
+                                                        },
                                                         {
                                                             "label":"Sweden",
                                                             "value":"Sweden",                                                        
                                                         },
                                                         {
-                                                            "label":"Australia",
-                                                            "value":"Australia",                                                        
+                                                            "label":"Israel",
+                                                            "value":"Israel",                                                        
                                                         },
                                                         {
-                                                            "label":"Norway",
-                                                            "value":"Norway",                                                        
+                                                            "label":"South Korea",
+                                                            "value":"Korea, South",
                                                         },
                                                         {
                                                             "label":"Japan",
                                                             "value":"Japan",
+                                                        },                                                         
+                                                        {
+                                                            "label":"Chile",
+                                                            "value":"Chile",   
                                                         },
                                                         {
-                                                            "label":"Singapore",
-                                                            "value":"Singapore",
+                                                            "label":"Ecuador",
+                                                            "value":"Ecuador",
                                                         },
                                                         {
-                                                            "label":"Taiwan",
-                                                            "value":"Taiwan*",
+                                                            "label":"Poland",
+                                                            "value":"Poland",
+                                                        },
+                                                        {
+                                                            "label":"Romania",
+                                                            "value":"Romania",
+                                                        },
+                                                        {
+                                                            "label":"Saudi Arabia",
+                                                            "value":"Saudi Arabia",
+                                                        },
+                                                        {
+                                                            "label":"Pakistan",
+                                                            "value":"Pakistan",
                                                         },
                                                     ],
                                                 ),
