@@ -11,12 +11,9 @@ app v3.py
 app v4.py
 scraper.py
 latlnt_old.xlsx
-data/US
-data/USCensus2010
-data/GoogleTrends
-data/NYT
-archive_data/
-JHUCSSE_Data/
+data/GoogleTrends/
+data/NYT/
+data/archive_data/
 style_sample/
 Literature/
 Media/
