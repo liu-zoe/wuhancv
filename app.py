@@ -43,7 +43,7 @@ rawdf=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/TimeSeries/'+x
 
 # Create a list of dates
 init_date=datetime.date(2020,1,22)
-today=datetime.date(2020,4,21)
+today=datetime.date(2020,4,22)
 #today=date.today()
 dates_real=[init_date] #list of dates as datetime object
 dates=['1/22/20'] #list of dates to extract variables 
@@ -429,25 +429,25 @@ app.layout = html.Div(
                                                             "value":"Chile",   
                                                         },
                                                         {
-                                                            "label":"South Korea",
-                                                            "value":"Korea, South",
-                                                        },
-                                                        {
                                                             "label":"Ecuador",
                                                             "value":"Ecuador",
+                                                        },
+                                                        {
+                                                            "label":"South Korea",
+                                                            "value":"Korea, South",
                                                         },
                                                         {
                                                             "label":"Poland",
                                                             "value":"Poland",
                                                         },                                                        
                                                         {
+                                                            "label":"Singapore",
+                                                            "value":"Singapore",
+                                                        },                                                        
+                                                        {
                                                             "label":"Pakistan",
                                                             "value":"Pakistan",
                                                         },
-                                                        {
-                                                            "label":"Romania",
-                                                            "value":"Romania",
-                                                        },                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
                                                     ],            
                                                 ),
                                                 dcc.Dropdown(
@@ -1110,24 +1110,24 @@ app.layout = html.Div(
                                                             "value":"Chile",   
                                                         },
                                                         {
-                                                            "label":"South Korea",
-                                                            "value":"Korea, South",
-                                                        },
-                                                        {
                                                             "label":"Ecuador",
                                                             "value":"Ecuador",
+                                                        },
+                                                        {
+                                                            "label":"South Korea",
+                                                            "value":"Korea, South",
                                                         },
                                                         {
                                                             "label":"Poland",
                                                             "value":"Poland",
                                                         },                                                        
                                                         {
+                                                            "label":"Singapore",
+                                                            "value":"Singapore",
+                                                        },                                                        
+                                                        {
                                                             "label":"Pakistan",
                                                             "value":"Pakistan",
-                                                        },
-                                                        {
-                                                            "label":"Romania",
-                                                            "value":"Romania",
                                                         },
                                                     ],
                                                 ),
