@@ -40,10 +40,22 @@ csv_names=[
     "time_series_covid19_deaths_US",
     ]
 rawdf=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/TimeSeries/'+x+'.csv')),csv_names))
-
+# Seperate the colonies and islands from Denmark, France, Netherlands & UK
+for i in range(3):
+    dat=rawdf[i]
+    dat=dat.assign(Location=np.where(dat['Province/State'].isnull(),
+                        dat['Country/Region'],
+                        dat['Country/Region']+'-'+dat['Province/State']))
+    dat['Country/Region']=np.where(
+        dat['Country/Region'].isin(['Denmark','France','Netherlands','United Kingdom']),
+        dat['Location'],
+        dat['Country/Region']
+    )
+    rawdf[i]=dat
+del i
 # Create a list of dates
 init_date=datetime.date(2020,1,22)
-today=datetime.date(2020,4,23)
+today=datetime.date(2020,4,24)
 #today=date.today()
 dates_real=[init_date] #list of dates as datetime object
 dates=['1/22/20'] #list of dates to extract variables 
@@ -74,9 +86,9 @@ mark_index.reverse()
 del skip, i
 
 # Create the baseline dataset for world bubble map on Jan 22
-bubble0=rawdf[0][['Province/State','Country/Region', 'Lat', 'Long']]
-bubble0=bubble0.assign(Location=np.where(bubble0['Province/State'].isnull(), bubble0['Country/Region'],\
-    bubble0['Country/Region']+'-'+bubble0['Province/State']))
+bubble0=rawdf[0][['Province/State','Country/Region', 'Lat', 'Long', 'Location']]
+#bubble0=bubble0.assign(Location=np.where(bubble0['Province/State'].isnull(), bubble0['Country/Region'],\
+#    bubble0['Country/Region']+'-'+bubble0['Province/State']))
 bubble0=bubble0.assign(Confirmed=rawdf[0]['1/22/20'])
 bubble0=bubble0.assign(Deaths=rawdf[1]['1/22/20'])
 bubble0=bubble0.assign(Recovered=rawdf[2]['1/22/20'])
@@ -1281,9 +1293,9 @@ app.layout = html.Div(
 def update_bubble(date_index):
     datevar=dates[date_index]
     bubble=pd.DataFrame()
-    bubble=rawdf[0][['Province/State','Country/Region', 'Lat', 'Long']]
-    bubble=bubble.assign(Location=np.where(bubble['Province/State'].isnull(), bubble['Country/Region'],\
-        bubble['Country/Region']+'-'+bubble['Province/State']))
+    bubble=rawdf[0][['Province/State','Country/Region', 'Lat', 'Long', 'Location']]
+    #bubble=bubble.assign(Location=np.where(bubble['Province/State'].isnull(), bubble['Country/Region'],\
+    #    bubble['Country/Region']+'-'+bubble['Province/State']))
     bubble=bubble.assign(Confirmed=rawdf[0][datevar])
     bubble=bubble.assign(Deaths=rawdf[1][datevar])
     bubble=bubble.assign(Recovered=rawdf[2][datevar])
