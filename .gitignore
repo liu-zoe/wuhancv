@@ -6,6 +6,7 @@ CoronaV_Data_v1.py
 CoronaV_Data_v2.py
 CoronaV_Trends_v1.py
 CoronaV_Plots_v1.py
+CoronaV_Twitter_v1.py
 app v1.py
 app v2.py
 app v3.py
@@ -13,6 +14,7 @@ app v4.py
 scraper.py
 latlnt_old.xlsx
 data/GoogleTrends/
+data/Twitter
 data/NYT/
 data/archive_data/
 style_sample/

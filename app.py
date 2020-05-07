@@ -40,6 +40,7 @@ csv_names=[
     "time_series_covid19_deaths_US",
     ]
 rawdf=list(map(lambda x: pd.read_csv(os.path.join(APP_PATH, 'data/TimeSeries/'+x+'.csv')),csv_names))
+last_column=list(rawdf[0])[-1].split('/')
 # Seperate the colonies and islands from Denmark, France, Netherlands & UK
 for i in range(3):
     dat=rawdf[i]
@@ -55,8 +56,11 @@ for i in range(3):
 del i
 # Create a list of dates
 init_date=datetime.date(2020,1,22)
-today=datetime.date(2020,5,5)
 #today=date.today()
+last_mon=int(last_column[0])
+last_day=int(last_column[1])
+today=datetime.date(2020,last_mon,last_day)
+del last_column, last_mon, last_day
 dates_real=[init_date] #list of dates as datetime object
 dates=['1/22/20'] #list of dates to extract variables 
 dates_short=['Jan22']
@@ -393,24 +397,24 @@ app.layout = html.Div(
                                                             "value":"Peru",
                                                         },
                                                         {
-                                                            "label":"Belgium",
-                                                            "value":"Belgium",                                                        
-                                                        },
-                                                        {
                                                             "label":"India",
                                                             "value":"India",
+                                                        },
+                                                        {
+                                                            "label":"Belgium",
+                                                            "value":"Belgium",                                                        
                                                         },
                                                         {
                                                             "label":"Netherlands",
                                                             "value":"Netherlands",                                                        
                                                         },
                                                         {
-                                                            "label":"Ecuador",
-                                                            "value":"Ecuador",
-                                                        },
-                                                        {
                                                             "label":"Saudi Arabia",
                                                             "value":"Saudi Arabia",
+                                                        },
+                                                        {
+                                                            "label":"Ecuador",
+                                                            "value":"Ecuador",
                                                         },
                                                         {
                                                             "label":"Switzerland",
@@ -423,14 +427,14 @@ app.layout = html.Div(
                                                         {
                                                             "label":"Portugal",
                                                             "value":"Portugal",                                                        
-                                                        },                                                                                                            
-                                                        {
-                                                            "label":"Sweden",
-                                                            "value":"Sweden",                                                        
                                                         },                                                        
                                                         {
                                                             "label":"Pakistan",
                                                             "value":"Pakistan",
+                                                        },                                                                                                            
+                                                        {
+                                                            "label":"Sweden",
+                                                            "value":"Sweden",                                                        
                                                         },                                                                                                                                                                        
                                                         {
                                                             "label":"Chile",
@@ -457,8 +461,8 @@ app.layout = html.Div(
                                                             "value":"Israel",                                                        
                                                         },
                                                         {
-                                                            "label":"Austria",
-                                                            "value":"Austria",                                                        
+                                                            "label":"United Arab Emirates",
+                                                            "value":"United Arab Emirates",                                                        
                                                         },                                                        
                                                     ],            
                                                 ),
@@ -1074,24 +1078,24 @@ app.layout = html.Div(
                                                             "value":"Peru",
                                                         },
                                                         {
-                                                            "label":"Belgium",
-                                                            "value":"Belgium",                                                        
-                                                        },
-                                                        {
                                                             "label":"India",
                                                             "value":"India",
+                                                        },
+                                                        {
+                                                            "label":"Belgium",
+                                                            "value":"Belgium",                                                        
                                                         },
                                                         {
                                                             "label":"Netherlands",
                                                             "value":"Netherlands",                                                        
                                                         },
                                                         {
-                                                            "label":"Ecuador",
-                                                            "value":"Ecuador",
-                                                        },
-                                                        {
                                                             "label":"Saudi Arabia",
                                                             "value":"Saudi Arabia",
+                                                        },
+                                                        {
+                                                            "label":"Ecuador",
+                                                            "value":"Ecuador",
                                                         },
                                                         {
                                                             "label":"Switzerland",
@@ -1104,14 +1108,14 @@ app.layout = html.Div(
                                                         {
                                                             "label":"Portugal",
                                                             "value":"Portugal",                                                        
-                                                        },                                                                                                            
-                                                        {
-                                                            "label":"Sweden",
-                                                            "value":"Sweden",                                                        
                                                         },                                                        
                                                         {
                                                             "label":"Pakistan",
                                                             "value":"Pakistan",
+                                                        },                                                                                                            
+                                                        {
+                                                            "label":"Sweden",
+                                                            "value":"Sweden",                                                        
                                                         },                                                                                                                                                                        
                                                         {
                                                             "label":"Chile",
@@ -1138,8 +1142,8 @@ app.layout = html.Div(
                                                             "value":"Israel",                                                        
                                                         },
                                                         {
-                                                            "label":"Austria",
-                                                            "value":"Austria",                                                        
+                                                            "label":"United Arab Emirates",
+                                                            "value":"United Arab Emirates",                                                        
                                                         },
                                                     ],
                                                 ),
