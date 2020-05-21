@@ -80,7 +80,7 @@ del cur_date,x,y
 bubble_size_index=7
 
 #Create a subset of all dates to limit the clutter on bubblemap timetrack
-skip=2
+skip=3
 mark_index=[]
 i=len(dates)-1
 while (i>=0):
@@ -403,26 +403,26 @@ app.layout = html.Div(
                                                         {
                                                             "label":"Saudi Arabia",
                                                             "value":"Saudi Arabia",
-                                                        },
-                                                        {
-                                                            "label":"Belgium",
-                                                            "value":"Belgium",                                                        
                                                         },                                                        
                                                         {
                                                             "label":"Mexico",
                                                             "value":"Mexico",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Belgium",
+                                                            "value":"Belgium",                                                        
                                                         },                                                                                                                                                                        
                                                         {
                                                             "label":"Chile",
                                                             "value":"Chile",   
-                                                        },
-                                                        {
-                                                            "label":"Netherlands",
-                                                            "value":"Netherlands",                                                        
                                                         },                                                        
                                                         {
                                                             "label":"Pakistan",
                                                             "value":"Pakistan",
+                                                        },
+                                                        {
+                                                            "label":"Netherlands",
+                                                            "value":"Netherlands",                                                        
                                                         }, 
                                                         {
                                                             "label":"Qatar",
@@ -1084,26 +1084,26 @@ app.layout = html.Div(
                                                         {
                                                             "label":"Saudi Arabia",
                                                             "value":"Saudi Arabia",
-                                                        },
-                                                        {
-                                                            "label":"Belgium",
-                                                            "value":"Belgium",                                                        
                                                         },                                                        
                                                         {
                                                             "label":"Mexico",
                                                             "value":"Mexico",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Belgium",
+                                                            "value":"Belgium",                                                        
                                                         },                                                                                                                                                                        
                                                         {
                                                             "label":"Chile",
                                                             "value":"Chile",   
-                                                        },
-                                                        {
-                                                            "label":"Netherlands",
-                                                            "value":"Netherlands",                                                        
                                                         },                                                        
                                                         {
                                                             "label":"Pakistan",
                                                             "value":"Pakistan",
+                                                        },
+                                                        {
+                                                            "label":"Netherlands",
+                                                            "value":"Netherlands",                                                        
                                                         }, 
                                                         {
                                                             "label":"Qatar",
