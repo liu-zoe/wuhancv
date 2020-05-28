@@ -433,12 +433,12 @@ app.layout = html.Div(
                                                             "value":"Belarus",
                                                         },
                                                         {
-                                                            "label":"Ecuador",
-                                                            "value":"Ecuador",
-                                                        },
-                                                        {
                                                             "label":"Bangladesh",
                                                             "value":"Bangladesh",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Ecuador",
+                                                            "value":"Ecuador",
                                                         },                                                                                                            
                                                         {
                                                             "label":"Sweden",
@@ -461,8 +461,8 @@ app.layout = html.Div(
                                                             "value":"Switzerland",
                                                         },
                                                         {
-                                                            "label":"Ireland",
-                                                            "value":"Ireland",
+                                                            "label":"South Africa",
+                                                            "value":"South Africa",
                                                         },                                                       
                                                     ],            
                                                 ),
@@ -1114,12 +1114,12 @@ app.layout = html.Div(
                                                             "value":"Belarus",
                                                         },
                                                         {
-                                                            "label":"Ecuador",
-                                                            "value":"Ecuador",
-                                                        },
-                                                        {
                                                             "label":"Bangladesh",
                                                             "value":"Bangladesh",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Ecuador",
+                                                            "value":"Ecuador",
                                                         },                                                                                                            
                                                         {
                                                             "label":"Sweden",
@@ -1142,8 +1142,8 @@ app.layout = html.Div(
                                                             "value":"Switzerland",
                                                         },
                                                         {
-                                                            "label":"Ireland",
-                                                            "value":"Ireland",
+                                                            "label":"South Africa",
+                                                            "value":"South Africa",
                                                         },
                                                     ],
                                                 ),
