@@ -131,12 +131,13 @@ cumu_us['Days']+=1
 cumu_us['death_rate']=round(100*(cumu_us['Deaths']/cumu_us['Confirmed']),2)
 vars=['Confirmed','Deaths','Recovered', 'death_rate','recover_rate']
 yaxislab=['Confirmed Cases', 'Deaths Cases', 'Recovered Cases',
-'Death Rates (%)', 'Recovered Rates (%)']
-charttitle=['Number of Confirmed Cases Across Time', 
-'Number of Deaths Cases Across Time', 
-'Number of Recovered Cases Across Time', 
-'Deaths Rates* Across Time', 
-'Recovered Rates Across Time']
+'Death Rates (%)', 'Recovered Rates (%)','New Confirmed Cases',]
+charttitle=['Cumulative Confirmed Cases Across Time', 
+'Cumulative Deaths Cases Across Time', 
+'Cumulative Recovered Cases Across Time', 
+'Cumulative Deaths Rates* Across Time', 
+'Cumulative Recovered Rates Across Time',
+'New Confirmed Cases Across Time',]
 #----------------------------------Fit a growth curve-------------------------------#
 pred_period=5 #Number of days to plot ahead of today
 days_count=len(dates)
@@ -413,12 +414,12 @@ app.layout = html.Div(
                                                             "value":"Canada",                                                        
                                                         },
                                                         {
-                                                            "label":"China",
-                                                            "value":"China",
-                                                        },
-                                                        {
                                                             "label":"Bangladesh",
                                                             "value":"Bangladesh",                                                        
+                                                        },
+                                                        {
+                                                            "label":"China",
+                                                            "value":"China",
                                                         }, 
                                                         {
                                                             "label":"Qatar",
@@ -445,20 +446,20 @@ app.layout = html.Div(
                                                             "value":"Netherlands",                                                        
                                                         },
                                                         {
-                                                            "label":"Ecuador",
-                                                            "value":"Ecuador",
-                                                        },
-                                                        {
                                                             "label":"Colombia",
                                                             "value":"Colombia",
                                                         },
                                                         {
-                                                            "label":"United Arab Emirates",
-                                                            "value":"United Arab Emirates",                                                        
+                                                            "label":"Ecuador",
+                                                            "value":"Ecuador",
                                                         },  
                                                         {
                                                             "label":"Egypt",
                                                             "value":"Egypt",                                                        
+                                                        },
+                                                        {
+                                                            "label":"United Arab Emirates",
+                                                            "value":"United Arab Emirates",                                                        
                                                         }, 
                                                         {
                                                             "label":"Singapore",
@@ -495,7 +496,7 @@ app.layout = html.Div(
                                                 ),
                                             ],
                                         ),
-                                        html.H5("Number of Confirmed Cases Across Time",
+                                        html.H5("Cumulative Confirmed Cases Across Time",
                                                 id="lineplot-title",
                                                 style={'textAlign': 'left',},
                                                 ),
@@ -914,6 +915,10 @@ app.layout = html.Div(
                                                         {
                                                             "label": "Confirmed Cases",
                                                             "value":0,
+                                                        },                                                        
+                                                        {
+                                                            "label": "New Confirmed Cases",
+                                                            "value":5,
                                                         },
                                                         {
                                                             "label": "Deaths Cases",
@@ -927,7 +932,7 @@ app.layout = html.Div(
                                                 ),
                                             ],
                                         ),
-                                        html.H5("Number of Confirmed Cases Across Time",
+                                        html.H5("Cumulative Confirmed Cases Across Time",
                                                 id="lineplot-title-us",
                                                 style={'textAlign': 'left',},
                                                 ),
@@ -1094,12 +1099,12 @@ app.layout = html.Div(
                                                             "value":"Canada",                                                        
                                                         },
                                                         {
-                                                            "label":"China",
-                                                            "value":"China",
-                                                        },
-                                                        {
                                                             "label":"Bangladesh",
                                                             "value":"Bangladesh",                                                        
+                                                        },
+                                                        {
+                                                            "label":"China",
+                                                            "value":"China",
                                                         }, 
                                                         {
                                                             "label":"Qatar",
@@ -1126,20 +1131,20 @@ app.layout = html.Div(
                                                             "value":"Netherlands",                                                        
                                                         },
                                                         {
-                                                            "label":"Ecuador",
-                                                            "value":"Ecuador",
-                                                        },
-                                                        {
                                                             "label":"Colombia",
                                                             "value":"Colombia",
                                                         },
                                                         {
-                                                            "label":"United Arab Emirates",
-                                                            "value":"United Arab Emirates",                                                        
+                                                            "label":"Ecuador",
+                                                            "value":"Ecuador",
                                                         },  
                                                         {
                                                             "label":"Egypt",
                                                             "value":"Egypt",                                                        
+                                                        },
+                                                        {
+                                                            "label":"United Arab Emirates",
+                                                            "value":"United Arab Emirates",                                                        
                                                         }, 
                                                         {
                                                             "label":"Singapore",
@@ -1562,58 +1567,118 @@ def update_chart_title_us(chart_dropdown):
     ],
 )
 def display_selected_data_us(chart_dropdown, state_dropdown):
-    if state_dropdown=="US":
-        cumux_us=cumu_us
-    else:
-        df0=[]
-        for dataframe in rawdf[3:]:
-            df0.append(dataframe[dataframe['Province_State']==state_dropdown])
-        sums=list(map(lambda x: sumbydate(x), df0))
-        cumux_us=pd.DataFrame()
-        cumux_us['date']=dates_real
-        cumux_us['Confirmed']=sums[0].values
-        cumux_us['Deaths']=sums[1].values
-        cumux_us['Days']=np.arange(len(cumux_us))
-        cumux_us['Days']+=1
-        cumux_us['death_rate']=round(100*(cumux_us['Deaths']/cumux_us['Confirmed']),2)
-    yvar=vars[chart_dropdown]
-    cumu_one_var=cumux_us[cumux_us[yvar]>0][['date', yvar]]
-    fig=go.Figure(
-        data=go.Scatter(
-            x=cumu_one_var['date'],
-            y=cumu_one_var[yvar],
-            name='',
-            mode='lines+markers',
-            hovertemplate='%{x}'+'<br>'+yaxislab[chart_dropdown]+':%{y}',
-            marker = go.scatter.Marker(
-                        color = markercl,
+    if chart_dropdown<5:
+        if state_dropdown=="US":
+            cumux_us=cumu_us
+        else:
+            df0=[]
+            for dataframe in rawdf[3:]:
+                df0.append(dataframe[dataframe['Province_State']==state_dropdown])
+            sums=list(map(lambda x: sumbydate(x), df0))
+            cumux_us=pd.DataFrame()
+            cumux_us['date']=dates_real
+            cumux_us['Confirmed']=sums[0].values
+            cumux_us['Deaths']=sums[1].values
+            cumux_us['Days']=np.arange(len(cumux_us))
+            cumux_us['Days']+=1
+            cumux_us['death_rate']=round(100*(cumux_us['Deaths']/cumux_us['Confirmed']),2)
+        yvar=vars[chart_dropdown]
+        cumu_one_var=cumux_us[cumux_us[yvar]>0][['date', yvar]]
+        fig=go.Figure(
+            data=go.Scatter(
+                x=cumu_one_var['date'],
+                y=cumu_one_var[yvar],
+                name='',
+                mode='lines+markers',
+                hovertemplate='%{x}'+'<br>'+yaxislab[chart_dropdown]+':%{y}',
+                marker = go.scatter.Marker(
+                            color = markercl,
+                ),
+                opacity=0.85,     
             ),
-            opacity=0.85,     
-        ),
-    )
-    fig.update_layout(
-        paper_bgcolor=bgcl, 
-        plot_bgcolor=bgcl,
-        margin=dict(l=0, t=0, b=0, r=0, pad=0),
-        yaxis = dict(zeroline = False,
-                    title=yaxislab[chart_dropdown],
-                    color=linecl, 
-                    showgrid=False,
-        ),
-        xaxis = dict(zeroline = False,
-                    title='Date',
-                    color=linecl,
-                    showgrid=False,
-                    tickmode='auto',
-                    nticks=17,
-                    tickangle=45,
-        ),
-        font=dict(
-            family=plotfont, 
-            size=11, 
-            color=fontcl,
-        ),
-    )
+        )
+        fig.update_layout(
+            paper_bgcolor=bgcl, 
+            plot_bgcolor=bgcl,
+            margin=dict(l=0, t=0, b=0, r=0, pad=0),
+            yaxis = dict(zeroline = False,
+                        title=yaxislab[chart_dropdown],
+                        color=linecl, 
+                        showgrid=False,
+            ),
+            xaxis = dict(zeroline = False,
+                        title='Date',
+                        color=linecl,
+                        showgrid=False,
+                        tickmode='auto',
+                        nticks=17,
+                        tickangle=45,
+            ),
+            font=dict(
+                family=plotfont, 
+                size=11, 
+                color=fontcl,
+            ),
+        )
+    else: #New Daily Cases
+        if state_dropdown=="US":
+            cumux_us=cumu_us
+        else:
+            df0=[]
+            for dataframe in rawdf[3:]:
+                df0.append(dataframe[dataframe['Province_State']==state_dropdown])
+            sums=list(map(lambda x: sumbydate(x), df0))
+            cumux_us=pd.DataFrame()
+            cumux_us['date']=dates_real
+            cumux_us['Confirmed']=sums[0].values
+            cumux_us['Deaths']=sums[1].values
+            cumux_us['Days']=np.arange(len(cumux_us))
+            cumux_us['Days']+=1
+            cumux_us['death_rate']=round(100*(cumux_us['Deaths']/cumux_us['Confirmed']),2)
+        days_count=len(dates)
+        x=np.array(list(cumux_us['Days']))
+        y=np.array(list(cumux_us['Confirmed']))
+        y_prev=np.append(np.array([0,]), y[:days_count-1])
+        y_change=y-y_prev
+
+        fig=go.Figure(
+            data=go.Bar(
+                x=dates,
+                y=y_change,
+                name='New Caess',
+                hovertemplate='%{y} on %{x}',
+                marker = dict(
+                    color = markercl,
+                    line=dict(
+                        width=0,
+                    )
+                ),
+                opacity=0.85,     
+            ),
+        )
+        fig.update_layout(
+            paper_bgcolor=bgcl, 
+            plot_bgcolor=bgcl,
+            margin=dict(l=0, t=0, b=0, r=0, pad=0),
+            yaxis = dict(zeroline = False,
+                        title=yaxislab[chart_dropdown],
+                        color=linecl, 
+                        showgrid=False,
+            ),
+            xaxis = dict(zeroline = False,
+                        title='Date',
+                        color=linecl,
+                        showgrid=False,
+                        tickmode='auto',
+                        nticks=17,
+                        tickangle=45,
+            ),
+            font=dict(
+                family=plotfont, 
+                size=11, 
+                color=fontcl,
+            ),
+        )
     return fig 
 #~~~~~~~~~~~~~~~~~~~~~Growth Curve Titles~~~~~~~~~~~~~~~~~~~~#
 @app.callback(
