@@ -7,7 +7,7 @@
 # Twint Documentation:https://github.com/twintproject/twint
 #%%
 from IPython import get_ipython
-#get_ipython().magic('reset -sf')
+get_ipython().magic('reset -sf')
 import datetime
 from datetime import datetime as dt
 from datetime import date
@@ -254,7 +254,7 @@ print('Elapsed:', diff)
 del t1, t2, diff
 #%%
 # Read in json
-#with open(os.path.join(APP_PATH,'data','Twitter','G.json'), 'r') as fp:
+#with open(os.path.join(APP_PATH,'data','Twitter','G21434.json'), 'r') as fp:
 #    G=json.load(fp)
 #G['nodes']={int(k): v for k,v in G['nodes'].items()}
 #%%
@@ -361,8 +361,8 @@ layout = go.Layout(
 )
 
 fig=go.Figure(data=[trace1, trace2], layout=layout)
-#fig.show()    
-fig.write_html("C:/Users/liuz2/Documents/Projects/wuhancv/JSM2020/plots/twitter_21434.html")
+fig.show()    
+#fig.write_html("C:/Users/liuz2/Documents/Projects/wuhancv/JSM2020/plots/twitter_21434.html")
 
 
 # %%

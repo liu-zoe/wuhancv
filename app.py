@@ -442,12 +442,12 @@ app.layout = html.Div(
                                                             "value":"Sweden",                                                        
                                                         },
                                                         {
-                                                            "label":"Netherlands",
-                                                            "value":"Netherlands",                                                        
-                                                        },
-                                                        {
                                                             "label":"Colombia",
                                                             "value":"Colombia",
+                                                        },
+                                                        {
+                                                            "label":"Netherlands",
+                                                            "value":"Netherlands",                                                        
                                                         },
                                                         {
                                                             "label":"Ecuador",
@@ -1127,12 +1127,12 @@ app.layout = html.Div(
                                                             "value":"Sweden",                                                        
                                                         },
                                                         {
-                                                            "label":"Netherlands",
-                                                            "value":"Netherlands",                                                        
-                                                        },
-                                                        {
                                                             "label":"Colombia",
                                                             "value":"Colombia",
+                                                        },
+                                                        {
+                                                            "label":"Netherlands",
+                                                            "value":"Netherlands",                                                        
                                                         },
                                                         {
                                                             "label":"Ecuador",
