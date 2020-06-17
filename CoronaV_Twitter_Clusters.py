@@ -49,8 +49,9 @@ plotfont="Open Sans, sans-serif"
 # Reading in the Tweets from April 1st to 4th
 datafiles=['5g_twitter_2020_04_01.csv', '5g_twitter_2020_04_02.csv', 
             '5g_twitter_2020_04_03.csv', '5g_twitter_2020_04_04.csv',
-            #'5g_twitter_2020_04_05.csv', '5g_twitter_2020_04_06.csv', 
-            #'5g_twitter_2020_04_07.csv', '5g_twitter_2020_04_08.csv','
+            '5g_twitter_2020_04_05.csv', '5g_twitter_2020_04_06.csv', 
+            '5g_twitter_2020_04_07.csv', '5g_twitter_2020_04_08.csv',
+            '5g_twitter_2020_04_09.csv',
             ]
 dflst=list(
     map(
@@ -72,83 +73,68 @@ dflst=list(
         )
     )
 #%%
-df0=pd.concat(dflst)
+df=pd.concat(dflst)
 del datafiles, dflst
 # Drop columns that are not useful
-df0=df0.drop(['retweet','near','geo','source','user_rt_id','user_rt','retweet_id','retweet_date','translate','trans_src','trans_dest'], axis=1)
+df=df.drop(['retweet','near','geo','source','user_rt_id','user_rt','retweet_id','retweet_date','translate','trans_src','trans_dest'], axis=1)
 # Drop duplicate rows; sort by retweet counts; and reset index
-df0.drop_duplicates(subset='link', keep='first',inplace=True)
-df0.sort_values('retweets_count', inplace=True, ascending=False)
-df0.reset_index(drop=True, inplace=True)
-#%%
-# Screen out posts that does not have the key words "corona", "virus", or "covid"
-df=df0[df0.tweet.str.contains('corona|virus|covid', flags=re.IGNORECASE)]
-#%%
-# Create a list of conversation id that appears more than once
-# For those conversations, check to see if there're any tweets
-# in the original data that were screened out.
-convid_freq=Counter(df.conversation_id)
-multiconv=[k for k, v in convid_freq.items() if v>1]
-for id in multiconv:
-    df_add=df0[df0.id==id]
-    df=pd.concat([df, df_add])
-del id
 df.drop_duplicates(subset='link', keep='first',inplace=True)
 df.sort_values('retweets_count', inplace=True, ascending=False)
 df.reset_index(drop=True, inplace=True)
 #%%
-# Remove the original data
-del df0
+# Screen out posts that does not have the key words "corona", "virus", or "covid"
+#df=df0[df0.tweet.str.contains('corona|virus|covid', flags=re.IGNORECASE)]
 #%%
 # Find the most freqeuent word
-#import nltk
-#all_tweets=' '.join(list(df['tweet']))
-#stopwords = nltk.corpus.stopwords.words('english')
-#wt=[i.lower() for i in nltk.word_tokenize(all_tweets) if (i.isalnum()) & (i.lower() not in stopwords)]
-#freqwrd = Counter(wt)
+'''
+import nltk
+all_tweets=' '.join(list(df['tweet']))
+stopwords = nltk.corpus.stopwords.words('english')
+wt=[i.lower() for i in nltk.word_tokenize(all_tweets) if (i.isalnum()) & (i.lower() not in stopwords)]
+freqwrd = Counter(wt)
 #freqwrd.most_common(300)
-#%%
-# Create a dicctionary for conversations that appear more than once
-conv_id_dict=dict()
-for id in multiconv:
-    tmp=df[(df.id==id) & (df.conversation_id==id)]
-    if len(tmp)>0:
-        conv_id_dict[id]=min(tmp.index)
-del id, tmp
-#%%
-'''
-# Check if the right origin is detected
-check_convid=dict()
-for i in conv_id_dict.keys():
-    name1=df.iloc[conv_id_dict[i]]['username']
-    nodes_d[conv_id_dict[i]]
-    check=df[df.conversation_id==i]
-    mentions=list(map(lambda x: list(ast.literal_eval(x.lower())), list(check['mentions'])))
-    mentions=list(functools.reduce(operator.iconcat, mentions,[]))
-    if len(mentions)>0:
-        mentions_c=Counter(mentions)
-        name2=mentions_c.most_common(1)[0][0]
-        top_mentions=list(zip(*mentions_c.most_common(5)))[0]
-    else:
-        name2=df.iloc[check.index[0]]['username']
-    if (name1!=name2) and (name1 not in top_mentions):
-        if name2 in list(df['username']):
-            if df[df.username==name1].index[0]>df[df.username==name2].index[0]:
-                check_convid[i]=[name1, name2, len(check)]
-del i, check, mentions, mentions_c, name1, name2, top_mentions
+pd.DataFrame.from_dict(freqwrd, orient="index").to_csv(os.path.join(APP_PATH, 'data', 'Twitter', 'tweet_word_frequency.csv'))
 '''
 #%%
-#check_convid2=sorted(check_convid.items(), key=lambda kv: kv[1][2], reverse=True)
+# Create dictionary of username vs name
+username_dict=dict(zip(df.username, df.name))
+u_name=list(df['username'])
 #%%
-'''
-i=check_convid2[0][0]
-check=df[df.conversation_id==i]
-mentions=list(map(lambda x: list(ast.literal_eval(x.lower())), list(check['mentions'])))
-mentions=list(functools.reduce(operator.iconcat, mentions,[]))
-mentions_c=Counter(mentions)
-top_rt=check[['username','retweets_count']]
-print(mentions_c.most_common(15))
-'''
+quote_url=list(df['quote_url'])
+urls=list(map(lambda x: list(ast.literal_eval(x.lower())), list(df['urls'])))
+#%%
+reply_to=list(df['reply_to'])
+reply_to_u=list(map(lambda x: list(pd.DataFrame(ast.literal_eval(x.lower()))['username']), reply_to))
+#%%
+mentions=list(map(lambda x: list(ast.literal_eval(x.lower())), list(df['mentions'])))
+#%%
+# Extract any additional data from reply_to, urls, quote_url columns
+reacts_to=[] #The combination of mentions, reply to, quote_url, and urls
+for i in range(len(mentions)):
+    x=[]
+    x1=mentions[i]
+    x2=reply_to_u[i]
+    x3=quote_url[i]
+    x4=urls[i]
+    x+=x1    
+    x+=x2
+    if isinstance(x3,str):
+        x+=re.findall('twitter.com/([A-Za-z0-9]+)/status/[0-9]+', x3.lower())    
+    if len(x4)>0:
+        x4b=list(map(lambda x: re.findall('twitter.com/([A-Za-z0-9]+)/status/[0-9]+', x.lower()), x4))
+        x4=list(set(functools.reduce(operator.iconcat, x4b,[])))
+        x+=x4
+    if u_name[i] in x:
+        x.remove(u_name[i])
+    x=list(set(x))
+    reacts_to+=[x]        
+del i, x, x1, x2, x3, x4, x4b
+#%%
+reacts_to2=[]
+for i in range(len(reacts_to)):
+    if len(reacts_to[i])>0:
+        reacts_to2+=reacts_to[i]
+del i
 #%% 
 # A function to insert line breaks
 def break_tweets(
