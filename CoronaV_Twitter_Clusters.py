@@ -110,7 +110,6 @@ mentions=list(map(lambda x: list(ast.literal_eval(x.lower())), list(df['mentions
 #%%
 # Extract any additional data from reply_to, urls, quote_url columns
 reacts_to=[] #The combination of mentions, reply to, quote_url, and urls
-df0=pd.DataFrame()
 for i in range(len(mentions)):
     x=[]
     x1=mentions[i]
@@ -128,10 +127,10 @@ for i in range(len(mentions)):
     if u_name[i] in x:
         x.remove(u_name[i])
     x=list(set(x))
-    if len(x)>0:
-        reacts_to+=[x]        
-        df0=pd.concat([df0, df.iloc[i]])
+    reacts_to+=[x]        
 del i, x, x1, x2, x3, x4, x4b
+#%%
+df['source']=reacts_to
 #%% 
 # Flatten the list of reacts_to and count most frequent 100 users
 reacts_to2=[]
@@ -140,8 +139,8 @@ for i in range(len(reacts_to)):
         reacts_to2+=reacts_to[i]
 del i
 freq=Counter(reacts_to2)
-top_n=100
-top100=[i[0] for i in freq.most_common(top_n)]
+top_n=20
+top=[i[0] for i in freq.most_common(top_n)]
 
 #%% 
 # A function to insert line breaks
@@ -173,8 +172,8 @@ nodes_d=dict()
 labels_d=dict()
 links=dict()
 for i in range(len(df)):
-    if any(x in top100 for x in reacts_to[i]):
-        currow=df0.iloc[i]
+    if any(x in top for x in reacts_to[i]):
+        currow=df.iloc[i]
         t=break_tweets(currow['tweet'])
         if type(currow['name'])==str:
             label=''.join([currow['name'],'(@',currow['username'],')','<br>', \
@@ -184,9 +183,14 @@ for i in range(len(df)):
                 t, currow['date'], ' ',currow['time']])
         labels_d[i]=label
         nodes_d[i]=currow['link']
-        for j in reacts_to[i]:
-
-del i, currow, label, t
+        for x in reacts_to[i]:
+            if x in top:
+                y=top.index(x)+400000
+                if y not in links.keys():
+                    links[y]=[i]
+                elif i not in links[y]:
+                    links[y].append(i)
+del i, currow, label, t, x, y
 #%%
 # Create links
 t_link=df.link
