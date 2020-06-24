@@ -7,7 +7,7 @@
 # Twint Documentation:https://github.com/twintproject/twint
 #%%
 from IPython import get_ipython
-get_ipython().magic('reset -sf')
+#get_ipython().magic('reset -sf')
 import datetime
 from datetime import datetime as dt
 from datetime import date
@@ -50,8 +50,9 @@ plotfont="Open Sans, sans-serif"
 datafiles=['5g_twitter_2020_04_01.csv', '5g_twitter_2020_04_02.csv', 
             '5g_twitter_2020_04_03.csv', '5g_twitter_2020_04_04.csv',
             '5g_twitter_2020_04_05.csv', '5g_twitter_2020_04_06.csv', 
-            '5g_twitter_2020_04_07.csv', '5g_twitter_2020_04_08.csv',
-            '5g_twitter_2020_04_09.csv',
+            '5g_twitter_2020_04_07.csv', 
+            '5g_twitter_2020_04_08.csv', 
+            #'5g_twitter_2020_04_09.csv',
             ]
 dflst=list(
     map(
@@ -83,7 +84,7 @@ df.sort_values('retweets_count', inplace=True, ascending=False)
 df.reset_index(drop=True, inplace=True)
 #%%
 # Screen out posts that does not have the key words "corona", "virus", or "covid"
-#df=df0[df0.tweet.str.contains('corona|virus|covid', flags=re.IGNORECASE)]
+df=df[df.tweet.str.contains('corona|virus|covid', flags=re.IGNORECASE)]
 #%%
 # Find the most freqeuent word
 '''
@@ -139,9 +140,9 @@ for i in range(len(reacts_to)):
         reacts_to2+=reacts_to[i]
 del i
 freq=Counter(reacts_to2)
-top_n=20
-top=[i[0] for i in freq.most_common(top_n)]
-
+top_n=10
+top=[i[0] for i in freq.most_common(top_n) if i[0] not in ['youtube','huawei','ukchange','bbcnews','who','verge','bbcworld']]
+print(freq.most_common(50))
 #%% 
 # A function to insert line breaks
 def break_tweets(
@@ -167,7 +168,7 @@ def break_tweets(
             j+=1
     return(text)
 #%% 
-# Create nodes and labels
+# Create nodes, links, and labels
 nodes_d=dict()
 labels_d=dict()
 links=dict()
@@ -192,52 +193,25 @@ for i in range(len(df)):
                     links[y].append(i)
 del i, currow, label, t, x, y
 #%%
-# Create links
-t_link=df.link
-links=dict()
-for i in range(len(df)):
-    currow=df.iloc[i]
-    if currow['conversation_id'] in conv_id_dict.keys():
-        source=conv_id_dict[currow['conversation_id']]
-        if source!=i:
-            if source not in links.keys():
-                links[source]=[i]
-            elif i not in links[source]:
-                links[source].append(i)
-    if type(currow['quote_url'])==str:
-        if currow['quote_url'] in t_link:        
-            source=t_link[t_link==currow['quote_url']].index[0]
-            if source!=i:
-                if source not in links.keys():
-                    links[source]=[i]
-                elif i not in links[source]:
-                    links[source].append(i)
-    if currow['urls']!='[]':
-        urls=ast.literal_eval(currow['urls'].lower())
-        if sum(t_link.isin(urls))>=1:
-            source=t_link[t_link.isin(urls)].index[0]
-            if source not in links.keys():
-                links[source]=[i]
-            elif i not in links[source]:
-                links[source].append(i)
-del currow, source, i, urls
-#%%
-# Single out the links with at 
-links_single=dict()
-links_multi=dict()
-for i in links.keys():
-    if len(links[i])>1:
-        links_multi[i]=links[i]
+# Adding users to nodes and labels
+groups_d=dict()
+for i in range(len(top)):
+    nodes_d[400000+i]=top[i]
+    if top[i] in username_dict:
+        labels_d[400000+i]=username_dict[top[i]]
     else:
-        links_single[i]=links[i]
-del i
+        labels_d[400000+i]=top[i]
+    groups_d[400000+i]=i
+    for j in links[400000+i]:
+        groups_d[j]=i
+del i,j
 #%%
 # Make Edges
 Edges=[]
 size_d=dict()
-for i in sorted(links_multi.keys()):
-    size_d[i]=len(links_multi[i])
-    for j in links_multi[i]:
+for i in sorted(links.keys()):
+    size_d[i]=len(links[i])
+    for j in links[i]:
         Edges.append((i,j))
 del i, j
 #%% 
@@ -268,25 +242,21 @@ node_sizes=[]
 groups=[]
 for key in G_nodes.keys():
     text=labels_d[key].lower()
-    if ("nigeria" in text) or ("pastor chris" in text)  or ("oyakhilome" in text) or ("dino melaye" in text):
-        groups.append(0.25)
-    elif ("vodafone" in text):
-        groups.append(0.5)
-    elif ("birmingham" in text) or ("london" in text) or ("leytonstone" in text) or ("merseyside" in text) or (" uk" in text) or ("david icke" in text):
-        groups.append(1)
-    else:
-        groups.append(0)
     if key in size_d.keys():
         node_sizes.append((math.log10(size_d[key]+1))*15)
         labels.append(labels_d[key]+'<br>'+'Connections:'+str(size_d[key]))
     else:
         node_sizes.append(2)
         labels.append(labels_d[key])
+    groups.append(groups_d[key])
 del key
 #%%
 Xn=[G_nodes[k]['location'][0] for k in G_nodes.keys()]# x-coordinates of nodes
 Yn=[G_nodes[k]['location'][1] for k in G_nodes.keys()]# y-coordinates
 Zn=[G_nodes[k]['location'][2] for k in G_nodes.keys()]# z-coordinates
+Xnmax=max(Xn)
+Ynmax=max(Yn)
+Znmin=min(Zn)
 Xe=[]
 Ye=[]
 Ze=[]
@@ -299,7 +269,7 @@ trace1=go.Scatter3d(x=Xe,
                y=Ye,
                z=Ze,
                mode='lines',
-               line=dict(color='rgb(125,125,125)', width=1),
+               line=dict(color='rgb(125,125,125)', width=0.5),
                hoverinfo='none'
                )
 
@@ -307,19 +277,20 @@ trace2=go.Scatter3d(x=Xn,
                y=Yn,
                z=Zn,
                mode='markers',
-               name='actors',
+               name='Twitter User',
                marker=dict(symbol='circle',
                              size=node_sizes,
                              #color="#e7ad52",
                              color=groups,
-                             #colorscale='Viridis',
-                             colorscale=[
-                                [0, '#E7AD52'],
-                                [0.25, plotlycl[0]],
-                                [0.5, plotlycl[1]],
-                                [0.75, plotlycl[2]],
-                                [1, plotlycl[3]],
-                                ],
+                             #colorscale='Plasma',
+                             colorbar=dict(
+                                 title='Legend',
+                                 thickness=10,
+                                 tickvals=list(range(len(top))),
+                                 ticktext=top,
+                                 tickcolor='rgb(125,125,125)',
+                                 tickfont=dict(color='rgb(125,125,125)'),
+                                 ),
                              line=dict(color='rgb(50,50,50)', width=0.5)
                              ),
                text=labels,
@@ -361,10 +332,9 @@ layout = go.Layout(
     plot_bgcolor=bgcl,
     hovermode='closest',
 )
-
 fig=go.Figure(data=[trace1, trace2], layout=layout)
-fig.show()    
-#fig.write_html("C:/Users/liuz2/Documents/Projects/wuhancv/JSM2020/plots/twitter_21434.html")
+#fig.show()    
+fig.write_html("C:/Users/liuz2/Documents/Projects/wuhancv/JSM2020/plots/twitter_20200623.html")
 
 
 # %%
@@ -376,6 +346,7 @@ print('Time used to run the entire script: ', diff)
 del t0, t3, diff
 #%%
 # Save G as a json file
+'''
 G_edges2=[]
 G_nodes2=dict()
 for i in G_edges:
@@ -394,4 +365,4 @@ G2['nodes']=G_nodes2
 with open(os.path.join(APP_PATH,'data','Twitter','G21434.json'), 'w') as fp:
     json.dump(G2, fp)
 del i, s, t, G_edges2, G_nodes2, G2
-# %%
+'''
