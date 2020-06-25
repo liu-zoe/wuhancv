@@ -50,8 +50,7 @@ plotfont="Open Sans, sans-serif"
 datafiles=['5g_twitter_2020_04_01.csv', '5g_twitter_2020_04_02.csv', 
             '5g_twitter_2020_04_03.csv', '5g_twitter_2020_04_04.csv',
             '5g_twitter_2020_04_05.csv', '5g_twitter_2020_04_06.csv', 
-            '5g_twitter_2020_04_07.csv', 
-            '5g_twitter_2020_04_08.csv', 
+            '5g_twitter_2020_04_07.csv', '5g_twitter_2020_04_08.csv', 
             #'5g_twitter_2020_04_09.csv',
             ]
 dflst=list(
@@ -99,6 +98,34 @@ pd.DataFrame.from_dict(freqwrd, orient="index").to_csv(os.path.join(APP_PATH, 'd
 #%%
 # Create dictionary of username vs name
 username_dict=dict(zip(df.username, df.name))
+username_dict['youtube']='YouTube'
+username_dict['realdonaldtrump']='Donald J. Trump'
+username_dict['drzwelimkhize']='Dr Zweli Mkhize'
+username_dict['piersmorgan']='Piers Morgan'
+username_dict['borisjohnson']='Boris Johnson #StayAlert'
+username_dict['stormisuponus']='Storm Is Upon Us'
+username_dict['inevitable_et']='l E T 17'
+username_dict['blaackdiamonnd']='theREALBlack💎'
+username_dict['realjameswoods']='James Woods'
+username_dict['realcandaceo']='Candace Owens'
+username_dict['umvrr']='_umvr'
+username_dict['holbornlolz']='Old Holborn ✘'
+username_dict['x22report']='X22 Report'
+username_dict['who']='World Health Organization (WHO)'
+username_dict['cjtruth']='CJTRUTH⭐️⭐️⭐️'
+username_dict['clarkemicah']='Peter Hitchens'
+username_dict['potus']='President Trump'
+username_dict['alexbkane']='Alex Kane'
+username_dict['billgates']='Bill Gates'
+username_dict['amandaholden']='Amanda Holden'
+username_dict['drisapantami']='Isa Ali Pantami, PhD'
+username_dict['ncdcgov']='NCDC'
+username_dict['worldstar']='WORLDSTARHIPHOP'
+username_dict['jimalkhalili']='Jim Al-Khalili'
+username_dict['pastorchrislive']='Pastor Chris'
+username_dict['sam_adeyemi']='Sam Adeyemi'
+username_dict['apostlesuleman']='Apst Johnson Suleman'
+username_dict['ipot1776']='In Pursuit of Truth'
 u_name=list(df['username'])
 #%%
 quote_url=list(df['quote_url'])
@@ -142,7 +169,7 @@ del i
 freq=Counter(reacts_to2)
 top_n=10
 top=[i[0] for i in freq.most_common(top_n) if i[0] not in ['youtube','huawei','ukchange','bbcnews','who','verge','bbcworld']]
-print(freq.most_common(50))
+top_labels=[username_dict[key]+"(@"+key+")" if key in username_dict else key for key in top]
 #%% 
 # A function to insert line breaks
 def break_tweets(
@@ -198,7 +225,7 @@ groups_d=dict()
 for i in range(len(top)):
     nodes_d[400000+i]=top[i]
     if top[i] in username_dict:
-        labels_d[400000+i]=username_dict[top[i]]
+        labels_d[400000+i]=username_dict[top[i]]+"(@"+top[i]+")"
     else:
         labels_d[400000+i]=top[i]
     groups_d[400000+i]=i
@@ -284,10 +311,10 @@ trace2=go.Scatter3d(x=Xn,
                              color=groups,
                              #colorscale='Plasma',
                              colorbar=dict(
-                                 title='Legend',
+                                 title='',
                                  thickness=10,
                                  tickvals=list(range(len(top))),
-                                 ticktext=top,
+                                 ticktext=top_labels,
                                  tickcolor='rgb(125,125,125)',
                                  tickfont=dict(color='rgb(125,125,125)'),
                                  ),
@@ -332,11 +359,8 @@ layout = go.Layout(
     plot_bgcolor=bgcl,
     hovermode='closest',
 )
-fig=go.Figure(data=[trace1, trace2], layout=layout)
-#fig.show()    
-fig.write_html("C:/Users/liuz2/Documents/Projects/wuhancv/JSM2020/plots/twitter_20200623.html")
-
-
+fig=go.Figure(data=[trace1, trace2], layout=layout)   
+fig.write_html("C:/Users/liuz2/Documents/Projects/wuhancv/JSM2020/plots/twitter_20200624.html")
 # %%
 t3=dt.now()
 diff=t3-t0
@@ -344,25 +368,3 @@ print('-------------------Finish Running Code------------------')
 print('Time: ', t3)
 print('Time used to run the entire script: ', diff)
 del t0, t3, diff
-#%%
-# Save G as a json file
-'''
-G_edges2=[]
-G_nodes2=dict()
-for i in G_edges:
-    s=i['source']
-    t=i['target']
-    G_edges2.append(
-        dict(
-            source=int(s), 
-            target=int(t))
-        )
-for i in G_nodes.keys():
-    G_nodes2[int(i)]=G_nodes[i]
-G2=dict()
-G2['edges']=G_edges2
-G2['nodes']=G_nodes2
-with open(os.path.join(APP_PATH,'data','Twitter','G21434.json'), 'w') as fp:
-    json.dump(G2, fp)
-del i, s, t, G_edges2, G_nodes2, G2
-'''
