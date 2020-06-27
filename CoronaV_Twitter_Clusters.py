@@ -101,6 +101,7 @@ username_dict=dict(zip(df.username, df.name))
 username_dict['youtube']='YouTube'
 username_dict['realdonaldtrump']='Donald J. Trump'
 username_dict['drzwelimkhize']='Dr Zweli Mkhize'
+username_dict['dino_melaye']='Senator Dino Melaye. (SDM)'
 username_dict['piersmorgan']='Piers Morgan'
 username_dict['borisjohnson']='Boris Johnson #StayAlert'
 username_dict['stormisuponus']='Storm Is Upon Us'
@@ -368,3 +369,18 @@ print('-------------------Finish Running Code------------------')
 print('Time: ', t3)
 print('Time used to run the entire script: ', diff)
 del t0, t3, diff
+
+
+#%%
+'''
+# The most frequent youtube
+youtu=[]
+for i in urls:
+    if len(i)>0:
+        for j in i:
+            youtu+=re.findall(r"https://(www.youtube.com/watch?[\?\=\_\-\&A-Za-z0-9]+)", j)
+            youtu+=re.findall(r"https://(www.youtu.be/[A-Za-z0-9-_]+)", j)
+del i, j
+ytfreq=Counter(youtu)
+ytfreq.most_common(10)
+'''
