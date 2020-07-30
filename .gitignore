@@ -1,31 +1,6 @@
-credentials.json
-JSM 2020 Abstract.docx
-CoronaV_Map.py
-CoronaV_Data.py
-CoronaV_Data_v1.py
-CoronaV_Data_v2.py
-CoronaV_Trends_v1.py
-CoronaV_Trends_wuhanlab.py
-CoronaV_Plots_v1.py
-CoronaV_Twitter_v1.py
-CoronaV_Twitter_mini_v1.py
-CoronaV_Twitter_Clusters_v1.py
-CoronaV_Twitter_Clusters_v2.py
-CoronaV_Twitter_Clusters_v3.py
-CoronaV_Twitter_Clusters_v4.py
-CoronaV_Twitter_Rank.py
-lesmiserables_network.py
-app v1.py
-app v2.py
-app v3.py
-app v4.py
-scraper.py
-latlnt_old.xlsx
-data/GoogleTrends/
-data/Twitter
+archive/
 data/NYT/
 data/archive_data/
-style_sample/
-Literature/
-Media/
-JSM2020/
+credentials.json
+CoronaV_Map.py
+CoronaV_Data.py
