@@ -6,8 +6,6 @@ Using Plotly and Dash to Visualize the spread of the COVID-19 from Wuhan to the 
 
 ![COVID-19 Time Lapse](https://github.com/liu-zoe/wuhancv/blob/master/assets/COVD19.gif)
 
-#### -- [Link to Timeline](https://liu-zoe.github.io/wuhancv/) --
-
 ## __Project Description__
 A time lapse of bubble map showing number of confirmed cases of COVID-19 around the globe starting from late Jan 2020. Time series plots present cumulative count of confirmed, recovered, and deaths cases across the world and in high-risked countreis. 
 
