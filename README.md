@@ -15,3 +15,6 @@ Data used in this project is extracted from [**Mapping 2019-nCoV**](https://syst
 
 ### Author
 > [Zoe Liu](https://github.com/liu-zoe)
+
+### Related Project
+[A Visual Story of the COVID19 Outbreak and How Misinformation Spreads](https://github.com/liu-zoe/covid_misinformation)
