@@ -406,12 +406,12 @@ app.layout = html.Div(
                                                             "value":"Bangladesh",                                                        
                                                         },
                                                         {
-                                                            "label":"Italy",
-                                                            "value":"Italy",
-                                                        },
-                                                        {
                                                             "label":"Argentina",
                                                             "value":"Argentina",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Italy",
+                                                            "value":"Italy",
                                                         },                                                        
                                                         {
                                                             "label":"Turkey",
@@ -1091,12 +1091,12 @@ app.layout = html.Div(
                                                             "value":"Bangladesh",                                                        
                                                         },
                                                         {
-                                                            "label":"Italy",
-                                                            "value":"Italy",
-                                                        },
-                                                        {
                                                             "label":"Argentina",
                                                             "value":"Argentina",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Italy",
+                                                            "value":"Italy",
                                                         },                                                        
                                                         {
                                                             "label":"Turkey",
