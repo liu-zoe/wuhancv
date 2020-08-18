@@ -382,12 +382,12 @@ app.layout = html.Div(
                                                             "value":"Chile",   
                                                         },
                                                         {
-                                                            "label":"Iran",
-                                                            "value":"Iran",
-                                                        },
-                                                        {
                                                             "label":"Spain",
                                                             "value":"Spain",
+                                                        },
+                                                        {
+                                                            "label":"Iran",
+                                                            "value":"Iran",
                                                         },
                                                         {
                                                             "label":"United Kingdom",
@@ -1067,12 +1067,12 @@ app.layout = html.Div(
                                                             "value":"Chile",   
                                                         },
                                                         {
-                                                            "label":"Iran",
-                                                            "value":"Iran",
-                                                        },
-                                                        {
                                                             "label":"Spain",
                                                             "value":"Spain",
+                                                        },
+                                                        {
+                                                            "label":"Iran",
+                                                            "value":"Iran",
                                                         },
                                                         {
                                                             "label":"United Kingdom",
