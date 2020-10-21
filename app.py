@@ -458,12 +458,12 @@ app.layout = html.Div(
                                                             "value":"Canada",                                                        
                                                         },
                                                         {
-                                                            "label":"Poland",
-                                                            "value":"Poland",
+                                                            "label":"Czechia",
+                                                            "value":"Czechia",                                                        
                                                         },
                                                         {
-                                                            "label":"Romania",
-                                                            "value":"Romania",                                                        
+                                                            "label":"Poland",
+                                                            "value":"Poland",
                                                         },                                                      
                                                     ],            
                                                 ),
@@ -1143,12 +1143,12 @@ app.layout = html.Div(
                                                             "value":"Canada",                                                        
                                                         },
                                                         {
-                                                            "label":"Poland",
-                                                            "value":"Poland",
+                                                            "label":"Czechia",
+                                                            "value":"Czechia",                                                        
                                                         },
                                                         {
-                                                            "label":"Romania",
-                                                            "value":"Romania",                                                        
+                                                            "label":"Poland",
+                                                            "value":"Poland",
                                                         }, 
                                                     ],
                                                 ),
