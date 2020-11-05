@@ -418,16 +418,16 @@ app.layout = html.Div(
                                                             "value":"Belgium",                                                        
                                                         },
                                                         {
+                                                            "label":"Poland",
+                                                            "value":"Poland",
+                                                        },
+                                                        {
                                                             "label":"Ukraine",
                                                             "value":"Ukraine",
                                                         }, 
                                                         {
                                                             "label":"Indonesia",
                                                             "value":"Indonesia",
-                                                        },
-                                                        {
-                                                            "label":"Poland",
-                                                            "value":"Poland",
                                                         },
                                                         {
                                                             "label":"Bangladesh",
@@ -1103,16 +1103,16 @@ app.layout = html.Div(
                                                             "value":"Belgium",                                                        
                                                         },
                                                         {
+                                                            "label":"Poland",
+                                                            "value":"Poland",
+                                                        },
+                                                        {
                                                             "label":"Ukraine",
                                                             "value":"Ukraine",
                                                         }, 
                                                         {
                                                             "label":"Indonesia",
                                                             "value":"Indonesia",
-                                                        },
-                                                        {
-                                                            "label":"Poland",
-                                                            "value":"Poland",
                                                         },
                                                         {
                                                             "label":"Bangladesh",
