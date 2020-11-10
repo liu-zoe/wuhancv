@@ -396,14 +396,14 @@ app.layout = html.Div(
                                                         {
                                                             "label":"South Africa",
                                                             "value":"South Africa",
-                                                        },                                                                              
-                                                        {
-				                                            "label":"Germany",
-                                                            "value":"Germany",
                                                         },
                                                         {
                                                             "label":"Iran",
                                                             "value":"Iran",
+                                                        },                                                                              
+                                                        {
+				                                            "label":"Germany",
+                                                            "value":"Germany",
                                                         },
                                                         {
                                                             "label":"Poland",
@@ -1081,14 +1081,14 @@ app.layout = html.Div(
                                                         {
                                                             "label":"South Africa",
                                                             "value":"South Africa",
-                                                        },                                                                              
-                                                        {
-				                                            "label":"Germany",
-                                                            "value":"Germany",
                                                         },
                                                         {
                                                             "label":"Iran",
                                                             "value":"Iran",
+                                                        },                                                                              
+                                                        {
+				                                            "label":"Germany",
+                                                            "value":"Germany",
                                                         },
                                                         {
                                                             "label":"Poland",
