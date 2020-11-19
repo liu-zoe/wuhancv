@@ -402,12 +402,12 @@ app.layout = html.Div(
                                                             "value":"Iran",
                                                         },
                                                         {
-                                                            "label":"South Africa",
-                                                            "value":"South Africa",
-                                                        },
-                                                        {
                                                             "label":"Poland",
                                                             "value":"Poland",
+                                                        },
+                                                        {
+                                                            "label":"South Africa",
+                                                            "value":"South Africa",
                                                         },
                                                         {
                                                             "label":"Ukraine",
@@ -1087,12 +1087,12 @@ app.layout = html.Div(
                                                             "value":"Iran",
                                                         },
                                                         {
-                                                            "label":"South Africa",
-                                                            "value":"South Africa",
-                                                        },
-                                                        {
                                                             "label":"Poland",
                                                             "value":"Poland",
+                                                        },
+                                                        {
+                                                            "label":"South Africa",
+                                                            "value":"South Africa",
                                                         },
                                                         {
                                                             "label":"Ukraine",
