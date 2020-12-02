@@ -432,14 +432,14 @@ app.layout = html.Div(
                                                         {
                                                             "label":"Indonesia",
                                                             "value":"Indonesia",
-                                                        },
-                                                        {
-                                                            "label":"Netherlands",
-                                                            "value":"Netherlands",
                                                         },                                                         
                                                         {
                                                             "label":"Czechia",
                                                             "value":"Czechia",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Netherlands",
+                                                            "value":"Netherlands",
                                                         }, 
                                                         {
                                                             "label":"Romania",
@@ -462,8 +462,8 @@ app.layout = html.Div(
                                                             "value":"Canada",                                                        
                                                         },
                                                         {
-                                                            "label":"Saudi Arabia",
-                                                            "value":"Saudi Arabia",
+                                                            "label":"Morocco",
+                                                            "value":"Morocco",
                                                         },                                                      
                                                     ],            
                                                 ),
@@ -1117,14 +1117,14 @@ app.layout = html.Div(
                                                         {
                                                             "label":"Indonesia",
                                                             "value":"Indonesia",
-                                                        },
-                                                        {
-                                                            "label":"Netherlands",
-                                                            "value":"Netherlands",
                                                         },                                                         
                                                         {
                                                             "label":"Czechia",
                                                             "value":"Czechia",                                                        
+                                                        },
+                                                        {
+                                                            "label":"Netherlands",
+                                                            "value":"Netherlands",
                                                         }, 
                                                         {
                                                             "label":"Romania",
@@ -1147,8 +1147,8 @@ app.layout = html.Div(
                                                             "value":"Canada",                                                        
                                                         },
                                                         {
-                                                            "label":"Saudi Arabia",
-                                                            "value":"Saudi Arabia",
+                                                            "label":"Morocco",
+                                                            "value":"Morocco",
                                                         }, 
                                                     ],
                                                 ),
