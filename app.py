@@ -72,7 +72,7 @@ init_date=datetime.date(2020,1,22)
 #today=date.today()
 last_mon=int(last_column[0])
 last_day=int(last_column[1])
-today=datetime.date(2020,last_mon,last_day)
+today=datetime.date(2021,last_mon,last_day)
 del last_column, last_mon, last_day 
 dates_real=[init_date] #list of dates as datetime object
 dates=['1/22/20'] #list of dates to extract variables 
