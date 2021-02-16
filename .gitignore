@@ -1,6 +1,5 @@
-archive/
-data/NYT/
-data/archive_data/
+data/NYT/us-counties.csv
+data/NYT/us-states.csv
 data/TimeSeries/uspopfips.csv
 data/TimeSeries/uscountypop2019est.csv
 data/TimeSeries/usfips.csv
@@ -10,3 +9,5 @@ data/TimeSeries/co-est2019-annres.xlsx
 credentials.json
 CoronaV_Map.py
 CoronaV_Data.py
+data/.DS_Store
+.DS_Store
