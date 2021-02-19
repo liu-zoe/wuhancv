@@ -1,7 +1,5 @@
-data/NYT/
-credentials.json
 CoronaV_Map.py
 CoronaV_Data.py
-data/.DS_Store
-.DS_Store
 geckodriver.log
+data/NYT/us-counties.csv
+data/NYT/us-states.csv
