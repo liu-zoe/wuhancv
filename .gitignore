@@ -1,5 +1,8 @@
 CoronaV_Map.py
 CoronaV_Data.py
 geckodriver.log
+.DS_Store
+data/.DS_Store
 data/NYT/us-counties.csv
 data/NYT/us-states.csv
+.vscode/
