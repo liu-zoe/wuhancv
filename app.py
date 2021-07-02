@@ -93,7 +93,7 @@ del cur_date,x,y
 bubble_size_index=7
 
 #Create a subset of all dates to limit the clutter on bubblemap timetrack
-skip=15
+skip=16
 mark_index=[]
 i=len(dates)-1
 while (i>=0):
